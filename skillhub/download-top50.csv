@@ -1,0 +1,51 @@
+﻿rank,slug,ownerName,name,source,category,downloads,stars,installs
+1,dev-expert-pro,user_47d655f0,编程专家Pro.Skill,community,dev-programming,5186649,9,0
+2,dev-god,u_42bbb65f,编程大神.Skill,enterprise,dev-programming,5055805,28,0
+3,dev-expert,user_741dc82b,编程专家.Skill,community,dev-programming,4862792,358,0
+4,dev-expert,user_814dbe54,dev-expert,community,dev-programming,4159533,27,0
+5,multi-search-engine,u_8ee34d77,搜索引擎,enterprise,knowledge-management,3673051,65,0
+6,parenting-expert,user_741dc82b,育儿大师.Skill,community,life-service,2505212,68,0
+7,tencent-docs,u_b0de8114,腾讯文档 TENCENT DOCS,enterprise,office-efficiency,1808753,323,8107
+8,self-improving-agent,pskoett,self-improving agent,clawhub,ai-agent,1443696,4534,86140
+9,anti-fraud,user_741dc82b,防骗大师.Skill,community,life-service,1339402,31,0
+10,find-skills,root,Find Skills,clawhub,ai-agent,1325362,1797,75956
+11,agent-browser,rez0,Agent Browser,clawhub,ai-agent,1065308,996,36434
+12,anti-fraud,user_814dbe54,anti-fraud,community,life-service,1049927,1,0
+13,beatra,u_319b171b,视频短视频图片音乐音频配音口播数字人全能创作,enterprise,design-media,1030380,88,0
+14,cic,u_c2c77b5f,全国电子印章互认平台,enterprise,professional,1011030,6,0
+15,anti-fraud,user_e9185b15,防诈专家,community,professional,1006802,2,0
+16,parenting-expert,user_c0c05774,育儿专家,community,education,963953,18,0
+17,libai,user_741dc82b,李白.Skill,community,content-creation,896030,103,0
+18,summarize,paudyyin,Summarize,clawhub,knowledge-management,759066,1042,45959
+19,libai,user_814dbe54,libai-skill,community,content-creation,687472,8,0
+20,lingyi-wx-video-decomposer-plus,u_c19e970c,视频号爆款短视频拆解（付费版：全能）【零一数科·出品】,enterprise,content-creation,686313,102,0
+21,unclecheng-reduce-ai-perception-v2,user_ab5ae6ee,文章去AI味工具,community,content-creation,685250,730,650
+22,mysteel-datasearch,u_9ed3401d,钢联AI - 智能问数,enterprise,data-analysis,666246,6,0
+23,ima-skills,u_1742680f,ima-skills,enterprise,knowledge-management,646719,551,11831
+24,baozheng,user_741dc82b,包拯.SKILL,community,professional,584171,55,0
+25,cnfinancialscraper,user_9d5a2a39,全能金融爬虫（新增MCP接入）,community,data-analysis,559790,265,0
+26,self-improving,ivangdavila,Self-Improving + Proactive Agent,clawhub,ai-agent,549082,1616,57561
+27,wps-office-suite,user_1a470ba8,WPS Office 全家桶,community,office-efficiency,488484,137,0
+28,totorosir-workbuddy-checkin,user_3a370331,WorkBuddy签到助手,community,ai-agent,482089,40,0
+29,smart-charts,user_5b28ea14,smart-charts,community,data-analysis,479437,127,8
+30,admapix,fly0pants,AdMapix,clawhub,data-analysis,476409,304,6496
+31,github,steipete,Github,clawhub,dev-programming,429925,710,35756
+32,proactive-agent,halthelobster,Proactive Agent,clawhub,ai-agent,426586,913,28937
+33,humanizer,biostartechnology,Humanizer,clawhub,content-creation,413228,1113,33756
+34,talking-avatar-video,u_319b171b,AI数字人口播与虚拟主播视频,enterprise,design-media,411336,32,0
+35,lingyi-wx-video-script-creator-plus,u_c19e970c,视频号挂车爆单短视频脚本生成【零一数科·出品】,enterprise,content-creation,400837,34,0
+36,gongwen-writting-2,u_70fc650d,秘书材料星公文写作-妙笔skill,enterprise,office-efficiency,396429,37,0
+37,skill-vetter,spclaudehome,Skill Vetter,clawhub,ai-agent,383526,1327,37273
+38,contextweave-interactive-architecture,user_bddf3fe6,架构图一键生成,community,design-media,370513,268,239
+39,ontology,oswalpalash,ontology,clawhub,ai-agent,363751,787,29080
+40,skill-creator,chindden,Skill Creator,clawhub,ai-agent,342390,481,3453
+41,agent-browser,u_8ee34d77,Agent Browser,enterprise,ai-agent,338677,18,0
+42,tiangong-skill,user_741dc82b,天工.skill,community,ai-agent,334366,41,0
+43,qilinbashe,user_cd0fcd93,律师助手,community,professional,328584,66,0
+44,web-tools-guide,user_ec205dbb,web-tools-guide,community,knowledge-management,326405,218,3459
+45,luhe-paper-free-pro,u_a3c224a2,露禾论文写作助手（免费版pro）,enterprise,professional,323098,17,0
+46,ppt-generator-skill,user_3b34947d,ppt-generator-skill,community,office-efficiency,322917,320,1378
+47,patent-drafting-cn,user_9c63fdb4,专利初稿助手,community,professional,320258,45,0
+48,zhongkui-skill,user_741dc82b,钟馗.skill,community,it-ops-security,317031,15,0
+49,weather,steipete,Weather,clawhub,life-service,316748,482,21530
+50,excel-xlsx,ivangdavila,Excel / XLSX,clawhub,office-efficiency,315881,452,24636

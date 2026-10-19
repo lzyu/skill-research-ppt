@@ -1,0 +1,77 @@
+{
+  "observed_date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "public_list_total": 199511,
+  "categories_count": 13,
+  "sample_description": "public API downloads desc first 50 listings, not unique users or successful runs",
+  "sample_n": 50,
+  "sample_download_sum": 53316699,
+  "source_counts_in_sample": {
+    "community": 23,
+    "enterprise": 13,
+    "clawhub": 14
+  },
+  "categories_in_sample": {
+    "dev-programming": {
+      "listings": 5,
+      "downloads": 19694704,
+      "download_share_pct": 36.94
+    },
+    "knowledge-management": {
+      "listings": 4,
+      "downloads": 5405241,
+      "download_share_pct": 10.14
+    },
+    "life-service": {
+      "listings": 4,
+      "downloads": 5211289,
+      "download_share_pct": 9.77
+    },
+    "office-efficiency": {
+      "listings": 5,
+      "downloads": 3332464,
+      "download_share_pct": 6.25
+    },
+    "ai-agent": {
+      "listings": 11,
+      "downloads": 7054833,
+      "download_share_pct": 13.23
+    },
+    "design-media": {
+      "listings": 3,
+      "downloads": 1812229,
+      "download_share_pct": 3.4
+    },
+    "professional": {
+      "listings": 6,
+      "downloads": 3573943,
+      "download_share_pct": 6.7
+    },
+    "education": {
+      "listings": 1,
+      "downloads": 963953,
+      "download_share_pct": 1.81
+    },
+    "content-creation": {
+      "listings": 6,
+      "downloads": 3769130,
+      "download_share_pct": 7.07
+    },
+    "data-analysis": {
+      "listings": 4,
+      "downloads": 2181882,
+      "download_share_pct": 4.09
+    },
+    "it-ops-security": {
+      "listings": 1,
+      "downloads": 317031,
+      "download_share_pct": 0.59
+    }
+  },
+  "global_source_counts_not_additive": {
+    "official": 0,
+    "enterprise": 69251,
+    "community": 136108,
+    "clawhub": 63404
+  }
+}

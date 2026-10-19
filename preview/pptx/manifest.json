@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "backend": "native",
+  "rasterEngine": "libreoffice",
+  "source": "saved",
+  "inputPath": "/Users/tpy/workspace/ai_gallery/skill-asset-ppt/skill-asset-lifecycle.pptx",
+  "sourceSha256": "d41cd12059f4346d7f091da765e335724e6c6379ba2f902e8119410cff6c7555",
+  "dpi": 144,
+  "pageCount": 1,
+  "images": [
+    {
+      "index": 1,
+      "page": 1,
+      "path": "/Users/tpy/workspace/ai_gallery/skill-asset-ppt/preview/pptx/page-0001.png",
+      "width": 1921,
+      "height": 1081,
+      "rectangle": {
+        "x": 0,
+        "y": 0,
+        "width": 1280.0666666666666,
+        "height": 720.0666666666667
+      },
+      "byteLength": 370701
+    }
+  ],
+  "missingFonts": [
+    "Microsoft YaHei"
+  ]
+}

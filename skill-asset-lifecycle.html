@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>一个 Skill 的四段路 · 写出来 发出去 装进去 用起来</title>
+<style>
+  :root{
+    --red:#b5333b;
+    --ink:#1a1a1c;
+    --body:#585860;
+    --mute:#8a8a92;
+    --line:#e3e4e8;
+    --paper:#fafafa;
+    --cream:#fbf4ee;
+    --s:.5;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    background:radial-gradient(120% 100% at 50% 0%,#f1f1f4 0%,#e6e6ea 58%,#dedee3 100%);
+    font-family:'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif;
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .stage{min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .slide-fit{
+    flex:none;
+    width:calc(1920px * var(--s));
+    height:calc(1080px * var(--s));
+    position:relative;
+    box-shadow:0 30px 80px rgba(24,26,34,.20),0 2px 6px rgba(24,26,34,.08);
+  }
+  .slide-canvas{
+    width:1920px;height:1080px;
+    transform:scale(var(--s));transform-origin:top left;
+    position:relative;background:var(--paper);overflow:hidden;
+  }
+  code{
+    font-family:'JetBrains Mono','SF Mono',Menlo,monospace;
+    font-size:.86em;color:#566472;font-weight:600;
+    letter-spacing:-.01em;
+  }
+  /* ---------- page ---------- */
+  .page{
+    width:100%;height:100%;
+    padding:60px 84px 34px;
+    display:flex;flex-direction:column;
+    background:var(--paper);
+    position:relative;
+  }
+  .page::after{
+    content:"";position:absolute;right:0;top:0;width:8px;height:210px;
+    background:linear-gradient(180deg,var(--red) 0%,rgba(181,51,59,0) 100%);
+  }
+  .eyebrow{
+    font-family:'JetBrains Mono','SF Mono',Menlo,monospace;
+    font-size:18px;font-weight:600;letter-spacing:.2em;
+    color:var(--red);
+  }
+  h1{
+    margin-top:16px;
+    font-size:46px;line-height:1.22;font-weight:700;letter-spacing:-.018em;
+    color:var(--ink);
+  }
+  .sub{
+    margin-top:14px;
+    font-size:21px;line-height:1.5;color:var(--body);
+  }
+  .sub .sep{color:var(--red);font-family:'JetBrains Mono','SF Mono',Menlo,monospace;font-weight:700;}
+  /* ---------- journey ---------- */
+  .journey{
+    flex:1;min-height:0;
+    display:grid;
+    grid-template-columns:1fr 32px 1fr 32px 1fr 32px 1fr;
+    column-gap:6px;
+    margin-top:26px;
+  }
+  .stage-card{
+    position:relative;
+    min-width:0;
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    display:flex;flex-direction:column;
+    overflow:hidden;
+  }
+  .stage-card::before{
+    content:"";position:absolute;left:0;right:0;top:0;height:4px;
+    background:var(--red);
+  }
+  .head{display:flex;align-items:flex-end;gap:14px;padding:26px 24px 0;}
+  .no{
+    font-family:'JetBrains Mono','SF Mono',Menlo,monospace;
+    font-size:38px;line-height:.95;font-weight:700;letter-spacing:-.05em;
+    color:var(--red);
+  }
+  .head h2{font-size:30px;line-height:1.1;font-weight:700;color:var(--ink);}
+  .en{
+    margin-top:5px;
+    font-family:'JetBrains Mono','SF Mono',Menlo,monospace;
+    font-size:13px;font-weight:500;letter-spacing:.18em;color:var(--mute);
+  }
+  .role{
+    padding:18px 24px 0;
+    font-size:24px;line-height:1.3;font-weight:700;color:var(--ink);
+    min-height:50px;
+  }
+  .acts{
+    list-style:none;
+    padding:0 24px;
+    margin-top:18px;
+    display:flex;flex-direction:column;gap:12px;
+  }
+  .acts li{
+    display:flex;gap:10px;
+    font-size:21px;line-height:1.42;color:var(--body);
+  }
+  .acts li > span{min-width:0;}
+  .acts li::before{
+    content:"";flex:none;width:6px;height:6px;border-radius:50%;
+    background:var(--red);margin-top:9px;
+  }
+  .product{
+    margin:20px 24px 0;
+    margin-top:auto;
+    padding:12px 14px;
+    background:var(--cream);
+    border-radius:10px;
+    display:flex;align-items:baseline;gap:9px;flex-wrap:wrap;
+    font-size:17px;line-height:1.45;font-weight:600;color:var(--ink);
+  }
+  .product b{
+    flex:none;font-size:13px;font-weight:700;letter-spacing:.06em;color:var(--mute);
+  }
+  .product code{font-size:.95em;}
+  .flow{display:flex;align-items:center;justify-content:center;}
+  .flow svg{width:30px;height:24px;display:block;}
+  /* ---------- walkthrough ---------- */
+  .walk{
+    margin-top:18px;
+    border:1px solid var(--line);
+    border-radius:16px;
+    background:#fff;
+    padding:14px 20px 16px;
+  }
+  .walk-head{
+    display:flex;align-items:baseline;gap:14px;
+    padding-bottom:10px;
+    border-bottom:1px solid #f0f0f2;
+  }
+  .walk-head b{
+    font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--red);
+    background:#fdf0f1;border-radius:6px;padding:2px 10px;flex:none;
+  }
+  .walk-head span{font-size:17px;color:var(--body);}
+  .walk-head i{
+    margin-left:auto;font-style:normal;font-size:15px;color:var(--mute);
+    font-family:'JetBrains Mono','SF Mono',Menlo,monospace;
+  }
+  .walk-steps{
+    display:grid;
+    grid-template-columns:1fr 22px 1fr 22px 1fr 22px 1fr 22px 1fr 22px 1fr;
+    align-items:stretch;
+    padding-top:10px;
+  }
+  .walk-step{display:flex;flex-direction:column;gap:5px;min-width:0;}
+  .walk-tag{
+    font-family:'JetBrains Mono','SF Mono',Menlo,monospace;
+    font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--red);
+  }
+  .walk-txt{font-size:19px;line-height:1.38;color:var(--ink);}
+  .walk-txt code{font-size:.9em;}
+  .walk-arrow{display:flex;align-items:center;justify-content:center;}
+  .walk-arrow svg{width:22px;height:18px;display:block;}
+  /* ---------- footer ---------- */
+  .foot{
+    display:flex;align-items:center;justify-content:space-between;gap:28px;
+    border-top:1px solid var(--line);
+    padding-top:12px;
+    margin-top:12px;
+    font-size:15px;line-height:1.4;color:var(--mute);
+  }
+  .foot .chain b,.foot .checks b{color:var(--ink);font-weight:700;letter-spacing:.05em;margin-right:9px;}
+  .foot .chain i{font-style:normal;color:#b9b9c0;font-family:'JetBrains Mono','SF Mono',Menlo,monospace;}
+  .foot .checks{display:flex;align-items:center;gap:18px;}
+  .foot .checks .neq{color:var(--red);font-weight:700;}
+  .foot .dot{color:#c9c9cf;}
+  @media print{
+    body{background:#fff;}
+    .slide-fit{box-shadow:none;}
+  }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="slide-fit">
+    <div class="slide-canvas">
+      <section class="page" data-label="四段实际做法">
+        <div class="eyebrow">SKILL LIFECYCLE · 四段实际做法</div>
+        <h1>一个 Skill 的四段路：写出来 → 发出去 → 装进去 → 用起来</h1>
+        <p class="sub">Skill 以 <code>SKILL.md</code> 为入口，按需配脚本 / 资料 / 模板；四段路各有具体做法，用完的反馈再回到生产。</p>
+
+        <div class="journey">
+          <article class="stage-card">
+            <div class="head"><div class="no">01</div><div><h2>生产</h2><div class="en">PRODUCE</div></div></div>
+            <p class="role">把一次做对的过程写下来</p>
+            <ul class="acts">
+              <li><span><code>SKILL.md</code>：<code>name</code>、<code>description</code>，<br>正文写步骤、异常与验收</span></li>
+              <li><span>跑 <code>$skill-creator</code> 生成草稿，<br>再拿真实任务改</span></li>
+              <li><span>现成 MCP / API / SOP<br>封装成方法，并声明依赖</span></li>
+              <li><span>用「该用 / 不该用 / 边界」<br>三类任务验证触发与结果</span></li>
+              <li><span>留一个能跑通的样例，<br>再写清不适用的情况</span></li>
+            </ul>
+            <div class="product"><b>产物</b><span><code>SKILL.md</code> + <code>scripts/</code><br><code>references/</code> + 评测记录</span></div>
+          </article>
+
+          <div class="flow" aria-hidden="true">
+            <svg viewBox="0 0 32 24"><path d="M2 12h26M20 4l8 8-8 8" fill="none" stroke="#b5333b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <article class="stage-card">
+            <div class="head"><div class="no">02</div><div><h2>分发</h2><div class="en">DISTRIBUTE</div></div></div>
+            <p class="role">把确定的版本交到手上</p>
+            <ul class="acts">
+              <li><span>Git 仓库：目录 + 提交历史，<br>ref 指向实际 commit</span></li>
+              <li><span>ZIP / 目录包：离线交付，<br>附依赖与完整性说明</span></li>
+              <li><span>市场目录（如 Skills.sh）做发现，<br>CLI 负责取</span></li>
+              <li><span>Plugin：<code>plugin.json</code> + <code>skills/</code><br>+ <code>mcp.json</code> 组合交付</span></li>
+              <li><span>托管 API：上传 ZIP，返回<br><code>skill_id</code> + <code>version</code></span></li>
+            </ul>
+            <div class="product"><b>产物</b><span>发布包 + 来源 / 版本 / 许可<br>Plugin 另含 <code>mcp.json</code></span></div>
+          </article>
+
+          <div class="flow" aria-hidden="true">
+            <svg viewBox="0 0 32 24"><path d="M2 12h26M20 4l8 8-8 8" fill="none" stroke="#b5333b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <article class="stage-card">
+            <div class="head"><div class="no">03</div><div><h2>安装</h2><div class="en">INSTALL</div></div></div>
+            <p class="role">让宿主发现并跑得起来</p>
+            <ul class="acts">
+              <li><span>复制到 <code>~/.claude/skills/</code>、<br><code>~/.agents/skills/</code>（也可项目级）</span></li>
+              <li><span>CLI：<code>npx skills add &lt;repo&gt;</code><br><code>--skill &lt;name&gt; -g -a codex</code></span></li>
+              <li><span>Agent 内：<code>$skill-installer</code><br>从指定仓库装，并报位置</span></li>
+              <li><span>云端：<code>skill_reference</code><br>挂 <code>skill_id</code> + <code>version</code></span></li>
+              <li><span>查依赖与权限，<br>跑一个最小任务验证</span></li>
+            </ul>
+            <div class="product"><b>产物</b><span>安装实例 + 就绪检查<br>记下宿主、作用域、版本</span></div>
+          </article>
+
+          <div class="flow" aria-hidden="true">
+            <svg viewBox="0 0 32 24"><path d="M2 12h26M20 4l8 8-8 8" fill="none" stroke="#b5333b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+
+          <article class="stage-card">
+            <div class="head"><div class="no">04</div><div><h2>使用</h2><div class="en">USE</div></div></div>
+            <p class="role">选中、加载，交付结果</p>
+            <ul class="acts">
+              <li><span>提目标、输入、约束和验收；<br>Agent 按 <code>description</code> 选</span></li>
+              <li><span>点名：Claude 用 <code>/pdf-processing</code><br>Codex 用 <code>$pdf-processing</code></span></li>
+              <li><span>渐进加载：目录 → <code>SKILL.md</code> →<br>按需读 <code>references/</code>、跑 <code>scripts/</code></span></li>
+              <li><span>执行后验收，记录版本、<br>环境与修正</span></li>
+              <li><span>结果不合格时，先分清是方法、<br>输入还是环境问题</span></li>
+            </ul>
+            <div class="product"><b>产物</b><span>任务结果 + 使用记录<br>版本、环境、修正</span></div>
+          </article>
+        </div>
+
+        <div class="walk">
+          <div class="walk-head">
+            <b>举个例</b><span>PDF 处理 Skill 怎么走完四段</span>
+            <i>example · pdf-processing</i>
+          </div>
+          <div class="walk-steps">
+            <div class="walk-step">
+              <div class="walk-tag">生产</div>
+              <div class="walk-txt">写 <code>SKILL.md</code><br>+ <code>scripts/</code></div>
+            </div>
+            <div class="walk-arrow" aria-hidden="true"><svg viewBox="0 0 22 18"><path d="M2 9h16M12 3l6 6-6 6" fill="none" stroke="#c9c9cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="walk-step">
+              <div class="walk-tag">分发</div>
+              <div class="walk-txt">推 Git / 打 ZIP<br>标 v1.0</div>
+            </div>
+            <div class="walk-arrow" aria-hidden="true"><svg viewBox="0 0 22 18"><path d="M2 9h16M12 3l6 6-6 6" fill="none" stroke="#c9c9cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="walk-step">
+              <div class="walk-tag">安装</div>
+              <div class="walk-txt"><code>npx skills add</code><br>落到 <code>~/.agents/skills/</code></div>
+            </div>
+            <div class="walk-arrow" aria-hidden="true"><svg viewBox="0 0 22 18"><path d="M2 9h16M12 3l6 6-6 6" fill="none" stroke="#c9c9cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="walk-step">
+              <div class="walk-tag">使用</div>
+              <div class="walk-txt"><code>/pdf-processing</code><br>合并三个 PDF</div>
+            </div>
+            <div class="walk-arrow" aria-hidden="true"><svg viewBox="0 0 22 18"><path d="M2 9h16M12 3l6 6-6 6" fill="none" stroke="#c9c9cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="walk-step">
+              <div class="walk-tag">验收</div>
+              <div class="walk-txt">页数、文本完整<br>输出能打开</div>
+            </div>
+            <div class="walk-arrow" aria-hidden="true"><svg viewBox="0 0 22 18"><path d="M2 9h16M12 3l6 6-6 6" fill="none" stroke="#c9c9cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <div class="walk-step">
+              <div class="walk-tag">反馈</div>
+              <div class="walk-txt">补 OCR 说明<br>发 v1.1</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="foot">
+          <div class="chain"><b>追溯链</b><span>资产标识</span><i>&nbsp;→&nbsp;</i><span>发布版本</span><i>&nbsp;→&nbsp;</i><span>安装实例</span><i>&nbsp;→&nbsp;</i><span>使用记录</span></div>
+          <div class="checks">
+            <span><b>口径</b>已上架<span class="neq">&nbsp;≠&nbsp;</span>可获取</span>
+            <span class="dot">·</span>
+            <span>已安装<span class="neq">&nbsp;≠&nbsp;</span>已就绪</span>
+            <span class="dot">·</span>
+            <span>已调用<span class="neq">&nbsp;≠&nbsp;</span>已验收</span>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    function fit() {
+      var s = Math.min((window.innerWidth - 48) / 1920, (window.innerHeight - 48) / 1080);
+      document.documentElement.style.setProperty('--s', String(Math.max(s, 0.1)));
+    }
+    window.addEventListener('resize', fit);
+    fit();
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'f' || e.key === 'F') {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (document.documentElement.requestFullscreen) document.documentElement.requestFullscreen();
+      }
+    });
+  })();
+</script>
+</body>
+</html>

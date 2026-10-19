@@ -1,0 +1,22 @@
+{
+  "readme.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/README.md",
+  "api-overview.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/README.md",
+  "skills-api.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/skills.md",
+  "evaluation-api.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/evaluation.md",
+  "categories-api.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/categories.md",
+  "evaluator-skill.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/skills/skillhub-trace-evaluator/SKILL.md",
+  "dsh-plugin.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/dsh-plugin/README.md",
+  "repo-tree.json": "https://api.github.com/repos/Tencent/skillhub/git/trees/main?recursive=1",
+  "api-downloads.json": "https://api.skillhub.cn/api/skills?sortBy=downloads&order=desc&pageSize=50",
+  "categories-live.json": "https://api.skillhub.cn/api/v1/categories",
+  "api-official.json": "https://api.skillhub.cn/api/skills?source=official&pageSize=1",
+  "api-enterprise.json": "https://api.skillhub.cn/api/skills?source=enterprise&pageSize=1",
+  "api-community.json": "https://api.skillhub.cn/api/skills?source=community&pageSize=1",
+  "api-clawhub.json": "https://api.skillhub.cn/api/skills?source=clawhub&pageSize=1",
+  "api-top.json": "https://api.skillhub.cn/api/skills/top",
+  "homepage.html": "https://skillhub.cn",
+  "about.html": "https://skillhub.cn/about",
+  "api-tencent-docs.json": "https://api.skillhub.cn/api/v1/skills/tencent-docs",
+  "api-mysteel.json": "https://api.skillhub.cn/api/v1/skills/mysteel-datasearch",
+  "api-find-skill.json": "https://api.skillhub.cn/api/v1/skills/find-skill-skillhub"
+}
