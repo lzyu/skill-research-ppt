@@ -1,0 +1,6 @@
+import fs from 'node:fs/promises';
+import {finalizePresentation} from '/Users/tpy/.codex/plugins/cache/openai-primary-runtime/presentations/26.1013.11914/skills/presentations/container_tools/artifact_tool_utils.mjs';
+const workspace='/Users/tpy/workspace/ai_gallery/skill-asset-ppt/skillhub';
+const skill='/Users/tpy/.codex/plugins/cache/openai-primary-runtime/presentations/26.1013.11914/skills/presentations';
+const result=await finalizePresentation({workspaceDir:workspace,candidatePath:workspace+'/.build/skillhub-insights-v1-with-notes.pptx',finalPath:workspace+'/output/skillhub-insights-v1.pptx',pythonExecutable:'/Users/tpy/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3',integrityValidatorPath:skill+'/container_tools/inspect_presentation_package_integrity.py',layoutValidatorPath:skill+'/container_tools/inspect_presentation_layout_geometry.py',explicitTotalSlideCount:1,requiredNativeTableOwnerSlides:[],requiredNativeChartOwnerSlides:[],layoutArgs:['--expected-slide-size-emu','12192000,6858000','--validate-bullet-geometry','--validate-heading-fit'],fontPolicy:{basis:'design',families:['Microsoft YaHei']},verifyArtifactToolImport:true,receiptPath:workspace+'/.build/skillhub-v1-validation.json'});
+console.log(JSON.stringify({finalPath:result.finalPath,receiptPath:result.receiptPath}));

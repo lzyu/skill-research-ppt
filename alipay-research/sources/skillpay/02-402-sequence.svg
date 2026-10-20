@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <style>
+    rect, circle { fill: none !important; stroke: #202020 !important; }
+    path { stroke: #202020 !important; }
+    text { fill: #202020 !important; }
+    svg > rect:first-of-type { fill: none !important; stroke: none !important; }
+  </style>
+  <rect width="1600" height="980" fill="#F6F4EE"/>
+  <text x="80" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#77736B" letter-spacing="3">FIGURE 01 / PAYMENT HANDSHAKE</text>
+  <text x="80" y="142" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="42" font-weight="700" fill="#171717">402 将支付嵌入 Agent 的任务链路</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="22" font-weight="650" fill="#171717">
+    <rect x="80" y="205" width="240" height="68" rx="14" fill="#FFF" stroke="#AAA69C" stroke-width="2"/><text x="200" y="248" text-anchor="middle">用户</text>
+    <rect x="470" y="205" width="240" height="68" rx="14" fill="#FFF" stroke="#AAA69C" stroke-width="2"/><text x="590" y="248" text-anchor="middle">用户 Agent</text>
+    <rect x="860" y="205" width="240" height="68" rx="14" fill="#FBE9E4" stroke="#C77A63" stroke-width="2"/><text x="980" y="248" text-anchor="middle">支付宝 SkillPay</text>
+    <rect x="1250" y="205" width="240" height="68" rx="14" fill="#E8EFE9" stroke="#7D9C86" stroke-width="2"/><text x="1370" y="248" text-anchor="middle">商品履约</text>
+  </g>
+  <g stroke="#BDB9AF" stroke-width="2" stroke-dasharray="7 9"><path d="M200 273V875"/><path d="M590 273V875"/><path d="M980 273V875"/><path d="M1370 273V875"/></g>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="19" fill="#393835" stroke="#171717" stroke-width="2.2">
+    <path d="M200 330H578"/><path d="M566 321L578 330L566 339" fill="none"/><text x="389" y="315" text-anchor="middle" stroke="none">① 提出任务</text>
+    <path d="M590 405H968"/><path d="M956 396L968 405L956 414" fill="none"/><text x="779" y="390" text-anchor="middle" stroke="none">② 请求调用</text>
+    <path d="M980 480H602"/><path d="M614 471L602 480L614 489" fill="none"/><text x="791" y="465" text-anchor="middle" stroke="none" fill="#A84F38">③ HTTP 402 + 支付要求</text>
+    <path d="M590 555H212"/><path d="M224 546L212 555L224 564" fill="none"/><text x="401" y="540" text-anchor="middle" stroke="none">④ 说明价格并请求确认</text>
+    <path d="M200 630H578"/><path d="M566 621L578 630L566 639" fill="none"/><text x="389" y="615" text-anchor="middle" stroke="none">⑤ 确认支付</text>
+    <path d="M590 705H968"/><path d="M956 696L968 705L956 714" fill="none"/><text x="779" y="690" text-anchor="middle" stroke="none">⑥ 携带支付结果重试</text>
+    <path d="M980 780H1358"/><path d="M1346 771L1358 780L1346 789" fill="none"/><text x="1169" y="765" text-anchor="middle" stroke="none">⑦ 一次性交付 / 创建订阅权益</text>
+    <path d="M1370 850H602"/><path d="M614 841L602 850L614 859" fill="none"/><text x="986" y="835" text-anchor="middle" stroke="none" fill="#3E6653">⑧ 恢复安装或调用，继续原任务</text>
+  </g>
+  <rect x="80" y="912" width="1410" height="2" fill="#D2CEC4"/>
+  <text x="80" y="949" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18" fill="#77736B">支付不是任务之外的跳转，而是一次可恢复、可验证的协议握手。</text>
+</svg>

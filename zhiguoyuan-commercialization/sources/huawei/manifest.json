@@ -1,0 +1,141 @@
+[
+  {
+    "name": "portal",
+    "url": "https://agentorchard.huaweicloud.com/",
+    "status": 200,
+    "bytes": 216195,
+    "scripts": [
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.1.16/js/jquery.min.js",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/libs.min.js",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/globalInfo.min.js",
+      "https://res.hc-cdn.com/cnpm-portal-utils/1.4.33/PortalUtils.umd.js",
+      "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/js/ViewMotion.min.1.2.js?sttl=1.2.20",
+      "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/js/v2/dcSlideShow.min.js?20171012&sttl=1.2.20",
+      "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/js/swiper-3.4.2.jquery.min.js?20171012&sttl=1.2.20",
+      "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/product/js/checkURL.js?sttl=1.2.20",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.1.16/js/bi_new.js?sttl=1.2.20",
+      "https://portal.hc-cdn.com/cnpm-baseui/3.0.18/theme-token.js?sttl=1.2.20&ttr=1.2.20",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/feloader.js",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/global.min.js",
+      "https://portal.hc-cdn.com/bi/uba.in.js?v=2.17",
+      "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/apm/wise_trace.min.js?sttl=1.2.20"
+    ]
+  },
+  {
+    "name": "homepage",
+    "url": "https://pangu.huaweicloud.com/gallery/homepage.html",
+    "status": 200,
+    "bytes": 46987,
+    "scripts": [
+      "https://res.hc-cdn.com/cnpm-portal-utils/1.4.33/PortalUtils.umd.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/vendors.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/gallery-nav.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/footer.js",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.2.16/js/feloader.js",
+      "https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/js/swiper-3.4.2.jquery.min.js",
+      "https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/js/jquery.min.js",
+      "https://portal.hc-cdn.com/cnpm-baseui/3.0.13/theme-token.js"
+    ]
+  },
+  {
+    "name": "skill-list",
+    "url": "https://pangu.huaweicloud.com/gallery/asset-list-page.html?type=skills",
+    "status": 200,
+    "bytes": 6582,
+    "scripts": [
+      "https://res.hc-cdn.com/cnpm-portal-utils/1.4.33/PortalUtils.umd.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/vendors.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/gallery-nav.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/asset-list.js",
+      "https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/footer.js",
+      "https://portal.hc-cdn.com/cnpm-global-resources/1.2.16/js/feloader.js",
+      "https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/js/swiper-3.4.2.jquery.min.js",
+      "https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/js/jquery.min.js",
+      "https://portal.hc-cdn.com/cnpm-baseui/3.0.13/theme-token.js"
+    ]
+  },
+  {
+    "name": "gallery-overview",
+    "url": "https://support.huaweicloud.com/aimarket-modelarts/ma_gallery_0004.html",
+    "status": 200,
+    "bytes": 80544,
+    "scripts": []
+  },
+  {
+    "name": "gallery-flow",
+    "url": "https://support.huaweicloud.com/aimarket-modelarts/ma_gallery_0001.html",
+    "status": 200,
+    "bytes": 83120,
+    "scripts": []
+  },
+  {
+    "name": "skill-host",
+    "url": "https://support.huaweicloud.com/aimarket-modelarts/ma_gallery_0011.html",
+    "status": 200,
+    "bytes": 95326,
+    "scripts": []
+  },
+  {
+    "name": "skill-publish",
+    "url": "https://support.huaweicloud.com/aimarket-modelarts/ma_gallery_0012.html",
+    "status": 200,
+    "bytes": 87045,
+    "scripts": []
+  },
+  {
+    "name": "skill-manage",
+    "url": "https://support.huaweicloud.com/aimarket-modelarts/ma_gallery_0013.html",
+    "status": 200,
+    "bytes": 93464,
+    "scripts": []
+  },
+  {
+    "name": "agentarts-gallery",
+    "url": "https://support.huaweicloud.com/productdesc-agentarts/agentarts_03_0028.html",
+    "status": 200,
+    "bytes": 92572,
+    "scripts": []
+  },
+  {
+    "name": "agentarts-skill-intro",
+    "url": "https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_01301.html",
+    "status": 200,
+    "bytes": 103522,
+    "scripts": []
+  },
+  {
+    "name": "agentarts-skill-import",
+    "url": "https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_0367.html",
+    "status": 200,
+    "bytes": 89434,
+    "scripts": []
+  },
+  {
+    "name": "agentarts-observe",
+    "url": "https://support.huaweicloud.com/bestpractice-agentarts/agentarts_06_0037.html",
+    "status": 200,
+    "bytes": 136352,
+    "scripts": []
+  },
+  {
+    "name": "github-readme",
+    "url": "https://raw.githubusercontent.com/huaweicloud/huaweicloud-skills/master/README-CN.md",
+    "status": 200,
+    "bytes": 3777,
+    "scripts": []
+  },
+  {
+    "name": "github-license",
+    "url": "https://raw.githubusercontent.com/huaweicloud/huaweicloud-skills/master/LICENSE",
+    "status": 200,
+    "bytes": 1068,
+    "scripts": []
+  },
+  {
+    "name": "find-skill",
+    "url": "https://raw.githubusercontent.com/huaweicloud/huaweicloud-skills/master/skills/devtools/common/huawei-cloud-find-skills/SKILL.md",
+    "status": 200,
+    "bytes": 20407,
+    "scripts": []
+  }
+]

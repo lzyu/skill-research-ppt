@@ -1,0 +1,53 @@
+{
+  "accessed": "2026-10-20",
+  "records": [
+    {
+      "name": "agent-gateway",
+      "url": "https://support.huaweicloud.com/usermanual-marketplace/zh-cn_topic_0000002497990256.html",
+      "bytes": 106848,
+      "status": "saved"
+    },
+    {
+      "name": "payment-change",
+      "url": "https://support.huaweicloud.com/bulletin-marketplace/zh-cn_topic_0000002527868130.html",
+      "bytes": 84508,
+      "status": "saved"
+    },
+    {
+      "name": "pricing-general",
+      "url": "https://support.huaweicloud.com/usermanual-marketplace/zh-cn_topic_01980206211.html",
+      "bytes": 84918,
+      "status": "saved"
+    },
+    {
+      "name": "pricing-joint",
+      "url": "https://support.huaweicloud.com/usermanual-marketplace/zh-cn_topic_0198020621.html",
+      "bytes": 105479,
+      "status": "saved"
+    },
+    {
+      "name": "saas-renewal",
+      "url": "https://support.huaweicloud.com/usermanual-marketplace/zh-cn_topic_0070649180.html",
+      "bytes": 104711,
+      "status": "saved"
+    },
+    {
+      "name": "refund-rules",
+      "url": "https://support.huaweicloud.com/usermanual-marketplace/buyer_topic_0000010.html",
+      "bytes": 119263,
+      "status": "saved"
+    },
+    {
+      "name": "invoices",
+      "url": "https://support.huaweicloud.com/ug-marketplace/invoices_topic_0000002.html",
+      "bytes": 97626,
+      "status": "saved"
+    },
+    {
+      "name": "machinepay-integration",
+      "url": "https://aipay.alipay.com/docs/ai-receive/MACHINE_PAY.html",
+      "bytes": 106594,
+      "status": "saved"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+[
+  {
+    "query": "all",
+    "total": 199553,
+    "returned": 1,
+    "labels": [
+      {
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "paid",
+    "total": 17006,
+    "returned": 1,
+    "labels": [
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "not-paid",
+    "total": 182422,
+    "returned": 1,
+    "labels": [
+      {
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "key-true",
+    "total": 38563,
+    "returned": 1,
+    "labels": [
+      {
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "key-false",
+    "total": 160959,
+    "returned": 1,
+    "labels": [
+      {
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "key-not-true",
+    "total": 160978,
+    "returned": 1,
+    "labels": [
+      {
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "key-not-false",
+    "total": 38587,
+    "returned": 1,
+    "labels": [
+      {
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "paid-key-true",
+    "total": 204,
+    "returned": 1,
+    "labels": [
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "paid-key-false",
+    "total": 16857,
+    "returned": 1,
+    "labels": [
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "pay-category",
+    "total": 19962,
+    "returned": 1,
+    "labels": [
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "pay-category-paid",
+    "total": 17061,
+    "returned": 1,
+    "labels": [
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "pay-category-key-true",
+    "total": 332,
+    "returned": 1,
+    "labels": [
+      {
+        "pricing_type": "alipay",
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "paid-sample",
+    "total": 17061,
+    "returned": 100,
+    "labels": [
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      },
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      },
+      {
+        "pricing_type": "paid",
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "key-true-sample",
+    "total": 38568,
+    "returned": 30,
+    "labels": [
+      {
+        "requires_api_key": "true"
+      },
+      {
+        "requires_api_key": "true"
+      },
+      {
+        "requires_api_key": "true"
+      }
+    ]
+  },
+  {
+    "query": "all-sample",
+    "total": 199553,
+    "returned": 100,
+    "labels": [
+      {
+        "requires_api_key": "false"
+      },
+      {
+        "requires_api_key": "false"
+      },
+      {
+        "requires_api_key": "false"
+      }
+    ]
+  },
+  {
+    "query": "homepage",
+    "bytes": 7429
+  },
+  {
+    "query": "skills-api-doc",
+    "bytes": 10380
+  }
+]

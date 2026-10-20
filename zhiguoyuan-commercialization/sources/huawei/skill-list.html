@@ -1,0 +1,46 @@
+<!doctype html> <html lang="zh-CN" site="china"> <head> <meta charset="UTF-8"> <meta name="applicable-device" content="pc,mobile"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> <meta http-equiv="x-dns-prefetch-control" content="on"> <meta name="templateName" content="aigallery-pangu-common-module-pep2.0"> <title>资产列表_华为云</title> <meta name="keywords" content="资产列表、模型、数据集、Skill、MCP、工作流、本体、项目" /> <meta name="description" content="AI资产广场聚合全品类AI资产，模型、数据集、Skill、MCP、提示词、工作流一站尽览，快速发现优质资产，助力AI应用敏捷开发" /> <link rel="icon" href="https://www.huaweicloud.com/favicon.ico"> <script>window.$cssList = ["https://res.hc-cdn.com/cnpm-pep-htmlcomponent/1.0.2"];window.$aioList = [];window.$aioCdnPrefix = 'https://res.hc-cdn.com/';</script> <script src="https://res.hc-cdn.com/cnpm-portal-utils/1.4.33/PortalUtils.umd.js"></script> <script type="importmap">
+        {
+         "imports": {
+           "svelte": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/index.js",
+           "svelte/store": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/store.js",
+           "svelte/motion": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/motion.js",
+           "svelte/transition": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/transition.js",
+           "svelte/animate": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/animate.js",
+           "svelte/easing": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/easing.js",
+           "svelte/events": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/events.js",
+           "svelte/internal/client": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/internal-client.js",
+           "svelte/legacy": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/legacy.js",
+           "svelte/reactivity": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/reactivity.js",
+           "svelte/reactivity/window": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/reactivity-window.js",
+           "svelte/attachments": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/attachments.js",
+           "svelte/internal/disclose-version": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/internal-disclose-version.js"
+          }
+        }
+      </script> <script>
+        window.gConfig =  window.gConfig || {};
+        window.gConfig.isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+        var hClassName ;
+        if(window.gConfig.isMobile) {
+          hClassName = ' phone';
+        } else {
+          hClassName = ' pc';
+        }
+        if(window.$cssList) {
+          for(var i=0; i<window.$cssList.length; i++) {
+            document.write('<link rel="stylesheet" href="'+window.$cssList[i]+'/'+(window.gConfig.isMobile?'m':'pc')+'/index.css" />');
+          }
+        }
+        var root = document.documentElement;
+        root.className += hClassName ;
+    </script> <link rel="stylesheet" href="https://portal.hc-cdn.com/cnpm-baseui/3.0.13/theme-token.css"> </head> <body> <div id="content" data-site="china"> <div id="common-components-container"> <div data-mod-id="pep-htmlcomponent_1681954291744"> <div data-mod-name-pc="@cloud/pep-htmlcomponent/pc/index" data-mod-name-m="@cloud/pep-htmlcomponent/m/index" class="pep-htmlcomponent" data-mod-name="pep-htmlcomponent"> <link href="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/css/vendors.css" rel="stylesheet" type="text/css"/> <link href="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/css/gallery-nav.css" rel="stylesheet" type="text/css"/> <link href="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/css/asset-list.css" rel="stylesheet" type="text/css"/> <link href="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/css/footer.css" rel="stylesheet" type="text/css"/> <div id="gallery-nav"></div> <div id="asset-list"></div> <div id="gallery-footer"></div> <script src="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/vendors.js" type="text/javascript" charset="utf-8"></script> <script src="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/gallery-nav.js" type="text/javascript" charset="utf-8"></script> <script src="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/asset-list.js" type="text/javascript" charset="utf-8"></script> <script src="https://aiasset-res.hc-cdn.com/gallery-ui/portal/prod/js/footer.js" type="text/javascript" charset="utf-8"></script> <script> window.gConfig = window.gConfig || {}; window.gConfig.seed = window.gConfig.seed || []; window.gConfig.seed.push({name : '@cloud/pep-htmlcomponent', data : {"packages":{"@cloud/pep-htmlcomponent":{"path":"//res.hc-cdn.com/cnpm-pep-htmlcomponent/1.0.2/","version":"1.0.2"},"@cloud/lazyload":{"path":"//res.hc-cdn.com/cnpm-lazyload/2.0.8/","version":"2.0.8"},"@cloud/link-to":{"path":"//res.hc-cdn.com/cnpm-link-to/1.0.16/","version":"1.0.16"},"@cloud/xtemplate-runtime":{"path":"//res.hc-cdn.com/cnpm-xtemplate-runtime/1.0.1/","version":"1.0.1"}}} })</script> </div> </div> <script>
+          window.gConfig = window.gConfig || {};
+          window.gConfig.seed = window.gConfig.seed || [];
+          window.$devPath = {"@cloud/pep-htmlcomponent":{"path":"https://res.hc-cdn.com/cnpm-pep-htmlcomponent/1.0.2"}};
+          for(var i = 0; i < window.gConfig.seed.length; i++) {
+            var tmpSeed = window.gConfig.seed[i].data;
+            var name = window.gConfig.seed[i].name;
+            if(tmpSeed && tmpSeed.packages && window.$devPath[name]) {
+              tmpSeed.packages[name] = window.$devPath[name];
+            }
+          }
+        </script> </div> </div> <script type="text/javascript" src="https://portal.hc-cdn.com/cnpm-global-resources/1.2.16/js/feloader.js"></script> <script defer src="https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/js/swiper-3.4.2.jquery.min.js"></script> <script src="https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/js/jquery.min.js"></script> <link href="https://res.hc-cdn.com/cpage-mkp-global-resource/11.7.200/public/css/swiper-3.4.2.min.css" rel="stylesheet" /> <script src="https://portal.hc-cdn.com/cnpm-baseui/3.0.13/theme-token.js"></script> </body> </html> 

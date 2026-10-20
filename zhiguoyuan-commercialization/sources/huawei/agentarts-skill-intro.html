@@ -1,0 +1,659 @@
+<!DOCTYPE html> <html lang="zh-CN" site="china"> <head> <meta name="referrer" content="no-referrer-when-downgrade" /> <link rel="canonical" data-link-type="uri" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_01301.html" /> <link rel="alternate" type="text/markdown" data-link-type="markdown" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_01301.md" /> <link rel="alternate" type="text/plain" data-link-type="llms-txt" href="/agentarts/llms.txt" /> <title>Skill介绍_Skill_智能体组件_低代码开发智能体_智果（AgentArts）智能体平台-华为云</title> <meta name="keywords" content="Skill介绍,Skill,低代码开发" /> <meta name="description" content="在AgentArts平台上，Skill可以将过去分散在不同文档、代码片段或零散笔记中的隐性知识，以显性化和结构化的方式组织起来，使AI能够按需、稳定地执行专业任务。您可以将Skill看作是开发者的工具箱，将积累的技术经验和最佳实践打包成技能包，使AI成为您专业领域的专家。" /> <meta charset="UTF-8" /> <meta name="applicable-device" content="pc,mobile" /> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" /> <meta name="baidu-site-verification" content="nsMgQr28vc" /> <meta http-equiv="x-dns-prefetch-control" content="on" /> <meta name="cache" content="pep-disable-cache" /> <script
+        src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/support/resource/framework/js/special_iframe.js"></script> <meta name="templateName" content="doc-common-detail-pep2.0-module" /> <meta name="referrer" content="no-referrer-when-downgrade" /> <meta name="pep-template-version" content="1.9.27" /> <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests;" /> <link rel="icon" href="https://www.huaweicloud.com/favicon.ico"> <link rel="stylesheet" href="https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/css/global.min.css?sttl=3.0.86&ttr=1.2.20" crossorigin="anonymous"/> <!--/* header css */--> <link rel="stylesheet" href="https://portal.hc-cdn.com/cpage-pep-header-and-footer-china/2.0.61/index.css?sttl=3.0.86&ttr=1.2.20" crossorigin="anonymous"> <style> @media(max-width:768px) { #header { display: none; } } #footer .footer-nav { display: none; } #footer .footer-copyright-container { display: none; } .footer-service .footer-wrapper { display: none; } </style> <link rel="stylesheet" href="https://portal.hc-cdn.com/cnpm-baseui/3.0.18/theme-token.css"> <script src="https://portal.hc-cdn.com/cnpm-global-resources/1.1.16/js/jquery.min.js" crossorigin="anonymous"></script> <script src="https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/libs.min.js"></script> <script src="https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/globalInfo.min.js" crossorigin="anonymous"></script> <!-- --> <meta name="google-site-verification" content="wQwSWDVSYQzH1niLqcUE15XH1_j_rN1T9-mbq2r6Dmw" /> <meta name="sogou_site_verification" content="u4x6sJNooE" /> <link rel="dns-prefetch" href="https://res-static.hc-cdn.cn" /> <link rel="dns-prefetch" href="https://portal.hc-cdn.com" /> <link rel="dns-prefetch" href="https://support.huaweicloud.com" /> <link rel="dns-prefetch" href="https://activity.huaweicloud.com" /> <link rel="dns-prefetch" href="https://portal.huaweicloud.com" /> <link rel="dns-prefetch" href="https://uba.huaweicloud.com" /> <link rel="dns-prefetch" href="https://uba-intl.huaweicloud.com" /> <!-- --> <script>
+    window.dataLayer = window.dataLayer || [];
+    window.$closeBiReport2018 = true
+
+    window.$siteInfo = window.$siteInfo || {};
+    window.$siteInfo.site = "china";
+    window.$siteInfo.lang = "zh-cn".replace("_", "-");
+</script> <script>window.$cssList = [];window.$aioList = [];window.$aioCdnPrefix = 'https://res.hc-cdn.com/';</script> <script src="https://res.hc-cdn.com/cnpm-portal-utils/1.4.33/PortalUtils.umd.js"></script> <script type="importmap">
+        {
+         "imports": {
+           "svelte": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/index.js",
+           "svelte/store": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/store.js",
+           "svelte/motion": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/motion.js",
+           "svelte/transition": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/transition.js",
+           "svelte/animate": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/animate.js",
+           "svelte/easing": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/easing.js",
+           "svelte/events": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/events.js",
+           "svelte/internal/client": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/internal-client.js",
+           "svelte/legacy": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/legacy.js",
+           "svelte/reactivity": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/reactivity.js",
+           "svelte/reactivity/window": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/reactivity-window.js",
+           "svelte/attachments": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/attachments.js",
+           "svelte/internal/disclose-version": "https://res.hc-cdn.com/pep-components-svelte/5.38.10/svelte-cdn/internal-disclose-version.js"
+          }
+        }
+      </script> <script>
+        window.gConfig =  window.gConfig || {};
+        window.gConfig.isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+        var hClassName ;
+        if(window.gConfig.isMobile) {
+          hClassName = ' phone';
+        } else {
+          hClassName = ' pc';
+        }
+        if(window.$cssList) {
+          for(var i=0; i<window.$cssList.length; i++) {
+            document.write('<link rel="stylesheet" href="'+window.$cssList[i]+'/'+(window.gConfig.isMobile?'m':'pc')+'/index.css" />');
+          }
+        }
+        var root = document.documentElement;
+        root.className += hClassName ;
+    </script> <script>
+    window.gConfig =  window.gConfig || {};
+    window.gConfig.isMobile = /iPhone|iPad|iPod|Android|Mobile/i.test(navigator.userAgent);
+    var hClassName;
+    if(window.gConfig.isMobile){
+        hClassName = ' phone';
+    }else{
+        hClassName = ' pc';  
+    }
+    if(window.$aioList) {
+        for(var i=0; i<window.$aioList.length; i++) {
+            if(window.$aioCdnPrefix){
+                if(window.$aioList[i].length>0) {
+                    document.write('<link rel="stylesheet" href="'+window.$aioCdnPrefix+window.$aioList[i]+'/'+(window.gConfig.isMobile?'m':'pc')+'/index.css" />');
+                }
+            } else {
+                if(window.$aioList[i].length>0) {
+                    document.write('<link rel="stylesheet" href="https://res.hc-cdn.com/'+window.$aioList[i]+'/'+(window.gConfig.isMobile?'m':'pc')+'/index.css" />');
+                }
+            }
+            
+        }
+    }
+    var root = document.documentElement;
+    root.className += hClassName ; 
+    window.gConfig.seed = window.gConfig.seed || [];
+    window.gConfig.seed.push({
+        name: '@cloud/link-to',
+        data: {
+            "packages": {
+                "@cloud/link-to": {
+                    "path": "//portal.hc-cdn.com/cnpm-link-to/3.1.12/",
+                    "version": "3.1.12"
+                }
+            }
+        }
+    });
+</script> <link href="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/css/index_revision.css?20240716&sttl=3.0.86" rel="stylesheet" /> <link href="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/css/default.min.css" rel="stylesheet" /> <script>
+        // 规避资料不规范出现这些未定义的方法
+        function image_size() { }
+        function highlightSearch() { }
+        function initImageViewer(Selector) { }
+    </script> </head> <body class="scrolled"> <div id="header" bi_parent_name="navigation" meta-data-adjust-app="hide"> <div class="header-container"> <div class="header-prompt"> <div class="header-prompt-wrapper"> <div class="header-prompt-content"> <i class="por-icon por-icon-error"></i> <p>检测到您已登录华为云国际站账号，为了您更好的体验，建议您访问国际站服务网站 <a href="https://www.huaweicloud.com/intl/zh-cn">https://www.huaweicloud.com/intl/zh-cn</a></p> </div> <div class="header-prompt-radio"> <i class="header-prompt-checkbox active"></i> <p>不再显示此消息</p> <i class="header-prompt-closed por-icon por-icon-close"></i> </div> </div></div> <div class="header-topnav"> <div class="header-topnav-wrapper"> <li class="header-lang "> <div class="header-lang-current"><i class="header-icon-earth"></i><span class="header-lang-label">中国站</span><i class="header-icon-arrow-down"></i></div> <div class="header-lang-list"> <div class="header-site" bi_parent_name="中国站"> <div class="header-site-left">中国站</div> <ul class="header-site-right "> <li class="header-lang-item active"><a href="//www.huaweicloud.com/">简体中文</a></li> </ul> </div> <div class="header-site" bi_parent_name="International"> <div class="header-site-left">International</div> <ul class="header-site-right"> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/en-us/">English</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/id-id/">Bahasa Indonesia</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/es-us/">Español</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/pt-br/">Português</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/tr-tr/">Türkçe</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/ar-mena/">عربي</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/th-th/">ไทย</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/zh-cn/">简体中文</a></li> <li class="header-lang-item"><a href="https://www.huaweicloud.com/intl/ja-jp/">日本語</a></li> </ul> </div> <div class="header-site" bi_parent_name="Europe"> <div class="header-site-left">Europe</div> <ul class="header-site-right "> <li class="header-lang-item"><a href="//www.huaweicloud.com/eu/">English</a></li> <li class="header-lang-item"><a href="//www.huaweicloud.com/eu/de-de/">Deutsch</a></li> <li class="header-lang-item"><a href="//www.huaweicloud.com/eu/es-es/">Español</a></li> <li class="header-lang-item"><a href="//www.huaweicloud.com/eu/fr-fr/">Français</a></li> <li class="header-lang-item"><a href="//www.huaweicloud.com/eu/nl-nl/">Nederlands</a></li> </ul> </div> </div> </li> <li class="header-hwapp"> <i class="header-icon-hwapp"></i><a class="header-hwapp-link" href="https://www.huaweicloud.com/mobile_app/hwapp.html?channel=navigation_right" target="_black">华为云App</a> </li> </div></div> <div class="header-wrapper"> <div class="header-bottom"> <div class="header-bottom-wrapper "> <a class="header-logo" bi_name="logo" href="https://www.huaweicloud.com"> <img src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/wangxue/header/logo.svg"> </a> <div class="header-nav"> <div class="header-nav-scroll"> <ul class="header-nav-list"> <li data-key="agentorchard"> <a data-href="https://agentorchard.huaweicloud.com/index.html"> <span>智果园</span> </a> </li> <li data-key="activity"> <a> <span>活动</span> </a> </li> <li data-key="product"> <a data-href="https://www.huaweicloud.com/product/"> <span>产品</span> </a> </li> <li data-key="solution"> <a data-href="https://www.huaweicloud.com/solution/"> <span>解决方案</span> </a> </li> <li data-key="price"> <a data-href="https://www.huaweicloud.com/pricing/index.html"> <span>定价</span> </a> </li> <li data-key="market"> <a data-href="https://marketplace.huaweicloud.com/"> <span>云商店</span> </a> </li> <li data-key="partner"> <a data-href="https://www.huaweicloud.com/partners/"> <span>伙伴</span> </a> </li> <li data-key="developer"> <a data-href="https://developer.huaweicloud.com/"> <span>开发者</span> </a> </li> <li data-key="support"> <a data-href="https://www.huaweicloud.com/service/"> <span>服务</span> </a> </li> <li data-key="about"> <a data-href="https://www.huaweicloud.com/about/index.html"> <span>了解华为云</span> </a> </li> </ul> </div> <div class="header-bottom-mask"></div> <div class="header-nav-hover-line"></div> </div> <div class="header-tools"> <div class="header-search J-header-search" bi_parent_name="search"> <form class="header-search-inner J-serach-form" tabindex="-1" data-api-search-url="https://www.huaweicloud.com/s/" data-api-report="https://portal.huaweicloud.com/stats/pip.gif" data-api-hot="https://portal.huaweicloud.com/rest/cbc/portalsearchcorrectorservice/v1/hot-words?appId=com.huaweicloud.portal.search.high&amp;type=PC" data-use-quick-link="true" data-quick-link-icon="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/advertisement/Fixed/banner/ic_public_link.svg" data-api-autoword="https://portal.huaweicloud.com/rest/cbc/portalsearchcorrectorservice/v1/search" data-default-hot="网站和Web应用程序,镜像制作,弹性势能,容器化改造,大数据分析人"> <div class="header-search-content J-search-content"> <div class="header-search-input"> <textarea class="J-search-input" id="header-navigation-search-input" rows="1" maxlength="256" data-active-placeholder="输入您想要搜索的关键词" autocomplete="off"></textarea> <div class="header-search-footer"> <button type="button" class="header-search-send" bi_name="#header-navigation-search-input"></button> </div> </div> <div class="header-search-droplist J-search-drop J-search-autoword" data-clickable-asyn="true"> <div class="J-search-hot"> <div class="J-search-history" bi_parent_name="history"> <div class="J-search-title"><span>清空</span>最近搜索</div> <div class="J-search-history-content"> </div> </div> <div class="J-search-popular" bi_parent_name="recommend"> <div class="J-search-title">快速链接</div> <ul class="J-search-popular-content"> <li><a>云耀云服务器L实例</a></li> <li><a>免费试用</a></li> <li><a>云服务器</a></li> <li><a>域名</a></li> <li><a>云速建站</a></li> </ul> </div> </div> <div class="J-search-related"> <ul></ul> </div> <div class="J-search-assist"> <div class="J-search-assist-keyword" bi_name="openpangu" data-assist-text="问一问云宝助手“$$”"><i class="J-search-assist-icon" style="background-image: url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/commons/icon-yunbao.png');"></i><a><p>使用云宝助手，探索更多专业内容</p><i class="header-icon-arrow-right"></i></a></div> </div> </div> </div> </form> <div class="header-search-button"> <input class="search-default" type="text" data-active-placeholder="搜索" autocomplete="off" placeholder="搜索"> <i></i> <div class="header-search-carousel"> <ul></ul> </div> </div> </div> <div class="header-menu-search-mb"> <span class="header-icon-search"></span> </div> <ul class="header-tools-right header-main"> <li class="header-tools-icon"> <a href="https://www.huaweicloud.com/service/contact.html" title="联系我们" bi_name="tools_icon_联系我们"> <i class="header-tools-icon-default" style="background-image:url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/header-2025/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC.svg')"></i> <i class="header-tools-icon-hover" style="background-image:url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/header-2025/%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC.svg')"></i> </a> <div class="header-tools-list"> <ul> <li> <div class="header-tools-list-category-title">售前咨询</div> <div class="tool-item"> <i class="header-tools-list-icon" style="background-image:url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/header-2025/电话.svg')"></i> <div> <div class="header-tools-list-title"><p>950808 转 1</p></div> </div> </div> </li> <li> <div class="tool-item"> <i class="header-tools-list-icon" style="background-image:url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/header-2025/预约咨询.svg')"></i> <div> <div class="header-tools-list-title"><p><a href="https://www.huaweicloud.com/consultation/" rel="noopener noreferrer" target="_blank" class="por-link">预约咨询</a></p></div> </div> </div> </li> <li> <div class="header-tools-list-category-title">售后服务</div> <div class="tool-item"> <i class="header-tools-list-icon" style="background-image:url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/header-2025/工单.svg')"></i> <div> <div class="header-tools-list-title"><p><a href="https://console.huaweicloud.com/ticket/?locale=zh-cn#/ticketindex/createIndex" rel="noopener noreferrer" target="_blank" class="por-link">工单提交</a></p></div> </div> </div> </li> <li> <div class="header-tools-list-category-title">建议反馈</div> <div class="tool-item"> <i class="header-tools-list-icon" style="background-image:url('https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/header-2025/建议反馈.svg')"></i> <div> <div class="header-tools-list-title"><p><a href="https://bbs.huaweicloud.com/suggestion" rel="noopener noreferrer" target="_blank" class="por-link">我有建议</a></p></div> </div> </div> </li> </ul> </div></li> <li><a href="https://support.huaweicloud.com">文档</a></li> <li><a href="https://beian.huaweicloud.com">备案</a></li> <li><a href="https://console.huaweicloud.com?locale=zh-cn">控制台</a></li> <li class="header-login-mobile"> <span class="header-icon-user js-login"></span> <div class="header-user-info user-info-layer user-unlogin header-backdrop"> <ul class="header-user-info-list account-nav"> <li class="header-user-info-item-account account-item"> <a href="//account.huaweicloud.com/usercenter/?locale=zh-cn&amp;region=cn-north-4#/accountindex/accountInfo" bi_name="账号中心" target="_blank">账号中心</a> </li> <li class="header-user-info-item-account account-item"> <a href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/userindex/allview" bi_name="费用与成本" target="_blank">费用与成本</a> </li> <li class="header-user-info-split"></li> <li class="order1"><a href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/ordercenter/userindex/unpaidOrder" bi_name="待支付订单" target="_blank">待支付订单</a></li> <li class="management1"><a href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/userindex/renewalManagement" bi_name="待续费产品" target="_blank">待续费产品</a></li> <li class="message "><a href="//console.huaweicloud.com/mc/?locale=zh-cn" bi_name="未读消息" target="_blank">未读消息</a></li> <li class="header-user-info-split"></li> <li><a href="//console.huaweicloud.com/ticket/?region=cn-north-1&amp;locale=zh-cn#/ticketindex/createIndex" bi_name="工单管理" target="_blank">工单管理</a></li> <li><a class="mb-special" href="//www.huaweicloud.com/mobile_app/api_page/appv2/app_download.html?channel=mobile_console" rel="nofollow" bi_name="管理控制台" target="_blank">管理控制台</a></li> <li class="header-user-info-split"></li> <li class="header-user-info-item-account account-item button-container"> <a class="header-user-info-button-red" href="https://reg.huaweicloud.com/registerui/public/custom/register.html?locale=zh-cn&amp;service=https%3A%2F%2Faccount.huaweicloud.com%2Fusercenter%2F%3Flocale%3Dzh-cn%26cloud_route_state%3D%2Fuserindex%2FaccountInfo#/register" target="_blank">注册</a> <a class="header-user-info-button-common" href="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=" target="_blank">登录</a> </li> </ul> </div></li><li class="header-login"><a data-login-href="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=" href="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=" class="btn js-login">登录</a></li> <li class="header-register"><a href="https://reg.huaweicloud.com/registerui/public/custom/register.html?locale=zh-cn#/register" class="btn js-register"> 注册 </a></li> <li style="display:none" class="header-shopping-cart" data-api-canuse="https://portal.huaweicloud.com/rest/cbc/cbcshoppingcartservice/v1/shopping-cart/can-use-shopping-cart" data-api-summary="https://portal.huaweicloud.com/rest/cbc/cbcshoppingcartservice/v1/shopping-cart/summary"> <a class="shopping-cart-icon" target="_blank" data-login="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=https://account.huaweicloud.com/usercenter/%23%2Fordercenter/cart" data-shopping-cart="https://account.huaweicloud.com/usercenter/#/ordercenter/cart" href="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=https://account.huaweicloud.com/usercenter/%23%2Fordercenter/cart"> <span></span> <img src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/header-and-footer/shopping-cart.png"> </a> <a class="shopping-cart-text btn js-shopping-cart" target="_blank" data-login="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=https://account.huaweicloud.com/usercenter/%23%2Fordercenter/cart" data-shopping-cart="https://account.huaweicloud.com/usercenter/#/ordercenter/cart" href="//auth.huaweicloud.com/authui/login?locale=zh-cn&amp;service=https://account.huaweicloud.com/usercenter/%23%2Fordercenter/cart"> 购物车 </a></li><li class="header-user user-info"> <div class="header-user-avator"> <img class="header-tool-user-avator-img account-pic lazyload" data-src="//res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/v2_resources/images/global/headPic.png?sttl=20180413"> </div> <div class="header-user-name"><span class="my-acct">admin</span><i class="header-nav-item-icon"></i></div> <div class="header-user-info user-info-layer header-backdrop"> <ul class="header-user-info-list account-nav"> <li class="header-user-info-item-account account-item"> <a href="//account.huaweicloud.com/usercenter/#/accountindex/accountInfo" bi_name="账号中心" target="_blank">账号中心</a> <a class="account-verification header-verification" href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/accountindex/realNameAuth" target="_blank"> <i class="header-icon header-icon-verification"></i> <i class="header-icon header-icon-verification-on"></i> <p class="state-unactive">未实名认证</p> <p class="state-active">已实名认证</p> </a> </li> <li><a href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/userindex/allview" bi_name="费用与成本" target="_blank">费用与成本</a></li> <li class="header-user-info-split"></li> <li class="order"><a href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/ordercenter/userindex/unpaidOrder" bi_name="待支付订单" target="_blank">待支付订单<span>0</span></a></li> <li class="management"><a href="//account.huaweicloud.com/usercenter/?locale=zh-cn#/userindex/renewalManagement" bi_name="待续费产品" target="_blank">待续费产品<span>0</span></a></li> <li class="message"><a href="//console.huaweicloud.com/mc/?locale=zh-cn" bi_name="未读消息" target="_blank">未读消息<span>0</span></a></li> <li class="header-user-info-split"></li> <li class="isVendor" style="display:none;"><a href="https://partner.huaweicloud.com/partnercenter" bi_name="伙伴中心" target="_blank">伙伴中心</a></li> <li><a href="//console.huaweicloud.com/marketplace/tenant/#/market/order/purchasedProductsCN" bi_name="云商店买家中心" target="_blank">云商店买家中心</a></li> <li class="isIsv" style="display:none;"><a href="//console.huaweicloud.com/marketplace/isv/#/console/overview" bi_name="云商店卖家中心" target="_blank">云商店卖家中心</a></li> <li class="header-user-info-split"></li> <li><a href="https://console.huaweicloud.com/ticket/?locale=zh-cn#/ticketindex/customerService" bi_name="实时客服" target="_blank">实时客服</a></li> <li class="header-user-info-split"></li> <li><a href="https://console.huaweicloud.com/ticket/#/ticketindex/createIndex" bi_name="工单管理" target="_blank">工单管理</a></li> <li class="header-user-info-split pc-only"></li> <li><a href="https://devstation.developer.huaweicloud.com/aidevspace" bi_name="开发者空间" target="_blank" class="pc-special">开发者空间</a></li> <li class="header-user-info-split"></li> <li><a href="https://www.huaweicloud.com/declaration/labels_config.html" bi_name="个性化推荐管理" target="_blank">个性化推荐管理</a></li> <li><a href="//www.huaweicloud.com/mobile_app/api_page/appv2/app_download.html?channel=mobile_console" bi_name="管理控制台" target="_blank" class="mb-special">管理控制台</a></li> <li class="header-user-info-split"></li> <li class="logout"> <a href="#" class="bottom-username"><span class="my-acct">admin</span></a> <a class="logout-btn" mate_data_ts="www_v2_top_navigation.click.logout" href="//portal.huaweicloud.com/index/logout">退出登录</a> </li> </ul> </div></li> </ul> <div class="header-menu-mb" bi_name="HamburgNavigation" data-clickable="true"> <span></span> <span></span> <span></span> </div></div> </div></div> <script type="text/html" id="holder-drop"></script> <script type="text/html" id="holder-mbnav"></script> <div class="header-mbshearch header-backdrop" bi_parent_name="search_mb"> <div class="header-mbshearch-innner"> <form class="header-mbshearch-form" action method="get" data-api-search-url="https://www.huaweicloud.com/s/" data-api-report="https://portal.huaweicloud.com/stats/pip.gif" data-api-hot="https://portal.huaweicloud.com/rest/cbc/portalsearchcorrectorservice/v1/hot-words?appId=com.huaweicloud.portal.search.high&amp;type=PC" data-api-autoword="https://portal.huaweicloud.com/rest/cbc/portalsearchcorrectorservice/v1/search" data-default-hot="网站和Web应用程序,镜像制作,弹性势能,容器化改造,大数据分析人"> <div class="header-mbshearch-form-row"> <div> <div class="header-mbshearch-input-box"> <i class=""></i> <input type="text" maxlength="128" class="header-mbshearch-input" autocomplete="off"> <div class="header-search-carousel"> <ul></ul> </div> </div> </div> <div><a class="header-mbshearch-cancel">取消</a></div> </div> </form> <div class="header-mbshearch-droplist" data-clickable-asyn="true"> <div class="J-mbshearch-hot"> <div class="J-mbshearch-history"> <div class="J-mbshearch-title"><span>清空</span>最近搜索</div> <div class="J-mbshearch-history-content"> </div> </div> <div class="J-mbshearch-popular"> <div class="J-mbshearch-title">快速链接</div> <ul class="J-mbshearch-popular-content"> <li><a>云耀云服务器L实例</a></li> <li><a>免费试用</a></li> <li><a>云服务器</a></li> <li><a>域名</a></li> <li><a>云速建站</a></li> </ul> </div> </div> <ul class="J-mbshearch-related"> </ul> </div> </div></div> </div> </div></div> <div id="content" class="help-page home-page" bi_parent_name="support"> <div bi_parent_name="china-content"> <div> <a id="support-hidden-menu" hidden href="/agentarts/v3_support_leftmenu_fragment.html"></a> <a id="support-hidden-index" hidden href="/support_all_doc_fragment.html"></a> </div> <div class="support-section support-content" id="support-content"> <div class="support-body" data-prod="agentarts" bi_parent_name="agentarts_main"> <div class="wrapper"> <div class="support-section support-nav" id="support-nav"></div> <script>
+    !(function (win, $) {
+        !(function initAllDoc() {
+            const origin = window.location.origin;
+            const url = `${origin}/support_all_doc_fragment.html`;
+            $.ajax({
+                type: 'get',
+                url: url,
+                timeout: 10000,
+                success: function (data) {
+                    initBase(data);
+                },
+            });
+        })();
+
+        function initBase(allDoc) {
+            let url = '';
+            let code = 'agentarts' || '';
+            const origin = window.location.origin;
+
+            if (code === 'pcre' && queryString('product')) {
+                code = queryString('product');
+            }
+            if (code) {
+                url = `${origin}/${code}/v3_support_leftmenu_fragment.html`;
+            }
+            $.ajax({
+                type: 'get',
+                url: url,
+                timeout: 10000,
+                success: function (data) {
+                    initCommon(data, allDoc, code);
+                },
+            });
+        }
+
+        function queryString(key) {
+            var url = window.location.href;
+            var val = url.match(new RegExp('[?&]' + key + '=([^&#]*)(&?)', 'i'));
+            return val ? val[1] : val;
+        }
+
+        function initCommon(data, allDoc, code) {
+            var peplang = $('html').attr('lang').toLowerCase();
+            var scripts = [
+                "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/support/resource/framework/js/common_revision.min.js?20240716&sttl=3.0.86",
+                "https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/support/resource/framework/js/maintainable_revision.min.js?20240716&sttl=3.0.86"
+            ];
+            $(data).find('ul.help-tsr li.nav-item').eq(1).find('a').attr('target', '_blank').removeClass('ajax-nav');
+            $('#support-nav').html($(data));
+            $('#support-nav').find('.side-nav-menu .side-menu-box').html($(allDoc));
+            if (peplang === 'es-us' || peplang === 'pt-br' || peplang === 'ja-jp') {
+                $('#support-nav .side-nav').find('.nav-item.level1').each((_index, item) => {
+                    if ($(item).attr('data-append') === 'false' && $(item).next().attr('data-append') === 'true') {
+                        $(item).after(`<li class="nav-item level1 append-tip"><a style="padding: 0;font-size: 12px;overflow: visible;max-height: initial;-webkit-line-clamp: initial;">以下内容暂无该语言版本，请查阅英文版本。</a></li>`);
+                    }
+                    if ($(item).attr('data-append') === 'true') {
+                        $(item).find('a').attr('target', '_blank');
+                    }
+                })
+            };
+            for(var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+                script.type = 'text/javaScript';
+                script.setAttribute('crossorigin','anonymous');
+                script.src = scripts[i];
+                document.getElementsByTagName('body')[0].appendChild(script);
+            };
+        }
+        !(function () {
+            var sWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            if (sWidth >= 768) {
+                $('.side-menu-box .item.item-search-mb').remove();
+            } else {
+                $('.side-menu-box .item.item-search-pc').remove();
+            }
+        })();
+    })(window, jQuery);
+</script> <div class="support-main" data-handbook-type="lowcode-agentarts"> <span class="move-line"></span> <div class="crumbs"> <a class="link help-link" href="/index.html" mate_data_ts_v2="zh-cn_support_detail_agentarts_breadcrumb.click_文档首页">文档首页</a><span>&#47;</span> <a class="link help-link" href="https://support.huaweicloud.com/agentarts/index.html" mate_data_ts_v2="zh-cn_support_detail_agentarts_breadcrumb.click_智果（AgentArts）智能体平台">智果（AgentArts）智能体平台</a><span>&#47;</span> <a class="link help-link" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_0001.html" mate_data_ts_v2="zh-cn_support_detail_agentarts_breadcrumb.click_低代码开发智能体">低代码开发智能体</a><span>&#47;</span> <a class="link help-link" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_0285.html" mate_data_ts_v2="zh-cn_support_detail_agentarts_breadcrumb.click_智能体组件">智能体组件</a><span>&#47;</span> <a class="link help-link" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_01300.html" mate_data_ts_v2="zh-cn_support_detail_agentarts_breadcrumb.click_Skill">Skill</a><span>&#47;</span> <span class="text">Skill介绍</span> </div> <div class="help-content help-center-document cf" data-current-handbookcode="lowcode-agentarts" data-handbook-type="lowcode-agentarts" > <div id="adOutsideDiv"><div id="helpAdDiv"></div></div> <div class="updateTime"> 更新时间：<span class="updateInfo">2026-09-16 GMT+08:00</span> <div class="doc-tips"> </div> </div> <div class="help-view-pdf" mate_data_ts_v2="zh-cn_support_detail_agentarts.click_查看PDF"> <a target="_blank" href="https://support.huaweicloud.com/lowcode-agentarts/AgentArts-低代码开发-pdf.pdf"><i></i><span>查看PDF</span></a> </div> <div class="help-view-share"> <a href="javascript:void(0);"><i></i><span>分享</span></a> <div class="share-content"> <ul class="share-list"> <li class="share-item share-weibo" mate_data_ts_v2="zh-cn_support_detail_agentarts.click_微博"> <a href="javascript:void(0);"><i></i><span>微博</span></a> <div class="share-result"> <p>分享文档到微博</p> </div> </li> <li class="share-item share-wechat" mate_data_ts_v2="zh-cn_support_detail_agentarts.click_微信"> <a href="javascript:void(0);"><i></i><span>微信</span></a> <div class="share-result"> <div id="qrcode"></div> </div> </li> <li class="share-item share-copy" mate_data_ts_v2="zh-cn_support_detail_agentarts.click_复制链接"> <a href="javascript:void(0);"><i></i><span data-copy-text="复制链接" data-copied-text="复制成功">复制链接</span></a> <div class="share-result"> <p>复制链接到剪贴板</p> </div> </li> </ul> </div> </div> <div class="share-item share-copy-fixed"> <i class="copy-success"></i> <p>链接复制成功！</p> <span class="copy-close"></span> </div> <a name="agentarts_05_01301"></a><a name="agentarts_05_01301"></a> <div class="articleBoxWithoutHead"> <h1 class="topicTitle-h1">Skill介绍</h1> <div id="body0000002562971333"> <div class="section" id="agentarts_05_01301__section2581294381"> <h4 class="sectiontitle">什么是Skill</h4> <p id="agentarts_05_01301__p108401028193111">在AgentArts平台上，Skill可以将过去分散在不同文档、代码片段或零散笔记中的隐性知识，以显性化和结构化的方式组织起来，使AI能够按需、稳定地执行专业任务。您可以将Skill看作是开发者的工具箱，将积累的技术经验和最佳实践打包成技能包，使AI成为您专业领域的专家。与一次性使用的提示词不同，Skill是可以保存、复用和优化的任务解决方案，使AI不仅能理解您的指令，更能掌握您的方法。当一个任务的处理流程相对固定、可重复操作，并且需要一致和可靠的输出时，可以将其封装为Skill，供通用智能体使用。</p> <p id="agentarts_05_01301__p1884002813319">例如，假设您是一名软件开发工程师，经常需要进行代码审查。您可以将代码审查的最佳实践和常见检查点整理成一个Skill包，包括代码风格检查、逻辑错误检测、性能优化建议等。这样，每次进行代码审查时，AI可以自动应用这些技能，确保审查过程的一致性和可靠性。</p> <div class="note" id="agentarts_05_01301__note11575181923317"> <img src="https://support.huaweicloud.com/lowcode-agentarts/public_sys-resources/note_3.0-zh-cn.png"><span class="notetitle"> </span> <div class="notebody"> <p id="agentarts_05_01301__p9191191612411">本功能仅在贵阳一区域（Region）提供。</p> <p id="agentarts_05_01301__p719141602412">当前版本仅支持Skill的导入、管理和浏览，暂不支持在智能体中调用使用。后续版本将逐步开放智能体集成能力。请关注最新动态公告。</p> </div> </div> </div> <div class="section" id="agentarts_05_01301__section13409316318"> <h4 class="sectiontitle">Skill的工作机制</h4> <p id="agentarts_05_01301__p1270811173919"><strong id="agentarts_05_01301__b197088111396">Skill</strong>是一种遵循统一规范的文件夹结构，清晰地定义了完成特定任务所需的标准作业流程（SOP）、方法论和参考模板。为了提高对话效率，智能体不会一次性加载Skill的全部内容，而是通过“按需加载”机制，在对话过程中动态判断哪些Skill与当前任务相关，并仅加载完成任务所需的必要信息，从而避免上下文窗口过载。</p> <p id="agentarts_05_01301__p570811143910">一个标准的Skill文件夹通常包含以下核心组成部分：</p> <ul id="agentarts_05_01301__ul3708201133916"> <li id="agentarts_05_01301__li17082114398"><strong id="agentarts_05_01301__b134621932183113">SKILL.md</strong>：必需文件 <ul id="agentarts_05_01301__ul4708517391"> <li id="agentarts_05_01301__li177085113920"><strong id="agentarts_05_01301__b167087153910">描述</strong>：这是Skill的核心元数据文件和使用说明书，用于向智能体说明该Skill的名称、用途以及操作指南。</li> <li id="agentarts_05_01301__li570813163914"><strong id="agentarts_05_01301__b1708171183911">功能</strong>：智能体在启动时会优先加载该文件的元数据信息，以便在需要时快速判断是否调用该Skill，并确定如何调用。</li> </ul></li> <li id="agentarts_05_01301__li117085113914"><strong id="agentarts_05_01301__b1671578453">scripts/目录：</strong> <ul id="agentarts_05_01301__ul670831173915"> <li id="agentarts_05_01301__li137089183910"><strong id="agentarts_05_01301__b1370819103911">描述</strong>：存放可执行的代码文件，用于完成具体的计算任务。</li> <li id="agentarts_05_01301__li1470811163910"><strong id="agentarts_05_01301__b1970816114391">功能</strong>：这些脚本文件包含明确的逻辑和算法，使智能体能够执行特定的操作，确保任务的确定性和可重复性。</li> </ul></li> <li id="agentarts_05_01301__li18708141133913"><strong id="agentarts_05_01301__b953131194512">references/目录：</strong> <ul id="agentarts_05_01301__ul1470812112391"> <li id="agentarts_05_01301__li207082111391"><strong id="agentarts_05_01301__b57081143919">描述</strong>：存放与Skill相关的参考资料，包括第三方API文档、设计规范、测试报告等。</li> <li id="agentarts_05_01301__li11708161133912"><strong id="agentarts_05_01301__b2708191143911">功能</strong>：这些文档为智能体提供背景信息和上下文支持，帮助其更好地理解任务需求并优化执行过程。</li> </ul></li> <li id="agentarts_05_01301__li1970814113399"><strong id="agentarts_05_01301__b1810815135454">assets/目录：</strong> <ul id="agentarts_05_01301__ul370815153916"> <li id="agentarts_05_01301__li1870841103918"><strong id="agentarts_05_01301__b77086173918">描述</strong>：存放Skill所需的静态资源和模板文件，例如配置模板、音视频文件等。</li> <li id="agentarts_05_01301__li1370813113919"><strong id="agentarts_05_01301__b117081313395">功能</strong>：这些资源文件为智能体提供执行任务所需的额外信息和素材，确保任务执行的准确性和高效性。</li> </ul></li> </ul> <p id="agentarts_05_01301__p167086163911">通过清晰的文件夹结构和按需加载机制，Skill能够帮助智能体在对话场景中灵活扩展功能，从通用助手快速转变为特定领域的专家。</p> </div> <div class="section" id="agentarts_05_01301__section460512835111"> <a name="agentarts_05_01301__section460512835111"></a><a name="section460512835111"></a> <h4 class="sectiontitle">Skill的制品包规范</h4> <p id="agentarts_05_01301__p11328444165114">Skill制品包为ZIP格式，遵循<a href="https://agentskills.io/specification" target="_blank" rel="noopener noreferrer">Agent Skills Standard</a>，以SKILL.md为核心清单文件。</p> <ol id="agentarts_05_01301__ol12779123915014"> <li id="agentarts_05_01301__li187796398016"><strong id="agentarts_05_01301__b37461572014">目录结构</strong> <div class="p" id="agentarts_05_01301__p7432131610511"> 制品包内部的目录结构示例如下： <pre class="screen" id="agentarts_05_01301__screen072157458">skill-package.zip
+└──skill-package
+   ├── SKILL.md              # 技能清单文件（必需，YAML frontmatter + Markdown）
+   ├── scripts/              # 可执行脚本目录
+   │   ├── main.py           # 入口文件
+   │   └── ...
+   ├── references/           # 参考文档（可选）
+   │   └── REFERENCE.md
+   └── assets/               # 静态资源（可选，模板、图片等）</pre> </div></li> <li id="agentarts_05_01301__li722511211918"><strong id="agentarts_05_01301__b1377861035714">SKILL.md清单文件格式</strong>： <div class="p" id="agentarts_05_01301__p266622114"> SKILL.md完全遵循<a href="https://agentskills.io/specification" target="_blank" rel="noopener noreferrer">Agent Skills Standard</a>规范。由YAML frontmatter（元数据头）和Markdown（正文描述）两部分组成。必须包含name和description字段， 且name不可修改。 <pre class="screen" id="agentarts_05_01301__screen79441730195711">---
+name: skill-creator
+description: Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.
+license: Complete terms in LICENSE.txt
+---
+
+# 此处为 Markdown 正文内容
+...</pre> </div></li> <li id="agentarts_05_01301__li518815473217"> <p id="agentarts_05_01301__p168045119311"><a name="agentarts_05_01301__li518815473217"></a><a name="li518815473217"></a><strong id="agentarts_05_01301__b64811315230">元数据字段定义</strong></p> <p id="agentarts_05_01301__p480441111320">以下为SKILL.md文件中YAML frontmatter的字段详细说明（遵循Agent Skills Standard）：</p> <div class="tableBorder"> <table cellpadding="4" cellspacing="0" summary="" id="agentarts_05_01301__table14858182310581" frame="border" border="1" rules="all"> <caption> <b>表1 </b><strong id="agentarts_05_01301__b864559731">元数据字段定义</strong> </caption> <thead align="left"> <tr id="agentarts_05_01301__row10858172316589"> <th align="left" class="cellrowborder" valign="top" width="17.791779177917793%" id="mcps1.3.3.3.3.3.2.4.1.1" liselected="liSelected"> <p id="agentarts_05_01301__p126561533145811">字段</p> </th> <th align="left" class="cellrowborder" valign="top" width="12.541254125412543%" id="mcps1.3.3.3.3.3.2.4.1.2" liselected="liSelected"> <p id="agentarts_05_01301__p2656113355818">是否必需</p> </th> <th align="left" class="cellrowborder" valign="top" width="69.66696669666966%" id="mcps1.3.3.3.3.3.2.4.1.3" liselected="liSelected"> <p id="agentarts_05_01301__p6656153320586">说明</p> </th> </tr> </thead> <tbody> <tr id="agentarts_05_01301__row1858162375810"> <td class="cellrowborder" valign="top" width="17.791779177917793%" headers="mcps1.3.3.3.3.3.2.4.1.1 "> <p id="agentarts_05_01301__p1981610341542">name</p> </td> <td class="cellrowborder" valign="top" width="12.541254125412543%" headers="mcps1.3.3.3.3.3.2.4.1.2 "> <p id="agentarts_05_01301__p88163341448">是</p> </td> <td class="cellrowborder" valign="top" width="69.66696669666966%" headers="mcps1.3.3.3.3.3.2.4.1.3 "> <p id="agentarts_05_01301__p1981610341349">技能唯一标识。</p> <ul id="agentarts_05_01301__ul1740911454417"> <li id="agentarts_05_01301__li49941352745">最长64字符（NFKC归一化后）。</li> <li id="agentarts_05_01301__li530615551342">仅允许Unicode字母、数字、连字符。</li> <li id="agentarts_05_01301__li117341049043">必须全小写；不能以连字符开头或结尾；不允许连续连字符。</li> </ul> </td> </tr> <tr id="agentarts_05_01301__row1185882355819"> <td class="cellrowborder" valign="top" width="17.791779177917793%" headers="mcps1.3.3.3.3.3.2.4.1.1 "> <p id="agentarts_05_01301__p1781614341416">description</p> </td> <td class="cellrowborder" valign="top" width="12.541254125412543%" headers="mcps1.3.3.3.3.3.2.4.1.2 "> <p id="agentarts_05_01301__p481663418416">是</p> </td> <td class="cellrowborder" valign="top" width="69.66696669666966%" headers="mcps1.3.3.3.3.3.2.4.1.3 "> <p id="agentarts_05_01301__p1681618341745">技能描述。</p> <ul id="agentarts_05_01301__ul53021619518"> <li id="agentarts_05_01301__li1013954558">最长1024字符。</li> <li id="agentarts_05_01301__li113021711751">需清晰描述技能功能及触发条件。</li> </ul> </td> </tr> <tr id="agentarts_05_01301__row2858723145819"> <td class="cellrowborder" valign="top" width="17.791779177917793%" headers="mcps1.3.3.3.3.3.2.4.1.1 "> <p id="agentarts_05_01301__p481673419420">license</p> </td> <td class="cellrowborder" valign="top" width="12.541254125412543%" headers="mcps1.3.3.3.3.3.2.4.1.2 "> <p id="agentarts_05_01301__p1081615341749">否</p> </td> <td class="cellrowborder" valign="top" width="69.66696669666966%" headers="mcps1.3.3.3.3.3.2.4.1.3 "> <p id="agentarts_05_01301__p08160348420">许可证名称或文件引用（例如LICENSE.txt）。</p> </td> </tr> <tr id="agentarts_05_01301__row785820234587"> <td class="cellrowborder" valign="top" width="17.791779177917793%" headers="mcps1.3.3.3.3.3.2.4.1.1 "> <p id="agentarts_05_01301__p1381618341415">allowed-tools</p> </td> <td class="cellrowborder" valign="top" width="12.541254125412543%" headers="mcps1.3.3.3.3.3.2.4.1.2 "> <p id="agentarts_05_01301__p681615348418">否</p> </td> <td class="cellrowborder" valign="top" width="69.66696669666966%" headers="mcps1.3.3.3.3.3.2.4.1.3 "> <p id="agentarts_05_01301__p128161934649">允许该技能调用的工具列表。</p> </td> </tr> <tr id="agentarts_05_01301__row28591123145819"> <td class="cellrowborder" valign="top" width="17.791779177917793%" headers="mcps1.3.3.3.3.3.2.4.1.1 "> <p id="agentarts_05_01301__p881615341647">metadata</p> </td> <td class="cellrowborder" valign="top" width="12.541254125412543%" headers="mcps1.3.3.3.3.3.2.4.1.2 "> <p id="agentarts_05_01301__p1481610341842">否</p> </td> <td class="cellrowborder" valign="top" width="69.66696669666966%" headers="mcps1.3.3.3.3.3.2.4.1.3 "> <p id="agentarts_05_01301__p1681663412416">扩展元数据，支持任意键值对（如author、version等）。</p> </td> </tr> <tr id="agentarts_05_01301__row11859923175810"> <td class="cellrowborder" valign="top" width="17.791779177917793%" headers="mcps1.3.3.3.3.3.2.4.1.1 "> <p id="agentarts_05_01301__p19816734846">compatibility</p> </td> <td class="cellrowborder" valign="top" width="12.541254125412543%" headers="mcps1.3.3.3.3.3.2.4.1.2 "> <p id="agentarts_05_01301__p1781663410411">否</p> </td> <td class="cellrowborder" valign="top" width="69.66696669666966%" headers="mcps1.3.3.3.3.3.2.4.1.3 "> <p id="agentarts_05_01301__p981612341141">运行环境要求。</p> <ul id="agentarts_05_01301__ul2180171110518"> <li id="agentarts_05_01301__li99476136514">数据类型须为字符串。</li> <li id="agentarts_05_01301__li141801711559">最长500字符。</li> </ul> </td> </tr> </tbody> </table> </div> </li> </ol> </div> <div class="section" id="agentarts_05_01301__section13850176101717"> <h4 class="sectiontitle">Skill与其他资源的区别</h4> <p id="agentarts_05_01301__p184311762519">在AgentArts中，Skill是一种专为增强智能体能力设计的标准化组件，包含指令文档、元数据配置和执行脚本等要素，能够为智能体注入特定领域的专业能力、流程规范和经验法则。为了更好地理解Skill与其他资源的区别，以下是对Skill与提示词、工作流、插件、MCP和知识库的详细分析：</p> <div class="tableBorder"> <table cellpadding="4" cellspacing="0" summary="" id="agentarts_05_01301__table11930114062816" frame="border" border="1" rules="all"> <caption> <b>表2 </b>Skill与其他资源的区别 </caption> <thead align="left"> <tr id="agentarts_05_01301__row199301440112812"> <th align="left" class="cellrowborder" valign="top" width="13.211321132113211%" id="mcps1.3.4.3.2.4.1.1" liselected="liSelected"> <p id="agentarts_05_01301__p4406175372817"><strong id="agentarts_05_01301__b240615539281">对比项</strong></p> </th> <th align="left" class="cellrowborder" valign="top" width="41.6941694169417%" id="mcps1.3.4.3.2.4.1.2" liselected="liSelected"> <p id="agentarts_05_01301__p174061053182818"><strong id="agentarts_05_01301__b64066538285">Skill的定义与特点</strong></p> </th> <th align="left" class="cellrowborder" valign="top" width="45.0945094509451%" id="mcps1.3.4.3.2.4.1.3" liselected="liSelected"> <p id="agentarts_05_01301__p1940665312810"><strong id="agentarts_05_01301__b17406105313285">对比项的定义与特点</strong></p> </th> </tr> </thead> <tbody> <tr id="agentarts_05_01301__row11930174016288"> <td class="cellrowborder" valign="top" width="13.211321132113211%" headers="mcps1.3.4.3.2.4.1.1 "> <p id="agentarts_05_01301__p33092599281">提示词</p> </td> <td class="cellrowborder" valign="top" width="41.6941694169417%" headers="mcps1.3.4.3.2.4.1.2 "> <p id="agentarts_05_01301__p2309165972814">提供特定领域的专业能力与方法，按需触发，用于完成具体任务。</p> </td> <td class="cellrowborder" valign="top" width="45.0945094509451%" headers="mcps1.3.4.3.2.4.1.3 "> <p id="agentarts_05_01301__p730955982811">定义智能体的全局人设和工作方式，持续生效，影响输出风格。</p> </td> </tr> <tr id="agentarts_05_01301__row13930940122817"> <td class="cellrowborder" valign="top" width="13.211321132113211%" headers="mcps1.3.4.3.2.4.1.1 "> <p id="agentarts_05_01301__p14309135916281">工作流</p> </td> <td class="cellrowborder" valign="top" width="41.6941694169417%" headers="mcps1.3.4.3.2.4.1.2 "> <p id="agentarts_05_01301__p183091359162810">灵活的操作说明书，允许自主决策，不固定执行路径。</p> </td> <td class="cellrowborder" valign="top" width="45.0945094509451%" headers="mcps1.3.4.3.2.4.1.3 "> <p id="agentarts_05_01301__p1430919598288">预设的固定流程，明确步骤顺序，适用于自动化任务。</p> </td> </tr> <tr id="agentarts_05_01301__row79301040172819"> <td class="cellrowborder" valign="top" width="13.211321132113211%" headers="mcps1.3.4.3.2.4.1.1 "> <p id="agentarts_05_01301__p19309105917282">插件</p> </td> <td class="cellrowborder" valign="top" width="41.6941694169417%" headers="mcps1.3.4.3.2.4.1.2 "> <p id="agentarts_05_01301__p73091259102812">封装使用策略，指导何时何地使用插件。</p> </td> <td class="cellrowborder" valign="top" width="45.0945094509451%" headers="mcps1.3.4.3.2.4.1.3 "> <p id="agentarts_05_01301__p530965952818">负责调用外部API，处理技术接入。</p> </td> </tr> <tr id="agentarts_05_01301__row2931640102818"> <td class="cellrowborder" valign="top" width="13.211321132113211%" headers="mcps1.3.4.3.2.4.1.1 "> <p id="agentarts_05_01301__p8309159172816">MCP</p> </td> <td class="cellrowborder" valign="top" width="41.6941694169417%" headers="mcps1.3.4.3.2.4.1.2 "> <p id="agentarts_05_01301__p3309125912818">指导如何使用MCP提供的接口完成任务。</p> </td> <td class="cellrowborder" valign="top" width="45.0945094509451%" headers="mcps1.3.4.3.2.4.1.3 "> <p id="agentarts_05_01301__p1309559122815">提供能力调用接口，访问外部服务。</p> </td> </tr> <tr id="agentarts_05_01301__row16931184019288"> <td class="cellrowborder" valign="top" width="13.211321132113211%" headers="mcps1.3.4.3.2.4.1.1 "> <p id="agentarts_05_01301__p13309105918281">知识库</p> </td> <td class="cellrowborder" valign="top" width="41.6941694169417%" headers="mcps1.3.4.3.2.4.1.2 "> <p id="agentarts_05_01301__p03091959102816">提供标准操作流程（SOP）与最佳实践，处理明确问题更高效。</p> </td> <td class="cellrowborder" valign="top" width="45.0945094509451%" headers="mcps1.3.4.3.2.4.1.3 "> <p id="agentarts_05_01301__p183095594282">存储文档与素材内容，适合信息检索与内容补充类场景。</p> </td> </tr> </tbody> </table> </div> <p id="agentarts_05_01301__p1323413446275">在AgentArts中，Skill是一种强大的工具，通过将隐性知识显性化、结构化，使智能体能够稳定、高效地执行专业任务。Skill与提示词、工作流、插件、MCP和知识库在功能和应用场景上各有侧重，但它们共同构成了智能体的综合能力体系，使智能体能够在不同场景下灵活、高效地完成任务。</p> </div> <div class="section" id="agentarts_05_01301__section1675818244335"> <h4 class="sectiontitle">Skill的类型</h4> <p id="agentarts_05_01301__p644054883318">根据Skill的提供者和使用范围，Skill可分为以下类型：</p> <div class="tableBorder"> <table cellpadding="4" cellspacing="0" summary="" id="agentarts_05_01301__table9940519143413" frame="border" border="1" rules="all"> <caption> <b>表3 </b>Skill的类型 </caption> <thead align="left"> <tr id="agentarts_05_01301__row179401719153413"> <th align="left" class="cellrowborder" valign="top" width="16.09160916091609%" id="mcps1.3.5.3.2.4.1.1" liselected="liSelected"> <p id="agentarts_05_01301__p129832332346"><strong id="agentarts_05_01301__b1498343314344">服务</strong></p> </th> <th align="left" class="cellrowborder" valign="top" width="21.512151215121513%" id="mcps1.3.5.3.2.4.1.2" liselected="liSelected"> <p id="agentarts_05_01301__p898353314348"><strong id="agentarts_05_01301__b598315336345">技能类型</strong></p> </th> <th align="left" class="cellrowborder" valign="top" width="62.3962396239624%" id="mcps1.3.5.3.2.4.1.3" liselected="liSelected"> <p id="agentarts_05_01301__p1298383333419"><strong id="agentarts_05_01301__b12983153393411">说明</strong></p> </th> </tr> </thead> <tbody> <tr id="agentarts_05_01301__row322919305378"> <td class="cellrowborder" rowspan="3" valign="top" width="16.09160916091609%" headers="mcps1.3.5.3.2.4.1.1 "> <p id="agentarts_05_01301__p1038173611371">AgentArts</p> </td> <td class="cellrowborder" valign="top" width="21.512151215121513%" headers="mcps1.3.5.3.2.4.1.2 "> <p id="agentarts_05_01301__p1794010191344">资产广场Skill</p> </td> <td class="cellrowborder" valign="top" width="62.3962396239624%" headers="mcps1.3.5.3.2.4.1.3 "> <p id="agentarts_05_01301__p1937315613356">由AgentArts开发和维护的编程技能，通过资产广场面向所有用户开放。在对话中，AgentArts会按需自动调用官方Skill完成任务。</p> </td> </tr> <tr id="agentarts_05_01301__row1615192893715"> <td class="cellrowborder" rowspan="2" valign="top" headers="mcps1.3.5.3.2.4.1.1 "> <p id="agentarts_05_01301__p294001919342">组件库Skill</p> </td> <td class="cellrowborder" valign="top" headers="mcps1.3.5.3.2.4.1.2 "> <p id="agentarts_05_01301__p732171413620">AgentArts支持用户手动上传的技能，这些技能仅限您个人使用。技能的范畴广泛，不仅限于编程，还包括语言、沟通、管理、技术、创意、商业、个人发展、专业、生活和社交技能等。</p> </td> </tr> <tr id="agentarts_05_01301__row1428214161510"> <td class="cellrowborder" valign="top" headers="mcps1.3.5.3.2.4.1.1 "> <div class="caution" id="agentarts_05_01301__note533103111389"> <span class="cautiontitle"> 注意： </span> <div class="cautionbody"> <p id="agentarts_05_01301__p233153173813">请您注意，"第三方技能"来源于第三方服务商提供，当您使用第三方服务商提供的技能时，您应严格遵守第三方的相关协议。您理解并同意，第三方服务商提供的技能可能存在风险，我们无法对其做出任何形式的保证。请您在使用前审慎考量并评估其风险。</p> </div> </div> <p id="agentarts_05_01301__p1035881313434">AgentArts支持导入通过第三方工具生成的资源包，或存储在OBS服务中的资源包。</p> </td> </tr> </tbody> </table> </div> </div> <div class="section" id="agentarts_05_01301__section633516446122"> <h4 class="sectiontitle">资产广场Skill</h4> <p id="agentarts_05_01301__p1691237114217">AgentArts通过资产广场Skill页签，与开发者共同构建技能生态系统。Skill使用者则可以根据自身需求，从广场中挑选合适的Skill进行使用。“Skill”页面集中展示了平台精选的各类技能工具，如<a href="#agentarts_05_01301__fig18509171414332">图1</a>所示。这些技能功能丰富，覆盖通用工具、效率提升、自动化处理、设计与可视化、内容创作等多个实用领域，能够有效扩展智能体的应用能力。用户可根据实际业务需求，灵活调用和组合各类技能，以提升工作效率和实现业务目标。</p> <div class="fignone" id="agentarts_05_01301__fig18509171414332"> <a name="agentarts_05_01301__fig18509171414332"></a><a name="fig18509171414332"></a><span class="figcap"><b>图1 </b>Skill</span> <br> <span><img id="agentarts_05_01301__image1092603818338" src="https://support.huaweicloud.com/lowcode-agentarts/zh-cn_image_0000002568749689.png" title="点击放大" class="imgResize"></span> </div> </div> </div> </div> <div class="footerNavBar clearfix"> <div class="parentlink"> 父主题： <a href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_01300.html">Skill </a> </div> </div> <script language="JavaScript">
+<!--
+initImageViewer('.imgResize');
+var msg_imageMax = "查看原图";
+var msg_imageClose = "关闭";
+//--></script> </div> <script>
+    (function ($) {
+      $.fn.bigrender = function (opts) {
+
+        var winHeight = document.documentElement.clientHeight;
+        var sum = 0;
+        var count = 0;
+        var flash = new Array();
+
+        // 'class' 是textarea父节点的类；'textarea' 是textarea标签的类；'threshold'是距离进入屏幕还有150像素就开始渲染；'remove'是否删除textarea标签       
+        options = $.extend({
+          'class': '.br-warp',
+          'textarea': '.br-rendered',
+          'threshold': 150,
+          'remove': true,
+        }, opts);
+
+        $brenders = $(options.class);
+        // 渲染首屏的内容
+        initBigrender();
+        // 绑定滚动条事件
+        scrollDisplay();
+
+
+        // 函数定义
+        function initBigrender() {
+          $brenders.each(function (n, object) {
+            sum++;
+            if (isRender($(this))) {
+              display($(this));
+              count++;
+              flash[n] = true;
+            } else {
+              flash[n] = false;
+            }
+          });
+        }
+
+        // 判断时候需要渲染
+        function isRender(object) {
+          offsetTop = object.offset().top;
+          ojh = object.outerHeight(true);
+          st = Math.max(document.body.scrollTop || document.documentElement.scrollTop);
+
+          if (offsetTop + ojh + options.threshold >= st && offsetTop - options.threshold < (st + winHeight)) {
+            return true;
+          } else return false;
+
+        }
+
+        // 渲染textarea内的html代码
+        function display(object) {
+          $display = object.find(options.textarea).eq(0);
+          object.append($display.val());
+          if (options.remove) {
+            $display.remove();
+          }
+        }
+
+        // 屏幕绑定滚动条事件，当待渲染的内容进入可视屏幕就触发isRender函数
+        function scrollDisplay() {
+          $(window).scroll(function () {
+            if (count < sum) {
+              $brenders.each(function (n, object) {
+                if (!flash[n]) {
+                  if (isRender($(this))) {
+                    display($(this));
+                    count++;
+                    flash[n] = true;
+                  }
+                }
+              });
+            }
+          });
+        }
+      };
+    })(jQuery);
+    window.addEventListener('DOMContentLoaded', function (event) {
+      $.fn.bigrender({ 'threshold': 100 });
+    });
+    $(document).data('ajaxNav') && $(document).data('ajaxNav').addEvent('load', function () {
+      $.fn.bigrender({ 'threshold': 100 });
+    });
+  </script> <div class="help-detail-feedback "> <div class="action"> <p class="prev"> <span class="label js-title"></span> <a class="link help-link js-title" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_01300.html" mate_data_ts_v2="zh-cn_support_detail_agentarts.click_上一篇：Skill">上一篇：Skill</a> </p> <p class="next"> <span class="label js-title"></span> <a class="link help-link js-title" href="https://support.huaweicloud.com/lowcode-agentarts/agentarts_05_0388.html" mate_data_ts_v2="zh-cn_support_detail_agentarts.click_下一篇：示例：导入旅游规划Skill">下一篇：示例：导入旅游规划Skill</a> </p> </div> </div> <div class="relevant-content"> <div class="relevant-body"> <h4 class="relevant-title">相关文档</h4> <ul class="relevant-left"></ul> </div> <div class="doc-bottom-feedback"> <h3 class="feedback-title"> <span>您对此文档页面的整体评价？</span> </h3> <div class="help-form" bi_parent_name="feedback"> <div class="help-btn-wrap"> <div class="help-form-content"> <div class="star-score-btns"> <div id="score0" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_0星"><span>0</span><i class="help-form-n"></i></div> <div id="score1" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_1星"><span>1</span><i class="help-form-n"></i></div> <div id="score2" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_2星"><span>2</span><i class="help-form-n"></i></div> <div id="score3" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_3星"><span>3</span><i class="help-form-n"></i></div> <div id="score4" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_4星"><span>4</span><i class="help-form-n"></i></div> <div id="score5" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_5星"><span>5</span><i class="help-form-n"></i></div> <div id="score6" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_6星"><span>6</span><i class="help-form-n"></i></div> <div id="score7" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_7星"><span>7</span><i class="help-form-m"></i></div> <div id="score8" class="help-form-btn help-btn-unuse" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_8星"><span>8</span><i class="help-form-m"></i></div> <div id="score9" class="help-form-btn help-btn-use" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_9星"><span>9</span><i class="help-form-y"></i></div> <div id="score10" class="help-form-btn help-btn-use" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_10星"><span>10</span><i class="help-form-y"></i></div> </div> <div class="star-score-tip"> <span>非常不满意</span><span>非常满意</span> </div> </div> <a class="help-form-btn provide-feedback" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_提供反馈">提供反馈</a> </div> <div class="por-tip success help-form-success"> <div class="por-tip-content"> <i class="por-icon por-icon-success"></i> <div class="por-tip-wenzi"> <span>提交成功！非常感谢您的反馈，我们会继续努力做到更好！<span class="logged-text-str">您可在<a href="https://bbs.huaweicloud.com/mysuggestion" target="_blank" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_我的云声建议.submitted">我的云声建议</a>查看反馈及问题处理状态。</span></span> <span class="por-tip-remove"></span> </div> </div> </div> <div class="por-tip error help-form-false"> <div class="por-tip-content"> <i class="por-icon por-icon-error"></i> <div class="por-tip-wenzi"> <span>系统繁忙，请稍后重试</span> <span class="por-tip-remove"></span> </div> </div> </div> <form action="" data-evaluate-level=""> <div class="question-negative"> <div class="support-mast">您遇到了哪些问题？（最多选三项）</div> <div class="por-checkbox-group"> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="内容不易理解" name="question" id="support_suggest_0"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_0" class="">内容不易理解</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="内容不正确" name="question" id="support_suggest_1"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_1">内容不正确</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="内容不完整" name="question" id="support_suggest_2"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_2">内容不完整</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="阅读体验不佳" name="question" id="support_suggest_3"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_3">阅读体验不佳</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="产品问题" name="question" id="support_suggest_4"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_4">产品问题</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="其他" name="question" id="support_suggest_5"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_5">其他</label> </div> </div> </div> <div class="question-positive"> <div class="support-mast">您感到满意的原因是？（最多选三项）</div> <div class="por-checkbox-group"> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="内容易理解" name="question_positive" id="support_suggest_0_positive"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_0_positive">内容易理解</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="内容正确" name="question_positive" id="support_suggest_1_positive"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_1_positive">内容正确</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="内容丰富" name="question_positive" id="support_suggest_2_positive"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_2_positive">内容丰富</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="阅读体验友好" name="question_positive" id="support_suggest_3_positive"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_3_positive">阅读体验友好</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="产品功能完备" name="question_positive" id="support_suggest_4_positive"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_4_positive">产品功能完备</label> </div> <div class="por-checkbox-inline"> <div class="por-checkbox"> <input class="por-native" type="checkbox" value="其他" name="question_positive" id="support_suggest_5_positive"> <span><i class="u-icon u-icon-confirm"></i></span> </div> <label for="support_suggest_5_positive">其他</label> </div> </div> </div> <p class="support-mast optional">意见反馈</p> <div class="textarea-wrapper"> <textarea maxlength="500" rows="10" cols="30" placeholder="欢迎反馈更多建议"></textarea> <div class="textarea-numbers"><span>0</span>/500</div> </div> <p class="important choose"> <span class="por-icon por-icon-error"></span>请至少选择一项反馈信息并填写问题反馈 </p> <p class="important length"><span class="por-icon por-icon-error"></span>字符长度不能超过500</p> <a href="javascript:void(0)" class="por-btn por-btn-primary submit" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_直接提交">直接提交</a> <a href="javascript:void(0)" class="por-btn por-btn-secondary false" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_取消">取消</a> </form> <div class="contact-decs"> <p>如您有其它疑问，您也可以通过华为云社区问答频道来与我们联系探讨</p> <a href="https://www.huaweicloud.com/ai-assistant/index.html" class="help-form-more" target="_blank" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_云宝助手提问">云宝助手提问 </a><a href="https://bbs.huaweicloud.com/forum/" target="_blank" class="help-form-more" mate_data_ts_v2="zh-cn_support_detail_agentarts_bottomfeedback.click_云社区提问">云社区提问</a> </div> </div> </div> </div> </div> <div class="guide-buoy" mate_data_ts_v2="zh-cn_support_detail_agentarts_introduction.open"></div> <div class="guide-model"> <div class="img-container" mate_data_ts_v2="zh-cn_support_detail_agentarts_introduction.close"></div> </div> </div> </div> <span class="show-menu-btn"></span> </div> </div> </div> <div class="footer-service" meta-data-adjust-app="hide"></div> <script src="https://res.hc-cdn.com/cnpm-portal-utils/1.4.16/PortalUtils.umd.js"></script> <script src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/js/v2/clipboard.js"></script> <script src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/support/resource/framework/js/highlight.min.js"></script> <div id="register"></div> <div id="service"></div> <script>
+  var furionAppCode = '';
+  var $currentUrl = location.href;
+  const $path = location.pathname;
+  if($currentUrl.indexOf("/pricing/calculator.html") !== -1 || $currentUrl.indexOf("/pricing/index.html") !== -1){
+    furionAppCode = 'D00903385CF649FCA048B5DE1C1E6D4E';
+  }else if($currentUrl.indexOf("https://activity.huaweicloud.com") === 0) {
+    furionAppCode = '51D7385A7D2B4937BB45DC755E82C48C';
+  } else if ($currentUrl.indexOf("https://support.huaweicloud.com") === 0) {
+    furionAppCode = '1C04D12EB0F8479A9DA9A24639FCA81C';
+  }else{
+    furionAppCode = '7D9AB7C5E01D4698B7B918065C762796';
+  }
+  if(!window.__fr && furionAppCode){
+    !function(x, n) {
+      window[n] = window[n] || {};
+      window[n].config = {
+          appId: furionAppCode,setting: "api,jsTrack,uba,longtask,rtti",hashMode: true,closeReportFMP: true,
+      };
+      var o = document.createElement('script');
+      o.src = x, o.async = !0;
+      var d = document.body.firstChild;
+      document.body.insertBefore(o, d);
+    }('https://portal.hc-cdn.com/FurionSdkStatic/3.6.55/furion-cdn.min.js', '__fr');
+  }
+</script> <script src="https://portal.hc-cdn.com/cnpm-global-resources/1.1.16/js/bi_new.js?sttl=3.0.86"></script> <script>
+    if (window.NodeList && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+            thisArg = thisArg || window;
+            for (var i = 0; i < this.length; i++) {
+                callback.call(thisArg, this[i], i, this);
+            }
+        };
+    }
+</script> <script src="https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/global.min.js" crossorigin="anonymous"></script> <script src="https://portal.hc-cdn.com/cnpm-baseui/3.0.18/theme-token.js?sttl=3.0.86&ttr=1.2.20" crossorigin="anonymous"></script> <script type="text/javascript" src="https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/feloader.js" crossorigin="anonymous"></script> <div class="hide-sttl" style="height: 0;width:0" data-sttl="3.0.86"></div> <script>
+    window.sttlVersion = $('.hide-sttl').attr('data-sttl') || '2020';
+</script> <script>
+            if( !/pcloudApp/i.test(navigator.userAgent) ){
+                $("#header").css("display","block");
+            }
+        </script> <!-- TODO：兼容AEM的埋点 Begin--> <script>
+    // edit--china--en-us--declaration
+    var $ts_site = "china";
+    var $ts_lang = "zh-cn".replace("_", "-");
+    var $ts_domain = window.location.host.split('.')[1] ? window.location.host.split('.')[0] : 'localhost';
+    var channel = "support";
+    var $uri = channel?"/detail.html":"detail.html";
+    var $pepchannel = (channel+$uri).split("/").join("_").replace(".html","");
+    window.matedataDomain = $ts_domain;
+
+    // if open in app, should change ts_domain in to "app"
+    if( /pcloudApp/i.test(navigator.userAgent) ) {
+        window.matedataDomain = "app";
+    }else{
+        var str = window.location.search;
+        var suband = "type=android";
+        var subios = "type=ios";
+        if( str.indexOf(subios)!=-1 || str.indexOf(suband)!=-1 ){
+            window.matedataDomain = "app";
+        }
+    }
+
+    // 新系统中生成的方式需要改下
+    window.pageMatedataPrefix = window.matedataDomain + "_" + $ts_site + "_" + $ts_lang + "_" + $pepchannel + ".click.";
+    window.headerMatedataPrefix = window.matedataDomain + "_" + $ts_site + "_" + $ts_lang + "_" + $pepchannel + "_navigation.click.";
+    window.footerMatedataPrefix = window.matedataDomain + "_" + $ts_site + "_" + $ts_lang + "_" + $pepchannel + "_footer.click.";
+    window.registerMatedataPrefix = window.matedataDomain + "_" + $ts_site + "_" + $ts_lang + "_" + $pepchannel + "_register.click.";
+    window.serviceMatedataPrefix = window.matedataDomain + "_" + $ts_site + "_" + $ts_lang + "_" + $pepchannel + "_service.click.";
+    window.pep_uaid = ($ts_site=="china") ? "UA-55836286-1" : "UA-55836286-39";
+    window.mate_data_ts_pageType = $pepchannel;
+</script> <!-- TODO：兼容AEM的埋点 End--> <script>
+    function showFooter(){
+       if(window.matedataDomain != "app") {
+           $("#footer .footer-nav").css('display','block');
+           $("#footer .footer-copyright-container").css('display','block');
+           $(".footer-service .footer-wrapper").css('display','block');
+           $("#footer #videoDiv").css('display','none');
+       }
+    }
+    if (window.feloader) {
+        feloader.onLoad(function(){
+            feloader.getScript('https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/static/v2_resources/css/product-icons.css');
+            feloader.getScript('https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/static/v2_resources/css/iconFont-solution.css');
+            showFooter()
+        })
+    }
+    else{
+        document.write("<link rel='stylesheet' href='https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/static/v2_resources/css/product-icons.css'>");
+        document.write("<link rel='stylesheet' href='https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/static/v2_resources/css/iconFont-solution.css'>");
+        showFooter();
+    }
+
+    // 处理一下a标签href是tel的场景
+    var telsEle = $("a[href^='tel:'][target]");
+    telsEle .removeAttr("target");
+</script> <script>
+    if (window.$aioList && window.$aioList.length > 0) {
+        for (var i = 0; i < window.$aioList.length; i++) {
+            var tmpComponent = window.$aioList[i];
+            if (tmpComponent) {
+                var tmpComponentInfo = tmpComponent.split("/");
+                if (tmpComponentInfo.length == 2) {
+                    var name = tmpComponentInfo[0];
+                    var version = tmpComponentInfo[1];
+                    var tmpComponentWrapperEle = $('[data-mod-name="' + name + '"]');
+                    var eleVersionAttr = tmpComponentWrapperEle.attr("data-mod-version");
+                    if (eleVersionAttr && eleVersionAttr != version) {
+                        var linkEle = $('head link[href*="' + name + '/' + version + '"]');
+                        linkEle.attr("href", linkEle.attr("href").replace(version, eleVersionAttr));
+                    }
+                }
+            }
+        }
+    }
+</script> <script>
+    // document.referrer可以获取浏览器上一次地址，如果document.referrer是空字符串，则不为语言切换场景
+    window.refLan = "";
+    window.$PEP = true;
+
+    function getSiteFromURL() {
+        url = window.location.host;
+        urlArr = url.split(".");
+        if (urlArr[0] == "www") {
+            reg = "CN";
+        } else {
+            reg = "HK"
+        }
+        return reg;
+    }
+    var siteStr = $('html').attr("site")
+    if (siteStr) {
+        window.reg = siteStr == "china" ? "CN" : siteStr.toUpperCase();
+    } else {
+        window.reg = getSiteFromURL();
+    }
+
+    window.promptLan = $('html').attr("lang");
+
+    if (document.referrer != "") {
+        if (document.referrer.indexOf("/authui/login") == -1) {
+            if (document.referrer.indexOf(".com/intl") != -1) {
+                window.refLan = (document.referrer.indexOf(".com/intl/zh-cn") != -1) ? "zh-CN" : ((document.referrer.indexOf(".com/intl/en-us") != -1) ? "en-US" : "es-US");
+            } else {
+                window.refLan = (document.referrer.indexOf(".com/en-us") != -1) ? "en-US" : "zh-CN";
+            }
+        } else {
+            //window.refLan = (document.referrer.indexOf("locale=zh-cn") != -1) ? "zh-CN" : "en-US";
+            if (document.referrer.indexOf("locale=") != -1) {
+                window.refLan = (document.referrer.indexOf("locale=zh-cn") != -1) ? "zh-CN" : ((document.referrer.indexOf("locale=en-us") != -1) ? "en-US" : "es-US");
+            } else {
+                window.refLan = window.promptLan;
+            }
+        }
+    } else {
+        window.refLan = window.promptLan;
+    }
+</script> <!--/* 55 trace for some special page */--> <script>
+    !function ($) {
+        if (window.dataLayer && window.dataLayer.push) {
+
+            if (window.location.pathname == "/consultation/") {
+                $("#submitBtn").click(function (e) {
+                    window.dataLayer.push({
+                        "event": "consultSubmit",
+                        "productName": $("#applicationscene").val()
+                    });
+                })
+            }
+
+            $("#header .header-login").click(function (e) {
+                window.dataLayer.push({
+                    "event": "loginIntention"
+                })
+            });
+
+            $("#header .header-register").click(function (e) {
+                window.dataLayer.push({
+                    "event": "creationIntention",
+                    "pageType": window.mate_data_ts_pageType,
+                    "pagePosition": "Header"
+                })
+            });
+
+
+        }
+    }(jQuery);
+</script> <script src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/apm/wise_trace.min.js?sttl=3.0.86"></script> <script>
+    $("a[href*='/pep-dialog/']").each(function () {
+        var ele = $(this);
+        var href = ele.attr("href");
+        var path = href.replace(/.html/g, "");
+        var ajaxPath = path.indexOf("activity/") == -1 ? path : path.split("activity/")[1];
+        var arr = path.split("/");
+        var dialogName = arr[arr.length - 1];
+        var location_lang = $('html').attr('lang').toLowerCase();
+        var site = $('html').attr('site').toLowerCase() == 'china' ? 'china' : 'hk';  //  站点判断，国内：china；国际站：hk
+        var dialogUrl = (window.location.host.indexOf(".com") != -1 && window.location.host.indexOf("pep.huaweicloud.com") == -1) ? "https://" + window.location.host + "/" + ajaxPath + "/jcr:content/dialog.html?wcmmode=disabled" : "/content/cloudbu-site/" + site + "/" + location_lang + "/activity/" + ajaxPath + "/jcr:content/dialog.html?wcmmode=disabled";
+        ele.css('pointer-events', 'auto');
+        ele.on("click", function (e) {
+            e.stopPropagation();
+            e.preventDefault();
+            if ($("body [data-pep-path*='" + dialogName + "']").length !== 0) {
+                $("body [data-pep-path*='" + dialogName + "']").remove();
+            }
+            // dialog for activity
+            $.ajax({
+                url: dialogUrl,
+                success: function (data) {
+                    if (data) {
+                        data = data.replace('block', 'none');
+                        $("body").append(data);
+                        $("#modal-rule").html($("body [data-pep-path*='" + dialogName + "']").html());
+                        window.activityModal.show('#modal-rule', true);
+                    }
+                }
+            })
+        });
+    });
+</script> <time style="display:none!important;" datetime="2025-09-24T14:08:06.000+08:00">2025-09-24</time> <div class="footer-service" bi_parent_name="service" meta-data-adjust-app="hide"> <div class="footer-service-wrapper por-container"> <ul> <li> <a href="https://www.huaweicloud.com/service/protection.html#section-0" bi_name="7*24" target="_blank"> <i class="footer-icon-support lazyload" data-src="https://portal.hc-cdn.com/cnpm-header-and-footer/1.1.0/base/footer-china/components/service/images/support.svg"></i> <p class="footer-title">7*24</p> <p>多渠道服务支持</p> </a> </li> <li> <a href="https://beian.huaweicloud.com" bi_name="备案" target="_blank"> <i class="footer-icon-support lazyload" data-src="https://portal.hc-cdn.com/cnpm-header-and-footer/1.1.0/base/footer-china/components/service/images/record.svg"></i> <p class="footer-title">备案</p> <p>提供免费备案服务</p> </a> </li> <li> <a href="https://www.huaweicloud.com/service/professionalservices.html" bi_name="专业服务" target="_blank"> <i class="footer-icon-support lazyload" data-src="https://portal.hc-cdn.com/cnpm-header-and-footer/1.1.0/base/footer-china/components/service/images/vip.svg"></i> <p class="footer-title">专业服务</p> <p>云业务全流程支持</p> </a> </li> <li> <a href="https://www.huaweicloud.com/service/protection.html#section-2" bi_name="退订" target="_blank"> <i class="footer-icon-support lazyload" data-src="https://portal.hc-cdn.com/cnpm-header-and-footer/1.1.0/base/footer-china/components/service/images/unsub.svg"></i> <p class="footer-title">退订</p> <p>享无忧退订服务</p> </a> </li> <li> <a href="https://bbs.huaweicloud.com/suggestion" bi_name="建议反馈" target="_blank"> <i class="footer-icon-support lazyload" data-src="https://portal.hc-cdn.com/cnpm-header-and-footer/1.1.0/base/footer-china/components/service/images/feedback.svg"></i> <p class="footer-title">建议反馈</p> <p>优化改进建议</p> </a> </li> </ul> </div></div> <div id="footer" bi_parent_name="footer" meta-data-adjust-app="hide"> <div class="footer-hots-mb"> <div class="footer-hots-mb-wrapper"> <div class="footer-hots-mb-title">热门产品</div> <ul> <li> <a href="https://www.huaweicloud.com/product/ecs.html" target="_blank">弹性云服务器</a> </li> <li> <a href="https://www.huaweicloud.com/product/obs.html" target="_blank">对象存储服务</a> </li> <li> <a href="https://www.huaweicloud.com/product/gaussdb.html" target="_blank">云数据库 GaussDB</a> </li> </ul> </div></div><div class="footer-nav" meta-data-adjust-app="hide"> <div class="footer-nav-wrapper"> <div class="footer-nav-content"> <a href="https://www.huaweicloud.com/mobile_app/hwapp.html?channel=navigation_right" class="footer-logo"> <span>华为云App</span> </a> <div class="footer-nav-submenus"> <div class="footer-nav-submenus-inner"> <div class="footer-nav-contact"> <div class="footer-nav-contact-phone"> <p class="footer-nav-contact-phone-title">售前咨询热线</p> <a href="https://www.huaweicloud.com/service/contact.html"><span>950808转1</span></a> </div> <ul class="footer-nav-contact-emails"> <li> <div class="footer-nav-contact-emails-item"> <a href="https://console.huaweicloud.com/ticket/?locale=zh-cn#/ticketindex/createIndex">技术服务咨询</a> </div> </li> <li> <div class="footer-nav-contact-emails-item"> <a href="mailto:beian@huaweicloud.com">备案服务</a> <div class="foot-email"> <p> <a href="mailto:beian@huaweicloud.com">beian@huaweicloud.com</a> </p> </div> </div> </li> <li> <div class="footer-nav-contact-emails-item"> <a href="mailto:partner@huaweicloud.com">云商店咨询</a> <div class="foot-email"> <p> <a href="mailto:partner@huaweicloud.com">partner@huaweicloud.com</a> </p> </div> </div> </li> </ul> </div> <div class="footer-nav-download"><a href="https://www.huaweicloud.com/mobile_app/api_page/appv2/app_download.html?channel=official"><i></i>下载华为云App</a></div> <p class="footer-nav-contact-title">关注我们</p> <dl class="footer-nav-about"> <dt>关注华为云</dt> <dd class="footer-nav-about-dd-mb"> <a class="footer-nav-submenus-link footer-nav-submenus-link-phone" href="tel:4000955988"> <i class="footer-icon-phone"></i> <p>4000 955 988</p> <p>950808</p> </a> </dd> <dd> <a class="footer-nav-submenus-link weixin-sh"> <i class="svgicon lazyload" data-src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/%E7%BB%84%E4%BB%B6%E9%AA%8C%E8%AF%81/pep-common-footer/1619165229378039259.svg"></i> <p>华为云微信</p> <div class="footer-nav-submenus-qr qr-wechat"> <span class="lazyload" data-src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/v2_resources/images/global/footer/weixin-mobile.png" data-qr="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/commons/web_resoure/cms/static/v2_resources/images/global/footer/weixin-mobile.png" data-text="长按/截图保存，微信识别二维码&lt;br&gt;或者关注公众号“华为云”"></span> <p>扫描二维码</p> </div> </a> </dd> <dd> <a class="footer-nav-submenus-link microapp-sh"> <i class="svgicon lazyload" data-src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/commons/footer/icon-microapp.svg"></i> <p>华为云微信小程序</p> <div class="footer-nav-submenus-qr qr-microapp"> <span class="lazyload" data-src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/commons/footer/qr-microapp.png" data-qr="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/commons/footer/qr-microapp.png" data-text="长按/截图保存，微信识别二维码&lt;br&gt;或者微信搜索“华为云”小程序"></span> <p>华为云微信小程序</p> </div> </a> </dd> <dd> <a class="footer-nav-submenus-link " href="https://weibo.com/p/1006061930559805"> <i class="svgicon lazyload" data-src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/组件验证/pep-common-footer/1619165229391072287.svg"> </i> <p>华为云微博</p> <div class="footer-nav-submenus-qr qr-weibo" href="https://weibo.com/p/1006061930559805"> <span></span> <p>扫描二维码</p> </div> </a> </dd> <dd class="footer-nav-about-dd-app"> <a class="footer-nav-submenus-link hover" id="footer-nav-app" href="https://www.huaweicloud.com/mobile_app/api_page/appv2/app_download.html?channel=official" target="_blank"> <i class="svgicon lazyload" data-src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/yunying/new-header/app.svg"></i> <p>华为云App</p> <div class="footer-nav-submenus-qr qr-app"> <span></span> <p>扫描下载华为云App</p> </div> </a> </dd> </dl> <a href="tel:950808,1" class="footer-nav-contact-icon"><i class="lazyload" data-src="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/%E7%BB%84%E4%BB%B6%E9%AA%8C%E8%AF%81/pep-common-footer/1618990892808034938.svg"></i>售前咨询：<em>950808转1</em></a> <ul class="footer-law-mb"> <li><a href="https://www.huaweicloud.com/declaration/statement.html" target="_blank">法律条文</a> </li> <li><a href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank">隐私政策</a></li> </ul> <div class="wx-pop-wrapper"> <div class="wx-pop"> <img class="dbl-lazy loaded"> <p class="wx-info"></p> </div> </div> </div> </div> <div class="footer-nav-menus"> <dl bi_parent_name="关于华为云"> <dt>关于华为云</dt> <dd><a class="footer-link" href="https://www.huaweicloud.com/about/index.html" target="_blank" rel="nofollow">了解华为云</a></dd> <dd><a class="footer-link" href="https://support.huaweicloud.com/what-is.html" target="_blank" rel="nofollow">云计算概念</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/cases.html" target="_blank" rel="nofollow">客户案例</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/securecenter/overallsafety.html" target="_blank" rel="nofollow">信任中心</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/news.html" target="_blank" rel="nofollow">新闻报道</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/about/live.html" target="_blank" rel="nofollow">视频中心</a></dd> </dl> <dl bi_parent_name="热门产品"> <dt>热门产品</dt> <dd><a class="footer-link" href="https://codearts.huaweicloud.com" target="_blank" rel="nofollow">华为云码道代码智能体</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/product/modelarts.html" target="_blank" rel="nofollow"> 华为云魔坊（ModelArts）</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/product/modelarts/studio.html" target="_blank" rel="nofollow">MaaS模型即服务</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/product/agentarts.html" target="_blank" rel="nofollow">智果AgentArts智能体平台</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/product/ecs.html" target="_blank" rel="nofollow">弹性云服务器 ECS</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/product/mysql.html" target="_blank" rel="nofollow">云数据库 RDS for MySQL</a></dd> </dl> <dl bi_parent_name="支持与服务"> <dt>支持与服务</dt> <dd><a class="footer-link" href="https://support.huaweicloud.com/help-tools.html" target="_blank" rel="nofollow">自助服务</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/notice.html" target="_blank" rel="nofollow">服务公告</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/service/supportplans.html" target="_blank" rel="nofollow">支持计划</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/service/contact.html" target="_blank" rel="nofollow">联系我们</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/report/index.html" target="_blank" rel="nofollow">举报中心</a></dd> </dl> <dl bi_parent_name="实用工具"> <dt>实用工具</dt> <dd><a class="footer-link" href="https://developer.huaweicloud.com/tool.html" target="_blank" rel="nofollow">开发工具</a></dd> <dd><a class="footer-link" href="https://www.huaweicloud.com/service/aiassistant.html" target="_blank" rel="nofollow">云宝助手</a></dd> <dd><a class="footer-link" href="https://status.service.huaweicloud.com/#/home" target="_blank" rel="nofollow">云服务健康看板</a></dd> </dl> <dl bi_parent_name="友情链接"> <dt>友情链接</dt> <dd><a class="footer-link" href="https://cloudpartner.shixizhi.huawei.com/" target="_blank" rel="nofollow">华为云伙伴作战营</a></dd> <dd><a class="footer-link" href="https://www.huawei.com/cn/?ic_medium=direct&amp;ic_source=surlent" target="_blank" rel="nofollow">华为官网</a></dd> <dd><a class="footer-link" href="https://consumer.huawei.com/cn/?utm_source=huaweicloud&amp;utm_medium=footer" target="_blank" rel="nofollow">华为消费者业务</a></dd> <dd><a class="footer-link" href="https://developer.huawei.com/consumer/cn/" target="_blank" rel="nofollow">华为开发者联盟</a></dd> <dd><a class="footer-link" href="https://e.huawei.com/cn/" target="_blank" rel="nofollow">华为企业业务</a></dd> <dd><a class="footer-link" href="https://www.vmall.com/index_new.html#cid=92120" target="_blank" rel="nofollow">华为商城</a></dd> </dl> </div> </div> </div></div><div class="footer-copyright-container"> <div class="footer-copyright-wrapper"> <ul class="footer-law"> <li><a class="footer-link" href="https://www.huaweicloud.com/declaration/statement.html" target="_blank" rel="nofollow">法律条文</a></li> <li><a class="footer-link" href="https://www.huaweicloud.com/declaration/sa_prp.html" target="_blank" rel="nofollow">隐私政策</a></li> </ul> <div class="footer-copyright"> <span>©2026 Huaweicloud.com 版权所有</span> <a class="footer-link" href="https://beian.miit.gov.cn/" target="_blank" rel="nofollow">黔ICP备20004760号-14</a> <span>苏B2-20130048号</span> <span>A2.B1.B2-20070312</span> <span></span> <p class="footer-copyright-extra">增值电信业务经营许可证：B1.B2-20200593 | 代理域名注册服务机构：新网、西数</p> </div> <div class="footer-record"> <i class="footer-icon-record1" target="_blank"><a href="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/wangxue/header/yingyezhizhao02.jpg" target="_blank"></a></i> <span><a class="footer-link" href="https://res-static.hc-cdn.cn/cloudbu-site/china/zh-cn/wangxue/header/yingyezhizhao02.jpg" target="_blank">电子营业执照</a></span> <i class="footer-icon-record2"><a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52990002000093" target="_blank"></a></i> <span><a class="footer-link" href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=52990002000093" target="_blank">贵公网安备 52990002000093号</a></span> </div> </div></div><script>  if (window.screen.width < 1024) {      $('#footer-nav-app').attr('href', $('#footer-nav-app').attr("src-href"));  }</script></div> <script>
+    var originsWhiteList = ['https://www.huaweicloud.com','https://activity.huaweicloud.com','https://support.huaweicloud.com','https://beian.huaweicloud.com'];
+    var currentOrigin = originsWhiteList.includes(window.location.origin)?window.location.origin:'https://www.huaweicloud.com';
+    var customHeader = "";
+    var url = (currentOrigin+"/common/header-footer-china-zh-2023.html");
+    if(customHeader){ url = "https://"+customHeader+".html"; }
+    var $tmpForPEP = document.createElement("div");
+    $.ajax({
+        url: url,
+        async: true,
+        timeout: 10000,
+        success: function(response) {
+            $tmpForPEP.innerHTML = response;
+            // 下拉部分
+            $("#footer").append($tmpForPEP.querySelector("#edit-header-drop").innerHTML);           
+            var scripts = [
+                "https://portal.hc-cdn.com/cpage-pep-header-and-footer-china/2.0.61/header-and-footer-china.umd.js?sttl=3.0.86&ttr=1.2.20",
+                "https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/portalLogin.min.js?sttl=3.0.86&ttr=1.2.20"
+            ];
+            for(var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+                script.type = 'text/javaScript';
+                script.setAttribute('crossorigin','anonymous');
+                script.src = scripts[i];
+                document.getElementsByTagName('body')[0].appendChild(script);
+            }
+        },
+        error: function(response) {
+          var scripts = [
+                "https://portal.hc-cdn.com/cpage-pep-header-and-footer-china/2.0.61/header-and-footer-china.umd.js?sttl=3.0.86&ttr=1.2.20",
+                "https://portal.hc-cdn.com/cnpm-global-resources/1.2.20/js/portalLogin.min.js?sttl=3.0.86&ttr=1.2.20"
+            ]
+            for(var i = 0; i < scripts.length; i++) {
+                var script = document.createElement('script');
+                script.type = 'text/javaScript';
+                script.setAttribute('crossorigin','anonymous');
+                script.src = scripts[i];
+                document.getElementsByTagName('body')[0].appendChild(script);
+            }
+        }
+    });
+
+
+    if (!window.gConfig) {
+        window.gConfig = {}
+    }
+    window.gConfig.isApp = /galaxy/i.test(navigator.userAgent) && window.galaxy;
+    // 初始化全局变量
+    var jsonParamInit = {}
+    var jsonParamView = {}
+    var jsonParamEvent = {}
+    jsonParamInit['UserAccount'] = 'host'
+    jsonParamEvent['rec_account'] = getUaCookie('ua')
+    jsonParamView['rec_account'] = getUaCookie('ua')
+    var portalDomain = 'https://portal.huaweicloud.com',
+    ssoDomain = 'https://auth.huaweicloud.com'
+    var isVerified = false
+    var isLogin = false
+    var totalMsg = 0;
+    function getUaCookie(c_name) {
+        if (document.cookie.length > 0) {
+            var c_start = document.cookie.indexOf(c_name + '=')
+            if (c_start != -1) {
+            c_start = c_start + c_name.length + 1
+            var c_end = document.cookie.indexOf(';', c_start)
+            if (c_end == -1) c_end = document.cookie.length
+            return decodeURI(document.cookie.substring(c_start, c_end))
+            }
+        }
+        return ''
+    }
+</script> <div class="video-div"> <div class="video-modal-wrapper"> <div class="video-close-btn"></div> </div> </div> <div id="videoDiv" style="z-index: 9999; display: none; position: relative"> <div id="videobg" style=" position: absolute; background: #000; opacity: 0.3; filter: progid:DXImageTransform.Microsoft.Alpha(opacity=30); "></div> <div id="videoplayerDiv" style="position: absolute"> <div id="videoContainer" style="width: 700px; height: 500px; background-color: black"> <span id="closeBtn"><img src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/static/close_grey_1.svg?sttl=3.0.86" alt="" height="22" width="22" onclick="closeVideo()" /></span> <div id="videoplayer" style="height: 500px; width: 700px"></div> </div> </div> </div> <script type="text/javascript">
+        var videoDomain = '//bbs-video.huaweicloud.com';
+
+        var _videoProtocol = 'https:' == document.location.protocol ? 'https:' : 'http:';
+        var tag2urlMap = [];
+        var loading = false;
+        var isLogin = false;
+        function play(video_url, video_desc, domain) {
+            if (/(\.mp4|\.mu38)/.test(video_url)) {
+                _play(video_url, video_desc, domain);
+            } else {
+                if (tag2urlMap[video_url]) _play(tag2urlMap[video_url], video_desc, domain);
+                else {
+                    if (loading) return;
+                    loading = true;
+                    $.ajax({
+                        type: 'GET',
+                        url: 'https://bbs.huaweicloud.com/api/video/out-play?tag=' + video_url,
+                        dataType: 'text',
+                        success: function (result) {
+                            loading = false;
+                            tag2urlMap[video_url] = result;
+                            _play(tag2urlMap[video_url], video_desc, domain);
+                        },
+                        error: function () {
+                            loading = false;
+                        },
+                    });
+                }
+            }
+        }
+        function _play(video_url, video_desc, domain) {
+            var reg = RegExp(/bbs/);
+            var tmp = video_url;
+            var contentAsset = '/content/dam/';
+            var bbsAsset = '/FileServer/getFile/';
+            if (!video_url.match(reg)) {
+                if (video_url.match(contentAsset) || video_url.match(bbsAsset)) {
+                    tmp = video_url;
+                } else if (domain) {
+                    var tmp = _videoProtocol + domain + video_url;
+                } else {
+                    var tmp = _videoProtocol + videoDomain + video_url;
+                }
+            }
+            tmp = tmp.replace(/m3u8/, 'mp4');
+            tmp = tmp.replace(/bbs\.huaweicloud\.com/, 'bbs-video.huaweicloud.com');
+
+            var ua = navigator && navigator.userAgent;
+
+            var win_width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+            var obj = '#videoplayer';
+            if (win_width < 700) {
+                $('#videoContainer')
+                    .width(win_width)
+                    .height((win_width * 3) / 4);
+                $(obj)
+                    .width(win_width)
+                    .height((win_width * 3) / 4);
+            }
+            var h = $(obj).height();
+            var w = $(obj).width();
+
+            $(obj).append(
+                '<video src="' +
+                tmp +
+                '" height="' +
+                h +
+                '" width="' +
+                w +
+                '" autoplay="autoplay" controls="controls" controlslist="nodownload"></video>',
+            );
+            if($.fn.videoPointEvent) { //videoPointEvent和empujarPointEvent为新增埋点事件
+                var el = $('#videoplayer').find('video')[0];
+                $.fn.videoPointEvent(el);
+            }
+
+            var userAgent = navigator.userAgent;
+            var isOpera = userAgent.indexOf('Opera') > -1;
+            var height = document.body.offsetHeight;
+            $('#videobg').css('width', $(window).width());
+            $('#videobg').css('height', height);
+            $('#videobg').css('top', -height);
+            $('#videobg').css('left', '0px');
+            $('#videoplayerDiv').css('left', ($(window).width() - $('#videoplayer').width()) / 2);
+            $('#videoplayerDiv').css(
+                'top',
+                ($(window).height() - $('#videoplayer').height()) / 2 + $(window).scrollTop() - height,
+            );
+            $('#videoDiv').show();
+        }
+
+        function closeVideo() {
+            if($.fn.empujarPointEvent) {
+                $.fn.empujarPointEvent();
+            }
+            if (!!window.ActiveXObject || 'ActiveXObject' in window) {
+                $('#videoplayer').remove();
+                $('#closeBtn').append('<div id="videoplayer" style="height:500px;width:700px;">');
+            } else {
+                $('#videoplayer').html('');
+            }
+            $('#videoDiv').hide();
+        }
+    </script> <img src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/images/support-doc-revision-note.svg" id="support-hidden-image-note" alt="" hidden="" /> <img src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/images/support-doc-revision-warning.svg" id="support-hidden-image-warning" alt="" hidden="" /> <img src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/images/support-doc-revision-danger.svg" id="support-hidden-image-danger" alt="" hidden="" /> <img src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/images/support-doc-revision-notice.svg" id="support-hidden-image-notice" alt="" hidden="" /> <img src="https://res-static.hc-cdn.cn/aem/content/dam/cloudbu-site/archive/china/zh-cn/support/resource/framework/v3/images/support-doc-revision-caution.svg" id="support-hidden-image-caution" alt="" hidden="" /> </body> </html> 

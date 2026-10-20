@@ -1,0 +1,22 @@
+[
+  {
+    "slug": "workrally-image",
+    "url": "https://api.skillhub.cn/api/v1/download?slug=workrally-image",
+    "status": 200,
+    "final_url": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skills/workrally-image/1.0.5.zip",
+    "content_type": "application/zip",
+    "content_disposition": "attachment",
+    "first4_hex": "504b0304",
+    "no_payment_or_auth_sent": true
+  },
+  {
+    "slug": "xique-tender-pay",
+    "url": "https://api.skillhub.cn/api/v1/download?slug=xique-tender-pay",
+    "status": 200,
+    "final_url": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skills/257084/xique-tender-pay/1.0.0.zip",
+    "content_type": "application/zip",
+    "content_disposition": "attachment",
+    "first4_hex": "504b0304",
+    "no_payment_or_auth_sent": true
+  }
+]

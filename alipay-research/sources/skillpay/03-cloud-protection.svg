@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1120" viewBox="0 0 1600 1120">
+  <style>
+    rect, circle { fill: none !important; stroke: #202020 !important; }
+    path { stroke: #202020 !important; }
+    text { fill: #202020 !important; }
+    svg > rect:first-of-type { fill: none !important; stroke: none !important; }
+  </style>
+  <rect width="1600" height="1120" fill="#F6F4EE"/>
+  <text x="80" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#77736B" letter-spacing="3">FIGURE 02 / CLOUD PROTECTION, LOCAL EXECUTION</text>
+  <text x="80" y="142" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="42" font-weight="700" fill="#171717">云端保护生成执行文本，本地完成执行与回答</text>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">
+    <rect x="75" y="205" width="260" height="70" rx="15" fill="#FFF" stroke="#B9B5AB" stroke-width="2"/>
+    <text x="205" y="249" text-anchor="middle" font-size="23" font-weight="650" fill="#171717">Skill 使用者</text>
+    <rect x="445" y="205" width="300" height="70" rx="15" fill="#E8EDF5" stroke="#8092AD" stroke-width="2"/>
+    <text x="595" y="249" text-anchor="middle" font-size="23" font-weight="650" fill="#171717">本地 Agent</text>
+    <rect x="855" y="205" width="300" height="70" rx="15" fill="#FBE9E4" stroke="#C77A63" stroke-width="2"/>
+    <text x="1005" y="249" text-anchor="middle" font-size="23" font-weight="650" fill="#171717">云端保护</text>
+    <rect x="1265" y="205" width="260" height="70" rx="15" fill="#E8EFE9" stroke="#7D9C86" stroke-width="2"/>
+    <text x="1395" y="249" text-anchor="middle" font-size="23" font-weight="650" fill="#171717">本地公开文件</text>
+  </g>
+
+  <g stroke="#BDB9AF" stroke-width="2" stroke-dasharray="7 9">
+    <path d="M205 275V820M205 900V1015"/>
+    <path d="M595 275V320M595 392V1015"/>
+    <path d="M1005 275V540M1005 658V1015"/>
+    <path d="M1395 275V1015"/>
+  </g>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">
+    <rect x="425" y="320" width="340" height="72" rx="12" fill="#FFF6CC" stroke="#C9B245" stroke-width="2"/>
+    <text x="595" y="350" text-anchor="middle" font-size="17" fill="#7A681C">LOCAL PACKAGE</text>
+    <text x="595" y="378" text-anchor="middle" font-size="21" font-weight="650" fill="#171717">影子 Skill + public-files</text>
+
+    <path d="M205 430H582" stroke="#171717" stroke-width="2.3"/>
+    <path d="M570 421L582 430L570 439" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="393" y="414" text-anchor="middle" font-size="19" fill="#393835">① 提交问题或附件</text>
+
+    <path d="M595 505H992" stroke="#171717" stroke-width="2.3"/>
+    <path d="M980 496L992 505L980 514" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="793" y="489" text-anchor="middle" font-size="19" fill="#393835">② 发送当前问题与有效上下文</text>
+
+    <rect x="875" y="540" width="260" height="118" rx="14" fill="#FFF6CC" stroke="#C9B245" stroke-width="2"/>
+    <text x="1005" y="574" text-anchor="middle" font-size="17" fill="#7A681C">MINIMUM DISCLOSURE</text>
+    <text x="1005" y="608" text-anchor="middle" font-size="21" font-weight="650" fill="#171717">只披露必要执行文本</text>
+    <text x="1005" y="637" text-anchor="middle" font-size="18" fill="#5D542B">不运行脚本 · 不计算答案</text>
+
+    <path d="M1005 695H608" stroke="#171717" stroke-width="2.3" stroke-dasharray="8 7"/>
+    <path d="M620 686L608 695L620 704" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="806" y="679" text-anchor="middle" font-size="19" fill="#A84F38">③ 返回本次任务专用执行文本</text>
+
+    <path d="M595 725C665 725 665 780 595 780C550 780 550 755 582 755" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <path d="M572 747L582 755L572 763" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="690" y="760" font-size="19" fill="#393835">④ 本地校验执行文本</text>
+
+    <rect x="100" y="820" width="370" height="80" rx="16" fill="#FBE9E4" stroke="#C77A63" stroke-width="2"/>
+    <text x="285" y="852" text-anchor="middle" font-size="17" fill="#A84F38">IF INFORMATION IS MISSING</text>
+    <text x="285" y="883" text-anchor="middle" font-size="21" font-weight="650" fill="#171717">⑤ 向使用者追问缺失信息</text>
+    <path d="M582 820H470" stroke="#171717" stroke-width="2.3"/>
+    <path d="M482 811L470 820L482 829" fill="none" stroke="#171717" stroke-width="2.3"/>
+
+    <path d="M608 865H1382" stroke="#171717" stroke-width="2.3"/>
+    <path d="M1370 856L1382 865L1370 874" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="995" y="849" text-anchor="middle" font-size="19" fill="#3E6653">⑤ 信息充分：本地运行脚本、读取数据</text>
+
+    <path d="M1395 930H608" stroke="#171717" stroke-width="2.3" stroke-dasharray="8 7"/>
+    <path d="M620 921L608 930L620 939" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="1001" y="914" text-anchor="middle" font-size="19" fill="#3E6653">⑥ 返回本地执行结果</text>
+
+    <path d="M595 985H218" stroke="#171717" stroke-width="2.3"/>
+    <path d="M230 976L218 985L230 994" fill="none" stroke="#171717" stroke-width="2.3"/>
+    <text x="406" y="969" text-anchor="middle" font-size="19" font-weight="650" fill="#171717">⑦ 本地 Agent 生成最终答案</text>
+  </g>
+
+  <rect x="80" y="1052" width="1440" height="2" fill="#D2CEC4"/>
+  <text x="80" y="1090" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18" fill="#77736B">完整 Skill 明文不下发；云端保护只披露当前任务必要的执行文本，脚本、公开文件与最终答案均留在本地链路。</text>
+</svg>
+

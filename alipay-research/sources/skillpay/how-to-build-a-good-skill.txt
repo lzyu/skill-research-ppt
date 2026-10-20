@@ -1,0 +1,175 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f6f7"><title>好的 Skill，怎样做出来？｜支付宝 SkillPay</title><meta name="description" content="把专业经验整理成 Skill，只是第一步。真正决定它是否好用的，是它能否理解具体任务、作出恰当判断，并交付用户可以直接使用的结果。"><meta name="robots" content="index,follow"><link rel="canonical" href="https://skillpay.alipay.com/blog/how-to-build-a-good-skill"><link rel="icon" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:title" content="好的 Skill，怎样做出来？｜支付宝 SkillPay"><meta property="og:description" content="把专业经验整理成 Skill，只是第一步。真正决定它是否好用的，是它能否理解具体任务、作出恰当判断，并交付用户可以直接使用的结果。"><meta property="og:url" content="https://skillpay.alipay.com/blog/how-to-build-a-good-skill"><meta property="og:image" content="https://skillpay.alipay.com/og.png"><meta property="og:image:width" content="1731"><meta property="og:image:height" content="909"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="好的 Skill，怎样做出来？｜支付宝 SkillPay"><meta name="twitter:description" content="把专业经验整理成 Skill，只是第一步。真正决定它是否好用的，是它能否理解具体任务、作出恰当判断，并交付用户可以直接使用的结果。"><meta name="twitter:image" content="https://skillpay.alipay.com/og.png"><script>window.injectInfo = { appName: "skillpay-official-site", env: "PROD" };</script><script>window.publicPath = window.__basement_public_path__ = "https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/";</script><script>
+      document.documentElement.classList.add('has-scroll-reveal');
+      document.documentElement.classList.toggle(
+        'no-native-view-transition',
+        typeof document.startViewTransition !== 'function',
+      );
+    </script><meta name="data-aspm" content="a5486"><meta name="data-bizType" content="common"><script>(function(){const tracertConfig = {"spmAPos":"a5486","spmBPos":"b245646","pathName":"/blog/how-to-build-a-good-skill","name":"SkillPay博客详情页","bizType":"common","autoLogPv":true,"autoExpo":true,"ifRouterNeedPv":false,"expoOnce":false};
+const spmPageName = "SkillPay博客详情页";
+const tracertScriptUrl = "https://ur.alipay.com/tracert_a5486.js";
+
+  window._to = { ...tracertConfig, pathName: window.location.pathname };
+  window.__aipaySpmPageName = spmPageName;
+  window.__aipayTracertScriptUrl = tracertScriptUrl;
+})();</script><script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/spm-params.js"></script><script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/spm-loader.js"></script><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/ContentLayout.Cw0x-58E.css"><style>.subfooter-legal[data-astro-cid-gcn2mc3v]{width:100%;justify-content:flex-start;text-align:left}.subfooter-infringement[data-astro-cid-gcn2mc3v]{width:100%;max-width:920px;margin:0;color:inherit;font-size:var(--text-sub-size);line-height:var(--text-sub-line-height);text-align:left}.subfooter-infringement[data-astro-cid-gcn2mc3v] a[data-astro-cid-gcn2mc3v]{color:inherit;text-decoration:underline;text-underline-offset:2px}.subfooter-infringement[data-astro-cid-gcn2mc3v] a[data-astro-cid-gcn2mc3v]:hover{color:var(--foreground)}
+</style><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/onboarding.PKcRDf-v.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/NavUserAccount.DGmt9f10.css">
+    <meta name="yuyan_id" content="180020010001296536">
+    <meta name="bm_sprint_id" content="S090011956410">
+
+    <script>
+      !function(){var e=window;function n(n){if(e.g_monitor&&e.g_monitor.events){var t=e.g_monitor.events;t.length<20&&t.push(n)}}e.g_monitor=e.g_monitor||{listener:{},events:[]};var r=e.g_monitor.listener;function t(t,n){try{e.addEventListener?e.addEventListener(t,n,!0):e.attachEvent?e.attachEvent("on"+t,n):e[t]=n,r[t]=n}catch(n){console.warn("Tracert 监控事件注册失败："+t,n)}}r.error||t("error",n),r.unhandledrejection||t("unhandledrejection",n)}();
+    </script>
+    <script>
+      (function (window, document) {
+      window.yuyanCmdCache = [];
+      window.yuyanMonitor = {
+        config: function () {},
+        logError: function () {},
+        log: function () { window.yuyanCmdCache.push(arguments); }
+      };
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-sdk/1.1.0/dist/index.umd.min.js';
+      script.crossOrigin = "anonymous";
+      script.onload = function () {
+        if (YuyanMonitor) {
+          window.yuyanMonitor = new YuyanMonitor({ yuyanId: "180020010001296536" });
+          if (window.yuyanCmdCache.length) {
+            for (let i = 0; i < window.yuyanCmdCache.length; i++) {
+              window.yuyanMonitor.log.apply(window.yuyanMonitor, window.yuyanCmdCache[i]);
+            }
+            window.yuyanCmdCache.length = 0;
+          }
+        }
+      }
+      var insertAnchor = document.getElementsByTagName('script')[0];
+      if (insertAnchor.parentNode) {
+        insertAnchor.parentNode.insertBefore(script, insertAnchor);
+      }
+    })(window, window.document);
+    </script>
+  </head> <body data-aspm="b245646" data-biz-type="common">  <main class="content-page"> <header class="site-header content-site-header"> <div class="site-header-bar"> <a data-aspm-click="ca125825.da216628" data-aspm-desc="站点品牌-返回首页" class="brand brand--landing" href="/" aria-label="SkillPay 首页"> <img class="brand-landing-logo" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/skillpay-logo-landing.svg" alt=""> </a> <nav aria-label="主导航"> <a data-aspm-click="ca125826.da216626" data-aspm-desc="站点导航-博客" class="is-active" aria-current="page" href="/blog">博客</a> <a data-aspm-click="ca125826.da216627" data-aspm-desc="站点导航-更新日志" href="/changelog">更新日志</a> <div class="home-user-area" data-nav-auth="" aria-live="polite"> <a data-aspm-click="ca125823.da216585" data-aspm-desc="登录入口-登录" data-spm-button-name="登录" class="login extruded-button" href="/blog/how-to-build-a-good-skill?aipay_login=1&amp;aipay_login_next=stay" data-nav-login="true" hidden="" data-login-trigger="" data-extruded-button="" data-tilt-base-x="6" data-tilt-range-x="15" data-tilt-range-y="20"> <span class="extruded-button__volume"> <span class="extruded-button__layer" data-extruded-back="" style="--extruded-layer-z: 0px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 1px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 2px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 3px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 4px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 5px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 6px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 7px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 8px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 9px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 10px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 11px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 12px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 13px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 14px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 15px" aria-hidden="true"></span> <span class="extruded-button__face extruded-button__face--sweep login-face"><span class="login-label">登录</span></span> </span> </a><div class="navUser" data-nav-user="" hidden=""> <button data-aspm-click="ca125837.da216729" data-aspm-desc="页头账号菜单-打开用户菜单" class="navUserTrigger" type="button" aria-haspopup="menu" aria-expanded="false" data-nav-user-trigger=""> <span class="navUserAvatar" aria-hidden="true"> <img class="navUserAvatarImage" alt="" data-nav-user-avatar-image="" hidden=""> <span class="navUserAvatarInitial" data-nav-user-initial="" hidden="">开</span> </span> <span class="navUserName" data-nav-user-name="">开发者</span> <svg class="navUserArrow" viewBox="0 0 15 14" aria-hidden="true" focusable="false"> <path d="M4.25 5.25L7.5 8.5L10.75 5.25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> <div class="navUserMenu" role="menu" aria-hidden="true" data-nav-user-menu=""> <div class="navUserMenuName" role="presentation" data-nav-user-full-name=""></div> <a data-aspm-click="ca125837.da216676" data-aspm-desc="页头账号菜单-我是创作者" class="navUserMenuItem" href="/creator/products?aipay_choose_perspective=creator" role="menuitem"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path> <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline> <line x1="12" y1="22.08" x2="12" y2="12"></line> </svg>
+我是创作者
+</a> <a data-aspm-click="ca125837.da216731" data-aspm-desc="页头账号菜单-我是消费者" class="navUserMenuItem" href="/user/skills?aipay_choose_perspective=consumer" role="menuitem"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="8" r="4"></circle> <path d="M4 21a8 8 0 0 1 16 0"></path> </svg>
+我是消费者
+</a> <button data-aspm-click="ca125837.da216728" data-aspm-desc="页头账号菜单-退出登录" class="navUserMenuItem" type="button" role="menuitem" data-nav-logout=""> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path> <polyline points="16 17 21 12 16 7"></polyline> <line x1="21" y1="12" x2="9" y2="12"></line> </svg>
+退出登录
+</button> </div> </div> <script type="module">function h(){document.querySelectorAll(".navUser").forEach((o,f)=>{if(o.dataset.namePresentationBound)return;const n=o.querySelector("[data-nav-user-name]"),t=o.querySelector("[data-nav-user-trigger]"),s=o.querySelector("[data-nav-user-full-name]");if(!n||!t||!s)return;o.dataset.namePresentationBound="true";const e=document.createElement("div");e.id=`nav-name-tooltip-${f}`,e.className="nav-user-overflow-tooltip",e.setAttribute("role","tooltip"),e.hidden=!0,document.body.append(e);const c=new AbortController,r={signal:c.signal},a=()=>{e.hidden=!0},u=()=>n.clientWidth>0&&n.scrollWidth>n.clientWidth+1,i=()=>{a(),s.textContent=n.textContent,u()?t.setAttribute("aria-describedby",e.id):t.removeAttribute("aria-describedby")},l=()=>{if(i(),!u()||t.getAttribute("aria-expanded")==="true")return;e.textContent=n.textContent,e.hidden=!1;const d=n.getBoundingClientRect(),b=e.getBoundingClientRect();e.style.left=`${Math.max(12,Math.min(d.left,innerWidth-b.width-12))}px`,e.style.top=`${Math.max(12,Math.min(d.bottom+8,innerHeight-b.height-12))}px`};t.addEventListener("mouseenter",l,r),t.addEventListener("mouseleave",a,r),t.addEventListener("focus",l,r),t.addEventListener("blur",a,r),t.addEventListener("click",a,r),t.addEventListener("keydown",d=>{d.key==="Escape"&&a()},r),window.addEventListener("scroll",a,{...r,capture:!0}),window.addEventListener("resize",i,r);const v=new ResizeObserver(i);v.observe(n);const m=new MutationObserver(i);m.observe(n,{childList:!0,characterData:!0,subtree:!0}),i(),document.addEventListener("astro:before-swap",()=>{c.abort(),v.disconnect(),m.disconnect(),e.remove(),t.removeAttribute("aria-describedby"),delete o.dataset.namePresentationBound},{once:!0})})}h();document.addEventListener("astro:page-load",h);</script> <script>
+  (() => {
+    const script = document.currentScript;
+    const root = script?.parentElement?.closest('[data-nav-auth]');
+    if (!(root instanceof HTMLElement)) return;
+
+    try {
+      const cached = JSON.parse(sessionStorage.getItem('aipay:nav-account-cache') || 'null');
+      if (!cached || cached.version !== 1 || Number(cached.expiresAt || 0) <= Date.now()) return;
+
+      const isLoggedIn = cached.isLoggedIn === true;
+      const userInfo =
+        cached.userInfo && typeof cached.userInfo === 'object' ? cached.userInfo : {};
+      const loginEntry = root.querySelector('[data-nav-login]');
+      const user = root.querySelector('[data-nav-user]');
+      if (loginEntry instanceof HTMLElement) loginEntry.hidden = isLoggedIn;
+      if (user instanceof HTMLElement) user.hidden = !isLoggedIn;
+      root.toggleAttribute('data-nav-logged-in', isLoggedIn);
+      root.dataset.navAccountState = isLoggedIn ? 'logged-in' : 'logged-out';
+      if (!isLoggedIn) return;
+
+      const displayName =
+        String(
+          userInfo.userName ||
+            userInfo.logonName ||
+            userInfo.nickName ||
+            userInfo.name ||
+            userInfo.customerId ||
+            userInfo.userId ||
+            '开发者',
+        ).trim() || '开发者';
+      const name = root.querySelector('[data-nav-user-name]');
+      const initial = root.querySelector('[data-nav-user-initial]');
+      const avatar = root.querySelector('[data-nav-user-avatar-image]');
+      if (name instanceof HTMLElement) name.textContent = displayName;
+      if (initial instanceof HTMLElement) {
+        const firstCharacter = displayName.replace(/\s+/g, '').charAt(0) || '开';
+        initial.textContent = /[a-z]/i.test(firstCharacter)
+          ? firstCharacter.toUpperCase()
+          : firstCharacter;
+        initial.hidden = false;
+      }
+
+      const avatarUrl =
+        userInfo.avatarUrl || userInfo.avatar || userInfo.headImg || userInfo.headImgUrl || '';
+      if (!(avatar instanceof HTMLImageElement) || !avatarUrl) return;
+      const revealAvatar = () => {
+        avatar.hidden = false;
+        if (initial instanceof HTMLElement) initial.hidden = true;
+      };
+      avatar.src = avatarUrl;
+      if (avatar.complete && avatar.naturalWidth > 0) revealAvatar();
+      else avatar.addEventListener('load', revealAvatar, { once: true });
+    } catch {
+      // Keep both account variants hidden until the live status check completes.
+    }
+  })();
+</script> </div> </nav> </div> </header>  <article class="article-page"> <header class="article-hero"> <a data-aspm-click="ca125810.da216551" data-aspm-desc="博客正文-返回博客" class="article-back" href="/blog"><span aria-hidden="true">←</span> 返回博客</a> <h1>好的 Skill，怎样做出来？</h1> <p class="article-summary">把专业经验整理成 Skill，只是第一步。真正决定它是否好用的，是它能否理解具体任务、作出恰当判断，并交付用户可以直接使用的结果。</p> <div class="article-meta"> <span>支付宝 SkillPay</span> <time datetime="2026-09-04">2026/09/04</time> <span>约 8 分钟</span> </div> </header> <div class="article-body article-body--markdown" data-spm-links="ca125810.da216550" data-aspm-desc="博客正文-正文链接"> <h2 id="从有价值到做得好">从“有价值”到“做得好”</h2>
+<p><a href="/blog/skill-is-agent-learned-craft">上一篇《Skill 的价值，从哪里来？》</a>中，我们讨论了一个基本问题：一项 Skill 是否有价值，要看它能否帮助用户解决实际问题。</p>
+<p>当创作者开始动手制作 Skill，问题会进一步变成：怎样把自己的经验整理出来，让 AI 能够在不同任务中反复使用？需要放入多少资料？指令应该写到多细？怎样判断做出来的 Skill 是否真的好用？</p>
+<p>一项 Skill 可以包含很长的说明，也可以收录大量专业资料。但对用户来说，更重要的是它能否理解当前问题，找到合适的方法，并交付符合需要的结果。</p>
+<p>因此，制作一个好的 Skill，需要从用户的真实任务出发，把专业经验转化为可执行的判断，再通过一次次使用检验和完善。</p>
+<h2 id="01先选择一个值得反复解决的问题">01｜先选择一个值得反复解决的问题</h2>
+<p>制作 Skill 的第一步，是明确它究竟要帮助谁，完成什么任务。</p>
+<p>“帮助企业解决法律问题”“制作专业 PPT”“辅助内容创作”，这些方向包含很多需求，但还不足以指导一次具体工作。不同用户可能提供不同材料，期待不同结果，判断标准也并不相同。</p>
+<p>创作者可以从自己经常处理的任务开始。例如，比起笼统地说“审查合同”，可以进一步明确：根据用户的交易角色，检查一份采购合同中的付款、交付、数据和违约风险，标出需要关注的条款，并提出修改建议。</p>
+<p>任务越明确，创作者越容易判断需要哪些输入、应该经过哪些步骤，以及最后交付什么。用户也能更快理解这项 Skill 是否适合自己。</p>
+<p>范围也不宜只围绕一次性的个人需求。如果一套方法只能处理某一份材料，很难被其他人复用。创作者需要找到不同用户之间相对稳定的共同问题，让同一套专业方法能够在相似任务中反复发挥作用。</p>
+<p>判断一个问题是否适合做成 Skill，可以先看几个方面：用户能否提供完成任务所需的信息，结果是否可以被检查，以及创作者的专业判断能否带来明显改善。</p>
+<p><strong>好的 Skill，通常从一个范围明确、会反复出现，并且能够判断结果好坏的任务开始。</strong></p>
+<h2 id="02把经验写成判断而不只是放入资料">02｜把经验写成判断，而不只是放入资料</h2>
+<p>很多专业经验并不直接存在于书本或文件里。</p>
+<p>同样一份合同，有经验的律师会先判断双方的交易角色，再考虑哪些条款可能产生较大风险；同样一组采访材料，有经验的内容创作者会区分核心观点、事实依据和可以舍弃的信息；同样一个家庭空间，适老化服务人员会结合居住者的身体状况和生活习惯，决定先处理哪些问题。</p>
+<p>这些选择，才是专业经验中更难被替代的部分。</p>
+<p>因此，把资料放进 Skill，并不等于完成了专业能力的转化。创作者还需要说明处理问题时应该关注什么、按照什么顺序判断、哪些情况需要补充信息，以及遇到例外时如何调整。</p>
+<p>例如，一项合同审查 Skill 不应只告诉 AI 搜索“违约责任”“自动续费”等关键词。它还需要说明如何结合交易目标理解条款，怎样判断风险的重要程度，以及信息不足时应该向用户询问什么。</p>
+<p>这些说明也不需要覆盖所有可能发生的情况。过多而彼此重叠的规则，反而可能让 AI 难以判断当前任务的重点。创作者更需要写下那些会真正改变处理方式的经验，尤其是初学者容易忽略、专业人士却会特别关注的判断。</p>
+<p><strong>Skill 承载的不只是创作者知道什么，还包括他如何观察问题、作出选择和处理例外。</strong></p>
+<h2 id="03让每一步都有清楚的输入和结果">03｜让每一步都有清楚的输入和结果</h2>
+<p>专业人士在工作时，往往已经习惯了自己的思考过程。很多步骤因为过于熟悉，很容易在制作 Skill 时被省略。</p>
+<p>但用户提供的材料可能并不完整，也未必知道应该怎样描述需求。如果 Skill 收到材料后立即开始生成结果，就可能在目标尚未明确时作出错误假设。</p>
+<p>一个相对完整的工作过程，通常需要先了解用户的目标和使用场景，检查现有材料是否足够，再执行核心任务，最后检查结果并说明仍然存在的问题。</p>
+<p>以 PPT Skill 为例，它可能需要先了解演示对象、使用场合和希望达成的目标，再整理内容结构和视觉要求。生成文件后，还需要检查页面是否完整、文字是否超出边界，以及交付的文件能否继续编辑。</p>
+<p>每一步都应当有清楚的输入和结果。需要用户补充的信息，应在关键判断发生前提出；可以合理推断的内容，则可以继续完成，并把采用的假设说明清楚。</p>
+<p>对于可能影响用户决定的问题，Skill 还应知道何时停下来。缺少关键材料、任务已经超出适用范围，或结果需要专业人员进一步确认时，都应该明确告诉用户。</p>
+<p><strong>稳定的 Skill，需要把专业工作中容易被忽略的中间环节，也变成可以执行和检查的过程。</strong></p>
+<h2 id="04把不同内容放在合适的位置">04｜把不同内容放在合适的位置</h2>
+<p>Skill 并不是把所有指令、资料和示例放进同一个文件。</p>
+<p>当前主流的 Agent 与 Agent Skills 实践，正在逐渐形成一套共同方法：将能力封装为可复用模块，先用简短描述判断它是否适合当前任务，再根据需要读取完整流程、参考资料与可执行工具。</p>
+<p>不同框架的具体格式并不完全相同，但目标是一致的——减少无关信息对当前任务的干扰，让 Agent 在正确的时机获得正确的内容。</p>
+<p>以 <a href="https://learn.chatgpt.com/docs/build-skills">OpenAI</a>、<a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Anthropic</a> 和 <a href="https://docs.langchain.com/oss/python/deepagents/skills">LangChain</a> 的 Agent Skills 实现为例，它们都采用了类似的“渐进式披露”思路：名称和描述用于能力发现与任务匹配，SKILL.md 承载核心工作方法，较长的参考资料、脚本和模板则在相关任务中按需使用。</p>
+<p>这也意味着，<strong>不同内容承担着不同作用</strong>。</p>
+<p>名称和描述帮助系统与用户理解这项 Skill 适合什么任务。核心指令负责说明目标、工作方法、重要判断和必要限制。较长的法规、行业知识和格式规范，可以作为参考资料，在相关场景下再读取。对于格式转换、数据处理和结果检查等需要稳定执行的操作，则可以使用脚本。模板、字体和品牌素材等内容，可以作为资源供生成交付物时使用。</p>
+<p>以法律 Skill 为例，合同审查的共同方法可以放在核心指令中，不同类型合同的审查要点可以分别保存为参考资料。只有当用户提交劳动合同或软件采购合同时，才读取对应内容。</p>
+<p>这样做不仅能够减少干扰，也有利于后续维护。法规发生变化时，创作者可以更新相应资料；工作方法需要调整时，则修改核心流程，而不必重新整理全部内容。</p>
+<p><strong>一个好的 Skill，不一定拥有最多的内容，而是能在需要的时候找到正确的内容。</strong></p>
+<h2 id="05用真实任务检验结果">05｜用真实任务检验结果</h2>
+<p>创作者自己使用 Skill 时，往往已经知道应该提供什么信息，也能理解结果中的专业表达。这种熟悉，有时会掩盖其他用户可能遇到的问题。</p>
+<p>因此，测试不能只使用一份准备充分的示例。除了常见任务，还需要尝试材料不完整、表达含糊和超出适用范围的情况。</p>
+<p>在这些测试中，创作者可以观察：Skill 是否在合适的任务中被使用，是否向用户索取了必要信息，能否在不同输入下保持相对稳定的工作过程，以及最终结果是否可以直接使用。</p>
+<p>结果的好坏也需要有具体的判断依据。合同审查可以检查重要风险是否遗漏、建议能否对应原条款；PPT 制作可以检查内容结构、版面完整性和文件是否可编辑；数据分析可以检查计算是否正确、结论能否追溯到原始数据。</p>
+<p>有些质量指标来自专业标准，也有些来自用户的后续行为。用户是否需要大量修改，是否能够理解结果，是否愿意再次使用，都能帮助创作者判断问题出在哪里。</p>
+<p>一次成功的演示，可以说明某个任务能够完成。不同用户在不同材料下都能获得相对稳定的帮助，才说明这套方法具有更好的复用能力。</p>
+<p>当测试发现问题时，也不必立即增加一条适用于所有情况的新规则。创作者需要先判断这是普遍缺陷，还是某个特殊场景中的需求，再决定应该修改核心流程、补充参考资料，还是缩小适用范围。</p>
+<p><strong>好的 Skill，需要在真实任务中反复接受检验，并根据已经出现的问题作出有针对性的改进。</strong></p>
+<h2 id="06支付宝-skillpay让真实使用推动-skill-成长">06｜支付宝 SkillPay：让真实使用推动 Skill 成长</h2>
+<p>从个人经验到可复用的 Skill，通常需要经历多次整理和调整。</p>
+<p>创作者先从自己熟悉的任务开始，再邀请目标用户使用，观察他们提供了什么材料、在哪些地方感到困惑，以及最终如何使用交付结果。</p>
+<p>用户愿意付费，为这项 Skill 是否解决了真实需求提供了一项市场信号；使用后是否真正获得帮助、是否愿意继续使用，则能进一步检验 Skill 的质量。</p>
+<p>我们希望支付宝 SkillPay 能够帮助创作者完成售卖、订阅、收款和交付，让他们把更多精力放在 Skill 本身。清楚的商品说明可以帮助用户了解适用范围，持续更新可以让用户看见问题如何得到解决，真实交易和后续反馈则能帮助创作者判断下一步应该改进什么。</p>
+<p>商业化并不是制作完成后的最后一步。它也可以成为创作者与用户建立联系、了解实际需求和继续完善 Skill 的过程。</p>
+<p><strong>一个好的 Skill，不只是保存了一套经验。它让这套经验能够在恰当的任务中被调用，帮助更多人获得稳定、可靠的结果。</strong></p> </div> <footer class="article-end"> <span>文章结束</span> <a data-aspm-click="ca125810.da216549" data-aspm-desc="博客正文-继续阅读其他文章" href="/blog">继续阅读其他文章 <span aria-hidden="true">→</span></a> </footer> </article>  <footer class="site-footer" data-astro-cid-gcn2mc3v=""> <div class="subfooter" data-astro-cid-gcn2mc3v=""> <div class="subfooter-main" data-astro-cid-gcn2mc3v=""> <div class="subfooter-brandline" data-astro-cid-gcn2mc3v=""> <a data-aspm-click="ca125825.da216628" data-aspm-desc="站点品牌-返回首页" class="brand brand--landing" href="/" aria-label="SkillPay 首页"> <img class="brand-landing-logo" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/skillpay-logo-landing.svg" alt=""> </a> <span data-astro-cid-gcn2mc3v="">让你的有价值的 Skill，为你创造价值</span> </div> <p class="subfooter-legal" data-astro-cid-gcn2mc3v=""> <span data-astro-cid-gcn2mc3v="">Copyright © 支付宝（杭州）数字服务技术有限公司</span> <span aria-hidden="true" data-astro-cid-gcn2mc3v="">｜</span> <span data-astro-cid-gcn2mc3v="">经营许可证编号：合字B2-20190046</span> <span aria-hidden="true" data-astro-cid-gcn2mc3v="">｜</span> <a data-aspm-click="ca125827.da216624" data-aspm-desc="站点页脚-查看备案信息" href="http://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" data-astro-cid-gcn2mc3v="">
+网站备案号：沪ICP备15027489号
+</a> </p> <p class="subfooter-infringement" data-astro-cid-gcn2mc3v="">
+侵权处理：如 Skill 涉及版权问题，请发送邮件至
+<a data-aspm-click="ca125827.da216625" data-aspm-desc="站点页脚-联系服务邮箱" href="mailto:aipay@service.alipay.com" data-astro-cid-gcn2mc3v="">aipay@service.alipay.com</a>，我们将在收到通知后及时核实并予以下架处理
+</p> </div> </div> </footer> </main> <div class="onboardingRoot" data-onboarding-root=""> <section class="onboardingLayer onboardingLoginLayer" data-onboarding-panel="login" aria-labelledby="onboarding-login-title" aria-modal="true" role="dialog" tabindex="-1" hidden=""> <button data-aspm-click="ca125824.da216582" data-aspm-desc="登录弹窗-关闭登录弹窗遮罩" class="onboardingScrim" type="button" aria-label="登录弹窗遮罩" tabindex="-1"></button> <div class="loginDialog" role="document"> <button data-aspm-click="ca125824.da216583" data-aspm-desc="登录弹窗-关闭登录弹窗" class="onboardingIconClose loginDialogClose" type="button" data-onboarding-close="" aria-label="关闭"> <svg viewBox="0 0 20 20" aria-hidden="true"> <path d="M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5"></path> </svg> </button> <div class="loginSkillPayBrand" aria-label="SkillPay"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-mark.svg" alt=""> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-wordmark.svg" alt="SkillPay"> </div> <div class="loginDialogContent"> <h2 id="onboarding-login-title">欢迎使用 SkillPay</h2> <div class="loginQrGroup"> <div class="loginQrCard" aria-label="支付宝登录二维码"> <div class="loginStatusPanel" data-login-status-panel="" role="status" aria-live="polite"> <span class="loginStatusSpinner" data-login-status-spinner="" aria-hidden="true"></span> <p class="loginStatusText" data-login-status-text="">正在确认登录状态...</p> <div class="loginStatusActions" data-login-status-actions="" hidden=""> <button data-aspm-click="ca125824.da216629" data-aspm-desc="登录弹窗-重新加载登录二维码" class="loginStatusButton" type="button" data-login-retry="">重试</button> <button data-aspm-click="ca125824.da216581" data-aspm-desc="登录弹窗-刷新登录状态" class="loginStatusButton loginStatusButtonSecondary" type="button" data-login-full-logout="" hidden="">
+刷新登录状态
+</button> </div> </div> <div class="loginIframePanel" data-login-iframe-panel="" hidden=""> <iframe class="loginIframe" title="支付宝登录" data-login-iframe="" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> </div> <p class="loginQrHint">使用支付宝扫码登录</p> </div> </div> <p class="loginDialogSlogan">让你的有价值的 Skill，为你创造价值</p> </div> </section> <section class="onboardingLayer onboardingPerspectiveLayer" data-onboarding-panel="perspective" aria-labelledby="onboarding-perspective-title" aria-modal="true" role="dialog" tabindex="-1" hidden=""> <div class="onboardingScrim perspectiveScrim" aria-hidden="true"></div> <div class="perspectiveDialog" role="document"> <h2 id="onboarding-perspective-title" class="visuallyHidden">选择使用 SkillPay 的身份</h2> <div class="perspectiveSkillPayBrand" aria-label="SkillPay"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-mark.svg" alt=""> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-wordmark.svg" alt="SkillPay"> </div> <div class="perspectiveCardList" role="list"> <button data-aspm-click="ca125824.da216630" data-aspm-desc="登录弹窗-选择创作者身份" class="perspectiveCard" type="button" role="listitem" data-login-perspective="creator" data-login-return-path="/creator/products"> <span class="perspectiveCardMain"> <span class="perspectiveCardTitle">我是创作者</span> <img class="perspectiveCardIllustration perspectiveCardIllustrationCreator" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/role-creator.svg" alt=""> </span> <span class="perspectiveCardDescription">创作 Skill 赚取收益的用户</span> </button> <button data-aspm-click="ca125824.da216631" data-aspm-desc="登录弹窗-选择消费者身份" class="perspectiveCard" type="button" role="listitem" data-login-perspective="consumer" data-login-return-path="/user/skills"> <span class="perspectiveCardMain"> <span class="perspectiveCardTitle">我是消费者</span> <img class="perspectiveCardIllustration perspectiveCardIllustrationConsumer" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/role-consumer.svg" alt=""> </span> <span class="perspectiveCardDescription">购买 Skill 获得权益的用户</span> </button> </div> </div> </section> </div> <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/SessionRenewalScript.astro_astro_type_script_index_0_lang.BAIyrsu9.js"></script> <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/ContentLayout.astro_astro_type_script_index_0_lang.D5bkQlh0.js"></script> <script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/top-bar-auth-with-inject-7a897063.js"></script>  <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/EditorialBaseLayout.astro_astro_type_script_index_0_lang.DaVA6zBL.js"></script>  </body></html>

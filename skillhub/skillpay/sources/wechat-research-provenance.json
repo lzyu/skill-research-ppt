@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-20",
+  "scope": "Read-only official documents and linked demo; no install, login, preorder, payment or paid business request.",
+  "wechatpayDocs": {
+    "4035576700": "https://pay.wechatpay.cn/doc/v3/merchant/4035576700",
+    "4035576711": "https://pay.wechatpay.cn/doc/v3/merchant/4035576711",
+    "4035576716": "https://pay.wechatpay.cn/doc/v3/merchant/4035576716",
+    "4035576740": "https://pay.wechatpay.cn/doc/v3/merchant/4035576740",
+    "4035576771": "https://pay.wechatpay.cn/doc/v3/merchant/4035576771",
+    "4012791877": "https://pay.wechatpay.cn/doc/v3/merchant/4012791877",
+    "4012791880": "https://pay.wechatpay.cn/doc/v3/merchant/4012791880",
+    "4012791882": "https://pay.wechatpay.cn/doc/v3/merchant/4012791882"
+  },
+  "skillhubTutorial": "https://skillhub.cn/tutorials#agent-pay-onboard",
+  "skillhubFrontend": "https://cloudcache.tencent-cloud.com/qcloud/tea/app/skillhub/assets/skill-hub.cpdwg332.js?max_age=31536000",
+  "demoZip": "https://skillhub-1388575217.cos.ap-guangzhou.myqcloud.com/mch-demo/mch-demo.zip",
+  "demoSha256": "3e4223e7900cb27dc01dda7c8bdbdba9f7dd224eaef87ff16be7276623a83dfa",
+  "criticalDifference": "Current WeChat official x402 API uses aipay.wxpapp.weixin.qq.com/aipay/preorder with Authorization header; SkillHub tutorial/demo still use payapp.weixin.qq.com/palmpayminiapp/clawagentpay/preorder with Body auth. Do not mix."
+}

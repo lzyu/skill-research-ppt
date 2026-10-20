@@ -1,0 +1,25 @@
+# SkillHub 当前前端教程证据摘录（2026-10-20 重新获取）
+来源：https://cloudcache.tencent-cloud.com/qcloud/tea/app/skillhub/assets/skill-hub.cpdwg332.js?max_age=31536000
+完整来源文件：skillhub-current.js
+注意：minified JS 按字符偏移记录；下列为原始局部内容，不执行代码。
+
+## 微信支付后台会向 SkillHub 验签；字符偏移 2982254
+killHub 商户后台一键生成 |"},{kind:"text",content:"⚠️ AI 预下单接口**不使用**微信支付 API 证书签名，而是使用 SkillHub 颁发的开发者密钥签名。微信支付后台会向 SkillHub 验签，确认商户身份。"},{kind:"heading",id:"best-practice-endpoint",text:"统一接口设计",level:3},{kind:"text",content:'Demo 用一个 `POST /demo/skill/invoke` 接口承载两种场景：通过请求头 `X-Out-Trade-No` 是否存在决定走"创建订单"还是"验证履约"分支。'},{kind:"code",lang:"json",content:'{\n  "query": "用户查询内容"\n}'},{kind:"text",content:"**场景一：首次请求（无 X-Out-Trade-No Header）→ 返回 HTTP 402**，在
+
+## `pub_key_id`：形如；字符偏移 2969321
+ind:"text",content:"进入 SkillHub 商户中心的「开发者密钥」页面，生成一组 RSA 2048 密钥对。生成后得到两个信息："},{kind:"steps",items:["`pub_key_id`：形如 `PUB_KEY_` + 32 位大写 HEX，填入预下单请求，告诉平台用哪把公钥验签。","`private_key_pem`：RSA 2048 私钥（PEM 格式），用于对签名串做 SHA256withRSA 签名。**仅展示一次，SkillHub 不存储**，请交给服务端安全保存，不要放到前端或公开仓库。","同一商户最多保留 3 组有效密钥，建议测试和生产环境分开。"]},{kind:"heading",id:"agent-pay-upgrade-wechat-order",text:"Step 2：接入微信支付下单",level:3},{kind:"text",content:"调用微信支付下单接口，获取订单标识。Native 支付返回 `code_
+
+## `private_key_pem`：RSA；字符偏移 2969384
+对。生成后得到两个信息："},{kind:"steps",items:["`pub_key_id`：形如 `PUB_KEY_` + 32 位大写 HEX，填入预下单请求，告诉平台用哪把公钥验签。","`private_key_pem`：RSA 2048 私钥（PEM 格式），用于对签名串做 SHA256withRSA 签名。**仅展示一次，SkillHub 不存储**，请交给服务端安全保存，不要放到前端或公开仓库。","同一商户最多保留 3 组有效密钥，建议测试和生产环境分开。"]},{kind:"heading",id:"agent-pay-upgrade-wechat-order",text:"Step 2：接入微信支付下单",level:3},{kind:"text",content:"调用微信支付下单接口，获取订单标识。Native 支付返回 `code_url`，JSAPI / H5 场景返回 `prepay_id`。这是标准的微信支付下单流程，使用微信支付 API 证书签名。
+
+## 同一商户最多保留；字符偏移 2969496
+_pem`：RSA 2048 私钥（PEM 格式），用于对签名串做 SHA256withRSA 签名。**仅展示一次，SkillHub 不存储**，请交给服务端安全保存，不要放到前端或公开仓库。","同一商户最多保留 3 组有效密钥，建议测试和生产环境分开。"]},{kind:"heading",id:"agent-pay-upgrade-wechat-order",text:"Step 2：接入微信支付下单",level:3},{kind:"text",content:"调用微信支付下单接口，获取订单标识。Native 支付返回 `code_url`，JSAPI / H5 场景返回 `prepay_id`。这是标准的微信支付下单流程，使用微信支付 API 证书签名。\n\n微信支付官方文档：[Native](https://pay.weixin.qq.com/doc/v3/merchant/4012791877) | [JSAPI](https://pay.weixin.qq.com/
+
+## Demo 用一个 `POST；字符偏移 2982374
+，确认商户身份。"},{kind:"heading",id:"best-practice-endpoint",text:"统一接口设计",level:3},{kind:"text",content:'Demo 用一个 `POST /demo/skill/invoke` 接口承载两种场景：通过请求头 `X-Out-Trade-No` 是否存在决定走"创建订单"还是"验证履约"分支。'},{kind:"code",lang:"json",content:'{\n  "query": "用户查询内容"\n}'},{kind:"text",content:"**场景一：首次请求（无 X-Out-Trade-No Header）→ 返回 HTTP 402**，在响应头和响应体中携带支付码（`WeixinPay-Required`）和订单号（`X-Out-Trade-No`），引导 Agent 发起支付。"},{kind:"code",lang:"json",content:'{\n  "code"
+
+## payment_code；字符偏移 2968768
+:"Pay Skill 基于微信支付 Agent Pay X402 协议接入。一次调用分成四段：企业服务生成微信支付订单 → 用 SkillHub 开发者密钥签名，调用 X402 AI 预下单换取 `payment_code` → 通过 `WeixinPay-Required` 返回给 Agent → Agent 向用户申请支付授权，然后继续获取付费内容。"},{kind:"image",src:"https://cloudcache.tencent-cloud.com/qcloud/tea/app/skillhub/assets/a2a/skillpay-docs/skillpay-architecture-diagram.3027a3a1.png",alt:"Pay Skill X402 架构与调用时序图",caption:"Pay Skill 基于微信支付 Agent Pay X402 协议完成服务开发者模式接入。"},{kind:"heading",id:"agent-pay-u
+
+## product_id；字符偏移 2971475
+"\n  },\n  "pay_type": "SKILL_PAY",\n  "pay_mode": "AUTH_AND_PAY",\n  "pay_items": [\n    {\n      "product_id": "SP250625A001",\n      "pay_data": {\n        "type": "code_url",\n        "value": "weixin://wxpay/bizpayurl?pr=NwY5Mz9&groupid=00"\n      }\n    }\n  ],\n  "expires_at": "1750924500"\n}'},{kind:"text",content:"| 字段 | 说明 |\n|------|------|\n| `skill_info.skill_id` | 你在 SkillHub 发布的 Skill slug |\n| `skill_info.skill_version` | Skill 版本

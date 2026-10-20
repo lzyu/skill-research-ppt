@@ -1,0 +1,91 @@
+{
+  "contentZhAvailable": false,
+  "latestVersion": {
+    "changelog": "- 按实际安装包版本和发布来源上报身份，完善升级提示及展示后确认。\n- 保留原有渠道归因、账号归属、凭证配置和计费规则。",
+    "createdAt": 1791973438969,
+    "version": "1.0.7"
+  },
+  "namespace": {
+    "canonicalName": "@org-32m5yxyy/zlbx-bidding-payskill",
+    "displayName": "org-32m5yxyy",
+    "handle": "org-32m5yxyy",
+    "publicSlug": "zlbx-bidding-payskill"
+  },
+  "owner": {
+    "displayName": "李博龙",
+    "handle": "u_41cc4bed",
+    "image": null
+  },
+  "pricing": {
+    "billingType": "per_call",
+    "currency": "CNY",
+    "freeQuotaDaily": null,
+    "freeQuotaMonthly": null,
+    "pricePerCall": "0.1",
+    "pricingDescription": null,
+    "pricingMode": "unified"
+  },
+  "publisher": {
+    "name": "知了标讯",
+    "logoUrl": null,
+    "verified": true,
+    "certifiedName": "北京百炼智能科技有限公司",
+    "orgId": "org-32m5yxyy"
+  },
+  "securityReports": {
+    "keen": {
+      "reportUrl": "https://tix.qq.com/search/skill?keyword=df643711812336183a6fe1fe331ca2a3",
+      "status": "benign",
+      "statusText": "安全，无风险"
+    },
+    "sanbu": {
+      "reportUrl": "https://static.cloudsec.tencent.com/html-report-v2/2026/10/14/2141068_7ef55417bff608f00f9ca80f6644ee4e.html?q-sign-algorithm=sha1&q-ak=REDACTED&q-sign-time=1791973541%3B1823509541&q-key-time=1791973541%3B1823509541&q-header-list=host&q-url-param-list=&q-signature=d3ce8e6d3d0ddb5996aacf72cc95a95ca2d88a2b",
+      "status": "benign",
+      "statusText": "安全，无风险"
+    }
+  },
+  "skill": {
+    "authorVerifiedHandle": null,
+    "category": "business-ops",
+    "claim_state": "unclaimed",
+    "claimable": false,
+    "claimed_user_handle": null,
+    "createdAt": 1783159540036,
+    "displayName": "知了标讯 · 全网招中标数据查询",
+    "ext": null,
+    "githubAuthorLogin": null,
+    "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+    "isAuthorVerified": false,
+    "isServiceized": false,
+    "labels": {
+      "pricing_type": "paid",
+      "requires_api_key": "false"
+    },
+    "last_synced_at": null,
+    "overviewMd": "",
+    "slug": "zlbx-bidding-payskill",
+    "source": "enterprise",
+    "sourceUrl": null,
+    "stats": {
+      "comments": 0,
+      "downloads": 80959,
+      "installs": 0,
+      "stars": 13,
+      "versions": 0
+    },
+    "subCategories": [
+      {
+        "key": "biz-growth",
+        "name": "增长分析"
+      }
+    ],
+    "summary": "全网招中标数据查询与分析助手。当用户涉及以下任何场景时，必须使用此SKILL：查询招标/中标公告、搜索标讯、查找临期/即将到期项目、商机预测、推荐潜在投标供应商、分析公司主营业务/历史中标、查询公司上下游合作客户与供应商、分析竞争对手/竞对企业、查询Top采购单位/Top中标单位/Top中标品牌、招中标数据统计分析、查询品牌型号历史中标单价/价格趋势、市场分析/行业分析/采购寻源/渠道拓展等采购与投标相关场景。即使用户没有提到「知了标讯」，只要涉及招投标、采购、中标、供应商、竞争对手等关键词，都应使用本SKILL。新设备通常可获赠 100 积分体验额度（每日限量，发完为止），可用于基础检索与企业信息体验，直接提问即可使用；**联系方式等高价值能力仅支持付费额度**；额度用完后通过微信支付购买次数包，余额按设备保存、换对话继续有效，全程无需注册或配置 API Key。",
+    "summary_zh": "全网招中标数据查询与分析助手。当用户涉及以下任何场景时，必须使用此SKILL：查询招标/中标公告、搜索标讯、查找临期/即将到期项目、商机预测、推荐潜在投标供应商、分析公司主营业务/历史中标、查询公司上下游合作客户与供应商、分析竞争对手/竞对企业、查询Top采购单位/Top中标单位/Top中标品牌、招中标数据统计分析、查询品牌型号历史中标单价/价格趋势、市场分析/行业分析/采购寻源/渠道拓展等采购与投标相关场景。即使用户没有提到「知了标讯」，只要涉及招投标、采购、中标、供应商、竞争对手等关键词，都应使用本SKILL。新设备通常可获赠 100 积分体验额度（每日限量，发完为止），可用于基础检索与企业信息体验，直接提问即可使用；**联系方式等高价值能力仅支持付费额度**；额度用完后通过微信支付购买次数包，余额按设备保存、换对话继续有效，全程无需注册或配置 API Key。",
+    "tags": {},
+    "updatedAt": 1792426035808,
+    "upstream_owner_login": null,
+    "upstream_url": null,
+    "verified": false
+  },
+  "slug": "zlbx-bidding-payskill"
+}

@@ -1,0 +1,387 @@
+[
+  {
+    "file": "sources/all-sample.json",
+    "bytes": 208521,
+    "sha256": "c0a800fec35d6b02d4403e43b51e7055d68d886d0207923283086bf2a139e3ec"
+  },
+  {
+    "file": "sources/all.json",
+    "bytes": 1503,
+    "sha256": "a44a6624c832ec3037fcd20b3533457e9ae5b1103afd4ef1845456a1938ba1e7"
+  },
+  {
+    "file": "sources/business-api-apply.md",
+    "bytes": 1476,
+    "sha256": "21110c2a363a45d4f2a6009ae6f611610dcc52cce80f057d802eadd87477ac9f"
+  },
+  {
+    "file": "sources/business-code-evidence.txt",
+    "bytes": 34550,
+    "sha256": "9609e22bca2563e4b2db0ea04266c64593a7e16d4d4974dd5174764649606b88"
+  },
+  {
+    "file": "sources/business-detail-workrally-image.json",
+    "bytes": 3101,
+    "sha256": "3085448a0183a8b4237ac27f75b1ed681058fa3f15160b74cf4f0eaa0fb2655c"
+  },
+  {
+    "file": "sources/business-detail-xique-tender-pay.json",
+    "bytes": 3185,
+    "sha256": "bc3307df5d6ebcceead557d380af641ee6274db5869800c1c75bb54799adf67c"
+  },
+  {
+    "file": "sources/business-detail-zlbx-bidding-payskill.json",
+    "bytes": 4972,
+    "sha256": "88ad4b7003edd7ac012343278f15a81ce331bcb932395352849efa96047a3b0c"
+  },
+  {
+    "file": "sources/business-enterprise-tutorial-code.txt",
+    "bytes": 36800,
+    "sha256": "5ba5c7318ea831bb8b937645ba38483b32e8d8f348b99791bea9590e77f9a2e4"
+  },
+  {
+    "file": "sources/business-home.html",
+    "bytes": 7429,
+    "sha256": "6075be1a6e18893fe65a9e8dfd939e62ea5122f09afee0ead479f6c8990caab3"
+  },
+  {
+    "file": "sources/business-manifest.json",
+    "bytes": 2703,
+    "sha256": "f9f9b1131ceab19204aeae4261b2e36e0df8799b6c12e79b33d7b10618aea0c0"
+  },
+  {
+    "file": "sources/business-official-readme.md",
+    "bytes": 6320,
+    "sha256": "72e805b9624ee623d288bc68e1233d6406fb245d80a5020c160fbae1a78e5d67"
+  },
+  {
+    "file": "sources/business-open-api.md",
+    "bytes": 6296,
+    "sha256": "da24ef5db3c353e579b2b788ccc8800686791439de0a4c1e888e3e8900ed0341"
+  },
+  {
+    "file": "sources/business-pay-category.json",
+    "bytes": 143534,
+    "sha256": "7d5b93a501447f73630fe3796390205d72337ebb717e58ffd8ffe5de29d49c9d"
+  },
+  {
+    "file": "sources/business-pay-page.html",
+    "bytes": 7429,
+    "sha256": "a5a9334b72c5f73a529560da71770f6f7130a6acf02466db5ca1ffbab78bff50"
+  },
+  {
+    "file": "sources/business-polyfill.6.26.min.js",
+    "bytes": 104563,
+    "sha256": "59173f786dd1f3802f7ab26fd339aac4099dc10c6cb54a6a92213e6af277592a"
+  },
+  {
+    "file": "sources/business-polyfill.6.26.min.js?max_age=31536000",
+    "bytes": 127,
+    "sha256": "ec23533a104dd6e88f4b75ba24c3faa3b5c62c345d2cb398dc9286e500e13828"
+  },
+  {
+    "file": "sources/business-public-download-check.json",
+    "bytes": 790,
+    "sha256": "b79d9bbe35b480d2e70cab49f7443c1af50807ab40e6f4dcf85f7c7e2e06c6c5"
+  },
+  {
+    "file": "sources/business-skill-hub.cpdwg332.js",
+    "bytes": 3746209,
+    "sha256": "82a1fee3d94a51c9f63ee4674f60b12f6501b0c27d948eb08a6fe6be5d5466e2"
+  },
+  {
+    "file": "sources/business-skill-hub.cpdwg332.js?max_age=31536000",
+    "bytes": 127,
+    "sha256": "ac8bcf5d0806299bd901a919bf85aa967d1a4ba4ed36e2b94e1d30c51a119a1a"
+  },
+  {
+    "file": "sources/business-skill-workrally-image.txt",
+    "bytes": 9008,
+    "sha256": "e48ba98e1cdde1c9edb5c7c30241f948b5eef96ba4baa5a77da8d15a7c5e8b5d"
+  },
+  {
+    "file": "sources/business-skill-xique-tender-pay.txt",
+    "bytes": 8350,
+    "sha256": "71ef963e66d3b0972982c7e02aa508aee7740ada0471d0d241bb631ca6851d6c"
+  },
+  {
+    "file": "sources/business-tutorial-extract.txt",
+    "bytes": 44708,
+    "sha256": "717ab79c8d39412e858d46b35454984e528afbd7df4d85ae834d0f1c4023fc5a"
+  },
+  {
+    "file": "sources/homepage.html",
+    "bytes": 7429,
+    "sha256": "cd4eb1542fe1213494381f92d936624b9a32158a20ac76304c0411124231de7c"
+  },
+  {
+    "file": "sources/key-false.json",
+    "bytes": 1968,
+    "sha256": "2f6c180d6061eabd35927f1ad2b3471035e26e4fc7d58d2ba09b21f22e9845e5"
+  },
+  {
+    "file": "sources/key-not-false.json",
+    "bytes": 1502,
+    "sha256": "17c12ceaf8570bae0ea876c4a46a73697d4d2b5b49f83ed97b0cc8eb62b16aa9"
+  },
+  {
+    "file": "sources/key-not-true.json",
+    "bytes": 1968,
+    "sha256": "fddffe2c8c574aeb4ad25324d7042b033285302d776a486fb7aa8b164679d6b5"
+  },
+  {
+    "file": "sources/key-true-sample.json",
+    "bytes": 67167,
+    "sha256": "98856ba6eb418abe37962d1fa789c8f211fd5055c01d4bd88616213a55aa3b05"
+  },
+  {
+    "file": "sources/key-true.json",
+    "bytes": 1502,
+    "sha256": "b848bd78c209f5ca6829d8296985ae074777649ee05a303bc6e73011447761d2"
+  },
+  {
+    "file": "sources/mch-demo-mch-demo_README.md",
+    "bytes": 13426,
+    "sha256": "6214b112bacb92bf40e09ceb89c17d88ad347f49d092634431ea37fc0a5e364b"
+  },
+  {
+    "file": "sources/mch-demo-mch-demo_SKILL-example.md",
+    "bytes": 3014,
+    "sha256": "a4986b4a5f9cb516ce34373da289458d7b3888f3042d0e4c868391af3d22930c"
+  },
+  {
+    "file": "sources/mch-demo-mch-demo_go_main.go",
+    "bytes": 25123,
+    "sha256": "aa8c83985ce68b1941fe21e20d72f6cf21330290f02224289b6d421cc052c6fa"
+  },
+  {
+    "file": "sources/mch-demo-mch-demo_java_pom.xml",
+    "bytes": 1619,
+    "sha256": "4b6ed1f0fdc054ae0877bd194cb6728be9395914de3e2253db84b56514d7c541"
+  },
+  {
+    "file": "sources/mch-demo-mch-demo_java_src_main_java_com_example_weixinpayx402demo_WeixinPayX402DemoApplication.java",
+    "bytes": 32568,
+    "sha256": "6d8a8e594acdbbb3741085e377b171f65a93b0d4afda918a7de45dc187133e99"
+  },
+  {
+    "file": "sources/mch-demo.zip",
+    "bytes": 25617,
+    "sha256": "3e4223e7900cb27dc01dda7c8bdbdba9f7dd224eaef87ff16be7276623a83dfa"
+  },
+  {
+    "file": "sources/not-paid.json",
+    "bytes": 1503,
+    "sha256": "124b580f7aa125876a50a3469df216bf304dac8318f9944fbe0fbabf70061592"
+  },
+  {
+    "file": "sources/paid-key-false.json",
+    "bytes": 1771,
+    "sha256": "c56c6e57ec725e08ffff9ff6bb1de5509a3a67e767f13d614bab4e63d8ce4571"
+  },
+  {
+    "file": "sources/paid-key-true.json",
+    "bytes": 2525,
+    "sha256": "6f79bc3d24a3e255edee48936525967a8fc72bd201d976724112b53a3e06a112"
+  },
+  {
+    "file": "sources/paid-sample.json",
+    "bytes": 228769,
+    "sha256": "63dd203540e78996a1d33e8efb88a4bffdb7be80f8ee4673f34d2727f784b93d"
+  },
+  {
+    "file": "sources/paid.json",
+    "bytes": 1771,
+    "sha256": "44359491ec6418b12bf997724398aa751139453eb44c2255257cbcfcb1188d05"
+  },
+  {
+    "file": "sources/pay-category-key-true.json",
+    "bytes": 2670,
+    "sha256": "45b8d934055a336b49b4cfe5f2aa83f34157d6994bde18e6d3794965df9ddae0"
+  },
+  {
+    "file": "sources/pay-category-paid.json",
+    "bytes": 1771,
+    "sha256": "1d60c63e998158d195a7c2100a344ee72dd2140e50ce73fc68a025c8654d7b4e"
+  },
+  {
+    "file": "sources/pay-category.json",
+    "bytes": 1771,
+    "sha256": "f01b4279e1bff41769b8c4d9973669ae6095c9f0ff3218b0aec53eab02858bb8"
+  },
+  {
+    "file": "sources/repo-readme-current.md",
+    "bytes": 6320,
+    "sha256": "72e805b9624ee623d288bc68e1233d6406fb245d80a5020c160fbae1a78e5d67"
+  },
+  {
+    "file": "sources/skillpay-search.json",
+    "bytes": 140373,
+    "sha256": "d9359924ec88d279cf68814f70ca9a94086bde80b6abc31f1bc026f1826aaded"
+  },
+  {
+    "file": "sources/skills-api-doc.md",
+    "bytes": 10380,
+    "sha256": "b605b4804eb7e2a5e11e4cd3ae4c10aba807424cb58e70991e706855f1d92879"
+  },
+  {
+    "file": "sources/snapshot-alipay-key-true.json",
+    "bytes": 237724,
+    "sha256": "e9d0998d8368a3478ac6c6a5d84d69b3339de749bc72eaad4243114f0e8fffcd"
+  },
+  {
+    "file": "sources/snapshot-alipay.json",
+    "bytes": 249500,
+    "sha256": "36ff263f2c3c8b0bbda379ae6808478c2c248fa8dea7c6aeabd2779a0c8f7596"
+  },
+  {
+    "file": "sources/snapshot-all.json",
+    "bytes": 208521,
+    "sha256": "886b72477ff1e90b30aad927cbe953656108c0bfeaf90dbceaf238209612e0e2"
+  },
+  {
+    "file": "sources/snapshot-key-false.json",
+    "bytes": 198912,
+    "sha256": "e90414086129a8df4278a4b3dff1adf5aa798a063caf6646e20ffd1c94b41ddd"
+  },
+  {
+    "file": "sources/snapshot-key-true.json",
+    "bytes": 206086,
+    "sha256": "4e9635138fcdfd450c36ba552615b904068f7d48bcbbff6fadbefae23bbc47fd"
+  },
+  {
+    "file": "sources/snapshot-paid-key-true.json",
+    "bytes": 183147,
+    "sha256": "37c6c241a3f5575315dd1ff56c894d1ed7ccacee903e2eb1ff19adb24720e41c"
+  },
+  {
+    "file": "sources/snapshot-paid.json",
+    "bytes": 228765,
+    "sha256": "edf436706b67e2d8e4d031c2a2189b1b63f6b532af66154e2ba51200f36154a6"
+  },
+  {
+    "file": "sources/snapshot-pay-category-alipay.json",
+    "bytes": 249500,
+    "sha256": "36ff263f2c3c8b0bbda379ae6808478c2c248fa8dea7c6aeabd2779a0c8f7596"
+  },
+  {
+    "file": "sources/snapshot-pay-category-paid.json",
+    "bytes": 228765,
+    "sha256": "edf436706b67e2d8e4d031c2a2189b1b63f6b532af66154e2ba51200f36154a6"
+  },
+  {
+    "file": "sources/snapshot-pay-category.json",
+    "bytes": 246373,
+    "sha256": "cc0b16be7eee21de9503db32eb50d93bce1ca5f15bf035ee4b2f51c2360d404c"
+  },
+  {
+    "file": "sources/statistics-urls.json",
+    "bytes": 1691,
+    "sha256": "559ee2d77fbbb3d627a089a78a20c138c235fc71fbc221ae21039e8a0c974cc1"
+  },
+  {
+    "file": "sources/wechat-research-provenance.json",
+    "bytes": 1397,
+    "sha256": "0c1ccd223d737213720cfe08cd218a952fd10779b65ca45971fd0a3ec12c0f5e"
+  },
+  {
+    "file": "sources/wechat-skillhub-tutorial-raw.txt",
+    "bytes": 34467,
+    "sha256": "98b3215ee155f5dc58e976f63dfc9459935fffafa7cf14635ce2c54e01a41139"
+  },
+  {
+    "file": "sources/wechat-skillhub-tutorial-readable.txt",
+    "bytes": 26036,
+    "sha256": "c9a3397e6ccadb57740ef0944756c27fe9db367f2de70fc8704a957db748e4f6"
+  },
+  {
+    "file": "sources/wechatpay-4012791877.html",
+    "bytes": 1380417,
+    "sha256": "760f13e017f06963e258f41d7229939ffa1c59889530add39a541a9bd1137d7a"
+  },
+  {
+    "file": "sources/wechatpay-4012791877.txt",
+    "bytes": 30542,
+    "sha256": "be271e669a28cce3089939f930c657414be4c39b65d6c8360d6bbfaa67130326"
+  },
+  {
+    "file": "sources/wechatpay-4012791880.html",
+    "bytes": 1337328,
+    "sha256": "4169cd15f90c3ec373ea8b2efc69c2046503da26e17270f202d76fc1e8d4d50b"
+  },
+  {
+    "file": "sources/wechatpay-4012791880.txt",
+    "bytes": 28190,
+    "sha256": "59f10c3bd212926d42699ed1ebd7588c2ef3022203de28005af079f6b3de6f06"
+  },
+  {
+    "file": "sources/wechatpay-4012791882.html",
+    "bytes": 786460,
+    "sha256": "c08a82f808c450a419551a9e3494292cc43fdd1de74a5d2033b7802605e01684"
+  },
+  {
+    "file": "sources/wechatpay-4012791882.txt",
+    "bytes": 19059,
+    "sha256": "741c8689aa415a60661cb88c34420fc2597d50ce07d157826ca0270f2b66aa23"
+  },
+  {
+    "file": "sources/wechatpay-4035576700.html",
+    "bytes": 433052,
+    "sha256": "fb97d175694dae65f297f1a9cbda6ff3585b0d498c08c6cc0cfc8c8222cf16de"
+  },
+  {
+    "file": "sources/wechatpay-4035576700.txt",
+    "bytes": 4152,
+    "sha256": "292b5f7be20a27ab3937656a53c5c76fca1527c6d6cf56c9dfb0e34bd9c76e8b"
+  },
+  {
+    "file": "sources/wechatpay-4035576711.html",
+    "bytes": 428505,
+    "sha256": "138437569fe2ca1349b3511d29ea02dca0696cc76b5c3d5d4d8bed3d527b8dfe"
+  },
+  {
+    "file": "sources/wechatpay-4035576711.txt",
+    "bytes": 4336,
+    "sha256": "3e4807694df6854afa514d987b439fd894987b748c8e3f75c96135093c62adcf"
+  },
+  {
+    "file": "sources/wechatpay-4035576716.html",
+    "bytes": 444511,
+    "sha256": "cb90bc91c55c3ebb93afb10948dc4490519e3e2da4379ab623164c16a6544f4a"
+  },
+  {
+    "file": "sources/wechatpay-4035576716.txt",
+    "bytes": 5500,
+    "sha256": "c4fabb88e2c143a332cdb8267a6e91670c087a2f45bf85ddf2f10352c9521a24"
+  },
+  {
+    "file": "sources/wechatpay-4035576740.html",
+    "bytes": 579930,
+    "sha256": "5bb1840cbdd3b7140d0f090fa36854f6ac40a06bfa9c5205d6ce6d89399236d8"
+  },
+  {
+    "file": "sources/wechatpay-4035576740.txt",
+    "bytes": 8485,
+    "sha256": "d7b229f05b1438d7314518b04470357cfaddb0d3985cb4e7b8dd08d850c00a32"
+  },
+  {
+    "file": "sources/wechatpay-4035576771.html",
+    "bytes": 460631,
+    "sha256": "af5711f4f70dfbad71045b6d179d0d9a78b9d2ef4908f7412d6af50a19c9bc4d"
+  },
+  {
+    "file": "sources/wechatpay-4035576771.txt",
+    "bytes": 8406,
+    "sha256": "2da553dc7076005ff7969d0aeff1b5e3868d186d27c2254a116ca73800b5aa1f"
+  },
+  {
+    "file": "sources/wechatpay-plugin-install-guide.md",
+    "bytes": 2769,
+    "sha256": "5bcd3c8185bda3211dafec9d90c4f3bc4a2cb05cbeea235e608b26e4be939b8a"
+  },
+  {
+    "file": "sources/wechatpay-prep.html",
+    "bytes": 428504,
+    "sha256": "3026a91aae6deee9c37349ea853d8f8c8ccebc17c71be8ec6ee2742737d1b44a"
+  }
+]

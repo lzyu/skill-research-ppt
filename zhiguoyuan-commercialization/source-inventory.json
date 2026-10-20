@@ -1,0 +1,197 @@
+[
+  {
+    "file": "sources/commerce/agent-gateway.html",
+    "bytes": 106848,
+    "sha256": "70647afe92c613c268cbc9c41c9c66c5377cb9a2034687af0fc2ad01988a6beb"
+  },
+  {
+    "file": "sources/commerce/invoices.html",
+    "bytes": 97626,
+    "sha256": "1032679a717ae82aeb376635cc46d56ef4e42e5bacc70ac3a13974eb8a2eea42"
+  },
+  {
+    "file": "sources/commerce/machinepay-integration.html",
+    "bytes": 106594,
+    "sha256": "d18fb2d0dde81165d5934f339575e43b1259c15ee485d217c28f036bcf0a92af"
+  },
+  {
+    "file": "sources/commerce/manifest.json",
+    "bytes": 1546,
+    "sha256": "dc15243abe3f2f8abcac067eaaba2a70ba0b110b0b2ed1fad4758e64fea66451"
+  },
+  {
+    "file": "sources/commerce/payment-change.html",
+    "bytes": 84508,
+    "sha256": "29659f91d46fbe30c5e13f42d17bd1c5a8b79f6d2d6eecbc43fd6b0c7b656c61"
+  },
+  {
+    "file": "sources/commerce/pricing-general.html",
+    "bytes": 84918,
+    "sha256": "bdfb018997ee0e8aab8d27a4b2ec124e3d840cae8adda906896e6243fd9cfb40"
+  },
+  {
+    "file": "sources/commerce/pricing-joint.html",
+    "bytes": 105479,
+    "sha256": "7ce2deeb256955b14c8bc3effe73d8735bde687ba52882a64f4311090b30e525"
+  },
+  {
+    "file": "sources/commerce/refund-rules.html",
+    "bytes": 119263,
+    "sha256": "bf581f33a2df74cbb0627f5c108cc8bab44485129818f3d7a1029c2af76a901f"
+  },
+  {
+    "file": "sources/commerce/saas-renewal.html",
+    "bytes": 104711,
+    "sha256": "0fea17a593e744a6c677f64631af2ff4673f29fefa96eb36c3fea9c191b299e8"
+  },
+  {
+    "file": "sources/huawei/agentarts-gallery.html",
+    "bytes": 92572,
+    "sha256": "19608dfe5dd77666ceefcb96f3c434beb7da9e733890de805f4fb2aac76092f8"
+  },
+  {
+    "file": "sources/huawei/agentarts-gallery.text.txt",
+    "bytes": 8088,
+    "sha256": "85b9a2926c9d91649d46f5acd94754b8242394ec198fbd209cfba8612261f9e9"
+  },
+  {
+    "file": "sources/huawei/agentarts-observe.html",
+    "bytes": 136352,
+    "sha256": "f4157c659709605a66cf64e2269f437c14cd58795b3e3a1ad6dfaabc20a0519a"
+  },
+  {
+    "file": "sources/huawei/agentarts-observe.text.txt",
+    "bytes": 41623,
+    "sha256": "5538bc931f430850e06f4b162e624a24ccd39899a909a50cf6037c5f1e83c628"
+  },
+  {
+    "file": "sources/huawei/agentarts-skill-import.html",
+    "bytes": 89434,
+    "sha256": "4a9e42cdd707b3857f31d1285384414c29814cd5a48f103fcdfbda1e861ae7c1"
+  },
+  {
+    "file": "sources/huawei/agentarts-skill-import.text.txt",
+    "bytes": 7750,
+    "sha256": "1a87a392a2607bd5df45d849a5cffd58d8d22e4c4e2bd11d77cbadff27f5337c"
+  },
+  {
+    "file": "sources/huawei/agentarts-skill-intro.html",
+    "bytes": 103522,
+    "sha256": "977a9e5f758fcf0191db0d354cdff60d9f80a968cee0bb72028bec3b4775cc91"
+  },
+  {
+    "file": "sources/huawei/agentarts-skill-intro.text.txt",
+    "bytes": 12300,
+    "sha256": "0514f1930fabfa5c44c170747748783e0bfd6c772328cb354ee1ead436b9bd69"
+  },
+  {
+    "file": "sources/huawei/asset-list.js",
+    "bytes": 1400952,
+    "sha256": "b924013c9ed58198d0f99740628e01ae14396311e1b46b7bac4bb18e543d1aa9"
+  },
+  {
+    "file": "sources/huawei/billing-scout-SKILL.md",
+    "bytes": 8129,
+    "sha256": "8561d1732be13f8da90538e6f00b198b751dcc154ff9c4e4b4747797580abfc1"
+  },
+  {
+    "file": "sources/huawei/find-skill.txt",
+    "bytes": 20407,
+    "sha256": "a4fd2b0d693cc1c668d3cbde24d0c8295fab5578fecba1c919acdbc8fc08fb75"
+  },
+  {
+    "file": "sources/huawei/gallery-flow.html",
+    "bytes": 83120,
+    "sha256": "12d302790b74c9d1ecf5b89530cc8bfc7580caae072d793ea8fd0c7674fa0825"
+  },
+  {
+    "file": "sources/huawei/gallery-flow.text.txt",
+    "bytes": 5265,
+    "sha256": "5c4f6c8022c4afdb214d3119e7eeeb93d5295a8f22648c0feeb0fc6d7e8d83e0"
+  },
+  {
+    "file": "sources/huawei/gallery-overview.html",
+    "bytes": 80544,
+    "sha256": "3c3cb8f5e39872d6b011ea4ab63d32dfe04f418802f691e0e3937cb2eba83dce"
+  },
+  {
+    "file": "sources/huawei/gallery-overview.text.txt",
+    "bytes": 4223,
+    "sha256": "3e43499b4f4d411fab5bd68079210b3de4dbfab01dafa78d24d80d1affece695"
+  },
+  {
+    "file": "sources/huawei/github-license.txt",
+    "bytes": 1068,
+    "sha256": "a406579cd136771c705c521db86ca7d60a6f3de7c9b5460e6193a2df27861bde"
+  },
+  {
+    "file": "sources/huawei/github-readme.txt",
+    "bytes": 3777,
+    "sha256": "759fce9af946641e09869c32036b94c486d0ef5d02081d8a9b5b4a189c337843"
+  },
+  {
+    "file": "sources/huawei/homepage.html",
+    "bytes": 46987,
+    "sha256": "b38651f57286ff6ec7e67a7256e59859a5bf631888cdb02b0abfb277aff470a9"
+  },
+  {
+    "file": "sources/huawei/homepage.text.txt",
+    "bytes": 3701,
+    "sha256": "1de8878be1ef98f156581b8be95a7599f1e67ff82c1c5ad91802be11d97e52fa"
+  },
+  {
+    "file": "sources/huawei/manifest.json",
+    "bytes": 5566,
+    "sha256": "da9f7769a91f324e5f35ba48c394f49f5fdfae4a148dd7f0c42d6cd4ea20bcc9"
+  },
+  {
+    "file": "sources/huawei/portal.html",
+    "bytes": 216195,
+    "sha256": "70da2e74076bc850486fb865be8a4c1d1a5c84d7de6c70d8e2430a7019e1c319"
+  },
+  {
+    "file": "sources/huawei/portal.text.txt",
+    "bytes": 13997,
+    "sha256": "7d04da9713b5d8cc2543b702344ab1bb8d89830bff247c4792563755540bc72c"
+  },
+  {
+    "file": "sources/huawei/skill-host.html",
+    "bytes": 95326,
+    "sha256": "8667f80a02fefc05c99bdca28a33a0bf4a3e3e468b199d9b378a908a3b7eab21"
+  },
+  {
+    "file": "sources/huawei/skill-host.text.txt",
+    "bytes": 8525,
+    "sha256": "4816bb8d58b261c8db6f70b47c6a290f28edf46ba818525075c1ea280595b16c"
+  },
+  {
+    "file": "sources/huawei/skill-list.html",
+    "bytes": 6582,
+    "sha256": "c903e1e5e4289795afb29f1b8436bf8104ddfa893e12af60c044df6d73018513"
+  },
+  {
+    "file": "sources/huawei/skill-list.text.txt",
+    "bytes": 22,
+    "sha256": "7e70691c599c21071fe28b11b5eeacf29d1e9d60a7dd59b727c7bff628a27d2a"
+  },
+  {
+    "file": "sources/huawei/skill-manage.html",
+    "bytes": 93464,
+    "sha256": "8ad12a250c85e5166a89eae4f9116446174a731b6d3acff031620be0d26d1f36"
+  },
+  {
+    "file": "sources/huawei/skill-manage.text.txt",
+    "bytes": 8109,
+    "sha256": "4be2275e2fa53d093f92a89ff9d5e9a0729d60d63e91b2a5ed0fc4b7ba5b44b1"
+  },
+  {
+    "file": "sources/huawei/skill-publish.html",
+    "bytes": 87045,
+    "sha256": "2555c434dd61ba525dcfc45d5fa9fc82f4ee4734fcbc7ea94b0087c3be04e0f4"
+  },
+  {
+    "file": "sources/huawei/skill-publish.text.txt",
+    "bytes": 6050,
+    "sha256": "ace8b548ce46a9ee674e8eb5083b8ab72dcddcc5faadae861fef56b84e483992"
+  }
+]

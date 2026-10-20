@@ -1,0 +1,852 @@
+[
+  {
+    "file": "sources/machinepay/alipay-ai/.git/HEAD",
+    "bytes": 21,
+    "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/config",
+    "bytes": 389,
+    "sha256": "a01e27c358e0720fa0d8e6abbaa05c87cc7f690c1bdc66db7e010e49ceb83726"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/config.worktree",
+    "bytes": 57,
+    "sha256": "bfefdfeb2bf56f4a5282c172fe3a69b4075e13fe3bf3cd54f6611bafa461c276"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/description",
+    "bytes": 73,
+    "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/applypatch-msg.sample",
+    "bytes": 478,
+    "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/commit-msg.sample",
+    "bytes": 896,
+    "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/fsmonitor-watchman.sample",
+    "bytes": 4726,
+    "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/post-update.sample",
+    "bytes": 189,
+    "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/pre-applypatch.sample",
+    "bytes": 424,
+    "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/pre-commit.sample",
+    "bytes": 1649,
+    "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/pre-merge-commit.sample",
+    "bytes": 416,
+    "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/pre-push.sample",
+    "bytes": 1374,
+    "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/pre-rebase.sample",
+    "bytes": 4898,
+    "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/pre-receive.sample",
+    "bytes": 544,
+    "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/prepare-commit-msg.sample",
+    "bytes": 1492,
+    "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/push-to-checkout.sample",
+    "bytes": 2783,
+    "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/sendemail-validate.sample",
+    "bytes": 2308,
+    "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/hooks/update.sample",
+    "bytes": 3650,
+    "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/index",
+    "bytes": 50380,
+    "sha256": "f38d6256c2f64c4fcdb51a8028cc35caed93e3bee63f3c0ad4f0765ec930087d"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/info/exclude",
+    "bytes": 240,
+    "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/info/sparse-checkout",
+    "bytes": 401,
+    "sha256": "2c713edfa02c2ff51615da723247a3ec82cc5c9ce5b39f9eb3951baeb54617e9"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/logs/HEAD",
+    "bytes": 166,
+    "sha256": "754262d9dd6e90f5e15795c8aab990cdc553a40475c4a9401869b7891fe7058c"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/logs/refs/heads/main",
+    "bytes": 166,
+    "sha256": "754262d9dd6e90f5e15795c8aab990cdc553a40475c4a9401869b7891fe7058c"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/logs/refs/remotes/origin/HEAD",
+    "bytes": 166,
+    "sha256": "754262d9dd6e90f5e15795c8aab990cdc553a40475c4a9401869b7891fe7058c"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-52839adb4008bbba698662c5b9f2cfbe1d1a6ddd.idx",
+    "bytes": 3228,
+    "sha256": "e4bf4c7194404dcab83a8e0e60605e52c61c83094cacec521feae5d8e4945c74"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-52839adb4008bbba698662c5b9f2cfbe1d1a6ddd.pack",
+    "bytes": 280898,
+    "sha256": "eb29a9bb9ac2d6b8d6cad7f409c76caabd276766699cecabb2da0f6f662782e4"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-52839adb4008bbba698662c5b9f2cfbe1d1a6ddd.promisor",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-52839adb4008bbba698662c5b9f2cfbe1d1a6ddd.rev",
+    "bytes": 360,
+    "sha256": "f4a76d066efb89a40ff75d1db211856765ac707dea5d965ce58bfa2ecaa903e6"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-7412f4e284b3288626b4374838148513f4156016.idx",
+    "bytes": 1100,
+    "sha256": "af924a71a2be83a2450cd986e2d824004aa98255f08705c69577cb27c83dc813"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-7412f4e284b3288626b4374838148513f4156016.pack",
+    "bytes": 676,
+    "sha256": "093de03492e0f1ac870539ffea1f19c55f8d745b8563e84a4a83732d8aa2affc"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-7412f4e284b3288626b4374838148513f4156016.promisor",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-7412f4e284b3288626b4374838148513f4156016.rev",
+    "bytes": 56,
+    "sha256": "edf352c0e69fd82cb4b8e29c7a65506e1ae90f4eaa022ab5de7b0a91a15bdfaf"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-85cb2b55f9dbaf344723d54a2721d9532dc11faf.idx",
+    "bytes": 1184,
+    "sha256": "18972676f8606e7785b40f42c32ef705e8be50cdee47934aaa313cd7bb38b881"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-85cb2b55f9dbaf344723d54a2721d9532dc11faf.pack",
+    "bytes": 12327,
+    "sha256": "b1ee3a7bc57d18cd440d4f1a3831a3e03bd87dc98bd9fa6378d04af43ef8f2ac"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-85cb2b55f9dbaf344723d54a2721d9532dc11faf.promisor",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-85cb2b55f9dbaf344723d54a2721d9532dc11faf.rev",
+    "bytes": 68,
+    "sha256": "e90c8619c280ee38092d97b8f6c36f68ca8085a7fad10585c3fcb86d7de1eeda"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-b08141571a2cdfb6bb4fed897d5bcb7513adbd4c.idx",
+    "bytes": 4572,
+    "sha256": "cc0b6b4bb4bb5acb1eac60a2d677d18c257d6107562701c28445f1ad02181c8f"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-b08141571a2cdfb6bb4fed897d5bcb7513adbd4c.pack",
+    "bytes": 17433,
+    "sha256": "276faca1c71ee386b5a8a2cf96a42c10fb020ee1df24861d4492004d1ec469a9"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-b08141571a2cdfb6bb4fed897d5bcb7513adbd4c.promisor",
+    "bytes": 103,
+    "sha256": "f2f7e88bf837a84a70745608b93072e3ad3991487525ac19033d67ebe2081817"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/objects/pack/pack-b08141571a2cdfb6bb4fed897d5bcb7513adbd4c.rev",
+    "bytes": 552,
+    "sha256": "27d6dc7d49ad0cf68f00ddf7a2b77cc91b19ce20bf7a11a4fce2284c1559734a"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/packed-refs",
+    "bytes": 112,
+    "sha256": "db28416005a148fe809c973e9803823b47318e1bbb2148a406bc66a29bd55e44"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/refs/heads/main",
+    "bytes": 41,
+    "sha256": "713534c2b46d7aaa98c25e9e052c69e707f00f7d382b6a7b8aefba91fc8ea622"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/refs/remotes/origin/HEAD",
+    "bytes": 30,
+    "sha256": "2bb6a24aa0fc6c484100f5d51a29bbad841cd2c755f5d93faa204e5dbb4eb2b4"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/.git/shallow",
+    "bytes": 41,
+    "sha256": "713534c2b46d7aaa98c25e9e052c69e707f00f7d382b6a7b8aefba91fc8ea622"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/README.md",
+    "bytes": 1044,
+    "sha256": "c0fa5612e87a0afd7867ee2a99e0dfda6193ffa5eece3778175b9df6b6ca7e28"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/code_example/aipay-402-example/A2MPaymentDemoController.java",
+    "bytes": 26826,
+    "sha256": "618b829791ba6fa3e0d0609688bfd9ff717da9235a4d5d6e356797ade3d4a355"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/code_example/aipay-402-example/A2M智能收产品对接文档.md",
+    "bytes": 11531,
+    "sha256": "d7bddfad6f681b52afc978f399cd6e679cb2bc011c210d87865ff2c211433036"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/code_example/aipay-402-example/商家SKILL开放模板.md",
+    "bytes": 1536,
+    "sha256": "31f912ab1d76616d2869205b3cd9f776668b0ca4868bd431b08c0ba3a7049c7a"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/code_example/aipay-402-example/商家SKILL开放示例alipay-aipay-product-intro/SKILL.md",
+    "bytes": 1600,
+    "sha256": "4823db3d8e760054f3ee44368317cc815855efe66b55976038e63c2eb9cd0722"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/SKILL.md",
+    "bytes": 4287,
+    "sha256": "6e485a939e6f67e5fc3afe0b02f8cd3c8c6cd37f6eec9b048aab3121c74b90c1"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/VERSION",
+    "bytes": 6,
+    "sha256": "bb7320d831e7a151aa901c35e7326c752fa2ef5024f30768c42319b8bed171ed"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/flow.md",
+    "bytes": 80890,
+    "sha256": "75f80d31d40d108c5254e8519bf4beec1ee36bf5efce2052b99237acfa9596aa"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/alipay-sdk-reminder.md",
+    "bytes": 16502,
+    "sha256": "d155f94e2823caab5f53f54312f7c98ab4a8f53f766231c0c65f3beb517424d8"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/checklist.md",
+    "bytes": 16993,
+    "sha256": "e192fb5ebc74b3e2eff54da4242d92154ae0caee88d0c69f8c17b95fc6d41c18"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/1-通用接口/异步通知处理代码示例.md",
+    "bytes": 8889,
+    "sha256": "5e12f74b64d89ecbd06feaec75418341a64b3b945c434b510ebf4b5f94ea1a09"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/1-通用接口/统一收单交易关闭接口代码示例.md",
+    "bytes": 2016,
+    "sha256": "967f5fc9c7d5365a2d06ba17c42bee05e83f10fe6f4e012ce85a45305f65904a"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/1-通用接口/统一收单交易查询接口代码示例.md",
+    "bytes": 2610,
+    "sha256": "1a6843a556224c4064766d99d024d5cbad63b8ed2857a95beb920884e9c20e28"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/1-通用接口/统一收单交易退款接口代码示例.md",
+    "bytes": 2596,
+    "sha256": "96c84487b33225eb0cd2aa45ac40f27903ea5a74bbb67fe5f89b3816afd04b80"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/1-通用接口/统一收单交易退款查询接口代码示例.md",
+    "bytes": 2402,
+    "sha256": "fe881e00515bfda8db72e7ba4821f62f6b3f38a6dbd5d63ad23c7faada3dc866"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/2-网站支付/统一收单下单并支付页面接口代码示例.md",
+    "bytes": 3082,
+    "sha256": "cc8740b12c56bd0c67f905c46221de54b48eed36dd7aa1ab804a17cf16c4d3f1"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/3-APP支付/APP支付接口代码示例.md",
+    "bytes": 6334,
+    "sha256": "29f318a040a9fe3b90a6409e7f32d39adb4d0dd669e8ec80c3a66c6d37f66aba"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/csharp/4-按量付费/A2MPaymentDemo.md",
+    "bytes": 26490,
+    "sha256": "e253798c49bd4b60d801a09081295374a15debc1cd89f030b17dde8d2e54139f"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/1-通用接口/异步通知处理代码示例.md",
+    "bytes": 7814,
+    "sha256": "4412e40e7161eb7e609a2f90e48d6e5c41d58f1ad7d3635ad94f5288f7165942"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/1-通用接口/统一收单交易关闭接口代码示例.md",
+    "bytes": 2641,
+    "sha256": "730c983b5a3456867c1120ebd127bcbfc834c11a7a4b4428c71597e4fd167fa2"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/1-通用接口/统一收单交易查询接口代码示例.md",
+    "bytes": 3628,
+    "sha256": "c9b5003c6558a3eb957f96ca46887fc1c2ddc9e341bb105d85e8deac3eda0fb9"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/1-通用接口/统一收单交易退款接口代码示例.md",
+    "bytes": 3276,
+    "sha256": "685ef260abbfc1e4b9b34b4b8f95448e3ffc74072c49ef212e61cb8ad8035a52"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/1-通用接口/统一收单交易退款查询接口代码示例.md",
+    "bytes": 3128,
+    "sha256": "64b9183206cc1f235f7487578afd83ead8c07b99adc69e7769f9c75fd58d089d"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/2-网站支付/统一收单下单并支付页面接口代码示例.md",
+    "bytes": 3767,
+    "sha256": "200e2bc9973660639de584eba5e9366ac4d56415701db0e17f92522acd1e11c2"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/3-APP支付/APP支付接口代码示例.md",
+    "bytes": 6632,
+    "sha256": "d60ea2b32e406dfb9ed2eab3a7a909089f0901d79e8c73aa5a396ec7e17961ce"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/java/4-按量付费/A2MPaymentDemoController.md",
+    "bytes": 28454,
+    "sha256": "3f27f325a5581bdcf863ba96d36f0f8ae23036aded56b39614572e154d5157f7"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/1-通用接口/异步通知处理代码示例.md",
+    "bytes": 5580,
+    "sha256": "998f4b5a4c3226f6d8c3121e2c2f32ff0eeaf40035f689300000d6dc8e59a642"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/1-通用接口/统一收单交易关闭接口代码示例.md",
+    "bytes": 1477,
+    "sha256": "1c47355291322a3ab744191028bdf2af524009440a6c966f0984304d4114718d"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/1-通用接口/统一收单交易查询接口代码示例.md",
+    "bytes": 1768,
+    "sha256": "5ad7579c5639f23245a2745695537f0269de72ab5033294cb9d6ebb7a7c9cb1c"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/1-通用接口/统一收单交易退款接口代码示例.md",
+    "bytes": 1934,
+    "sha256": "e13c35939761134f5713ea19e83ad2d5c8b9a77affecb541d6d525a3909b28f2"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/1-通用接口/统一收单交易退款查询接口代码示例.md",
+    "bytes": 1598,
+    "sha256": "4ed69f4d20f4e9e519a4d58bc2cf34bbfc5856ef435e9eb6a771b6cce1181481"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/2-网站支付/统一收单下单并支付页面接口代码示例.md",
+    "bytes": 3659,
+    "sha256": "288eef868887fdbbd20961693bfba4e6632bd86b6a6ac308d378515fc47f1ea3"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/3-APP支付/APP支付接口代码示例.md",
+    "bytes": 3358,
+    "sha256": "708ff658ccd1cac60d6ca60371dc6fda820217547184e750e2a0e217b7a986d4"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/nodejs/4-按量付费/A2MPaymentDemo.md",
+    "bytes": 17640,
+    "sha256": "eff3428d4e9ecee0c36d2021218459eeb1d502cdad9767ebbe2e616d2e843242"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/1-通用接口/异步通知处理代码示例.md",
+    "bytes": 5981,
+    "sha256": "71dce9d847a751171ecb443c6793ccbc9f4419bb06043b7a55ab9518b7948847"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/1-通用接口/统一收单交易关闭接口代码示例.md",
+    "bytes": 1909,
+    "sha256": "6ee74d45c55b420ccf1a72428c1117ac2fd6779f275fa9595e0400502052022e"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/1-通用接口/统一收单交易查询接口代码示例.md",
+    "bytes": 2512,
+    "sha256": "77c141184c10cbd542cb9f592f46b235086ff19330c0beed1780419c7f2b990e"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/1-通用接口/统一收单交易退款接口代码示例.md",
+    "bytes": 2561,
+    "sha256": "109c4544613bb0bf679fb8908faaa54682d901b6b5f27e75690750b648e7ef0f"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/1-通用接口/统一收单交易退款查询接口代码示例.md",
+    "bytes": 2217,
+    "sha256": "7975e4a9845bd0eb38081d4cf2ebddf3b10d48ef15a83d5d59e871627e7db8fd"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/2-网站支付/统一收单下单并支付页面接口代码示例.md",
+    "bytes": 3049,
+    "sha256": "a868e54d42683f90285540782e5792d667b3da2cfb77aa8d836fb69fd60a188e"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/3-APP支付/APP支付接口代码示例.md",
+    "bytes": 4866,
+    "sha256": "08e28686338283f1079cc591e341cc4039a679880e702a98674af036dd50c2d5"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/php/4-按量付费/A2MPaymentDemo.md",
+    "bytes": 28089,
+    "sha256": "ba41d1ed9731d0b7d0dc9fa299975787f59b83a36f42dda8458d6176e4830e28"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/1-通用接口/异步通知处理代码示例.md",
+    "bytes": 5342,
+    "sha256": "ef052e58bb0994b3cfc985175a5d3afd11ec9c5bab3ec8d16b2e789aca2be6bc"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/1-通用接口/统一收单交易关闭接口代码示例.md",
+    "bytes": 1993,
+    "sha256": "96a3f04554b116cbcb594fa7bf1e6123da052c1705d1d15d2c1cf1d7d58c6b2c"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/1-通用接口/统一收单交易查询接口代码示例.md",
+    "bytes": 2566,
+    "sha256": "7f28b6b01b5615b877036ef41d9ccb92ac56569c2349e89e9bb8b58f9c0b0568"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/1-通用接口/统一收单交易退款接口代码示例.md",
+    "bytes": 2557,
+    "sha256": "48783b3dc143c6c7ca1ea915bc0aa043f2ede626a82156cc801ca9158d363582"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/1-通用接口/统一收单交易退款查询接口代码示例.md",
+    "bytes": 2443,
+    "sha256": "3cf71288c0412678c311e09637c92471ebe87f84c7963176e8b60f87384d86c6"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/2-网站支付/统一收单下单并支付页面接口代码示例.md",
+    "bytes": 2869,
+    "sha256": "3140663545816704c910919886f62661e88b35b126947001943121c034cf3e5d"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/3-APP支付/APP支付接口代码示例.md",
+    "bytes": 2708,
+    "sha256": "312fd2329c157f75e81a991e33670ce220c13e71d2d2fc7c417b421154f1042e"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/code-examples/python/4-按量付费/A2MPaymentDemo.md",
+    "bytes": 21374,
+    "sha256": "59b441c9955335c86d689799f9bfc5e6f19867d27024783b5cf4755e871e87cd"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/interface-contract/aipay-interface-contract.md",
+    "bytes": 3059,
+    "sha256": "67652763b84dcfe30930a0c220cfc5cedc92e3a66c5a4d609168fa316cb83093"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/interface-contract/apppay-interface-contract.md",
+    "bytes": 2370,
+    "sha256": "f43318328cc4ae0a6deb1d198c7bffeeb87fdc8fcc388fead4ca05c8c89e6607"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/interface-contract/common-trade-contract.md",
+    "bytes": 2996,
+    "sha256": "287fde1245b608e281e76a3343297b7b5fbbd5846233ba5bca31c05a2b8278b0"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/interface-contract/notify-url-contract.md",
+    "bytes": 5927,
+    "sha256": "733915d4bf0a9364bceefa6d66d5ee2276b1999aca5c60620db610e51eda910d"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/interface-contract/webpay-interface-contract.md",
+    "bytes": 2399,
+    "sha256": "99c5f48e9f8c4ffb53339405cfac737f94f5aa1be3a096f08022b31bc279d755"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/interface-guide.md",
+    "bytes": 5241,
+    "sha256": "fa11721e6abdabbd0e5a0973b3f139ec4b55adbd2f1bf0a0c3a617bb71461469"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/product-decision.md",
+    "bytes": 3393,
+    "sha256": "dfbd27ea4520999400c01cb4920454a55419d5e877333bb2b6428dc2abbab3c1"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/sandbox/a2m-sandbox-test.md",
+    "bytes": 17355,
+    "sha256": "751860115fcdd371bbe05463d5e745147849a3ecfec56be1a11cf59cc109480b"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/sandbox/alipay-sandbox-tool.md",
+    "bytes": 8041,
+    "sha256": "9c6f9b2053c1f203c69bbf14d3ebf3ec213e371fcfba1284c3fc5247eb90f110"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/sandbox/sandbox-setup-guide.md",
+    "bytes": 24947,
+    "sha256": "0bba0aadeef1e734d4b91d59d9cdfb6cbca117c7bccf2cc591c1778c6d7df481"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/scripts/local_402_sandbox_pay.py",
+    "bytes": 34597,
+    "sha256": "9fc7e50612144b362ae43abded1ac67e0347e55f84540d59b612f609045b2536"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/scripts/sandbox_config.sh",
+    "bytes": 16891,
+    "sha256": "5ef556932f0d21346c8e59fa0dd2e520cfaae118d2190c7037be6dd971c47ae4"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/integration/modules/troubleshooting-flow.md",
+    "bytes": 1893,
+    "sha256": "a1de030dda6125eddc1542b86b645a13c1511bfbd0c5dfb15829ddb420321824"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/flow.md",
+    "bytes": 86703,
+    "sha256": "fec7b8e78e793c389e89c5ca5c0a2583e0b74cbc70c404023bb89c32fb64e8a6"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/app-release.md",
+    "bytes": 10627,
+    "sha256": "e8c800efda0a812732a8862a2439719ec092d13fdca79560fdcb0d83b3254161"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/authorization.md",
+    "bytes": 5812,
+    "sha256": "9e2aa9900090e88204a275ea7e03992c1e22a38ffb193693024b1292cb8c1445"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/error-handling.md",
+    "bytes": 11442,
+    "sha256": "8dce5ed5519f5065752cc35e6632ff07047b829f6d70328e2e6e7ec3397b08b5"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/product-sign.md",
+    "bytes": 6629,
+    "sha256": "dd822fe1c6a46fc4f8bea1ec3730a68fea384ac2bd2eb6baa7d4d2ec22848d26"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/app.sh",
+    "bytes": 53383,
+    "sha256": "3aa766f4e36ab5bac7d3e73849537dc242ba10a152e638f23cf8d210a97d91be"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/ar_sign_apply.sh",
+    "bytes": 12769,
+    "sha256": "943719458e6cc775aadaff4f5a98784723d8bef11e23b275eb100e0b81e2e256"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/auth.sh",
+    "bytes": 41543,
+    "sha256": "5c496c1b0e8265d5f9ea5204a63a066329ec6b8464dea880d15916f11d99fccb"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/download_key_tool.sh",
+    "bytes": 7555,
+    "sha256": "2473672ee659945289ec55b6518c011a562c57e908fd82754fb6e234d0ec404b"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/error_handler.sh",
+    "bytes": 30579,
+    "sha256": "d34cb1a19721eb60856b88808851207347844336cbf6f5e9a45ae73cc79777c9"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/mcc.sh",
+    "bytes": 40802,
+    "sha256": "53b5e4c463e67e44e787d5688ee20966b88d83e35c70363e5fd0f21ce2fdd2ad"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/network_retry.sh",
+    "bytes": 5462,
+    "sha256": "c3f3c553329f2a49ddf48d442d4719e5386dd3e32c5a603cee2d23532a3db8eb"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/query_sign_status.sh",
+    "bytes": 3872,
+    "sha256": "5d502b84ce1da54631915a01494b8b985d5649cd6861451fe556ddae3f8e90ea"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/service.sh",
+    "bytes": 19425,
+    "sha256": "b53ad6e676246006c752afcf4e0cece39ee3895865f82a9423fec1c1bd946b3c"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/sign_status_parser.sh",
+    "bytes": 2094,
+    "sha256": "a1ee0d2ea657466ca0c23f44ea29a2b32b9265a60cb3bbeff45afd075a29074f"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/upload_screenshots.sh",
+    "bytes": 7650,
+    "sha256": "1a61b96e9c83a6c911ac40b06f5ddcbc95600ba2fa2c498f4fe7fc64ee265b04"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/scripts/upload_special_license.sh",
+    "bytes": 6731,
+    "sha256": "5b99496952c41995531b2d448dce62291c35b63b532d68f7bb4a70299dfe4411"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/onboarding/modules/service-registration.md",
+    "bytes": 3770,
+    "sha256": "82c01cf781c1320b94d6b455ec70384697bd9a2871bba4f4470a0dda92565bf9"
+  },
+  {
+    "file": "sources/machinepay/alipay-ai/skills/alipay-aipay/references/runtime-entry.md",
+    "bytes": 23409,
+    "sha256": "ab147743cf37642b054517fbe295bde3af2f26eaa4557e93d4807b2e6e6d11f3"
+  },
+  {
+    "file": "sources/machinepay/confirm-current.md",
+    "bytes": 10701,
+    "sha256": "2d880c35cd207ca9a625a09e65ebc0d15fb01b9b243df6c1518ec23f33a2c212"
+  },
+  {
+    "file": "sources/machinepay/example-readme.md",
+    "bytes": 14,
+    "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+  },
+  {
+    "file": "sources/machinepay/faq.md",
+    "bytes": 966,
+    "sha256": "f528229bba8c6cc0bd71762add76cdb2d065cb40ed0fe1b16e12a06db33f49a2"
+  },
+  {
+    "file": "sources/machinepay/integration.md",
+    "bytes": 17015,
+    "sha256": "bbdc1067e42164f0d5882035366522e777ea68809071c637470eacc523bba129"
+  },
+  {
+    "file": "sources/machinepay/product.html",
+    "bytes": 222781,
+    "sha256": "aa5fb7da8ecd855cb0d1191f7d939ab94e522eb3c68cdba483d05aaefd698178"
+  },
+  {
+    "file": "sources/machinepay/product.html.txt",
+    "bytes": 25210,
+    "sha256": "d62c29c3fbce72f5dd220b3ff1b17da5a642fbf21c5ad5b41a08a172e90a4ee2"
+  },
+  {
+    "file": "sources/machinepay/verify-current.md",
+    "bytes": 13091,
+    "sha256": "ef6155c41bad59b898bfd26e77722d2efea93c505188c74d4e20845cf7db82a2"
+  },
+  {
+    "file": "sources/machinepay/verify.md",
+    "bytes": 13174,
+    "sha256": "d84ecfa525a65e80a6f7e89e469baed084cce8d5651a8b9bd6d2da436dc508cb"
+  },
+  {
+    "file": "sources/skillpay/02-402-sequence.svg",
+    "bytes": 3567,
+    "sha256": "1fa27030a234c0ede9b2023a2fad853a73ae21da5867d8e84d7ee8e361c579b1"
+  },
+  {
+    "file": "sources/skillpay/03-cloud-protection.svg",
+    "bytes": 5816,
+    "sha256": "0b8519e6a2bf59830ca4f0ac013ceeb8731b4f9c111ae2f23ed328e31544fabf"
+  },
+  {
+    "file": "sources/skillpay/04-defense.svg",
+    "bytes": 4828,
+    "sha256": "8cd675059eb9969cdc499a7d50470831a86930cfe770dbc7e419ed9bb14d6853"
+  },
+  {
+    "file": "sources/skillpay/05-business-model.svg",
+    "bytes": 3288,
+    "sha256": "a850f0f87984e94fdea05ffd8d9e471f5f569a63ab428b67da4615576a3a384a"
+  },
+  {
+    "file": "sources/skillpay/PreviewBaseLayout.astro_astro_type_script_index_0_lang.Bsi1wV5g.js",
+    "bytes": 733,
+    "sha256": "9be13dc00bb592c7c23989ff1eee4f14ca9b7e9cdbf191510ff9c5ce033a433a"
+  },
+  {
+    "file": "sources/skillpay/ProductCard.astro_astro_type_script_index_0_lang.DRgOiNZP.js",
+    "bytes": 3820,
+    "sha256": "2ae8264315df9d68856597450ed101789f825f064cec3384b37207a1c83b6d52"
+  },
+  {
+    "file": "sources/skillpay/ProductLayout.astro_astro_type_script_index_0_lang.BvtR1MT1.js",
+    "bytes": 5679,
+    "sha256": "d838b2bce3b9143d3d0e311f8ebaa461b52c47104868595fb8d97cecf7db738d"
+  },
+  {
+    "file": "sources/skillpay/ProductListingForm.astro_astro_type_script_index_0_lang.DP7r4ow0.js",
+    "bytes": 133558,
+    "sha256": "21bb3ea1fa30bc6add6f8883fd98bed2ea6653e54a000ac05b6d0aa1edc9623a"
+  },
+  {
+    "file": "sources/skillpay/ProductShareDialog.astro_astro_type_script_index_0_lang.DGyp7KO3.js",
+    "bytes": 5399,
+    "sha256": "d1a9fe330cd326d475c9752b74ec9eebfba32a832ad913d1c361c46e3cb1e95b"
+  },
+  {
+    "file": "sources/skillpay/SessionRenewalScript.astro_astro_type_script_index_0_lang.BAIyrsu9.js",
+    "bytes": 5101,
+    "sha256": "528eb24ac97848ec83c5acfc575f57e0045d95d30e7c130b4293df851597ef53"
+  },
+  {
+    "file": "sources/skillpay/agent-402.md",
+    "bytes": 8841,
+    "sha256": "b52b0018225e55c5c497d57fdbc26704bd15b80dad3f0a3c3f4c454f379f3670"
+  },
+  {
+    "file": "sources/skillpay/agent-auth.md",
+    "bytes": 39110,
+    "sha256": "dbb6d967dc8fe2dc27d629ee22f1dcf1954bb0edf4cb23f9ecb67779c4421351"
+  },
+  {
+    "file": "sources/skillpay/agent-cashier.md",
+    "bytes": 6813,
+    "sha256": "ca3e9eea16421c8c105c1ba828932f27c4d3db3244f2028739537dd73f84b3d6"
+  },
+  {
+    "file": "sources/skillpay/agent-env.md",
+    "bytes": 1317,
+    "sha256": "9895d228c9c6f96b72ddda5716abda5a17211b906023c10d22f61d6ddce79b09"
+  },
+  {
+    "file": "sources/skillpay/ais-admin-api.BOG1XLQg.js",
+    "bytes": 8111,
+    "sha256": "d39263310ee2cf78e8fbe6ccece2260cfb4e9fe81ae2649e59f875acd46f2a10"
+  },
+  {
+    "file": "sources/skillpay/blog.txt",
+    "bytes": 23286,
+    "sha256": "062d14e84da71f93d6baa0b7d742dc276312d400a0b66df1b33ee0f8b4e916f2"
+  },
+  {
+    "file": "sources/skillpay/changelog.txt",
+    "bytes": 28175,
+    "sha256": "a5032bf0eb8cd7e7271ad00ec81a696737b7bf21c2a88791381b83a73b8aa903"
+  },
+  {
+    "file": "sources/skillpay/consumer-api.gLakm1y9.js",
+    "bytes": 1353,
+    "sha256": "5de3ab32ee54aa10ff49f1db19c765015e8991245b3f8c55ed1294e7c521815b"
+  },
+  {
+    "file": "sources/skillpay/creator-authorizations.html",
+    "bytes": 37402,
+    "sha256": "d7687c20901a35fa57d0f5de72a0e930ed9007271ce2b5e382a7f5d71715f321"
+  },
+  {
+    "file": "sources/skillpay/creator-new.html",
+    "bytes": 85378,
+    "sha256": "b4a8345bcaddf35657d82c0f6fdadcc7d29d60fd6020de24137e2e626333f710"
+  },
+  {
+    "file": "sources/skillpay/creator-product-new.html",
+    "bytes": 50179,
+    "sha256": "dec2bb3eaae244d2b611d006a66b122162c1819fce3c704cb12e1f03d884958d"
+  },
+  {
+    "file": "sources/skillpay/creator-products.html",
+    "bytes": 85378,
+    "sha256": "b4a8345bcaddf35657d82c0f6fdadcc7d29d60fd6020de24137e2e626333f710"
+  },
+  {
+    "file": "sources/skillpay/good-world-skills-get-paid.txt",
+    "bytes": 30610,
+    "sha256": "a2598fdc4f835787dbe9928fcd5bcb1fdb5978659f2ad7f670d806b89233f894"
+  },
+  {
+    "file": "sources/skillpay/home.txt",
+    "bytes": 131889,
+    "sha256": "df02bb191a45cd68148356e868b3f1fc182bce0d0fc134563f4dbb12bd96db93"
+  },
+  {
+    "file": "sources/skillpay/how-to-build-a-good-skill.txt",
+    "bytes": 34160,
+    "sha256": "8287f9acacb54e0fcd7cbbda1697e9eba128cc21712bdab6c2a3362e20c88a24"
+  },
+  {
+    "file": "sources/skillpay/llms.txt",
+    "bytes": 1798,
+    "sha256": "b720fbd162791ef9a4edfa399287b200b52d9bc99fcd439ca8507db316f9efbb"
+  },
+  {
+    "file": "sources/skillpay/product-purchase-command.C8MHVPbR.js",
+    "bytes": 385,
+    "sha256": "f9fccdf81bbfb1269975b4db1cfb1b0703b692af9f185aac7dd0b83f3623e692"
+  },
+  {
+    "file": "sources/skillpay/product-share-card.BwTd9cPe.js",
+    "bytes": 2738,
+    "sha256": "96056cdd08a3b837d9992f6976cc325e48cc787b878d088ec8fbcb2eb33ff8cc"
+  },
+  {
+    "file": "sources/skillpay/products.astro_astro_type_script_index_0_lang.CDw0rujx.js",
+    "bytes": 14523,
+    "sha256": "c9fed8ca70b6b172ea9e927c8ab2a61b16a4ee9774999d991c0a0667d6e1e6d7"
+  },
+  {
+    "file": "sources/skillpay/skill-is-agent-learned-craft.txt",
+    "bytes": 31004,
+    "sha256": "e81a5c30047c5c2bf94b6df34fee458ae15fe9b46baf2e93d65b32d9ff7a0b2d"
+  },
+  {
+    "file": "sources/skillpay/skillpay-refund-api.BxuNVKw_.js",
+    "bytes": 928,
+    "sha256": "ccb19039138dfd84363fb5f1211d019ce92ca27f9d7b6c6627a86231fb23dfcf"
+  },
+  {
+    "file": "sources/skillpay/skillpay-sign-api.Ca1BVbYK.js",
+    "bytes": 2040,
+    "sha256": "00b4fa719f61e25662e4eb9de1f2787df2866fd5abfefe1b1077e630397a1e22"
+  },
+  {
+    "file": "sources/skillpay/skills.astro_astro_type_script_index_0_lang.BOVz05QN.js",
+    "bytes": 14197,
+    "sha256": "ad71d0adf7554098810af348d74409afb1a27d7612150a84431b4d21c5dde819"
+  },
+  {
+    "file": "sources/skillpay/source-manifest.json",
+    "bytes": 6001,
+    "sha256": "bace96dfa8fd57e67af3b88e892615a3fdce320848da8295b5e8f488e4c265d5"
+  },
+  {
+    "file": "sources/skillpay/top-bar-auth.js",
+    "bytes": 26610,
+    "sha256": "7a897063e750b846f183d92a8ef71d64a6dfeb00962050b0c5f0efe7bcfe20d8"
+  },
+  {
+    "file": "sources/skillpay/user-skills.html",
+    "bytes": 36399,
+    "sha256": "01fe18397798652f00f0f35cf3eb14831c22da1ff21668055aac90e734ac83d0"
+  }
+]

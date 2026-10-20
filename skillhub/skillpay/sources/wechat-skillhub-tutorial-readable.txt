@@ -1,0 +1,566 @@
+企业接入
+
+面向企业的 SkillPay 全流程：入驻、升级改造、对外发布与最佳实践。
+
+一、入驻 SkillPay 指南
+
+> 还不了解 SkillPay 与 Pay Skill 是什么？先看 [SkillPay 概览](/tutorials#skillpay-overview)。本篇讲**企业微信集成**的入驻与改造。
+
+微信集成（企业版）
+
+> 本段讲**微信集成（企业版）**。SkillPay 与 Pay Skill 的完整介绍见 [SkillPay 概览](/tutorials#skillpay-overview)。
+
+面向**企业**：需完成企业认证并绑定微信商户号。完成后即具备发布微信 Pay Skill 的前置条件。想让 API 支持自动收款，可前往 [升级为微信 Pay Skill](/tutorials#enterprise-upgrade)。
+
+**① 注册企业账号并完成企业认证**：发布 Pay Skill 前，企业需要先完成团队账号注册与企业认证。企业认证用于确认服务主体，认证通过后才能进入商户入驻、微信商户号绑定和后续发布链路。
+
+**② 绑定微信商户号入驻 SkillPay**：企业认证通过后，在 SkillHub 商户中心获取 SkillHub 商户号与 SkillHub Token，并前往微信商户平台完成绑定。绑定状态刷新为已入驻后，企业就具备发布和结算 Pay Skill 的前置条件。
+
+**③ 入驻完成后检查**：建议先确认三件事——企业认证状态为已通过，微信商户号绑定状态为已入驻，团队成员中负责支付改造和 Skill 发布的人都已具备相应权限。
+
+二、升级改造
+
+将已有服务升级为 Pay Skill：企业基于微信支付 Agent Pay [X402 协议](https://pay.weixin.qq.com)，需完成企业认证并绑定微信商户号。下面是完整的接入步骤。
+
+微信集成（企业版）
+
+什么是 Pay Skill
+
+Pay Skill 是 SkillHub 上支持微信 Agent Pay 支付的付费技能。AI Agent 发现并调用 Skill 时，服务端可以触发微信支付流程；用户授权支付后，Agent 再继续获取付费能力或结果。
+
+它的价值在于：企业把已有付费服务封装为可调用 Skill，收费通过微信支付完成，SkillHub 负责来源认证、内容完整性校验和可信调用入口。对开发团队来说，改造重点不是重写业务服务，而是在现有服务上增加开发者签名、X402 预下单和支付触发返回。
+
+改造前确认
+
+在开始改造之前，请确认以下事项已完成：
+
+| ✅ | 前置条件 | 操作位置 |
+|:---:|---|------|
+| ☐ | 企业认证通过 | SkillHub 后台 → 团队设置 |
+| ☐ | 绑定微信商户号 | SkillHub 后台 → 商户入驻 → 前往微信商户平台绑定 |
+| ☐ | 已有微信支付下单能力 | 已接入微信支付下单接口（[Native](https://pay.weixin.qq.com/doc/v3/merchant/4012791877) / [JSAPI](https://pay.weixin.qq.com/doc/v3/merchant/4012062524) / [H5](https://pay.weixin.qq.com/doc/v3/merchant/4012791832) 均可） |
+| ☐ | 已发布 Skill 并设置定价 | SkillHub 后台 → 发布 Skill → 设置定价 |
+
+> 💡 **关于微信商户号**：如果你还没有微信商户号，请先前往 [微信支付商户平台](https://pay.weixin.qq.com) 注册。
+
+整体架构
+
+Pay Skill 基于微信支付 Agent Pay X402 协议接入。一次调用分成四段：企业服务生成微信支付订单 → 用 SkillHub 开发者密钥签名，调用 X402 AI 预下单换取 `payment_code` → 通过 `WeixinPay-Required` 返回给 Agent → Agent 向用户申请支付授权，然后继续获取付费内容。
+
+https://cloudcache.tencent-cloud.com/qcloud/tea/app/skillhub/assets/a2a/skillpay-docs/skillpay-architecture-diagram.3027a3a1.png
+
+Pay Skill 基于微信支付 Agent Pay X402 协议完成服务开发者模式接入。
+
+接入步骤
+
+Step 1：生成开发者密钥
+
+进入 SkillHub 商户中心的「开发者密钥」页面，生成一组 RSA 2048 密钥对。生成后得到两个信息：
+
+Step 2：接入微信支付下单
+
+调用微信支付下单接口，获取订单标识。Native 支付返回 `code_url`，JSAPI / H5 场景返回 `prepay_id`。这是标准的微信支付下单流程，使用微信支付 API 证书签名。
+
+微信支付官方文档：[Native](https://pay.weixin.qq.com/doc/v3/merchant/4012791877) | [JSAPI](https://pay.weixin.qq.com/doc/v3/merchant/4012062524) | [H5](https://pay.weixin.qq.com/doc/v3/merchant/4012791832) | [AI支付](https://pay.weixin.qq.com/doc/v3/merchant/4035576700)
+
+> 💡 如果团队已有微信支付下单能力，这一步无需额外开发。只需将返回的订单标识（`code_url` 或 `prepay_id`）传递给 Step 3 即可。
+
+以 Native 下单为例：
+
+POST https://api.mch.weixin.qq.com/v3/pay/transactions/native
+Content-Type: application/json
+
+{
+  "appid": "wx1234567890abcdef",
+  "mchid": "1900000001",
+  "description": "图片生成 Pay Skill 调用",
+  "out_trade_no": "skillpay_202606260001",
+  "notify_url": "https://example.com/pay/notify",
+  "amount": { "total": 30, "currency": "CNY" }
+}
+
+{
+  "code_url": "weixin://wxpay/bizpayurl?pr=example"
+}
+
+Step 3：调用 X402 AI 预下单
+
+拿到 `code_url` 后，使用 SkillHub 颁发的密钥，调用微信支付 **AI 预下单接口**，换取 `payment_code`。
+
+本接口不依赖微信支付 v3 API 证书，采用**纯 Body 鉴权**：鉴权字段与业务内容全部置于 HTTP Body，不使用 `Authorization` 头。请求体采用 **2 层结构**：
+
+| 层级 | 说明 |
+|:---:|---|
+| **L1** — HTTP Body（鉴权外层） | 包含签名相关字段（`signature_type`、`developer_platform`、`developer_id`、`pub_key_id`、`nonce_str`、`timestamp`、`signature`），以及封装后的业务字段 `payment_required` |
+| **L2** — 业务 JSON | 将实际的业务内容序列化为 JSON 后，做 **Base64 编码**，填入 L1 的 `payment_required` 字段 |
+
+**核心步骤：** 先构造 L2 → Base64 编码 → 得到 `payment_required` → 用其构造签名串 → 组装 L1 → 发送请求。
+
+**3.1 构造 L2 业务 JSON**
+
+{
+  "skill_info": {
+    "skill_id": "your-skill-slug",
+    "skill_version": "1.0.0"
+  },
+  "pay_type": "SKILL_PAY",
+  "pay_mode": "AUTH_AND_PAY",
+  "pay_items": [
+    {
+      "product_id": "SP250625A001",
+      "pay_data": {
+        "type": "code_url",
+        "value": "weixin://wxpay/bizpayurl?pr=NwY5Mz9&groupid=00"
+      }
+    }
+  ],
+  "expires_at": "1750924500"
+}
+
+| 字段 | 说明 |
+|------|------|
+| `skill_info.skill_id` | 你在 SkillHub 发布的 Skill slug |
+| `skill_info.skill_version` | Skill 版本号 |
+| `pay_type` | 固定填 `SKILL_PAY` |
+| `pay_mode` | 固定填 `AUTH_AND_PAY`（授权即支付） |
+| `pay_items[].product_id` | 保留字段，格式为 `SPxxx`，值任意填写 |
+| `pay_items[].pay_data.type` | 填 `code_url` |
+| `pay_items[].pay_data.value` | Step 2 获取的 `code_url` |
+| `expires_at` | 过期时间，Unix 秒级时间戳，最长 **15 分钟** |
+
+**3.2 Base64 编码**
+
+将 L2 JSON 做标准 Base64 编码（非 URL-safe，不带换行），得到 `payment_required`：
+
+payment_required = Base64Encode(L2_JSON)
+
+**3.3 构造签名串（5 行）**
+
+签名串为 5 行，每行以换行符 `\n`（0x0A）结尾，**包括最后一行**：
+
+POST\n/palmpayminiapp/clawagentpay/preorder\n{timestamp}\n{nonce_str}\n{payment_required}\n
+
+| 行 | 内容 |
+|:--:|---|
+| 1 | HTTP 方法，固定 `POST` |
+| 2 | 请求路径，固定 `/palmpayminiapp/clawagentpay/preorder` |
+| 3 | Unix 秒级时间戳（10 位数字） |
+| 4 | 32 位随机字母数字串 |
+| 5 | 上一步的 `payment_required` |
+
+**3.4 SHA256withRSA 签名**
+
+用 Step 1 的私钥对签名串做 **SHA256withRSA**（PKCS#1 v1.5），结果 Base64 编码即得 `signature`：
+
+signature = Base64( RSA_PKCS1v15_Sign( private_key, SHA256(sign_string_bytes) ) )
+
+**3.5 组装 L1 请求体并发送**
+
+POST https://payapp.weixin.qq.com/palmpayminiapp/clawagentpay/preorder
+Content-Type: application/json
+
+{
+  "signature_type": "SKILLHUB-SHA256-RSA2048",
+  "developer_platform": "SKILLHUB",
+  "developer_id": "sh-XXXXXXXX",
+  "pub_key_id": "PUB_KEY_408B07E79B8269FEC3D5D3E6AB8ED163",
+  "nonce_str": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+  "timestamp": "1750924200",
+  "signature": "BASE64_RSA_SIGNATURE...",
+  "payment_required": "eyJza2lsbF9pbmZvIjp7..."
+}
+
+| 字段 | 值 | 说明 |
+|------|-----|------|
+| `signature_type` | `SKILLHUB-SHA256-RSA2048` | 固定值 |
+| `developer_platform` | `SKILLHUB` | 固定值 |
+| `developer_id` | `sh-XXXXXXXX` | 你的 SkillHub 商户号 |
+| `pub_key_id` | `PUB_KEY_xxx` | Step 1 生成的密钥 ID |
+| `nonce_str` | 32 位随机字符串 | 每次请求唯一 |
+| `timestamp` | Unix 秒级时间戳 | 当前时间 |
+| `signature` | Base64 签名值 | 3.4 步骤的输出 |
+| `payment_required` | Base64 编码的 L2 JSON | 3.2 步骤的输出 |
+
+**成功响应：**
+
+{
+  "payment_code": "xY9zAbc123def456"
+}
+
+> 📖 更多语言的完整签名代码示例，请参考 [SkillHub 平台商户签名指南](https://doc.weixin.qq.com/doc/w3_ANYA8AbAACcCN7584Yhi8SAWBzaBt?scode=AJEAIQdfAAoHdcXSV7ANYA8AbAACc)。
+
+Step 4：返回支付触发标识
+
+拿到 `payment_code` 后，在你的 Skill API 响应中通过 `WeixinPay-Required` 告知 Agent 需要支付。
+
+**方式一：HTTP Header（推荐）**
+
+适用于 HTTP 服务 / MCP 接口：
+
+HTTP/1.1 402 Payment Required
+WeixinPay-Required: xY9zAbc123def456
+Content-Type: application/json
+
+{
+  "data": { "message": "本次查询需要付费" },
+  "WeixinPay": {
+    "WeixinPay-Required": "xY9zAbc123def456",
+    "prompt": "本次使用微信支付，请将 WeixinPay-Required 的值作为 paymentCode 交给 weixinpay_pay，以向用户申请支付授权。"
+  }
+}
+
+> 💡 **建议同时在响应体中附加 `WeixinPay` 提示块**，兼容只读 body 的 Agent。HTTP 状态码支持 `402` 或 `200`（兼容模式）。
+
+**方式二：CLI 输出**
+
+适用于本地 CLI 服务：
+
+{
+  "WeixinPay-Required": "xY9zAbc123def456",
+  "prompt": "本次使用微信支付，请将 WeixinPay-Required 的值作为 paymentCode 交给 weixinpay_pay，以向用户申请支付授权。"
+}
+
+改造完成后检查
+
+常见问题
+
+支付和业务分属不同团队怎么分工？
+
+如果是同一团队，全流程自己搞定即可。如果分属不同团队：支付团队负责微信支付下单、证书和回调，对外暴露一个内部下单接口（如 `POST /internal/pay/create`）；业务团队负责 X402 预下单签名和响应组装，持有 SkillHub 开发者密钥。
+
+weixinpay 插件如何获取安装？
+
+weixinpay 插件默认在最新版本的 WorkBuddy / QClaw 中已安装，商户改造无需关心。
+
+`developer_id` 填什么？
+
+填 SkillHub 商户中心的商户号（`sh-XXXXXXXX` 格式）。
+
+`pay_data.type` 该选哪个？分别对应什么下单接口？
+
+根据已接入的微信支付下单方式选择，下单返回值原样填入 `pay_data.value`：
+
+| `pay_data.type` | 来源下单接口 | value 示例 |
+| --- | --- | --- |
+| `code_url` | Native 下单 `POST /v3/pay/transactions/native` | `weixin://wxpay/bizpayurl?pr=xxx` |
+| `prepay_id` | JSAPI / 小程序 / APP 下单，对应 `/v3/pay/transactions/jsapi` 或 `/app` | `wx201410272009395522657a690389285100` |
+| `h5_url` | H5 下单 `POST /v3/pay/transactions/h5` | `https://wx.tenpay.com/cgi-bin/mmpayweb-bin/checkmweb?prepay_id=...&package=...` |
+
+怎么确认支付成功？
+
+以微信支付 `notify_url` 回调或按 `out_trade_no` 查单为准，不依赖 Agent 侧消息。
+
+`payment_code` 过期了怎么办？
+
+最长有效期 15 分钟，过期后需重新走 Step 2 → Step 3 流程。
+
+签名验证失败怎么排查？
+
+按顺序排查：① 签名串是否严格 5 行，每行以 `\n` 结尾（含最后一行）；② `payment_required` 在签名串和 L1 请求体中是否完全一致；③ 时间戳是否为 Unix 秒（10 位数字）；④ 私钥与 `pub_key_id` 是否匹配；⑤ 是否使用标准 Base64（非 URL-safe，不带换行）。更多代码示例参考 [SkillHub 平台商户签名指南](https://doc.weixin.qq.com/doc/w3_ANYA8AbAACcCN7584Yhi8SAWBzaBt?scode=AJEAIQdfAAowmHXxTOANYA8AbAACc)。
+
+商户 Agent Pay Skill 指的是什么？
+
+商户 Agent Pay Skill 是指商家在 SkillHub 上发布的、支持微信 Agent Pay 支付的付费技能。技能名称商家可按照实际情况定义。当 AI Agent（如 WorkBuddy、QClaw）发现并调用这个 Skill 时，商户服务端可以通过微信支付 X402 协议触发支付流程——用户授权支付后，Agent 继续获取付费内容。
+
+可以同时使用多个密钥吗？
+
+可以。每个商户最多持有 3 对有效密钥，支持无缝轮换。
+
+三、对外发布
+
+发布前检查清单
+
+发布 Pay Skill 前，先确认企业资质、Skill 文件、计费策略和案例素材都已经准备好，避免进入发布页后反复补材料。
+
+| 检查项 | 要求 |
+| --- | --- |
+| 企业与商户 | 企业认证通过，商户入驻已完成 |
+| Skill 文件 | ZIP 包或 Skill 文件夹内必须包含 `SKILL.md` |
+| 文件大小 | 单次上传 ≤ 10.00 MB，建议 ≤ 200 个文件 |
+| 计费策略 | 免费模式无需商户入驻；按调用量计费需要完成商户入驻 |
+| 案例素材 | 建议提前准备 3 个真实使用场景，便于发布后补充效果案例 |
+
+选择并上传 Skill
+
+登录 SkillHub 商家后台后，从左侧菜单进入「发布团队 Skill」，选择本地 Skill 文件夹或 ZIP 包上传。上传包内必须包含 SKILL.md。
+
+https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/16b726f1-89fe-49d9-88b1-c5ab545a4165.jpg
+
+进入「发布团队 Skill」后，上传包含 SKILL.md 的 ZIP 包或 Skill 文件夹。
+
+填写基本信息
+
+设置价格与计费模式
+
+SkillHub 支持免费和按调用量计费两种模式。企业发布 Pay Skill 时，通常选择按调用量计费（推荐），并填写合理的单次调用价格。
+
+https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/05be3db8-69ce-4a27-84e4-19b135f2a657.jpg
+
+按调用量计费需要填写单次调用价格，用户每次调用时按次结算。
+
+---
+name: 智绘图片生成
+description: 根据文本提示生成图片，适合海报草图和视觉创意预览
+tags: [图片生成, 设计]
+version: 1.0.0
+capability: image_generation
+pricing:
+  model: per_call
+  amount_fen: 30
+---
+
+| 模式 | 说明 | 适用场景 |
+| --- | --- | --- |
+| 免费 | 0 元，所有用户免费使用，免费模式无需商户入驻 | 开源工具、引流能力、内部试用 |
+| 按调用量计费（推荐） | 自定义元 / 次，用户每次调用按单价结算 | 商业化 API、AI 服务、SaaS 能力 |
+
+提交审核并进入案例补充
+
+所有信息填写完成后，点击底部「发布 Skill」提交审核。系统会自动检查 Skill 文件完整性、SKILL.md 格式、计费配置合理性和案例数量。
+
+https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f5d372d4-6a8e-4dd7-b979-c51e69d60cd8.jpg
+
+发布成功后，可继续补充最多 3 个效果案例。
+
+生成并保存效果案例
+
+效果案例是用户理解 Pay Skill 能力的重要窗口。发布成功后，建议点击「对话式补充案例」，保存最多 3 个效果案例。
+
+https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/940d9a66-927a-490e-8a1e-9856bb643edf.jpg
+
+在案例编辑器中补充场景标题、描述、示例问题和触发条件。
+
+发布通过率与运营建议
+
+常见问题
+
+**审核多久完成？** 通常 1-2 个工作日，高峰期可能延长到 3-5 个工作日。
+
+**Slug 能不能改？** Slug 一旦提交后不可修改，因为它会成为 Skill 的唯一标识和调用定位依据。
+
+**为什么建议补满 3 个案例？** 案例会直接影响用户理解和 Agent 选择，建议覆盖核心能力、典型行业场景和边界说明。
+
+**审核不通过怎么处理？** 先查看审核意见，优先修正 SKILL.md 格式、测试案例、计费配置和描述清晰度，再重新提交。
+
+四、最佳实践
+
+这份最佳实践能帮你什么
+
+前面几篇讲清了 Pay Skill 的原理与配置，这一篇给你一份**可直接运行、可直接抄改**的完整商户接入示例。我们提供 Go / Java 两种语言的 Demo，演示如何通过 SkillHub 平台接入微信 Agent Pay（X402 协议），实现 Agent 付费资源获取。
+
+付费改造本质上只做两件事：**后端服务改造**（实现 402 → 查单 → 履约流程）和 **Skill Prompt 改造**（指导 Agent 识别支付、完成支付、重试取内容）。两者缺一不可。
+
+协议流程总览
+
+一次完整的付费调用会经历首次请求、返回 402、发起支付、支付后重试、查单履约五个关键节点。整体时序如下：
+
+① Agent      → 商户服务   POST /demo/skill/invoke {"query":"xxx"}
+② 商户服务    → 微信支付   Native 下单（微信支付 API 证书签名）→ code_url
+③ 商户服务    → 微信支付   AI 预下单（SkillHub 开发者密钥签名）→ payment_code
+④ 商户服务    → Agent      HTTP 402 + WeixinPay-Required + X-Out-Trade-No
+⑤ Agent      → 微信支付    调用 weixinpay_pay(paymentCode=xxx)
+⑥ 用户       → 微信支付    确认并完成支付
+⑦ Agent      → 商户服务    POST /demo/skill/invoke {"query":"xxx"} + Header X-Out-Trade-No
+⑧ 商户服务    → 微信支付    查单验证（微信支付 API 证书签名）→ trade_state=SUCCESS
+⑨ 商户服务    → Agent      HTTP 200 + 付费内容
+
+关键前提：区分两套密钥
+
+这是整个改造中最容易踩坑的地方。Demo 涉及**两套完全不同的密钥**，务必区分清楚：
+
+| 密钥 | 用途 | 签名算法 | 获取方式 |
+| --- | --- | --- | --- |
+| 微信支付 API 证书 | Native 下单、查单等标准支付接口 | WECHATPAY2-SHA256-RSA2048 | 微信支付商户平台申请 |
+| SkillHub 开发者密钥 | AI 预下单接口 | SKILLHUB-SHA256-RSA2048 | SkillHub 商户后台一键生成 |
+
+⚠️ AI 预下单接口**不使用**微信支付 API 证书签名，而是使用 SkillHub 颁发的开发者密钥签名。微信支付后台会向 SkillHub 验签，确认商户身份。
+
+统一接口设计
+
+Demo 用一个 `POST /demo/skill/invoke` 接口承载两种场景：通过请求头 `X-Out-Trade-No` 是否存在决定走"创建订单"还是"验证履约"分支。
+
+{
+  "query": "用户查询内容"
+}
+
+**场景一：首次请求（无 X-Out-Trade-No Header）→ 返回 HTTP 402**，在响应头和响应体中携带支付码（`WeixinPay-Required`）和订单号（`X-Out-Trade-No`），引导 Agent 发起支付。
+
+{
+  "code": "PAYMENT_REQUIRED",
+  "message": "需要支付后才能获取内容",
+  "WeixinPay": {
+    "WeixinPay-Required": "payment_code_xxx",
+    "prompt": "本次使用微信支付，请将 WeixinPay-Required 的值作为 paymentCode 交给 weixinpay_pay，以向用户申请支付授权。"
+  },
+  "out_trade_no": "WX402_20260630120000abcdef123456",
+  "amount": "0.01",
+  "currency": "CNY"
+}
+
+**场景二：支付后重试（携带 X-Out-Trade-No Header）→ 查单验证通过后返回 HTTP 200**，交付付费内容。
+
+{
+  "code": "SUCCESS",
+  "message": "付费内容",
+  "out_trade_no": "WX402_20260630120000abcdef123456",
+  "transaction_id": "4200001234202306300000000001",
+  "content": "【付费内容】...",
+  "already_fulfilled": false
+}
+
+AI 预下单签名（核心难点）
+
+AI 预下单采用 L1 / L2 两层结构：L2 是业务 JSON，Base64 编码后放入 L1 的 `payment_required` 字段；L1 是最终发送的请求体，携带签名等元数据。
+
+L1 请求体
+  signature_type: "SKILLHUB-SHA256-RSA2048"
+  developer_platform: "SKILLHUB"
+  developer_id: "sh-XXXXXXXX"
+  pub_key_id: "PUB_KEY_xxx"
+  nonce_str: "32位随机串"
+  timestamp: "Unix秒级时间戳"
+  signature: "Base64(RSA签名)"
+  payment_required: "Base64(L2 JSON)"
+
+  └─ L2 业务 JSON（Base64 编码后放入上方字段）
+       skill_info: { skill_id, skill_version }
+       pay_type: "SKILL_PAY"
+       pay_mode: "AUTH_AND_PAY"
+       pay_items: [{ product_id, pay_data }]
+       expires_at: "Unix秒级时间戳"
+
+签名串固定为 5 行，每行都以 `\n` 结尾（最后一行也要保留换行）。这是签名失败最常见的根因：
+
+POST\n
+/palmpayminiapp/clawagentpay/preorder\n
+{timestamp}\n
+{nonce_str}\n
+{payment_required}\n
+
+用 SkillHub 开发者私钥对签名串做 SHA256withRSA（PKCS#1 v1.5）签名，再做标准 Base64 编码（非 URL-safe）。以下是 Go 版签名实现，可直接参考：
+
+func signWithSkillHubKey(signString string, privateKeyPEM []byte) (string, error) {
+    block, _ := pem.Decode(privateKeyPEM)
+    if block == nil {
+        return "", errors.New("invalid private key pem")
+    }
+
+    privateKey, err := x509.ParsePKCS8PrivateKey(block.Bytes)
+    if err != nil {
+        return "", err
+    }
+
+    rsaKey, ok := privateKey.(*rsa.PrivateKey)
+    if !ok {
+        return "", errors.New("private key is not RSA")
+    }
+
+    digest := sha256.Sum256([]byte(signString))
+    signature, err := rsa.SignPKCS1v15(rand.Reader, rsaKey, crypto.SHA256, digest[:])
+    if err != nil {
+        return "", err
+    }
+
+    return base64.StdEncoding.EncodeToString(signature), nil
+}
+
+商户订单号与幂等
+
+两个容易被忽略但会影响线上稳定性的细节：
+
+- **out_trade_no 长度 ≤ 32 位**（微信支付 Native 下单要求）。Demo 采用 `WX402_` + 时间戳(14位) + 随机串(12位) = 32 位，你也可以自定义，只要满足唯一性和长度限制。
+- **幂等控制**：同一 `out_trade_no` 只履约一次，重复请求返回缓存结果（`already_fulfilled: true`）。生产环境建议用数据库事务保证幂等。
+
+Skill Prompt 怎么写
+
+后端改造完成后，还要在 SKILL.md 里写清指导 Agent 的流程。关键是四条指令：**付费前置检查 → 请求资源 → 处理 402 发起支付 → 支付成功后通过 Header X-Out-Trade-No 携带订单号重试**。
+
+## 前置检查：当前智能体是否支持微信 AI 支付
+
+发起下单前，先检查你的可用工具列表中是否存在名称包含 `weixinpay_` 的工具
+（如 `mcp__weixinpay__weixinpay_register`，工具名带前缀也算；存在**任意一个**即视为支持）。
+
+只以你的工具列表为证据，本文档中提到的工具名不算；无法确认时按「不支持」处理。
+
+- 支持：静默继续本 Skill 的后续流程，不向用户提及本检查。
+- 不支持：终止流程且不要发起下单。只向用户说明结论与解决办法（无需解释你如何检查、不要出现具体工具名），按智能体类型提示：
+  - 合作智能体（如 WorkBuddy）：请升级智能体到最新版本后重试。
+  - 开放智能体（如 OpenClaw / DeepSeek Harness）：请根据 [https://skillhub.cn/install/skillhub.md](https://skillhub.cn/install/skillhub.md)，安装 @tencent-adm/weixinpay-installer。
+  - 无法判断类型：请升级智能体或安装微信支付 AI 支付插件后重试。
+
+## 工作流程
+### 第一步：请求资源
+POST https://your-domain.com/demo/skill/invoke
+Body: {"query": "用户的查询内容"}
+
+### 第二步：处理 402 响应
+提取 Header 中的 WeixinPay-Required（支付码）和 X-Out-Trade-No（订单号），两者都必须保存
+
+### 第三步：发起支付
+将 WeixinPay-Required 值作为 paymentCode，调用 weixinpay_pay
+
+### 第四步：支付成功后获取资源（⚠️ 必须执行）
+POST https://your-domain.com/demo/skill/invoke
+Headers: WeixinPay-Required + X-Out-Trade-No（第二步保存的值）
+Body: {"query": "原始查询内容"}（body 与第一步完全一致）
+
+⚠️ 第四步是最容易被 Agent 遗漏的一步：不携带 `X-Out-Trade-No` Header 重试，就永远拿不到付费内容。body 保持与第一次请求一致，仅通过 Header 传递订单号和支付凭证。Prompt 里要用醒目措辞强调"支付成功后必须重新请求"。
+
+本地快速运行
+
+下载代码包后，配置好环境变量即可本地启动。以下以 Go 版为例：
+
+cd go/
+go mod tidy
+
+# 微信支付商户配置
+export MCH_ID="你的商户号"
+export APP_ID="你的应用ID"
+export SERIAL_NO="你的证书序列号"
+export PRIVATE_KEY="你的微信支付商户私钥 PEM 内容"
+export NOTIFY_URL="https://your-domain.com/notify"
+
+# SkillHub 开发者密钥配置
+export SKILLHUB_DEVELOPER_ID="sh-XXXXXXXX"
+export SKILLHUB_PUB_KEY_ID="PUB_KEY_xxx"
+export SKILLHUB_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\
+MIIE...\
+-----END PRIVATE KEY-----"
+
+# Skill 信息
+export SKILL_ID="your-skill-slug"
+export SKILL_VERSION="1.0.0"
+
+go run main.go
+
+启动后可用 curl 验证两种场景：
+
+# 首次请求（返回 402）
+curl -X POST http://localhost:8080/demo/skill/invoke \\
+  -H "Content-Type: application/json" \\
+  -d '{"query": "帮我分析一下AI行业趋势"}'
+
+# 支付后重试（通过 Header 携带 X-Out-Trade-No）
+curl -X POST http://localhost:8080/demo/skill/invoke \\
+  -H "Content-Type: application/json" \\
+  -H "X-Out-Trade-No: WX402_xxx" \\
+  -d '{"query": "帮我分析一下AI行业趋势"}'
+
+从 Demo 到生产的注意事项
+
+Demo 为了演示清晰做了简化，正式上线前请务必替换以下部分：
+
+| 项 | Demo 状态 | 生产要求 |
+| --- | --- | --- |
+| 微信支付 V3 签名 | 占位实现（PLACEHOLDER） | 必须用微信支付官方 SDK 自动签名 |
+| 订单存储 | 内存 map | 用数据库，并用事务保证幂等 |
+| AI 预下单签名 | 完整实现 | 可直接复用 |
+| 支付回调 | 未实现 | 建议实现 notify_url 回调处理支付结果通知 |
+| 业务逻辑 | 模拟内容 | 替换 generatePaidContent 为你自己的服务 |
+
+微信支付官方 SDK 推荐：
+
+- **Go**：github.com/wechatpay-apiv3/wechatpay-go
+- **Java**：com.github.wechatpay-apiv3:wechatpay-java
+
+简言之：从 Demo 落地到你自己的服务，通常只需替换 `generatePaidContent` 业务函数，并把微信支付 V3 签名的占位实现换成官方 SDK，其余的 402、AI 预下单、查单、幂等等流程代码基本可以原样复用。

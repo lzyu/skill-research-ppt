@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040">
+  <style>
+    rect, circle { fill: none !important; stroke: #202020 !important; }
+    path { stroke: #202020 !important; }
+    text { fill: #202020 !important; }
+    svg > rect:first-of-type { fill: none !important; stroke: none !important; }
+  </style>
+  <rect width="1600" height="1040" fill="#F6F4EE"/>
+  <text x="80" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#77736B" letter-spacing="3">FIGURE 03 / DEFENSE IN DEPTH</text>
+  <text x="80" y="142" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="42" font-weight="700" fill="#171717">不是简单拒答，而是同时守住安全与可用性</text>
+  <rect x="80" y="205" width="1440" height="120" rx="20" fill="#FFF" stroke="#B9B5AB" stroke-width="2"/>
+  <text x="120" y="252" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18" fill="#77736B">INPUT</text>
+  <text x="120" y="290" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="27" font-weight="650" fill="#171717">用户 Query + 会话历史 + 当前权益 + Skill 能力边界</text>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">
+    <rect x="80" y="390" width="430" height="395" rx="22" fill="#E8EDF5" stroke="#8092AD" stroke-width="2"/>
+    <text x="120" y="443" font-size="18" fill="#52657F">PATH A / NORMAL</text>
+    <text x="120" y="486" font-size="29" font-weight="700" fill="#171717">正常任务</text>
+    <text x="120" y="541" font-size="21" fill="#3F4855">理解目标</text><text x="120" y="580" font-size="21" fill="#3F4855">加载最小必要上下文</text><text x="120" y="619" font-size="21" fill="#3F4855">生成任务专用执行文本</text><text x="120" y="658" font-size="21" fill="#3F4855">由本地 Agent 校验并执行</text>
+    <rect x="120" y="705" width="350" height="52" rx="26" fill="#5577A9"/><text x="295" y="739" text-anchor="middle" font-size="20" font-weight="650" fill="#FFF">返回有用、正确的任务结果</text>
+    <rect x="585" y="390" width="430" height="395" rx="22" fill="#FBE9E4" stroke="#C77A63" stroke-width="2"/>
+    <text x="625" y="443" font-size="18" fill="#A84F38">PATH B / EXTRACTION</text>
+    <text x="625" y="486" font-size="29" font-weight="700" fill="#171717">原文套取</text>
+    <text x="625" y="541" font-size="21" fill="#5C433C">直接索取提示词</text><text x="625" y="580" font-size="21" fill="#5C433C">角色扮演与指令覆盖</text><text x="625" y="619" font-size="21" fill="#5C433C">编码、翻译或分段改写</text><text x="625" y="658" font-size="21" fill="#5C433C">多轮累积与跨会话探测</text>
+    <rect x="625" y="705" width="350" height="52" rx="26" fill="#C86449"/><text x="800" y="739" text-anchor="middle" font-size="20" font-weight="650" fill="#FFF">拒绝原文，仍可帮助完成任务</text>
+    <rect x="1090" y="390" width="430" height="395" rx="22" fill="#E8EFE9" stroke="#7D9C86" stroke-width="2"/>
+    <text x="1130" y="443" font-size="18" fill="#557260">PATH C / BOUNDARY</text>
+    <text x="1130" y="486" font-size="29" font-weight="700" fill="#171717">边界请求</text>
+    <text x="1130" y="541" font-size="21" fill="#40574A">解释结果但不索取规则</text><text x="1130" y="580" font-size="21" fill="#40574A">合理引用与调试请求</text><text x="1130" y="619" font-size="21" fill="#40574A">与能力范围相邻的问题</text><text x="1130" y="658" font-size="21" fill="#40574A">需要人工判断的灰区</text>
+    <rect x="1130" y="705" width="350" height="52" rx="26" fill="#527A63"/><text x="1305" y="739" text-anchor="middle" font-size="20" font-weight="650" fill="#FFF">最小化披露 + 有用回答</text>
+  </g>
+  <g stroke="#171717" stroke-width="2.5" fill="none"><path d="M800 325V355H295V377"/><path d="M286 365L295 377L304 365"/><path d="M800 325V377"/><path d="M791 365L800 377L809 365"/><path d="M800 355H1305V377"/><path d="M1296 365L1305 377L1314 365"/></g>
+  <rect x="80" y="850" width="1440" height="112" rx="20" fill="#1C1C1B"/>
+  <text x="120" y="893" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="18" fill="#AAA69C">EVALUATION LOOP</text>
+  <text x="120" y="934" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="22" fill="#FFF">单轮攻击 · 多轮累计 · 编码变形 · 任务完成率 · 答案正确率 · 相对质量保持率 · P95 延迟</text>
+  <text x="80" y="1004" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="18" fill="#77736B">保护不是一次性规则：模型、策略或 Skill 版本变化后，都需要重新进行回归评测。</text>
+</svg>
+

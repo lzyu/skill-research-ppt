@@ -1,0 +1,33 @@
+# 支付宝 Agent支付 Agent 指南
+
+https://skillpay.alipay.com/ 是支付宝 AI 支付的官方网站，本文旨在：
+
+- 帮助 Agent 理解站点，快速找到对应站点内容
+- 引导 Agent 辅助开发者快速接入支付宝 AI 支付相关产品
+
+## 重要站点内容
+
+- [文档概览](https://skillpay.alipay.com/docs/overview.md)
+- [接入文档相关 llms.txt](https://skillpay.alipay.com/docs/llms.txt)
+- [站点 API Catalog](https://skillpay.alipay.com/.well-known/api-catalog)
+- [Agent Skill 索引](https://skillpay.alipay.com/.well-known/skills/index.json)
+
+## 核心产品介绍
+
+- [AI订阅解决方案](https://skillpay.alipay.com/subscription.md) - 为AI行业打造的变现基础设施
+- [AI按量付费](https://skillpay.alipay.com/callpay.md) - 专为智能体经济打造，让每一个 AI 技能、MCP 服务、API 都能实时变现
+- [AI网页应用收款](https://skillpay.alipay.com/products/ai-web-app.md) - 一行命令为网页应用商业化打造流畅支付体验
+- [AI移动应用收款](https://skillpay.alipay.com/products/ai-mobile-app.md) - 一行命令为移动应用商业化打造流畅支付体验
+- [Agent支付](https://skillpay.alipay.com/agentpay.md) - 给你的Agent一个AI钱包，让 AI 帮你下单付款，一句话完成
+- [支付集成Skill](https://skillpay.alipay.com/developers/skill.md) - 支持 AI 网页应用收款、AI 移动应用收款、AI 按量付费三种产品，签约入驻 + 代码集成一站式完成
+
+## 体验 Agent 支付
+
+```text
+npx -y @alipay/agent-payment@latest install
+```
+
+## 快速接入支付宝集成工具
+
+- 方式一：`npx -y @alipay/alipay-aipay@latest install`
+- 方式二：前往 [支付宝 AI Skills](https://github.com/alipay/ai/tree/main/skills) 获取支付宝AI付技能（alipay-aipay）

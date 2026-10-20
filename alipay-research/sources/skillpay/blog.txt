@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f6f6f7"><title>博客｜SkillPay</title><meta name="description" content="SkillPay 技术洞察、产品叙事与开发者实践。"><meta name="robots" content="index,follow"><link rel="canonical" href="https://skillpay.alipay.com/blog"><link rel="icon" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:title" content="博客｜SkillPay"><meta property="og:description" content="SkillPay 技术洞察、产品叙事与开发者实践。"><meta property="og:url" content="https://skillpay.alipay.com/blog"><meta property="og:image" content="https://skillpay.alipay.com/og.png"><meta property="og:image:width" content="1731"><meta property="og:image:height" content="909"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="博客｜SkillPay"><meta name="twitter:description" content="SkillPay 技术洞察、产品叙事与开发者实践。"><meta name="twitter:image" content="https://skillpay.alipay.com/og.png"><script>window.injectInfo = { appName: "skillpay-official-site", env: "PROD" };</script><script>window.publicPath = window.__basement_public_path__ = "https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/";</script><script>
+      document.documentElement.classList.add('has-scroll-reveal');
+      document.documentElement.classList.toggle(
+        'no-native-view-transition',
+        typeof document.startViewTransition !== 'function',
+      );
+    </script><meta name="data-aspm" content="a5486"><meta name="data-bizType" content="common"><script>(function(){const tracertConfig = {"spmAPos":"a5486","spmBPos":"b245645","pathName":"/blog","name":"SkillPay博客列表页","bizType":"common","autoLogPv":true,"autoExpo":true,"ifRouterNeedPv":false,"expoOnce":false};
+const spmPageName = "SkillPay博客列表页";
+const tracertScriptUrl = "https://ur.alipay.com/tracert_a5486.js";
+
+  window._to = { ...tracertConfig, pathName: window.location.pathname };
+  window.__aipaySpmPageName = spmPageName;
+  window.__aipayTracertScriptUrl = tracertScriptUrl;
+})();</script><script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/spm-params.js"></script><script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/spm-loader.js"></script><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/ContentLayout.Cw0x-58E.css"><style>.subfooter-legal[data-astro-cid-gcn2mc3v]{width:100%;justify-content:flex-start;text-align:left}.subfooter-infringement[data-astro-cid-gcn2mc3v]{width:100%;max-width:920px;margin:0;color:inherit;font-size:var(--text-sub-size);line-height:var(--text-sub-line-height);text-align:left}.subfooter-infringement[data-astro-cid-gcn2mc3v] a[data-astro-cid-gcn2mc3v]{color:inherit;text-decoration:underline;text-underline-offset:2px}.subfooter-infringement[data-astro-cid-gcn2mc3v] a[data-astro-cid-gcn2mc3v]:hover{color:var(--foreground)}
+</style><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/onboarding.PKcRDf-v.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/NavUserAccount.DGmt9f10.css">
+    <meta name="yuyan_id" content="180020010001296536">
+    <meta name="bm_sprint_id" content="S090011956410">
+
+    <script>
+      !function(){var e=window;function n(n){if(e.g_monitor&&e.g_monitor.events){var t=e.g_monitor.events;t.length<20&&t.push(n)}}e.g_monitor=e.g_monitor||{listener:{},events:[]};var r=e.g_monitor.listener;function t(t,n){try{e.addEventListener?e.addEventListener(t,n,!0):e.attachEvent?e.attachEvent("on"+t,n):e[t]=n,r[t]=n}catch(n){console.warn("Tracert 监控事件注册失败："+t,n)}}r.error||t("error",n),r.unhandledrejection||t("unhandledrejection",n)}();
+    </script>
+    <script>
+      (function (window, document) {
+      window.yuyanCmdCache = [];
+      window.yuyanMonitor = {
+        config: function () {},
+        logError: function () {},
+        log: function () { window.yuyanCmdCache.push(arguments); }
+      };
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-sdk/1.1.0/dist/index.umd.min.js';
+      script.crossOrigin = "anonymous";
+      script.onload = function () {
+        if (YuyanMonitor) {
+          window.yuyanMonitor = new YuyanMonitor({ yuyanId: "180020010001296536" });
+          if (window.yuyanCmdCache.length) {
+            for (let i = 0; i < window.yuyanCmdCache.length; i++) {
+              window.yuyanMonitor.log.apply(window.yuyanMonitor, window.yuyanCmdCache[i]);
+            }
+            window.yuyanCmdCache.length = 0;
+          }
+        }
+      }
+      var insertAnchor = document.getElementsByTagName('script')[0];
+      if (insertAnchor.parentNode) {
+        insertAnchor.parentNode.insertBefore(script, insertAnchor);
+      }
+    })(window, window.document);
+    </script>
+  </head> <body data-aspm="b245645" data-biz-type="common">  <main class="content-page"> <header class="site-header content-site-header"> <div class="site-header-bar"> <a data-aspm-click="ca125825.da216628" data-aspm-desc="站点品牌-返回首页" class="brand brand--landing" href="/" aria-label="SkillPay 首页"> <img class="brand-landing-logo" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/skillpay-logo-landing.svg" alt=""> </a> <nav aria-label="主导航"> <a data-aspm-click="ca125826.da216626" data-aspm-desc="站点导航-博客" class="is-active" aria-current="page" href="/blog">博客</a> <a data-aspm-click="ca125826.da216627" data-aspm-desc="站点导航-更新日志" href="/changelog">更新日志</a> <div class="home-user-area" data-nav-auth="" aria-live="polite"> <a data-aspm-click="ca125823.da216585" data-aspm-desc="登录入口-登录" data-spm-button-name="登录" class="login extruded-button" href="/blog?aipay_login=1&amp;aipay_login_next=stay" data-nav-login="true" hidden="" data-login-trigger="" data-extruded-button="" data-tilt-base-x="6" data-tilt-range-x="15" data-tilt-range-y="20"> <span class="extruded-button__volume"> <span class="extruded-button__layer" data-extruded-back="" style="--extruded-layer-z: 0px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 1px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 2px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 3px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 4px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 5px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 6px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 7px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 8px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 9px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 10px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 11px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 12px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 13px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 14px" aria-hidden="true"></span><span class="extruded-button__layer" style="--extruded-layer-z: 15px" aria-hidden="true"></span> <span class="extruded-button__face extruded-button__face--sweep login-face"><span class="login-label">登录</span></span> </span> </a><div class="navUser" data-nav-user="" hidden=""> <button data-aspm-click="ca125837.da216729" data-aspm-desc="页头账号菜单-打开用户菜单" class="navUserTrigger" type="button" aria-haspopup="menu" aria-expanded="false" data-nav-user-trigger=""> <span class="navUserAvatar" aria-hidden="true"> <img class="navUserAvatarImage" alt="" data-nav-user-avatar-image="" hidden=""> <span class="navUserAvatarInitial" data-nav-user-initial="" hidden="">开</span> </span> <span class="navUserName" data-nav-user-name="">开发者</span> <svg class="navUserArrow" viewBox="0 0 15 14" aria-hidden="true" focusable="false"> <path d="M4.25 5.25L7.5 8.5L10.75 5.25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> <div class="navUserMenu" role="menu" aria-hidden="true" data-nav-user-menu=""> <div class="navUserMenuName" role="presentation" data-nav-user-full-name=""></div> <a data-aspm-click="ca125837.da216676" data-aspm-desc="页头账号菜单-我是创作者" class="navUserMenuItem" href="/creator/products?aipay_choose_perspective=creator" role="menuitem"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path> <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline> <line x1="12" y1="22.08" x2="12" y2="12"></line> </svg>
+我是创作者
+</a> <a data-aspm-click="ca125837.da216731" data-aspm-desc="页头账号菜单-我是消费者" class="navUserMenuItem" href="/user/skills?aipay_choose_perspective=consumer" role="menuitem"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="8" r="4"></circle> <path d="M4 21a8 8 0 0 1 16 0"></path> </svg>
+我是消费者
+</a> <button data-aspm-click="ca125837.da216728" data-aspm-desc="页头账号菜单-退出登录" class="navUserMenuItem" type="button" role="menuitem" data-nav-logout=""> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path> <polyline points="16 17 21 12 16 7"></polyline> <line x1="21" y1="12" x2="9" y2="12"></line> </svg>
+退出登录
+</button> </div> </div> <script type="module">function h(){document.querySelectorAll(".navUser").forEach((o,f)=>{if(o.dataset.namePresentationBound)return;const n=o.querySelector("[data-nav-user-name]"),t=o.querySelector("[data-nav-user-trigger]"),s=o.querySelector("[data-nav-user-full-name]");if(!n||!t||!s)return;o.dataset.namePresentationBound="true";const e=document.createElement("div");e.id=`nav-name-tooltip-${f}`,e.className="nav-user-overflow-tooltip",e.setAttribute("role","tooltip"),e.hidden=!0,document.body.append(e);const c=new AbortController,r={signal:c.signal},a=()=>{e.hidden=!0},u=()=>n.clientWidth>0&&n.scrollWidth>n.clientWidth+1,i=()=>{a(),s.textContent=n.textContent,u()?t.setAttribute("aria-describedby",e.id):t.removeAttribute("aria-describedby")},l=()=>{if(i(),!u()||t.getAttribute("aria-expanded")==="true")return;e.textContent=n.textContent,e.hidden=!1;const d=n.getBoundingClientRect(),b=e.getBoundingClientRect();e.style.left=`${Math.max(12,Math.min(d.left,innerWidth-b.width-12))}px`,e.style.top=`${Math.max(12,Math.min(d.bottom+8,innerHeight-b.height-12))}px`};t.addEventListener("mouseenter",l,r),t.addEventListener("mouseleave",a,r),t.addEventListener("focus",l,r),t.addEventListener("blur",a,r),t.addEventListener("click",a,r),t.addEventListener("keydown",d=>{d.key==="Escape"&&a()},r),window.addEventListener("scroll",a,{...r,capture:!0}),window.addEventListener("resize",i,r);const v=new ResizeObserver(i);v.observe(n);const m=new MutationObserver(i);m.observe(n,{childList:!0,characterData:!0,subtree:!0}),i(),document.addEventListener("astro:before-swap",()=>{c.abort(),v.disconnect(),m.disconnect(),e.remove(),t.removeAttribute("aria-describedby"),delete o.dataset.namePresentationBound},{once:!0})})}h();document.addEventListener("astro:page-load",h);</script> <script>
+  (() => {
+    const script = document.currentScript;
+    const root = script?.parentElement?.closest('[data-nav-auth]');
+    if (!(root instanceof HTMLElement)) return;
+
+    try {
+      const cached = JSON.parse(sessionStorage.getItem('aipay:nav-account-cache') || 'null');
+      if (!cached || cached.version !== 1 || Number(cached.expiresAt || 0) <= Date.now()) return;
+
+      const isLoggedIn = cached.isLoggedIn === true;
+      const userInfo =
+        cached.userInfo && typeof cached.userInfo === 'object' ? cached.userInfo : {};
+      const loginEntry = root.querySelector('[data-nav-login]');
+      const user = root.querySelector('[data-nav-user]');
+      if (loginEntry instanceof HTMLElement) loginEntry.hidden = isLoggedIn;
+      if (user instanceof HTMLElement) user.hidden = !isLoggedIn;
+      root.toggleAttribute('data-nav-logged-in', isLoggedIn);
+      root.dataset.navAccountState = isLoggedIn ? 'logged-in' : 'logged-out';
+      if (!isLoggedIn) return;
+
+      const displayName =
+        String(
+          userInfo.userName ||
+            userInfo.logonName ||
+            userInfo.nickName ||
+            userInfo.name ||
+            userInfo.customerId ||
+            userInfo.userId ||
+            '开发者',
+        ).trim() || '开发者';
+      const name = root.querySelector('[data-nav-user-name]');
+      const initial = root.querySelector('[data-nav-user-initial]');
+      const avatar = root.querySelector('[data-nav-user-avatar-image]');
+      if (name instanceof HTMLElement) name.textContent = displayName;
+      if (initial instanceof HTMLElement) {
+        const firstCharacter = displayName.replace(/\s+/g, '').charAt(0) || '开';
+        initial.textContent = /[a-z]/i.test(firstCharacter)
+          ? firstCharacter.toUpperCase()
+          : firstCharacter;
+        initial.hidden = false;
+      }
+
+      const avatarUrl =
+        userInfo.avatarUrl || userInfo.avatar || userInfo.headImg || userInfo.headImgUrl || '';
+      if (!(avatar instanceof HTMLImageElement) || !avatarUrl) return;
+      const revealAvatar = () => {
+        avatar.hidden = false;
+        if (initial instanceof HTMLElement) initial.hidden = true;
+      };
+      avatar.src = avatarUrl;
+      if (avatar.complete && avatar.naturalWidth > 0) revealAvatar();
+      else avatar.addEventListener('load', revealAvatar, { once: true });
+    } catch {
+      // Keep both account variants hidden until the live status check completes.
+    }
+  })();
+</script> </div> </nav> </div> </header>  <section class="editorial-heading-shell"> <div class="editorial-heading" data-scroll-reveal=""> <h1>博客</h1> <p>分享用户故事、活动动态、团队幕后，以及我们对 Agent 支付与 Skill 商业化的思考。</p> </div> </section> <section class="blog-list" aria-label="博客文章"> <a data-aspm-click="ca125809.da216552" data-aspm-desc="博客列表-阅读文章" class="blog-row" href="/blog/how-to-build-a-good-skill" data-spm-button-name="好的 Skill，怎样做出来？" data-spm-item-index="0" data-scroll-reveal="" data-scroll-reveal-order="0" data-scroll-reveal-step="60"> <h2>好的 Skill，怎样做出来？</h2> <div class="blog-row-meta"> <span>支付宝 SkillPay</span> <time datetime="2026-09-04">2026/09/04</time> </div> </a><a data-aspm-click="ca125809.da216552" data-aspm-desc="博客列表-阅读文章" class="blog-row" href="/blog/skill-is-agent-learned-craft" data-spm-button-name="Skill 的价值，从哪里来？" data-spm-item-index="1" data-scroll-reveal="" data-scroll-reveal-order="1" data-scroll-reveal-step="60"> <h2>Skill 的价值，从哪里来？</h2> <div class="blog-row-meta"> <span>支付宝 SkillPay</span> <time datetime="2026-08-31">2026/08/31</time> </div> </a><a data-aspm-click="ca125809.da216552" data-aspm-desc="博客列表-阅读文章" class="blog-row" href="/blog/good-world-skills-get-paid" data-spm-button-name="好的世界，技有所得" data-spm-item-index="2" data-scroll-reveal="" data-scroll-reveal-order="2" data-scroll-reveal-step="60"> <h2>好的世界，技有所得</h2> <div class="blog-row-meta"> <span>支付宝 SkillPay</span> <time datetime="2026-08-13">2026/08/13</time> </div> </a> </section>  <footer class="site-footer" data-astro-cid-gcn2mc3v=""> <div class="subfooter" data-astro-cid-gcn2mc3v=""> <div class="subfooter-main" data-astro-cid-gcn2mc3v=""> <div class="subfooter-brandline" data-astro-cid-gcn2mc3v=""> <a data-aspm-click="ca125825.da216628" data-aspm-desc="站点品牌-返回首页" class="brand brand--landing" href="/" aria-label="SkillPay 首页"> <img class="brand-landing-logo" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/skillpay-logo-landing.svg" alt=""> </a> <span data-astro-cid-gcn2mc3v="">让你的有价值的 Skill，为你创造价值</span> </div> <p class="subfooter-legal" data-astro-cid-gcn2mc3v=""> <span data-astro-cid-gcn2mc3v="">Copyright © 支付宝（杭州）数字服务技术有限公司</span> <span aria-hidden="true" data-astro-cid-gcn2mc3v="">｜</span> <span data-astro-cid-gcn2mc3v="">经营许可证编号：合字B2-20190046</span> <span aria-hidden="true" data-astro-cid-gcn2mc3v="">｜</span> <a data-aspm-click="ca125827.da216624" data-aspm-desc="站点页脚-查看备案信息" href="http://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer" data-astro-cid-gcn2mc3v="">
+网站备案号：沪ICP备15027489号
+</a> </p> <p class="subfooter-infringement" data-astro-cid-gcn2mc3v="">
+侵权处理：如 Skill 涉及版权问题，请发送邮件至
+<a data-aspm-click="ca125827.da216625" data-aspm-desc="站点页脚-联系服务邮箱" href="mailto:aipay@service.alipay.com" data-astro-cid-gcn2mc3v="">aipay@service.alipay.com</a>，我们将在收到通知后及时核实并予以下架处理
+</p> </div> </div> </footer> </main> <div class="onboardingRoot" data-onboarding-root=""> <section class="onboardingLayer onboardingLoginLayer" data-onboarding-panel="login" aria-labelledby="onboarding-login-title" aria-modal="true" role="dialog" tabindex="-1" hidden=""> <button data-aspm-click="ca125824.da216582" data-aspm-desc="登录弹窗-关闭登录弹窗遮罩" class="onboardingScrim" type="button" aria-label="登录弹窗遮罩" tabindex="-1"></button> <div class="loginDialog" role="document"> <button data-aspm-click="ca125824.da216583" data-aspm-desc="登录弹窗-关闭登录弹窗" class="onboardingIconClose loginDialogClose" type="button" data-onboarding-close="" aria-label="关闭"> <svg viewBox="0 0 20 20" aria-hidden="true"> <path d="M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5"></path> </svg> </button> <div class="loginSkillPayBrand" aria-label="SkillPay"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-mark.svg" alt=""> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-wordmark.svg" alt="SkillPay"> </div> <div class="loginDialogContent"> <h2 id="onboarding-login-title">欢迎使用 SkillPay</h2> <div class="loginQrGroup"> <div class="loginQrCard" aria-label="支付宝登录二维码"> <div class="loginStatusPanel" data-login-status-panel="" role="status" aria-live="polite"> <span class="loginStatusSpinner" data-login-status-spinner="" aria-hidden="true"></span> <p class="loginStatusText" data-login-status-text="">正在确认登录状态...</p> <div class="loginStatusActions" data-login-status-actions="" hidden=""> <button data-aspm-click="ca125824.da216629" data-aspm-desc="登录弹窗-重新加载登录二维码" class="loginStatusButton" type="button" data-login-retry="">重试</button> <button data-aspm-click="ca125824.da216581" data-aspm-desc="登录弹窗-刷新登录状态" class="loginStatusButton loginStatusButtonSecondary" type="button" data-login-full-logout="" hidden="">
+刷新登录状态
+</button> </div> </div> <div class="loginIframePanel" data-login-iframe-panel="" hidden=""> <iframe class="loginIframe" title="支付宝登录" data-login-iframe="" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> </div> <p class="loginQrHint">使用支付宝扫码登录</p> </div> </div> <p class="loginDialogSlogan">让你的有价值的 Skill，为你创造价值</p> </div> </section> <section class="onboardingLayer onboardingPerspectiveLayer" data-onboarding-panel="perspective" aria-labelledby="onboarding-perspective-title" aria-modal="true" role="dialog" tabindex="-1" hidden=""> <div class="onboardingScrim perspectiveScrim" aria-hidden="true"></div> <div class="perspectiveDialog" role="document"> <h2 id="onboarding-perspective-title" class="visuallyHidden">选择使用 SkillPay 的身份</h2> <div class="perspectiveSkillPayBrand" aria-label="SkillPay"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-mark.svg" alt=""> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-wordmark.svg" alt="SkillPay"> </div> <div class="perspectiveCardList" role="list"> <button data-aspm-click="ca125824.da216630" data-aspm-desc="登录弹窗-选择创作者身份" class="perspectiveCard" type="button" role="listitem" data-login-perspective="creator" data-login-return-path="/creator/products"> <span class="perspectiveCardMain"> <span class="perspectiveCardTitle">我是创作者</span> <img class="perspectiveCardIllustration perspectiveCardIllustrationCreator" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/role-creator.svg" alt=""> </span> <span class="perspectiveCardDescription">创作 Skill 赚取收益的用户</span> </button> <button data-aspm-click="ca125824.da216631" data-aspm-desc="登录弹窗-选择消费者身份" class="perspectiveCard" type="button" role="listitem" data-login-perspective="consumer" data-login-return-path="/user/skills"> <span class="perspectiveCardMain"> <span class="perspectiveCardTitle">我是消费者</span> <img class="perspectiveCardIllustration perspectiveCardIllustrationConsumer" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/role-consumer.svg" alt=""> </span> <span class="perspectiveCardDescription">购买 Skill 获得权益的用户</span> </button> </div> </div> </section> </div> <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/SessionRenewalScript.astro_astro_type_script_index_0_lang.BAIyrsu9.js"></script> <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/ContentLayout.astro_astro_type_script_index_0_lang.D5bkQlh0.js"></script> <script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/top-bar-auth-with-inject-7a897063.js"></script>  <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/EditorialBaseLayout.astro_astro_type_script_index_0_lang.DaVA6zBL.js"></script>  </body></html>

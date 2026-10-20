@@ -1,0 +1,854 @@
+<!DOCTYPE html><html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="data-aspm" content="a5486">
+<meta name="data-bizType" content="common">
+<script>window.injectInfo = { appName: "aipay-official-site", env: "PROD" };</script><script>window.publicPath = window.__basement_public_path__ = "https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/";</script><script>(function initAipayChannelQuery() {
+const url = new URL(window.location.href);
+if (!url.searchParams.has('bd_vid')) return;
+const chinfo = url.searchParams.get('chinfo') || '';
+if (chinfo === 'bdvid' || chinfo.endsWith('_bdvid')) return;
+url.searchParams.set('chinfo', chinfo ? `${chinfo}_bdvid` : 'bdvid');
+window.history.replaceState(window.history.state, '', url.toString());
+})();
+(function initAipayMonitorContext() {
+const deviceStorageKey = 'aipay:device-id';
+let userId = '';
+function getDeviceInfo() {
+let deviceId = window.localStorage.getItem(deviceStorageKey);
+if (!deviceId) {
+deviceId = window.crypto.randomUUID();
+window.localStorage.setItem(deviceStorageKey, deviceId);
+}
+return {
+deviceId,
+deviceInfo: `${navigator.userAgent}_${window.screen.width}_${window.screen.height}`,
+};
+}
+window.__aipayMonitorContext = {
+getDeviceInfo,
+accountReady: Promise.resolve(),
+setAccountInfo(accountInfo) {
+userId = accountInfo.isLoggedIn ? String(accountInfo.userInfo.userId || '') : '';
+window.yuyanMonitor?.config({ userId });
+},
+getMonitorConfig() {
+return {
+userId,
+beforeLog(logItem) {
+const { deviceId, deviceInfo } = getDeviceInfo();
+const query = Object.fromEntries(new URLSearchParams(window.location.search));
+return { ...logItem, d18: JSON.stringify(query), d19: deviceId, d20: deviceInfo };
+},
+};
+},
+};
+// 雨燕平台会先注入临时对象，再用 SDK 实例替换它；每次替换都要同步配置。
+let monitor = window.yuyanMonitor;
+Object.defineProperty(window, 'yuyanMonitor', {
+configurable: true,
+enumerable: true,
+get() {
+return monitor;
+},
+set(value) {
+monitor = value;
+monitor?.config(window.__aipayMonitorContext.getMonitorConfig());
+},
+});
+monitor?.config(window.__aipayMonitorContext.getMonitorConfig());
+window.addEventListener('aipay-onboarding-login-success', () => {
+window.yuyanMonitor?.log({
+code: 1006,
+msg: 'login_success',
+d1: window.location.pathname,
+d2: document.title,
+});
+});
+})();</script>
+<script>
+window._to = {"spmAPos":"a5486","spmBPos":"b217675","bizType":"common","autoLogPv":true,"autoExpo":true,"ifRouterNeedPv":true,"expoOnce":false,"mdata":{"doc_path":"/docs/ai-receive/MACHINE_PAY.html"}};
+window.__aipaySpmPageName = "开发者文档页";
+window.__aipayTracertScriptUrl = "https://ur.alipay.com/tracert_a5486.js";
+</script>
+<script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/spm-loader.94bbfb71000b.js"></script>
+<script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/page-exposure.6db6f5e97793.js" defer=""></script>
+<link rel="icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" sizes="any">
+<meta name="theme-color" content="#1677ff">
+<title>产品接入指南 - 支付宝Agent支付文档</title>
+<meta name="description" content="产品接入指南。AI按量付费接入指南">
+<meta name="keywords" content="支付宝Agent支付, Agent支付文档, 产品接入指南 - 支付宝Agent支付文档">
+<link rel="canonical" href="https://aipay.alipay.com/docs/ai-receive/MACHINE_PAY.html">
+<meta name="last-modified" content="2026-10-09T15:11:32.000Z">
+<link rel="alternate" type="text/plain" title="llms.txt" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/llms.txt">
+<link rel="alternate" type="text/markdown" title="Markdown version" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/ai-receive/MACHINE_PAY.md">
+<link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/_astro/docs-style-entry.CxqXmBFf.css">
+
+    <meta name="yuyan_id" content="180020010001292425">
+    <meta name="bm_sprint_id" content="S090011955033">
+
+    <script>
+      !function(){var e=window;function n(n){if(e.g_monitor&&e.g_monitor.events){var t=e.g_monitor.events;t.length<20&&t.push(n)}}e.g_monitor=e.g_monitor||{listener:{},events:[]};var r=e.g_monitor.listener;function t(t,n){try{e.addEventListener?e.addEventListener(t,n,!0):e.attachEvent?e.attachEvent("on"+t,n):e[t]=n,r[t]=n}catch(n){console.warn("Tracert 监控事件注册失败："+t,n)}}r.error||t("error",n),r.unhandledrejection||t("unhandledrejection",n)}();
+    </script>
+    <script>
+      (function (window, document) {
+      window.yuyanCmdCache = [];
+      window.yuyanMonitor = {
+        config: function () {},
+        logError: function () {},
+        log: function () { window.yuyanCmdCache.push(arguments); }
+      };
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-sdk/1.1.0/dist/index.umd.min.js';
+      script.crossOrigin = "anonymous";
+      script.onload = function () {
+        if (YuyanMonitor) {
+          window.yuyanMonitor = new YuyanMonitor({ yuyanId: "180020010001292425" });
+          if (window.yuyanCmdCache.length) {
+            for (let i = 0; i < window.yuyanCmdCache.length; i++) {
+              window.yuyanMonitor.log.apply(window.yuyanMonitor, window.yuyanCmdCache[i]);
+            }
+            window.yuyanCmdCache.length = 0;
+          }
+        }
+      }
+      var insertAnchor = document.getElementsByTagName('script')[0];
+      if (insertAnchor.parentNode) {
+        insertAnchor.parentNode.insertBefore(script, insertAnchor);
+      }
+    })(window, window.document);
+    </script>
+  </head>
+<body data-doc-active="docs/ai-receive/MACHINE_PAY.md" data-aspm="b217675" data-biz-type="common">
+<style>.payathon-docs-nav-logo{margin-left:-12px;display:inline-flex;align-items:center;gap:3px;padding:8px 12px;border:1px solid transparent;border-radius:6px;background:transparent;transition:background-color 180ms ease,color 180ms ease}.payathon-docs-nav-logo>span{display:block;background:currentColor;mask-size:100% 100%;mask-repeat:no-repeat}a:is(:hover,:focus-visible)>.payathon-docs-nav-logo{background:#000;color:#fff}@media(prefers-reduced-motion:reduce){.payathon-docs-nav-logo{transition:none}}</style>
+<header class="topBar" data-aspm="ca125656" data-aspm-desc="AI付官网页头导航" data-aspm-expo="">
+<div class="scrollProgress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+<nav class="nav siteFrame" id="mobile-navigation" aria-label="页面导航">
+<div class="navMain">
+<a class="brand" href="/#top" data-aspm-click="ca125656.da216206" data-aspm-desc="AI付官网页头导航-首页">
+<img class="brandLogo" src="https://mdn.alipayobjects.com/huamei_xyehqf/afts/img/_8vASKJUXUkAAAAAQBAAAAgADvg4AQFr/fmt.webp" alt="Agent支付">
+</a>
+</div>
+<button class="mobileNavToggle" type="button" aria-expanded="false" aria-controls="mobile-navigation-panel" aria-label="展开导航菜单" data-mobile-nav-toggle=""><span></span><span></span><span></span></button>
+<div class="mobileNavPanel" id="mobile-navigation-panel">
+<div class="navLinks">
+<div class="navDropdown">
+<a href="/products" data-aspm-click="ca125656.da216208" data-aspm-desc="AI付官网页头导航-产品总览">产品</a>
+<button class="navDropdownToggle" type="button" aria-expanded="false" aria-label="展开产品子菜单" data-nav-dropdown-trigger="">
+<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="megaMenu megaMenu--products" role="menu" aria-label="产品菜单">
+<div class="megaInner megaInner--triple">
+<div class="megaCol">
+<p class="megaLabel">AI付</p>
+<div class="megaResources">
+<a class="megaResource" href="/products/agent-pay" data-aspm-click="ca125656.da216207" data-aspm-desc="AI付官网页头导航-智能体支付">
+<span class="megaResourceTitle">Agent Pay</span>
+<span class="megaResourceChinese">智能体支付</span>
+<span class="megaResourceDesc">连接智能体、用户与商品服务</span>
+</a>
+<div class="megaSubResources megaSubResources--scenes" role="group" aria-label="Agent Pay子产品">
+<a class="megaResource megaResource--secondary" href="/products/pc-agent-pay" data-aspm-click="ca125656.da216213" data-aspm-desc="AI付官网页头导航-办公智能体">
+<span class="megaResourceTitle">办公智能体支付</span>
+<svg class="megaSceneArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
+</a>
+<a class="megaResource megaResource--secondary" href="/products/mobile-agent-pay" data-aspm-click="ca125656.da216215" data-aspm-desc="AI付官网页头导航-移动智能体">
+<span class="megaResourceTitle">移动智能体支付</span>
+<svg class="megaSceneArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
+</a>
+<a class="megaResource megaResource--secondary" href="/products/device-agent-pay">
+<span class="megaResourceTitle">新终端智能体支付</span>
+<svg class="megaSceneArrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="megaCol">
+<p class="megaLabel">AI收</p>
+<div class="megaResources">
+<a class="megaResource" href="/products/vibe-pay" data-aspm-click="ca125656.da216212" data-aspm-desc="AI付官网页头导航-应用收款">
+<span class="megaResourceTitle">Vibe Pay</span>
+<span class="megaResourceChinese">AI 应用收款</span>
+<span class="megaResourceDesc">网页与移动应用统一收款</span>
+</a>
+<a class="megaResource" href="https://skillpay.alipay.com/" target="_blank" rel="noopener noreferrer" data-aspm-click="ca125656.da216198" data-aspm-desc="AI付官网页头导航-技能付费">
+<span class="megaResourceTitle">Skill Pay<svg class="megaResourceExternalIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg></span>
+<span class="megaResourceChinese">AI技能收款</span>
+<span class="megaResourceDesc">面向 Agent 的 Skill 收款</span>
+</a>
+<a class="megaResource" href="/products/machine-pay" data-aspm-click="ca125656.da216202" data-aspm-desc="AI付官网页头导航-按量付费">
+<span class="megaResourceTitle">Machine Pay</span>
+<span class="megaResourceChinese">AI 按量付费</span>
+<span class="megaResourceDesc">基于用量的灵活计费</span>
+</a>
+</div>
+</div>
+<div class="megaCol">
+<p class="megaLabel">Token Pay</p>
+<div class="megaResources">
+<a class="megaResource" href="/products/token-pay" data-aspm-click="ca125656.da216219" data-aspm-desc="AI付官网页头导航-连续订阅">
+<span class="megaResourceTitle">AI 连续订阅</span>
+<span class="megaResourceDesc">订阅管理与周期计费</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="navDropdown">
+<a class="active" href="/developers/skill" data-aspm-click="ca125656.da216200" data-aspm-desc="AI付官网页头导航-开发者">开发者</a>
+<button class="navDropdownToggle" type="button" aria-expanded="false" aria-label="展开开发者子菜单" data-nav-dropdown-trigger="">
+<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="megaMenu megaMenu--developers" role="menu" aria-label="开发者菜单">
+<div class="megaInner megaInner--triple">
+<div class="megaCol">
+<p class="megaLabel">文档</p>
+<div class="megaResources">
+<a class="megaResource" href="/docs/overview.html" data-aspm-click="ca125656.da216216" data-aspm-desc="AI付官网页头导航-开发文档">
+<span class="megaResourceTitle">Docs</span>
+<span class="megaResourceDesc">开发者文档中心</span>
+</a>
+</div>
+</div>
+<div class="megaCol">
+<p class="megaLabel">工具箱</p>
+<div class="megaResources">
+<a class="megaResource" href="/developers/skill" data-aspm-click="ca125656.da216209" data-aspm-desc="AI付官网页头导航-技能工具箱">
+<span class="megaResourceTitle">Skills</span>
+<span class="megaResourceDesc">支付集成专业技能</span>
+</a>
+<a class="megaResource" href="https://open.alipay.com/develop/sandbox/app" target="_blank" rel="noopener noreferrer" data-aspm-click="ca125656.da216204" data-aspm-desc="AI付官网页头导航-沙箱">
+<span class="megaResourceTitle">Sandbox</span>
+<span class="megaResourceDesc">安全测试环境</span>
+</a>
+</div>
+</div>
+<div class="megaCol">
+<p class="megaLabel">资源</p>
+<div class="megaResources">
+<a class="megaResource" href="/developers/benchmark" data-aspm-click="ca125656.da216214" data-aspm-desc="AI付官网页头导航-评测">
+<span class="megaResourceTitle">Benchmark</span>
+<span class="megaResourceDesc">支付基准测试</span>
+</a>
+<a class="megaResource" href="/developers/blog" data-aspm-click="ca125656.da216197" data-aspm-desc="AI付官网页头导航-博客">
+<span class="megaResourceTitle">Blog</span>
+<span class="megaResourceDesc">官方博客</span>
+</a>
+<a class="megaResource" href="/developers/changelog" data-aspm-click="ca125656.da216218" data-aspm-desc="AI付官网页头导航-更新日志">
+<span class="megaResourceTitle">Changelog</span>
+<span class="megaResourceDesc">产品更新日志</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="/incentive" data-aspm-click="ca125656.da216203" data-aspm-desc="AI付官网页头导航-激励计划">激励计划</a><a href="/about" data-aspm-click="ca125656.da216211" data-aspm-desc="AI付官网页头导航-关于我们">关于我们</a>
+<div class="navDropdown">
+<a href="https://www.act-protocol.com/" target="_blank" rel="noopener noreferrer" data-aspm-click="ca125656.da216210" data-aspm-desc="AI付官网页头导航-可信智能体商业">可信智能体商业</a>
+<button class="navDropdownToggle" type="button" aria-expanded="false" aria-label="展开可信智能体商业子菜单" data-nav-dropdown-trigger="">
+<svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</button>
+<div class="megaMenu" role="menu" aria-label="可信智能体商业菜单">
+<div class="megaInner megaInner--single">
+<div class="megaCol">
+<div class="megaResources">
+<a class="megaResource" href="https://www.act-protocol.com/" target="_blank" rel="noopener noreferrer" data-aspm-click="ca125656.da216201" data-aspm-desc="AI付官网页头导航-可信商业协议">
+<span class="megaResourceTitle">ACT 协议</span>
+<span class="megaResourceDesc">面向智能体商业的开放协议框架</span>
+</a>
+<a class="megaResource" href="/act/apass" data-aspm-click="ca125656.da216217" data-aspm-desc="AI付官网页头导航-可信身份">
+<span class="megaResourceTitle">APASS</span>
+<span class="megaResourceDesc">智能体可信身份基础设施</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a href="/community/events/payathon-2026" data-aspm-click="ca125656.da218852" data-aspm-desc="AI付官网页头导航-PAYATHON 2026"><span class="payathon-docs-nav-logo" aria-label="PAYATHON 2026"><span style="mask-image:url(https://mdn.alipayobjects.com/huamei_xyehqf/afts/img/8sPVS5vUIJMAAAAAQCAAAAgADvg4AQFr/original)"><img src="https://mdn.alipayobjects.com/huamei_xyehqf/afts/img/8sPVS5vUIJMAAAAAQCAAAAgADvg4AQFr/original" alt="PAYATHON" width="464" height="37" style="display:block;width:auto;height:10.8px;opacity:0"></span><span style="mask-image:url(https://mdn.alipayobjects.com/huamei_xyehqf/afts/img/4giDSLLYgHYAAAAAQEAAAAgADvg4AQFr/original)"><img src="https://mdn.alipayobjects.com/huamei_xyehqf/afts/img/4giDSLLYgHYAAAAAQEAAAAgADvg4AQFr/original" alt="2026" width="119" height="37" style="display:block;width:auto;height:10.8px;opacity:0"></span></span></a>
+</div>
+<div class="navActions" data-nav-auth="">
+<a class="navButton navButtonSoft" href="/open-flow/console" data-nav-console="" data-aspm-click="ca125656.da216199" data-aspm-desc="AI付官网页头导航-控制台" data-onboarding-entry="" data-onboarding-mode="console" hidden="">控制台</a>
+<a class="navButton navButtonDark" href="/docs/ai-receive/MACHINE_PAY.html?aipay_login=1&amp;aipay_return_to=%2Fdocs%2Fai-receive%2FMACHINE_PAY.html" data-nav-login="" data-aspm-click="ca125656.da216205" data-aspm-desc="AI付官网页头导航-登录" data-onboarding-entry="" data-onboarding-mode="stay" data-account-login-entry=""><span data-onboarding-entry-label="">登录</span></a>
+<div class="navUser" data-nav-user="" hidden="">
+<button class="navUserTrigger" type="button" aria-haspopup="menu" aria-expanded="false" data-nav-user-trigger="">
+<span class="navUserAvatar" aria-hidden="true">
+<img class="navUserAvatarImage" alt="" data-nav-user-avatar-image="" hidden="">
+</span>
+<span class="navUserName" data-nav-user-name="">开发者</span>
+<svg class="navUserArrow" viewBox="0 0 15 14" aria-hidden="true" focusable="false">
+<path d="M4.25 5.25L7.5 8.5L10.75 5.25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<div class="navUserMenu" role="menu" aria-hidden="true" data-nav-user-menu="">
+<button class="navUserMenuItem" type="button" role="menuitem" data-nav-logout="">
+退出登录
+</button>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<script>
+if (!window.__releaseDropdownNavigationBound) {
+window.__releaseDropdownNavigationBound = true;
+const closeDropdown = (dropdown) => {
+dropdown.classList.remove('is-open');
+dropdown.querySelector('.navDropdownToggle')?.setAttribute('aria-expanded', 'false');
+};
+document.addEventListener('click', (event) => {
+const target = event.target;
+if (!(target instanceof Element)) return;
+const nameLink = target.closest('.navDropdown > a');
+if (nameLink && window.matchMedia('(max-width: 980px)').matches) {
+const dropdown = nameLink.closest('.navDropdown');
+if (dropdown && !dropdown.classList.contains('is-open')) {
+event.preventDefault();
+document.querySelectorAll('.navDropdown.is-open').forEach(closeDropdown);
+dropdown.classList.add('is-open');
+dropdown.querySelector('.navDropdownToggle')?.setAttribute('aria-expanded', 'true');
+}
+return;
+}
+const trigger = target.closest('[data-nav-dropdown-trigger]');
+if (trigger && window.matchMedia('(max-width: 980px)').matches) {
+const dropdown = trigger.closest('.navDropdown');
+if (!(dropdown instanceof HTMLElement)) return;
+event.preventDefault();
+const isOpen = !dropdown.classList.contains('is-open');
+document.querySelectorAll('.navDropdown.is-open').forEach((item) => closeDropdown(item));
+if (isOpen) {
+dropdown.classList.add('is-open');
+dropdown.querySelector('.navDropdownToggle')?.setAttribute('aria-expanded', 'true');
+}
+return;
+}
+const menu = target.closest('.megaMenu');
+if (menu && target === menu) {
+const dropdown = menu.closest('.navDropdown');
+if (dropdown instanceof HTMLElement) closeDropdown(dropdown);
+}
+});
+}
+</script>
+<script>
+if (!window.__releaseMobileNavBound) {
+window.__releaseMobileNavBound = true;
+const closeMobileNavigation = (nav) => {
+nav.classList.remove("is-mobile-open");
+if (!document.querySelector(".nav.is-mobile-open")) {
+document.documentElement.classList.remove("has-mobile-navigation");
+}
+const toggle = nav.querySelector("[data-mobile-nav-toggle]");
+toggle?.setAttribute("aria-expanded", "false");
+toggle?.setAttribute("aria-label", "展开导航菜单");
+nav.querySelectorAll(".navDropdown.is-open").forEach((dropdown) => {
+dropdown.classList.remove("is-open");
+dropdown.querySelector(".navDropdownToggle")?.setAttribute("aria-expanded", "false");
+});
+};
+document.addEventListener("click", (event) => {
+const target = event.target;
+if (!(target instanceof Element)) return;
+const toggle = target.closest("[data-mobile-nav-toggle]");
+if (toggle) {
+const nav = toggle.closest(".nav");
+if (!(nav instanceof HTMLElement)) return;
+const willOpen = !nav.classList.contains("is-mobile-open");
+if (!willOpen) {
+closeMobileNavigation(nav);
+return;
+}
+document.querySelectorAll(".nav.is-mobile-open").forEach((item) => {
+if (item !== nav) closeMobileNavigation(item);
+});
+nav.classList.toggle("is-mobile-open", willOpen);
+document.documentElement.classList.toggle("has-mobile-navigation", willOpen);
+toggle.setAttribute("aria-expanded", String(willOpen));
+toggle.setAttribute("aria-label", willOpen ? "收起导航菜单" : "展开导航菜单");
+return;
+}
+const navLink = target.closest(".navLinks a");
+if (navLink && window.matchMedia("(max-width: 760px)").matches) {
+if (event.defaultPrevented) return;
+const nav = navLink.closest(".nav");
+if (nav instanceof HTMLElement) closeMobileNavigation(nav);
+return;
+}
+document.querySelectorAll(".nav.is-mobile-open").forEach((nav) => {
+if (!nav.closest(".topBar")?.contains(target)) closeMobileNavigation(nav);
+});
+});
+document.addEventListener("keydown", (event) => {
+if (event.key !== "Escape") return;
+document.querySelectorAll(".nav.is-mobile-open").forEach(closeMobileNavigation);
+});
+window.addEventListener("resize", () => {
+if (!window.matchMedia("(max-width: 760px)").matches) {
+document.querySelectorAll(".nav.is-mobile-open").forEach(closeMobileNavigation);
+}
+});
+document.addEventListener("astro:before-swap", () => {
+document.querySelectorAll(".nav.is-mobile-open").forEach(closeMobileNavigation);
+});
+}
+</script>
+<div class="docsPage" data-docs-page="" data-docs-pathname="/docs/ai-receive/MACHINE_PAY.html">
+<div class="doc-app siteFrame doc-app--article doc-app--has-toc">
+<aside id="docSidebar" class="doc-sidebar" aria-label="开发者文档"></aside>
+<div class="docBody">
+<main class="docMain" id="top">
+<article class="docArticle docsArticle">
+<script type="text/plain" data-agent-instructions="document">
+Document: 产品接入指南
+1. Machine Pay · AI按量付费
+可以通过 npx -y @alipay/alipay-aipay@latest install 安装支付宝 AI 付 Skill，加载 alipay-aipay 技能为开发者的 api 接口集成按量付费，完成沙箱测试，并完成签约入驻
+</script>
+<header class="docsHero">
+<nav class="docsBreadcrumb" aria-label="文档路径">
+<span class="docsBreadcrumbItem">Machine Pay · AI按量付费</span>
+<span class="docsBreadcrumbSeparator" aria-hidden="true">&gt;</span>
+<span class="docsBreadcrumbItem isCurrent">产品接入指南</span>
+</nav>
+<h1 class="docsTitle">产品接入指南</h1>
+<div class="docsMeta" aria-label="文档信息">
+<span>更新时间：</span><time datetime="2026-10-09T15:11:32.000Z">2026-10-09 23:11:32</time>
+</div>
+<div class="docsActions" aria-label="文档操作" data-aspm="c506398" data-aspm-desc="文档操作" data-aspm-expo="">
+<a href="/docs/ai-receive/MACHINE_PAY.md">以 Markdown 格式查看</a>
+<a href="/docs/ai-receive/llms.txt">LLM请查看llms.txt</a>
+<button type="button" data-docs-copy-markdown="" aria-live="polite" data-aspm-click="c506398.d773284" data-aspm-desc="文档操作-复制文档内容" data-aspm-expo="">复制 md 内容给 agent</button>
+</div>
+</header>
+<div id="docs-react-root" class="docsReactRoot" data-docs-render-root="" hidden=""></div>
+<div id="docs-static-content" class="docsBody docsStaticFallback" data-docs-static-content=""><p>商家/服务商可根据本文指引快速接入 <strong>AI按量付费</strong> 产品。
+说明：</p>
+<ul>
+<li><strong>AI按量付费</strong> 产品支持自研商家/服务商通过 <a href="https://opendocs.alipay.com/common/02bijh#%E8%87%AA%E7%A0%94%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%BA%94%E7%94%A8">自研应用</a> 或 <a href="https://opendocs.alipay.com/common/02bijh#%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%BA%94%E7%94%A8">第三方应用</a> 代调用（传入 app_auth_token）方式，调用 API 接入。</li>
+</ul>
+<h1 id="产品特色">产品特色</h1>
+<p><strong>AI按量付费</strong> 是支付宝AI付推出的基于402 Payment Required HTTP状态码的 A2M 方案，可让您的 API、数字内容或算力资源，能够直接向访问它们的 AI 智能体（AI Agents） 发起自动收款。</p>
+<ul>
+<li><strong>按量收费</strong>：每次调用都可以独立定价，不必强依赖包月订阅。</li>
+<li><strong>原生适配 AI 智能体</strong>：通过 <code>402 Payment Required</code> 告诉智能体“这个资源需要先付款”。</li>
+<li><strong>链路更短</strong>：用户不需要在商家侧注册、登录、跳转到复杂页面后再回来。</li>
+<li><strong>AI Agent 自动购买资源</strong>：用户授权后，由智能体完成请求、支付、交付。</li>
+</ul>
+<p></p>
+<h1 id="典型场景">典型场景</h1>
+<ol>
+<li>用户通过支付宝 App 支付并开通 AI付。  <img src="https://mdn.alipayobjects.com/huamei_k1uezb/afts/img/4k7rSbZKjvQAAAAAXGAAAAgADmlSAQFr/original" alt="image.png"></li>
+<li>用户向智能体下达指令，智能体访问商家的付费资源。</li>
+<li>商家服务端发现这次请求没有有效支付凭证，于是返回 <code>402 Payment Required</code>，并在 <code>Payment-Needed</code> Header 里放入账单。</li>
+<li>智能体把账单交给支付宝支付能力，用户确认后完成付款。</li>
+<li>支付成功后，智能体拿到支付凭证，并携带 <code>Payment-Proof</code> 再次请求商家资源。</li>
+<li>商家服务端调用支付宝接口验证支付凭证。</li>
+<li>验证通过后，商家返回资源内容，并异步发送履约回执。  <img src="https://mdn.alipayobjects.com/afts/img/A*OiuqRZy_YiYAAAAAZHAAAAgAeq8wAA/original?bz=openpt_doc&amp;t=Lbckg3uxBoV5fyWcUYQPtjhpE5GfIyynaaRj5oRfNnADAAAAZAAAMK8AAAAA#__spacing=both&amp;clientId=u92d0208d-9379-4&amp;from=paste&amp;height=379&amp;id=u3fb21707&amp;originHeight=754&amp;originWidth=1790&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u7aa9a9a3-4a0d-4a8d-a082-767bf144d8c&amp;title=&amp;width=900" alt="image.png"></li>
+</ol>
+<h1 id="vibe-coding-快速集成推荐">Vibe coding 快速集成（推荐）</h1>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">通过 npx -y @alipay/alipay-aipay@latest install 安装支付宝 AI 付 Skill，加载 alipay-aipay 技能为我的 api 接口集成按量付费，完成沙箱测试，并完成签约入驻</span></span></code></pre>
+<h1 id="手动集成传统">手动集成（传统）</h1>
+<p>你需要在自己的服务端完成三件事：</p>
+<ol>
+<li>用户未支付时，返回 <code>402 Payment Required</code> 和 <code>Payment-Needed</code> 账单。</li>
+<li>用户支付后，读取 <code>Payment-Proof</code> 并调用支付宝验凭证接口。</li>
+<li>验证通过并返回资源后，调用支付宝履约回执接口。</li>
+</ol>
+<h2 id="示例代码">示例代码</h2>
+<p>请访问<a href="https://github.com/alipay/ai/tree/main/code_example/aipay-402-example">AI按量计费示例代码</a>获取示例代码。</p>
+<h2 id="完整接口时序图">完整接口时序图</h2>
+<pre><code class="language-mermaid">sequenceDiagram
+    autonumber
+    participant User as 用户
+    participant Client as 买家Agent
+    participant SellerServer as 商家服务端
+    participant Alipay as 支付宝
+
+    Note over User,SellerServer: 访问付费资源并获取账单
+    User-&gt;&gt;Client: 访问付费资源&lt;br/&gt;(如: /market/antgroup/trend)
+    Client-&gt;&gt;SellerServer: GET /market/antgroup/trend
+    SellerServer-&gt;&gt;SellerServer: 检查 Payment-Proof 请求头
+    SellerServer-&gt;&gt;SellerServer: 使用支付宝 SDK 的加签方法进行加签
+    SellerServer-&gt;&gt;SellerServer: 生成 402 响应
+    SellerServer--&gt;&gt;Client: 402 Payment Needed&lt;br/&gt;Payment-Needed: Base64 编码的账单
+    Client--&gt;&gt;User: 展示支付账单&lt;br/&gt;(金额、商品、过期时间等)
+
+    Note over User,Alipay: 用户完成支付（简化示例）
+    User-&gt;&gt;Alipay: 通过支付宝完成支付
+    Alipay--&gt;&gt;User: 返回支付凭证和订单号
+
+    Note over User,SellerServer: 携带支付凭证访问资源
+    User-&gt;&gt;Client: 提交支付凭证、交易号、买家客户端标识
+    Client-&gt;&gt;SellerServer: GET /market/antgroup/trend&lt;br/&gt;Payment-Proof: Base64 编码的支付凭证、交易号、买家客户端标识
+    SellerServer-&gt;&gt;SellerServer: 解析 Payment-Proof 请求头
+    SellerServer-&gt;&gt;Alipay: 验证支付凭证&lt;br/&gt;alipay.aipay.agent.payment.verify
+    Alipay--&gt;&gt;SellerServer: 返回验证结果
+
+    alt 验证失败（active=false）
+        SellerServer--&gt;&gt;Client: 402 Payment Needed&lt;br/&gt;支付凭证无效或已过期
+        Client--&gt;&gt;User: 提示支付凭证无效&lt;br/&gt;需重新支付
+    else 验证成功（active=true）
+        SellerServer-&gt;&gt;SellerServer: 返回资源内容
+        SellerServer--&gt;&gt;Client: 200 OK&lt;br/&gt;返回付费资源内容
+        SellerServer-&gt;&gt;Alipay: 发送履约回执（异步）&lt;br/&gt;alipay.aipay.agent.fulfillment.confirm
+        Alipay--&gt;&gt;SellerServer: 履约回执确认
+        Client--&gt;&gt;User: 展示资源内容
+    end
+
+</code></pre>
+<h2 id="第一步返回-402-账单">第一步：返回 402 账单</h2>
+<p>当商家服务端收到资源请求时，先检查请求头里是否有 <code>Payment-Proof</code>。</p>
+<ul>
+<li>如果没有，说明用户还没支付，返回 <code>402 Payment Required</code>。</li>
+<li>如果有，但验证失败，也返回 <code>402 Payment Required</code>，让用户重新支付。</li>
+<li>如果有且验证成功，直接返回资源内容。</li>
+</ul>
+<p><code>402</code> 响应里最重要的是 <code>Payment-Needed</code> Header。它是一段经过 Base64URL 编码的账单，账单里包含本次交易的金额、商品名、资源 ID、收款方信息、支付截止时间和商家签名。</p>
+<h3 id="402-payment-needed">402 Payment-Needed</h3>
+<table><thead><tr><th>项目</th><th>规范</th></tr></thead><tbody><tr><td>HTTP 状态码</td><td>402 Payment Required</td></tr><tr><td>响应数据</td><td>通过 <code>Payment-Needed</code> Header 传递（<strong>Base64URL</strong> 编码）</td></tr></tbody></table>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="http"><code><span class="line"><span style="color:#F97583">HTTP</span><span style="color:#E1E4E8">/</span><span style="color:#79B8FF">1.1</span><span style="color:#79B8FF"> 402</span><span style="color:#9ECBFF"> Payment Required</span></span>
+<span class="line"><span style="color:#85E89D">Payment-Needed</span><span style="color:#F97583">:</span><span style="color:#9ECBFF"> &lt;base64url 编码后的账单 JSON&gt;</span></span>
+<span class="line"><span style="color:#85E89D">Content-Type</span><span style="color:#F97583">:</span><span style="color:#9ECBFF"> application/json</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "error"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Payment Needed"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "message"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"请先支付 0.01 CNY 以访问资源"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">  "resourceId"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"RES_1739836600000_abc123"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>响应体主要用于让调试和日志更清楚。真正给智能体识别和支付使用的是 <code>Payment-Needed</code> Header。</p>
+<h3 id="payment-needed-header-解码后的内容">Payment-Needed Header 解码后的内容</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "protocol"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "out_trade_no"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"ORDER_1739836600000_abc123"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "amount"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"0.01"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "currency"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"CNY"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "resource_id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"RES_1739836600000_abc123"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "pay_before"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"2026-03-25T12:00:00+08:00"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_signature"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"YYYYxxxx="</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_sign_type"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"RSA2"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_unique_id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"2088xxxxxxxx"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "method"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"测试商家"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"2088xxxxxxxx"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_app_id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"app_123456"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "goods_name"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"测试商品"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "seller_unique_id_key"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"seller_id"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "service_id"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"xxxx_12344"</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="字段说明">字段说明</h3>
+<h4 id="protocol-层字段">protocol 层字段</h4>
+<table><thead><tr><th>字段名</th><th>类型</th><th>必填</th><th>说明</th></tr></thead><tbody><tr><td><code>out_trade_no</code></td><td>String</td><td>是</td><td>商户订单号。建议全局唯一，用于幂等和防重复支付</td></tr><tr><td><code>amount</code></td><td>String</td><td>是</td><td>应付金额（最小货币单位，字符串）</td></tr><tr><td><code>currency</code></td><td>String</td><td>是</td><td>法币单位（默认 CNY）</td></tr><tr><td><code>resource_id</code></td><td>String</td><td>是</td><td>资源唯一标识（用于资源防串，如 /market/alibaba/trend_001）</td></tr><tr><td><code>pay_before</code></td><td>String</td><td>是</td><td>支付过期时间戳（ISO8601 格式，请设计合理有效期，过期账单不可继续支付）</td></tr><tr><td><code>seller_signature</code></td><td>String</td><td>是</td><td>商家对本次账单关键信息的签名</td></tr><tr><td><code>seller_sign_type</code></td><td>String</td><td>是</td><td>签名算法（目前仅支持 RSA2）</td></tr><tr><td><code>seller_unique_id</code></td><td>String</td><td>是</td><td>卖家唯一标识（此处是 <code>seller_id</code>）</td></tr></tbody></table>
+<h4 id="method-层字段">method 层字段</h4>
+<table><thead><tr><th>字段名</th><th>类型</th><th>必填</th><th>说明</th></tr></thead><tbody><tr><td><code>seller_name</code></td><td>String</td><td>是</td><td>收款方名称</td></tr><tr><td><code>seller_id</code></td><td>String</td><td>是</td><td>收款方 userId（2088ID）</td></tr><tr><td><code>seller_app_id</code></td><td>String</td><td>是</td><td>商户应用 ID（<strong>如果你是第三方代调用，需使用三方应用的app_id</strong>）</td></tr><tr><td><code>goods_name</code></td><td>String</td><td>是</td><td>交易物品标题</td></tr><tr><td><code>seller_unique_id_key</code></td><td>String</td><td>是</td><td>卖家唯一标识键，默认 <code>seller_id</code></td></tr><tr><td><code>service_id</code></td><td>String</td><td>是</td><td>商户提供的服务 ID，如何获取请查看 <a href="https://ideservice.alipay.com/cms/site/0j7uos">常见问题 Q2</a></td></tr></tbody></table>
+<h3 id="商家签名">商家签名</h3>
+<p>商家需要用自己的应用私钥（<strong>如果你是第三方代调用，需使用三方应用的私钥</strong>）对账单关键信息加签。加签只在本地完成，不会请求支付宝服务端。</p>
+<p>加签字段包括：</p>
+<ul>
+<li><code>amount</code>：支付金额</li>
+<li><code>currency</code>：币种</li>
+<li><code>goods_name</code>：商品或服务名称</li>
+<li><code>out_trade_no</code>：商户订单号</li>
+<li><code>pay_before</code>：支付截止时间</li>
+<li><code>resource_id</code>：资源 ID</li>
+<li><code>seller_id</code>：收款方 ID</li>
+<li><code>service_id</code>：服务 ID</li>
+</ul>
+<p>加签前，需要先把参数按 key 的字典序排序，再拼成 <code>key=value&amp;key=value</code> 的格式。</p>
+<pre><code class="language-text">amount=0.01&amp;currency=CNY&amp;goods_name=测试商品&amp;out_trade_no=ORDER_1739836600000_abc123&amp;pay_before=2026-03-25T12:00:00+08:00&amp;resource_id=RES_1739836600000_abc123&amp;seller_id=2088xxxxxxxx&amp;service_id=xxxx_12344
+</code></pre>
+<p>Java SDK 加签示例：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> static</span><span style="color:#E1E4E8"> String </span><span style="color:#B392F0">rsaSign</span><span style="color:#E1E4E8">(String content, String privateKey, String charset, String signType) throws AlipayApiException {</span></span>
+<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> AsymmetricManager.</span><span style="color:#B392F0">getByName</span><span style="color:#E1E4E8">(signType).</span><span style="color:#B392F0">sign</span><span style="color:#E1E4E8">(content, charset, privateKey);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="第二步验证-payment-proof">第二步：验证 Payment-Proof</h2>
+<p>用户支付成功后，智能体会再次请求商家资源，并在请求头里带上 <code>Payment-Proof</code>。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="http"><code><span class="line"><span style="color:#F97583">GET</span><span style="color:#E1E4E8"> /market/antgroup/trend </span><span style="color:#F97583">HTTP</span><span style="color:#E1E4E8">/</span><span style="color:#79B8FF">1.1</span></span>
+<span class="line"><span style="color:#85E89D">Payment-Proof</span><span style="color:#F97583">:</span><span style="color:#9ECBFF"> &lt;base64 编码后的支付凭证信息&gt;</span></span></code></pre>
+<p>商家服务端解析 <code>Payment-Proof</code> 后，可以得到支付凭证、支付宝订单号和买家客户端会话标识。</p>
+<pre><code class="language-text">Payment-Proof (Base64前): {
+  "protocol": {
+    "payment_proof": "7cf8a6a93c924e13eaa4bf20c3a487f30d1fbdb759a1f229b4091b7d0158xxxx",
+    "trade_no": "2026040900828111317760000001xxxx"
+  },
+  "method": {
+    "client_session": "xxxxxxxxxxxxxsCiAgICAic2Vzc2lvbklkIjogInh4IiwKICAgICJzaWduYXR1cmUiOiAi5Yqg562+5ZCO57uT5p6c77yM6YCa6L+HY3JlZGVudGlhbElk5Yqg562+YWdlbnRUb2tlbiArIHNlc3Npb25JZCkiCn0=",
+  } 
+}
+</code></pre>
+<p>解密后，商家需调用 <a href="https://ideservice.alipay.com/cms/site/0j7uot">alipay.aipay.agent.payment.verify（A2A 商户支付凭证验证接口）</a> 接口验证支付凭证，支付宝会返回已支付订单的基本信息（如外部订单号、资源 ID 等，详细出参见 API 文档）。</p>
+<p>入参均来自用户（买家）的 <code>Payment-Proof</code>：</p>
+<ul>
+<li>支付凭证：<code>payment_proof</code></li>
+<li>支付宝订单号：<code>trade_no</code></li>
+<li>买家客户端会话标识：<code>client_session</code></li>
+</ul>
+<h3 id="请求示例">请求示例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">package</span><span style="color:#E1E4E8"> com.java.sdk.demo;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.AlipayApiException;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.AlipayClient;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.DefaultAlipayClient;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.AlipayConfig;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.domain.AlipayAipayAgentPaymentVerifyModel;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.request.AlipayAipayAgentPaymentVerifyRequest;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.response.AlipayAipayAgentPaymentVerifyResponse;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.FileItem;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.Base64;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.ArrayList;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.List;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AlipayAipayAgentPaymentVerify</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> static</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">String</span><span style="color:#E1E4E8">[] </span><span style="color:#FFAB70">args</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">throws</span><span style="color:#E1E4E8"> AlipayApiException {</span></span>
+<span class="line"><span style="color:#6A737D">        // 初始化SDK</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayClient alipayClient </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> DefaultAlipayClient</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">getAlipayConfig</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 构造请求参数以调用接口</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayAipayAgentPaymentVerifyRequest request </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> AlipayAipayAgentPaymentVerifyRequest</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayAipayAgentPaymentVerifyModel model </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> AlipayAipayAgentPaymentVerifyModel</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        // 设置交易号</span></span>
+<span class="line"><span style="color:#E1E4E8">        model.</span><span style="color:#B392F0">setTradeNo</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"20260324008281172041220000012182"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        // 设置支付凭证</span></span>
+<span class="line"><span style="color:#E1E4E8">        model.</span><span style="color:#B392F0">setPaymentProof</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"62922589b11acfc70faf4ebab1da7a9bbc438554e40d0a1dcdc7f35b3085xxxx"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        // 设置买家客户端会话标识</span></span>
+<span class="line"><span style="color:#E1E4E8">        model.</span><span style="color:#B392F0">setClientSession</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"ImNsaWVudFNlc3N"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        request.</span><span style="color:#B392F0">setBizModel</span><span style="color:#E1E4E8">(model);</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayAipayAgentPaymentVerifyResponse response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> alipayClient.</span><span style="color:#B392F0">execute</span><span style="color:#E1E4E8">(request);</span></span>
+<span class="line"><span style="color:#E1E4E8">        System.out.</span><span style="color:#B392F0">println</span><span style="color:#E1E4E8">(response.</span><span style="color:#B392F0">getBody</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> (response.</span><span style="color:#B392F0">isSuccess</span><span style="color:#E1E4E8">()) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            System.out.</span><span style="color:#B392F0">println</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"调用成功"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">            System.out.</span><span style="color:#B392F0">println</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"调用失败"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">            // sdk版本是"4.38.0.ALL"及以上,可以参考下面的示例获取诊断链接</span></span>
+<span class="line"><span style="color:#6A737D">            // String diagnosisUrl = DiagnosisUtils.getDiagnosisUrl(response);</span></span>
+<span class="line"><span style="color:#6A737D">            // System.out.println(diagnosisUrl);</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> static</span><span style="color:#E1E4E8"> AlipayConfig </span><span style="color:#B392F0">getAlipayConfig</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">        String privateKey  </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "&lt;-- 请填写您的应用私钥，例如：MIIEvQIBADANB ... ... --&gt;"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        String alipayPublicKey </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "&lt;-- 请填写您的支付宝公钥，例如：MIIBIjANBg... --&gt;"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayConfig alipayConfig </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> AlipayConfig</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setServerUrl</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"https://openapi.alipay.com/gateway.do"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setAppId</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"&lt;-- 请填写您的AppId，例如：2019091767145019 --&gt;"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setPrivateKey</span><span style="color:#E1E4E8">(privateKey);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setFormat</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"json"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setAlipayPublicKey</span><span style="color:#E1E4E8">(alipayPublicKey);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setCharset</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"UTF-8"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setSignType</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RSA2"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> alipayConfig;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="响应示例">响应示例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">    "alipay_aipay_agent_payment_verify_response"</span><span style="color:#E1E4E8">:{</span></span>
+<span class="line"><span style="color:#79B8FF">        "msg"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"Success"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "amount"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"0.01"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "code"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"10000"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "out_trade_no"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"ORDER_1774598472720_etm5dy"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "trade_no"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"20260324008281172041220000012182"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "resource_id"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"out_res_id_0000123"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "active"</span><span style="color:#E1E4E8">:</span><span style="color:#79B8FF">true</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#79B8FF">    "sign"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>验证通过不只看接口调用成功，还要检查业务字段：</p>
+<ul>
+<li><code>active</code> 必须为 <code>true</code>。</li>
+<li><code>amount</code> 必须等于本次资源价格。</li>
+<li><code>out_trade_no</code> 必须是你生成的商户订单号。</li>
+<li><code>resource_id</code> 必须和用户本次访问的资源一致。</li>
+<li><code>trade_no</code> 不应被重复履约，避免同一笔支付被多次使用。</li>
+</ul>
+<p>如果任一检查不通过，返回 <code>402 Payment Required</code>，提示智能体重新支付。</p>
+<h2 id="第三步履约回执">第三步：履约回执</h2>
+<p>将资源返回给用户后，商家需异步调用 <a href="https://ideservice.alipay.com/cms/site/0j7sw0">alipay.aipay.agent.fulfillment.confirm（A2A 商家履约回执确认接口）</a>，告知支付宝这笔订单已经完成履约。</p>
+<p>入参：</p>
+<ul>
+<li>支付宝订单号：<code>trade_no</code></li>
+</ul>
+<h3 id="请求示例-1">请求示例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="java"><code><span class="line"><span style="color:#F97583">package</span><span style="color:#E1E4E8"> com.java.sdk.demo;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.AlipayApiException;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.AlipayClient;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.DefaultAlipayClient;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.AlipayConfig;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.response.AlipayAipayAgentFulfillmentConfirmResponse;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.domain.AlipayAipayAgentFulfillmentConfirmModel;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.request.AlipayAipayAgentFulfillmentConfirmRequest;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> com.alipay.api.FileItem;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.Base64;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.ArrayList;</span></span>
+<span class="line"><span style="color:#F97583">import</span><span style="color:#E1E4E8"> java.util.List;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> AlipayAipayAgentFulfillmentConfirm</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> static</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> main</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">String</span><span style="color:#E1E4E8">[] </span><span style="color:#FFAB70">args</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">throws</span><span style="color:#E1E4E8"> AlipayApiException {</span></span>
+<span class="line"><span style="color:#6A737D">        // 初始化SDK</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayClient alipayClient </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> DefaultAlipayClient</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">getAlipayConfig</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 构造请求参数以调用接口</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayAipayAgentFulfillmentConfirmRequest request </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> AlipayAipayAgentFulfillmentConfirmRequest</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayAipayAgentFulfillmentConfirmModel model </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> AlipayAipayAgentFulfillmentConfirmModel</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#6A737D">        // 设置交易号</span></span>
+<span class="line"><span style="color:#E1E4E8">        model.</span><span style="color:#B392F0">setTradeNo</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"20260324008281172041220000012182"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        </span></span>
+<span class="line"><span style="color:#E1E4E8">        request.</span><span style="color:#B392F0">setBizModel</span><span style="color:#E1E4E8">(model);</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayAipayAgentFulfillmentConfirmResponse response </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> alipayClient.</span><span style="color:#B392F0">execute</span><span style="color:#E1E4E8">(request);</span></span>
+<span class="line"><span style="color:#E1E4E8">        System.out.</span><span style="color:#B392F0">println</span><span style="color:#E1E4E8">(response.</span><span style="color:#B392F0">getBody</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> (response.</span><span style="color:#B392F0">isSuccess</span><span style="color:#E1E4E8">()) {</span></span>
+<span class="line"><span style="color:#E1E4E8">            System.out.</span><span style="color:#B392F0">println</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"调用成功"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        } </span><span style="color:#F97583">else</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#E1E4E8">            System.out.</span><span style="color:#B392F0">println</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"调用失败"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#6A737D">            // sdk版本是"4.38.0.ALL"及以上,可以参考下面的示例获取诊断链接</span></span>
+<span class="line"><span style="color:#6A737D">            // String diagnosisUrl = DiagnosisUtils.getDiagnosisUrl(response);</span></span>
+<span class="line"><span style="color:#6A737D">            // System.out.println(diagnosisUrl);</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> static</span><span style="color:#E1E4E8"> AlipayConfig </span><span style="color:#B392F0">getAlipayConfig</span><span style="color:#E1E4E8">() {</span></span>
+<span class="line"><span style="color:#E1E4E8">        String privateKey  </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "&lt;-- 请填写您的应用私钥，例如：MIIEvQIBADANB ... ... --&gt;"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        String alipayPublicKey </span><span style="color:#F97583">=</span><span style="color:#9ECBFF"> "&lt;-- 请填写您的支付宝公钥，例如：MIIBIjANBg... --&gt;"</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">        AlipayConfig alipayConfig </span><span style="color:#F97583">=</span><span style="color:#F97583"> new</span><span style="color:#B392F0"> AlipayConfig</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setServerUrl</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"https://openapi.alipay.com/gateway.do"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setAppId</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"&lt;-- 请填写您的AppId，例如：2019091767145019 --&gt;"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setPrivateKey</span><span style="color:#E1E4E8">(privateKey);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setFormat</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"json"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setAlipayPublicKey</span><span style="color:#E1E4E8">(alipayPublicKey);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setCharset</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"UTF-8"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#E1E4E8">        alipayConfig.</span><span style="color:#B392F0">setSignType</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RSA2"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> alipayConfig;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="响应示例-1">响应示例</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">    "alipay_aipay_agent_fulfillment_confirm_response"</span><span style="color:#E1E4E8">:{</span></span>
+<span class="line"><span style="color:#79B8FF">        "msg"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"Success"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "code"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"10000"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        "trade_no"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"20260324008281172041220000012182"</span></span>
+<span class="line"><span style="color:#E1E4E8">    },</span></span>
+<span class="line"><span style="color:#79B8FF">    "sign"</span><span style="color:#E1E4E8">:</span><span style="color:#9ECBFF">"ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre></div>
+<script type="application/json" id="docs-markdown-data" data-docs-markdown-data="">{"title":"产品接入指南","content":"商家/服务商可根据本文指引快速接入 **AI按量付费** 产品。\n说明：\n- **AI按量付费** 产品支持自研商家/服务商通过 [自研应用](https://opendocs.alipay.com/common/02bijh#%E8%87%AA%E7%A0%94%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%BA%94%E7%94%A8) 或 [第三方应用](https://opendocs.alipay.com/common/02bijh#%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%BA%94%E7%94%A8) 代调用（传入 app_auth_token）方式，调用 API 接入。\n\n# 产品特色\n**AI按量付费** 是支付宝AI付推出的基于402 Payment Required HTTP状态码的 A2M 方案，可让您的 API、数字内容或算力资源，能够直接向访问它们的 AI 智能体（AI Agents） 发起自动收款。\n\n- **按量收费**：每次调用都可以独立定价，不必强依赖包月订阅。\n- **原生适配 AI 智能体**：通过 `402 Payment Required` 告诉智能体“这个资源需要先付款”。\n- **链路更短**：用户不需要在商家侧注册、登录、跳转到复杂页面后再回来。\n- **AI Agent 自动购买资源**：用户授权后，由智能体完成请求、支付、交付。\n    \n\u003Ca name=\"f7b22fd2\">\u003C/a>\n# 典型场景\n\n1. 用户通过支付宝 App 支付并开通 AI付。  ![image.png](https://mdn.alipayobjects.com/huamei_k1uezb/afts/img/4k7rSbZKjvQAAAAAXGAAAAgADmlSAQFr/original)\n2. 用户向智能体下达指令，智能体访问商家的付费资源。\n3. 商家服务端发现这次请求没有有效支付凭证，于是返回 `402 Payment Required`，并在 `Payment-Needed` Header 里放入账单。\n4. 智能体把账单交给支付宝支付能力，用户确认后完成付款。\n5. 支付成功后，智能体拿到支付凭证，并携带 `Payment-Proof` 再次请求商家资源。\n6. 商家服务端调用支付宝接口验证支付凭证。\n7. 验证通过后，商家返回资源内容，并异步发送履约回执。  ![image.png](https://mdn.alipayobjects.com/afts/img/A*OiuqRZy_YiYAAAAAZHAAAAgAeq8wAA/original?bz=openpt_doc&t=Lbckg3uxBoV5fyWcUYQPtjhpE5GfIyynaaRj5oRfNnADAAAAZAAAMK8AAAAA#__spacing=both&clientId=u92d0208d-9379-4&from=paste&height=379&id=u3fb21707&originHeight=754&originWidth=1790&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7aa9a9a3-4a0d-4a8d-a082-767bf144d8c&title=&width=900)\n\n# Vibe coding 快速集成（推荐）\n```markdown\n通过 npx -y @alipay/alipay-aipay@latest install 安装支付宝 AI 付 Skill，加载 alipay-aipay 技能为我的 api 接口集成按量付费，完成沙箱测试，并完成签约入驻\n```\n# 手动集成（传统）\n你需要在自己的服务端完成三件事：\n\n1. 用户未支付时，返回 `402 Payment Required` 和 `Payment-Needed` 账单。\n2. 用户支付后，读取 `Payment-Proof` 并调用支付宝验凭证接口。\n3. 验证通过并返回资源后，调用支付宝履约回执接口。\n\n## 示例代码\n请访问[AI按量计费示例代码](https://github.com/alipay/ai/tree/main/code_example/aipay-402-example)获取示例代码。\n\n## 完整接口时序图\n\n```mermaid\nsequenceDiagram\n    autonumber\n    participant User as 用户\n    participant Client as 买家Agent\n    participant SellerServer as 商家服务端\n    participant Alipay as 支付宝\n\n    Note over User,SellerServer: 访问付费资源并获取账单\n    User->>Client: 访问付费资源\u003Cbr/>(如: /market/antgroup/trend)\n    Client->>SellerServer: GET /market/antgroup/trend\n    SellerServer->>SellerServer: 检查 Payment-Proof 请求头\n    SellerServer->>SellerServer: 使用支付宝 SDK 的加签方法进行加签\n    SellerServer->>SellerServer: 生成 402 响应\n    SellerServer-->>Client: 402 Payment Needed\u003Cbr/>Payment-Needed: Base64 编码的账单\n    Client-->>User: 展示支付账单\u003Cbr/>(金额、商品、过期时间等)\n\n    Note over User,Alipay: 用户完成支付（简化示例）\n    User->>Alipay: 通过支付宝完成支付\n    Alipay-->>User: 返回支付凭证和订单号\n\n    Note over User,SellerServer: 携带支付凭证访问资源\n    User->>Client: 提交支付凭证、交易号、买家客户端标识\n    Client->>SellerServer: GET /market/antgroup/trend\u003Cbr/>Payment-Proof: Base64 编码的支付凭证、交易号、买家客户端标识\n    SellerServer->>SellerServer: 解析 Payment-Proof 请求头\n    SellerServer->>Alipay: 验证支付凭证\u003Cbr/>alipay.aipay.agent.payment.verify\n    Alipay-->>SellerServer: 返回验证结果\n\n    alt 验证失败（active=false）\n        SellerServer-->>Client: 402 Payment Needed\u003Cbr/>支付凭证无效或已过期\n        Client-->>User: 提示支付凭证无效\u003Cbr/>需重新支付\n    else 验证成功（active=true）\n        SellerServer->>SellerServer: 返回资源内容\n        SellerServer-->>Client: 200 OK\u003Cbr/>返回付费资源内容\n        SellerServer->>Alipay: 发送履约回执（异步）\u003Cbr/>alipay.aipay.agent.fulfillment.confirm\n        Alipay-->>SellerServer: 履约回执确认\n        Client-->>User: 展示资源内容\n    end\n\n```\n\n## 第一步：返回 402 账单\n\n当商家服务端收到资源请求时，先检查请求头里是否有 `Payment-Proof`。\n\n- 如果没有，说明用户还没支付，返回 `402 Payment Required`。\n- 如果有，但验证失败，也返回 `402 Payment Required`，让用户重新支付。\n- 如果有且验证成功，直接返回资源内容。\n\n`402` 响应里最重要的是 `Payment-Needed` Header。它是一段经过 Base64URL 编码的账单，账单里包含本次交易的金额、商品名、资源 ID、收款方信息、支付截止时间和商家签名。\n\n\n### 402 Payment-Needed\n\n| 项目 | 规范 |\n| --- | --- |\n| HTTP 状态码 | 402 Payment Required |\n| 响应数据 | 通过 `Payment-Needed` Header 传递（**Base64URL** 编码） |\n\n```http\nHTTP/1.1 402 Payment Required\nPayment-Needed: \u003Cbase64url 编码后的账单 JSON>\nContent-Type: application/json\n{\n  \"error\": \"Payment Needed\",\n  \"message\": \"请先支付 0.01 CNY 以访问资源\",\n  \"resourceId\": \"RES_1739836600000_abc123\"\n}\n```\n响应体主要用于让调试和日志更清楚。真正给智能体识别和支付使用的是 `Payment-Needed` Header。\n\n### Payment-Needed Header 解码后的内容\n\n```json\n{\n  \"protocol\": {\n    \"out_trade_no\": \"ORDER_1739836600000_abc123\",\n    \"amount\": \"0.01\",\n    \"currency\": \"CNY\",\n    \"resource_id\": \"RES_1739836600000_abc123\",\n    \"pay_before\": \"2026-03-25T12:00:00+08:00\",\n    \"seller_signature\": \"YYYYxxxx=\",\n    \"seller_sign_type\": \"RSA2\",\n    \"seller_unique_id\": \"2088xxxxxxxx\"\n  },\n  \"method\": {\n    \"seller_name\": \"测试商家\",\n    \"seller_id\": \"2088xxxxxxxx\",\n    \"seller_app_id\": \"app_123456\",\n    \"goods_name\": \"测试商品\",\n    \"seller_unique_id_key\": \"seller_id\",\n    \"service_id\": \"xxxx_12344\"\n  }\n}\n```\n\n### 字段说明\n\n#### protocol 层字段\n\n| 字段名 | 类型 | 必填 | 说明 |\n| --- | --- | --- | --- |\n| `out_trade_no` | String | 是 | 商户订单号。建议全局唯一，用于幂等和防重复支付 |\n| `amount` | String | 是 | 应付金额（最小货币单位，字符串） |\n| `currency` | String | 是 | 法币单位（默认 CNY） |\n| `resource_id` | String | 是 | 资源唯一标识（用于资源防串，如 /market/alibaba/trend_001） |\n| `pay_before` | String | 是 | 支付过期时间戳（ISO8601 格式，请设计合理有效期，过期账单不可继续支付） |\n| `seller_signature` | String | 是 | 商家对本次账单关键信息的签名 |\n| `seller_sign_type` | String | 是 | 签名算法（目前仅支持 RSA2） |\n| `seller_unique_id` | String | 是 | 卖家唯一标识（此处是 `seller_id`） |\n\n#### method 层字段\n\n| 字段名 | 类型 | 必填 | 说明 |\n| --- | --- | --- | --- |\n| `seller_name` | String | 是 | 收款方名称 |\n| `seller_id` | String | 是 | 收款方 userId（2088ID） |\n| `seller_app_id` | String | 是 | 商户应用 ID（**如果你是第三方代调用，需使用三方应用的app_id**）|\n| `goods_name` | String | 是 | 交易物品标题 |\n| `seller_unique_id_key` | String | 是 | 卖家唯一标识键，默认 `seller_id` |\n| `service_id` | String | 是 | 商户提供的服务 ID，如何获取请查看 [常见问题 Q2](https://ideservice.alipay.com/cms/site/0j7uos) |\n\n### 商家签名\n\n商家需要用自己的应用私钥（**如果你是第三方代调用，需使用三方应用的私钥**）对账单关键信息加签。加签只在本地完成，不会请求支付宝服务端。\n\n加签字段包括：\n\n- `amount`：支付金额\n- `currency`：币种\n- `goods_name`：商品或服务名称\n- `out_trade_no`：商户订单号\n- `pay_before`：支付截止时间\n- `resource_id`：资源 ID\n- `seller_id`：收款方 ID\n- `service_id`：服务 ID\n\n加签前，需要先把参数按 key 的字典序排序，再拼成 `key=value&key=value` 的格式。\n\n```text\namount=0.01&currency=CNY&goods_name=测试商品&out_trade_no=ORDER_1739836600000_abc123&pay_before=2026-03-25T12:00:00+08:00&resource_id=RES_1739836600000_abc123&seller_id=2088xxxxxxxx&service_id=xxxx_12344\n```\nJava SDK 加签示例：\n\n```java\npublic static String rsaSign(String content, String privateKey, String charset, String signType) throws AlipayApiException {\n    return AsymmetricManager.getByName(signType).sign(content, charset, privateKey);\n}\n```\n\n## 第二步：验证 Payment-Proof\n\n用户支付成功后，智能体会再次请求商家资源，并在请求头里带上 `Payment-Proof`。\n\n```http\nGET /market/antgroup/trend HTTP/1.1\nPayment-Proof: \u003Cbase64 编码后的支付凭证信息>\n```\n\n商家服务端解析 `Payment-Proof` 后，可以得到支付凭证、支付宝订单号和买家客户端会话标识。\n\n```text\nPayment-Proof (Base64前): {\n  \"protocol\": {\n    \"payment_proof\": \"7cf8a6a93c924e13eaa4bf20c3a487f30d1fbdb759a1f229b4091b7d0158xxxx\",\n    \"trade_no\": \"2026040900828111317760000001xxxx\"\n  },\n  \"method\": {\n    \"client_session\": \"xxxxxxxxxxxxxsCiAgICAic2Vzc2lvbklkIjogInh4IiwKICAgICJzaWduYXR1cmUiOiAi5Yqg562+5ZCO57uT5p6c77yM6YCa6L+HY3JlZGVudGlhbElk5Yqg562+YWdlbnRUb2tlbiArIHNlc3Npb25JZCkiCn0=\",\n  } \n}\n```\n\n解密后，商家需调用 [alipay.aipay.agent.payment.verify（A2A 商户支付凭证验证接口）](https://ideservice.alipay.com/cms/site/0j7uot) 接口验证支付凭证，支付宝会返回已支付订单的基本信息（如外部订单号、资源 ID 等，详细出参见 API 文档）。\n\n入参均来自用户（买家）的 `Payment-Proof`：\n\n- 支付凭证：`payment_proof`\n- 支付宝订单号：`trade_no`\n- 买家客户端会话标识：`client_session`\n\n### 请求示例\n\n```java\npackage com.java.sdk.demo;\n\nimport com.alipay.api.AlipayApiException;\nimport com.alipay.api.AlipayClient;\nimport com.alipay.api.DefaultAlipayClient;\nimport com.alipay.api.AlipayConfig;\nimport com.alipay.api.domain.AlipayAipayAgentPaymentVerifyModel;\nimport com.alipay.api.request.AlipayAipayAgentPaymentVerifyRequest;\nimport com.alipay.api.response.AlipayAipayAgentPaymentVerifyResponse;\n\nimport com.alipay.api.FileItem;\nimport java.util.Base64;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class AlipayAipayAgentPaymentVerify {\n\n    public static void main(String[] args) throws AlipayApiException {\n        // 初始化SDK\n        AlipayClient alipayClient = new DefaultAlipayClient(getAlipayConfig());\n\n        // 构造请求参数以调用接口\n        AlipayAipayAgentPaymentVerifyRequest request = new AlipayAipayAgentPaymentVerifyRequest();\n        AlipayAipayAgentPaymentVerifyModel model = new AlipayAipayAgentPaymentVerifyModel();\n        \n        // 设置交易号\n        model.setTradeNo(\"20260324008281172041220000012182\");\n        \n        // 设置支付凭证\n        model.setPaymentProof(\"62922589b11acfc70faf4ebab1da7a9bbc438554e40d0a1dcdc7f35b3085xxxx\");\n        \n        // 设置买家客户端会话标识\n        model.setClientSession(\"ImNsaWVudFNlc3N\");\n        \n        request.setBizModel(model);\n        AlipayAipayAgentPaymentVerifyResponse response = alipayClient.execute(request);\n        System.out.println(response.getBody());\n\n        if (response.isSuccess()) {\n            System.out.println(\"调用成功\");\n        } else {\n            System.out.println(\"调用失败\");\n            // sdk版本是\"4.38.0.ALL\"及以上,可以参考下面的示例获取诊断链接\n            // String diagnosisUrl = DiagnosisUtils.getDiagnosisUrl(response);\n            // System.out.println(diagnosisUrl);\n        }\n    }\n\n    private static AlipayConfig getAlipayConfig() {\n        String privateKey  = \"\u003C-- 请填写您的应用私钥，例如：MIIEvQIBADANB ... ... -->\";\n        String alipayPublicKey = \"\u003C-- 请填写您的支付宝公钥，例如：MIIBIjANBg... -->\";\n        AlipayConfig alipayConfig = new AlipayConfig();\n        alipayConfig.setServerUrl(\"https://openapi.alipay.com/gateway.do\");\n        alipayConfig.setAppId(\"\u003C-- 请填写您的AppId，例如：2019091767145019 -->\");\n        alipayConfig.setPrivateKey(privateKey);\n        alipayConfig.setFormat(\"json\");\n        alipayConfig.setAlipayPublicKey(alipayPublicKey);\n        alipayConfig.setCharset(\"UTF-8\");\n        alipayConfig.setSignType(\"RSA2\");\n        return alipayConfig;\n    }\n}\n```\n\n### 响应示例\n\n```json\n{\n    \"alipay_aipay_agent_payment_verify_response\":{\n        \"msg\":\"Success\",\n        \"amount\":\"0.01\",\n        \"code\":\"10000\",\n        \"out_trade_no\":\"ORDER_1774598472720_etm5dy\",\n        \"trade_no\":\"20260324008281172041220000012182\",\n        \"resource_id\":\"out_res_id_0000123\",\n        \"active\":true\n    },\n    \"sign\":\"ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE\"\n}\n```\n验证通过不只看接口调用成功，还要检查业务字段：\n\n- `active` 必须为 `true`。\n- `amount` 必须等于本次资源价格。\n- `out_trade_no` 必须是你生成的商户订单号。\n- `resource_id` 必须和用户本次访问的资源一致。\n- `trade_no` 不应被重复履约，避免同一笔支付被多次使用。\n\n如果任一检查不通过，返回 `402 Payment Required`，提示智能体重新支付。\n## 第三步：履约回执\n\n将资源返回给用户后，商家需异步调用 [alipay.aipay.agent.fulfillment.confirm（A2A 商家履约回执确认接口）](https://ideservice.alipay.com/cms/site/0j7sw0)，告知支付宝这笔订单已经完成履约。\n\n入参：\n\n- 支付宝订单号：`trade_no`\n\n### 请求示例\n\n```java\npackage com.java.sdk.demo;\n\nimport com.alipay.api.AlipayApiException;\nimport com.alipay.api.AlipayClient;\nimport com.alipay.api.DefaultAlipayClient;\nimport com.alipay.api.AlipayConfig;\nimport com.alipay.api.response.AlipayAipayAgentFulfillmentConfirmResponse;\nimport com.alipay.api.domain.AlipayAipayAgentFulfillmentConfirmModel;\nimport com.alipay.api.request.AlipayAipayAgentFulfillmentConfirmRequest;\n\nimport com.alipay.api.FileItem;\nimport java.util.Base64;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class AlipayAipayAgentFulfillmentConfirm {\n\n    public static void main(String[] args) throws AlipayApiException {\n        // 初始化SDK\n        AlipayClient alipayClient = new DefaultAlipayClient(getAlipayConfig());\n\n        // 构造请求参数以调用接口\n        AlipayAipayAgentFulfillmentConfirmRequest request = new AlipayAipayAgentFulfillmentConfirmRequest();\n        AlipayAipayAgentFulfillmentConfirmModel model = new AlipayAipayAgentFulfillmentConfirmModel();\n        \n        // 设置交易号\n        model.setTradeNo(\"20260324008281172041220000012182\");\n        \n        request.setBizModel(model);\n        AlipayAipayAgentFulfillmentConfirmResponse response = alipayClient.execute(request);\n        System.out.println(response.getBody());\n\n        if (response.isSuccess()) {\n            System.out.println(\"调用成功\");\n        } else {\n            System.out.println(\"调用失败\");\n            // sdk版本是\"4.38.0.ALL\"及以上,可以参考下面的示例获取诊断链接\n            // String diagnosisUrl = DiagnosisUtils.getDiagnosisUrl(response);\n            // System.out.println(diagnosisUrl);\n        }\n    }\n\n    private static AlipayConfig getAlipayConfig() {\n        String privateKey  = \"\u003C-- 请填写您的应用私钥，例如：MIIEvQIBADANB ... ... -->\";\n        String alipayPublicKey = \"\u003C-- 请填写您的支付宝公钥，例如：MIIBIjANBg... -->\";\n        AlipayConfig alipayConfig = new AlipayConfig();\n        alipayConfig.setServerUrl(\"https://openapi.alipay.com/gateway.do\");\n        alipayConfig.setAppId(\"\u003C-- 请填写您的AppId，例如：2019091767145019 -->\");\n        alipayConfig.setPrivateKey(privateKey);\n        alipayConfig.setFormat(\"json\");\n        alipayConfig.setAlipayPublicKey(alipayPublicKey);\n        alipayConfig.setCharset(\"UTF-8\");\n        alipayConfig.setSignType(\"RSA2\");\n        return alipayConfig;\n    }\n}\n```\n\n### 响应示例\n\n```json\n{\n    \"alipay_aipay_agent_fulfillment_confirm_response\":{\n        \"msg\":\"Success\",\n        \"code\":\"10000\",\n        \"trade_no\":\"20260324008281172041220000012182\"\n    },\n    \"sign\":\"ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE\"\n}\n```\n","markdown":"商家/服务商可根据本文指引快速接入 **AI按量付费** 产品。\n说明：\n- **AI按量付费** 产品支持自研商家/服务商通过 [自研应用](https://opendocs.alipay.com/common/02bijh#%E8%87%AA%E7%A0%94%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%BA%94%E7%94%A8) 或 [第三方应用](https://opendocs.alipay.com/common/02bijh#%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1%E5%9E%8B%E5%BA%94%E7%94%A8) 代调用（传入 app_auth_token）方式，调用 API 接入。\n\n# 产品特色\n**AI按量付费** 是支付宝AI付推出的基于402 Payment Required HTTP状态码的 A2M 方案，可让您的 API、数字内容或算力资源，能够直接向访问它们的 AI 智能体（AI Agents） 发起自动收款。\n\n- **按量收费**：每次调用都可以独立定价，不必强依赖包月订阅。\n- **原生适配 AI 智能体**：通过 `402 Payment Required` 告诉智能体“这个资源需要先付款”。\n- **链路更短**：用户不需要在商家侧注册、登录、跳转到复杂页面后再回来。\n- **AI Agent 自动购买资源**：用户授权后，由智能体完成请求、支付、交付。\n    \n\u003Ca name=\"f7b22fd2\">\u003C/a>\n# 典型场景\n\n1. 用户通过支付宝 App 支付并开通 AI付。  ![image.png](https://mdn.alipayobjects.com/huamei_k1uezb/afts/img/4k7rSbZKjvQAAAAAXGAAAAgADmlSAQFr/original)\n2. 用户向智能体下达指令，智能体访问商家的付费资源。\n3. 商家服务端发现这次请求没有有效支付凭证，于是返回 `402 Payment Required`，并在 `Payment-Needed` Header 里放入账单。\n4. 智能体把账单交给支付宝支付能力，用户确认后完成付款。\n5. 支付成功后，智能体拿到支付凭证，并携带 `Payment-Proof` 再次请求商家资源。\n6. 商家服务端调用支付宝接口验证支付凭证。\n7. 验证通过后，商家返回资源内容，并异步发送履约回执。  ![image.png](https://mdn.alipayobjects.com/afts/img/A*OiuqRZy_YiYAAAAAZHAAAAgAeq8wAA/original?bz=openpt_doc&t=Lbckg3uxBoV5fyWcUYQPtjhpE5GfIyynaaRj5oRfNnADAAAAZAAAMK8AAAAA#__spacing=both&clientId=u92d0208d-9379-4&from=paste&height=379&id=u3fb21707&originHeight=754&originWidth=1790&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&taskId=u7aa9a9a3-4a0d-4a8d-a082-767bf144d8c&title=&width=900)\n\n# Vibe coding 快速集成（推荐）\n```markdown\n通过 npx -y @alipay/alipay-aipay@latest install 安装支付宝 AI 付 Skill，加载 alipay-aipay 技能为我的 api 接口集成按量付费，完成沙箱测试，并完成签约入驻\n```\n# 手动集成（传统）\n你需要在自己的服务端完成三件事：\n\n1. 用户未支付时，返回 `402 Payment Required` 和 `Payment-Needed` 账单。\n2. 用户支付后，读取 `Payment-Proof` 并调用支付宝验凭证接口。\n3. 验证通过并返回资源后，调用支付宝履约回执接口。\n\n## 示例代码\n请访问[AI按量计费示例代码](https://github.com/alipay/ai/tree/main/code_example/aipay-402-example)获取示例代码。\n\n## 完整接口时序图\n\n```mermaid\nsequenceDiagram\n    autonumber\n    participant User as 用户\n    participant Client as 买家Agent\n    participant SellerServer as 商家服务端\n    participant Alipay as 支付宝\n\n    Note over User,SellerServer: 访问付费资源并获取账单\n    User->>Client: 访问付费资源\u003Cbr/>(如: /market/antgroup/trend)\n    Client->>SellerServer: GET /market/antgroup/trend\n    SellerServer->>SellerServer: 检查 Payment-Proof 请求头\n    SellerServer->>SellerServer: 使用支付宝 SDK 的加签方法进行加签\n    SellerServer->>SellerServer: 生成 402 响应\n    SellerServer-->>Client: 402 Payment Needed\u003Cbr/>Payment-Needed: Base64 编码的账单\n    Client-->>User: 展示支付账单\u003Cbr/>(金额、商品、过期时间等)\n\n    Note over User,Alipay: 用户完成支付（简化示例）\n    User->>Alipay: 通过支付宝完成支付\n    Alipay-->>User: 返回支付凭证和订单号\n\n    Note over User,SellerServer: 携带支付凭证访问资源\n    User->>Client: 提交支付凭证、交易号、买家客户端标识\n    Client->>SellerServer: GET /market/antgroup/trend\u003Cbr/>Payment-Proof: Base64 编码的支付凭证、交易号、买家客户端标识\n    SellerServer->>SellerServer: 解析 Payment-Proof 请求头\n    SellerServer->>Alipay: 验证支付凭证\u003Cbr/>alipay.aipay.agent.payment.verify\n    Alipay-->>SellerServer: 返回验证结果\n\n    alt 验证失败（active=false）\n        SellerServer-->>Client: 402 Payment Needed\u003Cbr/>支付凭证无效或已过期\n        Client-->>User: 提示支付凭证无效\u003Cbr/>需重新支付\n    else 验证成功（active=true）\n        SellerServer->>SellerServer: 返回资源内容\n        SellerServer-->>Client: 200 OK\u003Cbr/>返回付费资源内容\n        SellerServer->>Alipay: 发送履约回执（异步）\u003Cbr/>alipay.aipay.agent.fulfillment.confirm\n        Alipay-->>SellerServer: 履约回执确认\n        Client-->>User: 展示资源内容\n    end\n\n```\n\n## 第一步：返回 402 账单\n\n当商家服务端收到资源请求时，先检查请求头里是否有 `Payment-Proof`。\n\n- 如果没有，说明用户还没支付，返回 `402 Payment Required`。\n- 如果有，但验证失败，也返回 `402 Payment Required`，让用户重新支付。\n- 如果有且验证成功，直接返回资源内容。\n\n`402` 响应里最重要的是 `Payment-Needed` Header。它是一段经过 Base64URL 编码的账单，账单里包含本次交易的金额、商品名、资源 ID、收款方信息、支付截止时间和商家签名。\n\n\n### 402 Payment-Needed\n\n| 项目 | 规范 |\n| --- | --- |\n| HTTP 状态码 | 402 Payment Required |\n| 响应数据 | 通过 `Payment-Needed` Header 传递（**Base64URL** 编码） |\n\n```http\nHTTP/1.1 402 Payment Required\nPayment-Needed: \u003Cbase64url 编码后的账单 JSON>\nContent-Type: application/json\n{\n  \"error\": \"Payment Needed\",\n  \"message\": \"请先支付 0.01 CNY 以访问资源\",\n  \"resourceId\": \"RES_1739836600000_abc123\"\n}\n```\n响应体主要用于让调试和日志更清楚。真正给智能体识别和支付使用的是 `Payment-Needed` Header。\n\n### Payment-Needed Header 解码后的内容\n\n```json\n{\n  \"protocol\": {\n    \"out_trade_no\": \"ORDER_1739836600000_abc123\",\n    \"amount\": \"0.01\",\n    \"currency\": \"CNY\",\n    \"resource_id\": \"RES_1739836600000_abc123\",\n    \"pay_before\": \"2026-03-25T12:00:00+08:00\",\n    \"seller_signature\": \"YYYYxxxx=\",\n    \"seller_sign_type\": \"RSA2\",\n    \"seller_unique_id\": \"2088xxxxxxxx\"\n  },\n  \"method\": {\n    \"seller_name\": \"测试商家\",\n    \"seller_id\": \"2088xxxxxxxx\",\n    \"seller_app_id\": \"app_123456\",\n    \"goods_name\": \"测试商品\",\n    \"seller_unique_id_key\": \"seller_id\",\n    \"service_id\": \"xxxx_12344\"\n  }\n}\n```\n\n### 字段说明\n\n#### protocol 层字段\n\n| 字段名 | 类型 | 必填 | 说明 |\n| --- | --- | --- | --- |\n| `out_trade_no` | String | 是 | 商户订单号。建议全局唯一，用于幂等和防重复支付 |\n| `amount` | String | 是 | 应付金额（最小货币单位，字符串） |\n| `currency` | String | 是 | 法币单位（默认 CNY） |\n| `resource_id` | String | 是 | 资源唯一标识（用于资源防串，如 /market/alibaba/trend_001） |\n| `pay_before` | String | 是 | 支付过期时间戳（ISO8601 格式，请设计合理有效期，过期账单不可继续支付） |\n| `seller_signature` | String | 是 | 商家对本次账单关键信息的签名 |\n| `seller_sign_type` | String | 是 | 签名算法（目前仅支持 RSA2） |\n| `seller_unique_id` | String | 是 | 卖家唯一标识（此处是 `seller_id`） |\n\n#### method 层字段\n\n| 字段名 | 类型 | 必填 | 说明 |\n| --- | --- | --- | --- |\n| `seller_name` | String | 是 | 收款方名称 |\n| `seller_id` | String | 是 | 收款方 userId（2088ID） |\n| `seller_app_id` | String | 是 | 商户应用 ID（**如果你是第三方代调用，需使用三方应用的app_id**）|\n| `goods_name` | String | 是 | 交易物品标题 |\n| `seller_unique_id_key` | String | 是 | 卖家唯一标识键，默认 `seller_id` |\n| `service_id` | String | 是 | 商户提供的服务 ID，如何获取请查看 [常见问题 Q2](https://ideservice.alipay.com/cms/site/0j7uos) |\n\n### 商家签名\n\n商家需要用自己的应用私钥（**如果你是第三方代调用，需使用三方应用的私钥**）对账单关键信息加签。加签只在本地完成，不会请求支付宝服务端。\n\n加签字段包括：\n\n- `amount`：支付金额\n- `currency`：币种\n- `goods_name`：商品或服务名称\n- `out_trade_no`：商户订单号\n- `pay_before`：支付截止时间\n- `resource_id`：资源 ID\n- `seller_id`：收款方 ID\n- `service_id`：服务 ID\n\n加签前，需要先把参数按 key 的字典序排序，再拼成 `key=value&key=value` 的格式。\n\n```text\namount=0.01&currency=CNY&goods_name=测试商品&out_trade_no=ORDER_1739836600000_abc123&pay_before=2026-03-25T12:00:00+08:00&resource_id=RES_1739836600000_abc123&seller_id=2088xxxxxxxx&service_id=xxxx_12344\n```\nJava SDK 加签示例：\n\n```java\npublic static String rsaSign(String content, String privateKey, String charset, String signType) throws AlipayApiException {\n    return AsymmetricManager.getByName(signType).sign(content, charset, privateKey);\n}\n```\n\n## 第二步：验证 Payment-Proof\n\n用户支付成功后，智能体会再次请求商家资源，并在请求头里带上 `Payment-Proof`。\n\n```http\nGET /market/antgroup/trend HTTP/1.1\nPayment-Proof: \u003Cbase64 编码后的支付凭证信息>\n```\n\n商家服务端解析 `Payment-Proof` 后，可以得到支付凭证、支付宝订单号和买家客户端会话标识。\n\n```text\nPayment-Proof (Base64前): {\n  \"protocol\": {\n    \"payment_proof\": \"7cf8a6a93c924e13eaa4bf20c3a487f30d1fbdb759a1f229b4091b7d0158xxxx\",\n    \"trade_no\": \"2026040900828111317760000001xxxx\"\n  },\n  \"method\": {\n    \"client_session\": \"xxxxxxxxxxxxxsCiAgICAic2Vzc2lvbklkIjogInh4IiwKICAgICJzaWduYXR1cmUiOiAi5Yqg562+5ZCO57uT5p6c77yM6YCa6L+HY3JlZGVudGlhbElk5Yqg562+YWdlbnRUb2tlbiArIHNlc3Npb25JZCkiCn0=\",\n  } \n}\n```\n\n解密后，商家需调用 [alipay.aipay.agent.payment.verify（A2A 商户支付凭证验证接口）](https://ideservice.alipay.com/cms/site/0j7uot) 接口验证支付凭证，支付宝会返回已支付订单的基本信息（如外部订单号、资源 ID 等，详细出参见 API 文档）。\n\n入参均来自用户（买家）的 `Payment-Proof`：\n\n- 支付凭证：`payment_proof`\n- 支付宝订单号：`trade_no`\n- 买家客户端会话标识：`client_session`\n\n### 请求示例\n\n```java\npackage com.java.sdk.demo;\n\nimport com.alipay.api.AlipayApiException;\nimport com.alipay.api.AlipayClient;\nimport com.alipay.api.DefaultAlipayClient;\nimport com.alipay.api.AlipayConfig;\nimport com.alipay.api.domain.AlipayAipayAgentPaymentVerifyModel;\nimport com.alipay.api.request.AlipayAipayAgentPaymentVerifyRequest;\nimport com.alipay.api.response.AlipayAipayAgentPaymentVerifyResponse;\n\nimport com.alipay.api.FileItem;\nimport java.util.Base64;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class AlipayAipayAgentPaymentVerify {\n\n    public static void main(String[] args) throws AlipayApiException {\n        // 初始化SDK\n        AlipayClient alipayClient = new DefaultAlipayClient(getAlipayConfig());\n\n        // 构造请求参数以调用接口\n        AlipayAipayAgentPaymentVerifyRequest request = new AlipayAipayAgentPaymentVerifyRequest();\n        AlipayAipayAgentPaymentVerifyModel model = new AlipayAipayAgentPaymentVerifyModel();\n        \n        // 设置交易号\n        model.setTradeNo(\"20260324008281172041220000012182\");\n        \n        // 设置支付凭证\n        model.setPaymentProof(\"62922589b11acfc70faf4ebab1da7a9bbc438554e40d0a1dcdc7f35b3085xxxx\");\n        \n        // 设置买家客户端会话标识\n        model.setClientSession(\"ImNsaWVudFNlc3N\");\n        \n        request.setBizModel(model);\n        AlipayAipayAgentPaymentVerifyResponse response = alipayClient.execute(request);\n        System.out.println(response.getBody());\n\n        if (response.isSuccess()) {\n            System.out.println(\"调用成功\");\n        } else {\n            System.out.println(\"调用失败\");\n            // sdk版本是\"4.38.0.ALL\"及以上,可以参考下面的示例获取诊断链接\n            // String diagnosisUrl = DiagnosisUtils.getDiagnosisUrl(response);\n            // System.out.println(diagnosisUrl);\n        }\n    }\n\n    private static AlipayConfig getAlipayConfig() {\n        String privateKey  = \"\u003C-- 请填写您的应用私钥，例如：MIIEvQIBADANB ... ... -->\";\n        String alipayPublicKey = \"\u003C-- 请填写您的支付宝公钥，例如：MIIBIjANBg... -->\";\n        AlipayConfig alipayConfig = new AlipayConfig();\n        alipayConfig.setServerUrl(\"https://openapi.alipay.com/gateway.do\");\n        alipayConfig.setAppId(\"\u003C-- 请填写您的AppId，例如：2019091767145019 -->\");\n        alipayConfig.setPrivateKey(privateKey);\n        alipayConfig.setFormat(\"json\");\n        alipayConfig.setAlipayPublicKey(alipayPublicKey);\n        alipayConfig.setCharset(\"UTF-8\");\n        alipayConfig.setSignType(\"RSA2\");\n        return alipayConfig;\n    }\n}\n```\n\n### 响应示例\n\n```json\n{\n    \"alipay_aipay_agent_payment_verify_response\":{\n        \"msg\":\"Success\",\n        \"amount\":\"0.01\",\n        \"code\":\"10000\",\n        \"out_trade_no\":\"ORDER_1774598472720_etm5dy\",\n        \"trade_no\":\"20260324008281172041220000012182\",\n        \"resource_id\":\"out_res_id_0000123\",\n        \"active\":true\n    },\n    \"sign\":\"ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE\"\n}\n```\n验证通过不只看接口调用成功，还要检查业务字段：\n\n- `active` 必须为 `true`。\n- `amount` 必须等于本次资源价格。\n- `out_trade_no` 必须是你生成的商户订单号。\n- `resource_id` 必须和用户本次访问的资源一致。\n- `trade_no` 不应被重复履约，避免同一笔支付被多次使用。\n\n如果任一检查不通过，返回 `402 Payment Required`，提示智能体重新支付。\n## 第三步：履约回执\n\n将资源返回给用户后，商家需异步调用 [alipay.aipay.agent.fulfillment.confirm（A2A 商家履约回执确认接口）](https://ideservice.alipay.com/cms/site/0j7sw0)，告知支付宝这笔订单已经完成履约。\n\n入参：\n\n- 支付宝订单号：`trade_no`\n\n### 请求示例\n\n```java\npackage com.java.sdk.demo;\n\nimport com.alipay.api.AlipayApiException;\nimport com.alipay.api.AlipayClient;\nimport com.alipay.api.DefaultAlipayClient;\nimport com.alipay.api.AlipayConfig;\nimport com.alipay.api.response.AlipayAipayAgentFulfillmentConfirmResponse;\nimport com.alipay.api.domain.AlipayAipayAgentFulfillmentConfirmModel;\nimport com.alipay.api.request.AlipayAipayAgentFulfillmentConfirmRequest;\n\nimport com.alipay.api.FileItem;\nimport java.util.Base64;\nimport java.util.ArrayList;\nimport java.util.List;\n\npublic class AlipayAipayAgentFulfillmentConfirm {\n\n    public static void main(String[] args) throws AlipayApiException {\n        // 初始化SDK\n        AlipayClient alipayClient = new DefaultAlipayClient(getAlipayConfig());\n\n        // 构造请求参数以调用接口\n        AlipayAipayAgentFulfillmentConfirmRequest request = new AlipayAipayAgentFulfillmentConfirmRequest();\n        AlipayAipayAgentFulfillmentConfirmModel model = new AlipayAipayAgentFulfillmentConfirmModel();\n        \n        // 设置交易号\n        model.setTradeNo(\"20260324008281172041220000012182\");\n        \n        request.setBizModel(model);\n        AlipayAipayAgentFulfillmentConfirmResponse response = alipayClient.execute(request);\n        System.out.println(response.getBody());\n\n        if (response.isSuccess()) {\n            System.out.println(\"调用成功\");\n        } else {\n            System.out.println(\"调用失败\");\n            // sdk版本是\"4.38.0.ALL\"及以上,可以参考下面的示例获取诊断链接\n            // String diagnosisUrl = DiagnosisUtils.getDiagnosisUrl(response);\n            // System.out.println(diagnosisUrl);\n        }\n    }\n\n    private static AlipayConfig getAlipayConfig() {\n        String privateKey  = \"\u003C-- 请填写您的应用私钥，例如：MIIEvQIBADANB ... ... -->\";\n        String alipayPublicKey = \"\u003C-- 请填写您的支付宝公钥，例如：MIIBIjANBg... -->\";\n        AlipayConfig alipayConfig = new AlipayConfig();\n        alipayConfig.setServerUrl(\"https://openapi.alipay.com/gateway.do\");\n        alipayConfig.setAppId(\"\u003C-- 请填写您的AppId，例如：2019091767145019 -->\");\n        alipayConfig.setPrivateKey(privateKey);\n        alipayConfig.setFormat(\"json\");\n        alipayConfig.setAlipayPublicKey(alipayPublicKey);\n        alipayConfig.setCharset(\"UTF-8\");\n        alipayConfig.setSignType(\"RSA2\");\n        return alipayConfig;\n    }\n}\n```\n\n### 响应示例\n\n```json\n{\n    \"alipay_aipay_agent_fulfillment_confirm_response\":{\n        \"msg\":\"Success\",\n        \"code\":\"10000\",\n        \"trade_no\":\"20260324008281172041220000012182\"\n    },\n    \"sign\":\"ERITJKEIJKJHKKKKKKKHJEREEEEEEEEEEE\"\n}\n```\n"}</script>
+</article>
+</main>
+</div>
+<aside id="docToc" class="doc-toc" aria-label="文章目录">
+<nav class="doc-tocNav" aria-label="文章目录"><h2>目录</h2><ol>
+<li class="doc-tocItem doc-tocItem--h1">
+<a href="#产品特色">产品特色</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h1">
+<a href="#典型场景">典型场景</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h1">
+<a href="#vibe-coding-快速集成推荐">Vibe coding 快速集成（推荐）</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h1">
+<a href="#手动集成传统">手动集成（传统）</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h2">
+<a href="#示例代码">示例代码</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h2">
+<a href="#完整接口时序图">完整接口时序图</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h2">
+<a href="#第一步返回-402-账单">第一步：返回 402 账单</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#402-payment-needed">402 Payment-Needed</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#payment-needed-header-解码后的内容">Payment-Needed Header 解码后的内容</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#字段说明">字段说明</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h4">
+<a href="#protocol-层字段">protocol 层字段</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h4">
+<a href="#method-层字段">method 层字段</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#商家签名">商家签名</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h2">
+<a href="#第二步验证-payment-proof">第二步：验证 Payment-Proof</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#请求示例">请求示例</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#响应示例">响应示例</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h2">
+<a href="#第三步履约回执">第三步：履约回执</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#请求示例-1">请求示例</a>
+</li>
+<li class="doc-tocItem doc-tocItem--h3">
+<a href="#响应示例-1">响应示例</a>
+</li>
+</ol></nav>
+</aside>
+</div>
+</div>
+<div class="onboardingRoot" data-docs-login-root="">
+<section class="onboardingLayer onboardingLoginLayer" data-onboarding-panel="login" aria-labelledby="docs-login-title" aria-modal="true" role="dialog" hidden="">
+<button class="onboardingScrim" type="button" aria-label="登录弹窗遮罩" tabindex="-1"></button>
+<div class="loginDialog" role="document">
+<button class="onboardingIconClose loginDialogClose" type="button" data-onboarding-close="" aria-label="关闭">
+<svg viewBox="0 0 20 20" aria-hidden="true">
+<path d="M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5"></path>
+</svg>
+</button>
+<div class="loginDialogTitleRow">
+<h2 id="docs-login-title">欢迎使用</h2>
+<span class="loginAipayLogoFrame">
+<img class="loginAipayLogoImage" src="https://mdn.alipayobjects.com/huamei_xpdhyt/afts/img/A*PPW5R4roFjcAAAAAQKAAAAgAem3dAQ/original" alt="支付宝 Agent支付">
+</span>
+</div>
+<div class="loginQrCard" aria-label="支付宝登录">
+<div class="loginStatusPanel" data-login-status-panel="" role="status" aria-live="polite">
+<span class="loginStatusSpinner" data-login-status-spinner="" aria-hidden="true"></span>
+<p class="loginStatusText" data-login-status-text="">正在确认登录状态...</p>
+<div class="loginStatusActions" data-login-status-actions="" hidden="">
+<button class="loginStatusButton" type="button" data-login-retry="">重试</button>
+<button class="loginStatusButton loginStatusButtonSecondary" type="button" data-login-full-logout="" hidden="">刷新登录状态</button>
+</div>
+</div>
+<div class="loginIframePanel" data-login-iframe-panel="" hidden="">
+<iframe class="loginIframe" title="支付宝登录" data-login-iframe="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</div>
+<p class="loginQrHint">请用支付宝App扫码登录，或按页面提示继续</p>
+</div>
+</section>
+</div>
+<script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/navigation-query.2b8634ce9700.js" defer=""></script>
+<script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/docs.d9910a5a020e.js" defer=""></script>
+<script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/docs-renderer.67e63d7483df.js"></script>
+<script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/top-bar-auth-with-inject.23ffdb5f1f8b.js" defer=""></script>
+<script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/docs-login.5692b6fbe1dd.js"></script>
+<script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001292425/docs/_assets/assistant-launcher.2e5766f3ce54.js"></script>
+
+
+</body></html>

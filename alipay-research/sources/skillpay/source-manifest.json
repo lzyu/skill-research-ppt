@@ -1,0 +1,182 @@
+{
+  "observed_date": "2026-10-20",
+  "timezone": "Asia/Shanghai",
+  "scope": "public read-only documentation and static source; no ct links requested, login, installs, orders or payments",
+  "files": [
+    {
+      "file": "02-402-sequence.svg",
+      "bytes": 3567,
+      "sha256": "1fa27030a234c0ede9b2023a2fad853a73ae21da5867d8e84d7ee8e361c579b1"
+    },
+    {
+      "file": "03-cloud-protection.svg",
+      "bytes": 5816,
+      "sha256": "0b8519e6a2bf59830ca4f0ac013ceeb8731b4f9c111ae2f23ed328e31544fabf"
+    },
+    {
+      "file": "04-defense.svg",
+      "bytes": 4828,
+      "sha256": "8cd675059eb9969cdc499a7d50470831a86930cfe770dbc7e419ed9bb14d6853"
+    },
+    {
+      "file": "05-business-model.svg",
+      "bytes": 3288,
+      "sha256": "a850f0f87984e94fdea05ffd8d9e471f5f569a63ab428b67da4615576a3a384a"
+    },
+    {
+      "file": "PreviewBaseLayout.astro_astro_type_script_index_0_lang.Bsi1wV5g.js",
+      "bytes": 733,
+      "sha256": "9be13dc00bb592c7c23989ff1eee4f14ca9b7e9cdbf191510ff9c5ce033a433a"
+    },
+    {
+      "file": "ProductCard.astro_astro_type_script_index_0_lang.DRgOiNZP.js",
+      "bytes": 3820,
+      "sha256": "2ae8264315df9d68856597450ed101789f825f064cec3384b37207a1c83b6d52"
+    },
+    {
+      "file": "ProductLayout.astro_astro_type_script_index_0_lang.BvtR1MT1.js",
+      "bytes": 5679,
+      "sha256": "d838b2bce3b9143d3d0e311f8ebaa461b52c47104868595fb8d97cecf7db738d"
+    },
+    {
+      "file": "ProductListingForm.astro_astro_type_script_index_0_lang.DP7r4ow0.js",
+      "bytes": 133558,
+      "sha256": "21bb3ea1fa30bc6add6f8883fd98bed2ea6653e54a000ac05b6d0aa1edc9623a"
+    },
+    {
+      "file": "ProductShareDialog.astro_astro_type_script_index_0_lang.DGyp7KO3.js",
+      "bytes": 5399,
+      "sha256": "d1a9fe330cd326d475c9752b74ec9eebfba32a832ad913d1c361c46e3cb1e95b"
+    },
+    {
+      "file": "SessionRenewalScript.astro_astro_type_script_index_0_lang.BAIyrsu9.js",
+      "bytes": 5101,
+      "sha256": "528eb24ac97848ec83c5acfc575f57e0045d95d30e7c130b4293df851597ef53"
+    },
+    {
+      "file": "agent-402.md",
+      "bytes": 8841,
+      "sha256": "b52b0018225e55c5c497d57fdbc26704bd15b80dad3f0a3c3f4c454f379f3670"
+    },
+    {
+      "file": "agent-auth.md",
+      "bytes": 39110,
+      "sha256": "dbb6d967dc8fe2dc27d629ee22f1dcf1954bb0edf4cb23f9ecb67779c4421351"
+    },
+    {
+      "file": "agent-cashier.md",
+      "bytes": 6813,
+      "sha256": "ca3e9eea16421c8c105c1ba828932f27c4d3db3244f2028739537dd73f84b3d6"
+    },
+    {
+      "file": "agent-env.md",
+      "bytes": 1317,
+      "sha256": "9895d228c9c6f96b72ddda5716abda5a17211b906023c10d22f61d6ddce79b09"
+    },
+    {
+      "file": "ais-admin-api.BOG1XLQg.js",
+      "bytes": 8111,
+      "sha256": "d39263310ee2cf78e8fbe6ccece2260cfb4e9fe81ae2649e59f875acd46f2a10"
+    },
+    {
+      "file": "blog.txt",
+      "bytes": 23286,
+      "sha256": "062d14e84da71f93d6baa0b7d742dc276312d400a0b66df1b33ee0f8b4e916f2"
+    },
+    {
+      "file": "changelog.txt",
+      "bytes": 28175,
+      "sha256": "a5032bf0eb8cd7e7271ad00ec81a696737b7bf21c2a88791381b83a73b8aa903"
+    },
+    {
+      "file": "consumer-api.gLakm1y9.js",
+      "bytes": 1353,
+      "sha256": "5de3ab32ee54aa10ff49f1db19c765015e8991245b3f8c55ed1294e7c521815b"
+    },
+    {
+      "file": "creator-authorizations.html",
+      "bytes": 37402,
+      "sha256": "d7687c20901a35fa57d0f5de72a0e930ed9007271ce2b5e382a7f5d71715f321"
+    },
+    {
+      "file": "creator-new.html",
+      "bytes": 85378,
+      "sha256": "b4a8345bcaddf35657d82c0f6fdadcc7d29d60fd6020de24137e2e626333f710"
+    },
+    {
+      "file": "creator-product-new.html",
+      "bytes": 50179,
+      "sha256": "dec2bb3eaae244d2b611d006a66b122162c1819fce3c704cb12e1f03d884958d"
+    },
+    {
+      "file": "creator-products.html",
+      "bytes": 85378,
+      "sha256": "b4a8345bcaddf35657d82c0f6fdadcc7d29d60fd6020de24137e2e626333f710"
+    },
+    {
+      "file": "good-world-skills-get-paid.txt",
+      "bytes": 30610,
+      "sha256": "a2598fdc4f835787dbe9928fcd5bcb1fdb5978659f2ad7f670d806b89233f894"
+    },
+    {
+      "file": "home.txt",
+      "bytes": 131889,
+      "sha256": "df02bb191a45cd68148356e868b3f1fc182bce0d0fc134563f4dbb12bd96db93"
+    },
+    {
+      "file": "how-to-build-a-good-skill.txt",
+      "bytes": 34160,
+      "sha256": "8287f9acacb54e0fcd7cbbda1697e9eba128cc21712bdab6c2a3362e20c88a24"
+    },
+    {
+      "file": "llms.txt",
+      "bytes": 1798,
+      "sha256": "b720fbd162791ef9a4edfa399287b200b52d9bc99fcd439ca8507db316f9efbb"
+    },
+    {
+      "file": "product-purchase-command.C8MHVPbR.js",
+      "bytes": 385,
+      "sha256": "f9fccdf81bbfb1269975b4db1cfb1b0703b692af9f185aac7dd0b83f3623e692"
+    },
+    {
+      "file": "product-share-card.BwTd9cPe.js",
+      "bytes": 2738,
+      "sha256": "96056cdd08a3b837d9992f6976cc325e48cc787b878d088ec8fbcb2eb33ff8cc"
+    },
+    {
+      "file": "products.astro_astro_type_script_index_0_lang.CDw0rujx.js",
+      "bytes": 14523,
+      "sha256": "c9fed8ca70b6b172ea9e927c8ab2a61b16a4ee9774999d991c0a0667d6e1e6d7"
+    },
+    {
+      "file": "skill-is-agent-learned-craft.txt",
+      "bytes": 31004,
+      "sha256": "e81a5c30047c5c2bf94b6df34fee458ae15fe9b46baf2e93d65b32d9ff7a0b2d"
+    },
+    {
+      "file": "skillpay-refund-api.BxuNVKw_.js",
+      "bytes": 928,
+      "sha256": "ccb19039138dfd84363fb5f1211d019ce92ca27f9d7b6c6627a86231fb23dfcf"
+    },
+    {
+      "file": "skillpay-sign-api.Ca1BVbYK.js",
+      "bytes": 2040,
+      "sha256": "00b4fa719f61e25662e4eb9de1f2787df2866fd5abfefe1b1077e630397a1e22"
+    },
+    {
+      "file": "skills.astro_astro_type_script_index_0_lang.BOVz05QN.js",
+      "bytes": 14197,
+      "sha256": "ad71d0adf7554098810af348d74409afb1a27d7612150a84431b4d21c5dde819"
+    },
+    {
+      "file": "top-bar-auth.js",
+      "bytes": 26610,
+      "sha256": "7a897063e750b846f183d92a8ef71d64a6dfeb00962050b0c5f0efe7bcfe20d8"
+    },
+    {
+      "file": "user-skills.html",
+      "bytes": 36399,
+      "sha256": "01fe18397798652f00f0f35cf3eb14831c22da1ff21668055aac90e734ac83d0"
+    }
+  ]
+}

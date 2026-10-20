@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh-CN"><head><script>window.injectInfo = { appName: "skillpay-official-site", env: "PROD" };</script><script>window.publicPath = window.__basement_public_path__ = "https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/";</script><script>
+      !(function () {
+        var e = window;
+        function n(n) {
+          if (e.g_monitor && e.g_monitor.events) {
+            var t = e.g_monitor.events;
+            t.length < 20 && t.push(n);
+          }
+        }
+        e.g_monitor = e.g_monitor || { listener: {}, events: [] };
+        var r = e.g_monitor.listener;
+        function t(t, n) {
+          try {
+            (e.addEventListener
+              ? e.addEventListener(t, n, !0)
+              : e.attachEvent
+                ? e.attachEvent('on' + t, n)
+                : (e[t] = n),
+              (r[t] = n));
+          } catch (n) {
+            console.warn('Tracert monitor event register failed: ' + t, n);
+          }
+        }
+        (r.error || t('error', n), r.unhandledrejection || t('unhandledrejection', n));
+      })();
+    </script><script>(function installOpenBridgeEnv(configuredEnv = "") {
+  const validEnvs = /* @__PURE__ */ new Set(["dev", "pre", "prod"]);
+  const normalizeEnv = (value) => {
+    const env2 = String(value || "").trim().toLowerCase();
+    return validEnvs.has(env2) ? env2 : "";
+  };
+  const isIpv4Host = (hostname) => {
+    if (!/^(?:\d{1,3}\.){3}\d{1,3}$/.test(hostname)) return false;
+    return hostname.split(".").every((part) => {
+      const value = Number(part);
+      return Number.isInteger(value) && value >= 0 && value <= 255;
+    });
+  };
+  const isIpv6Host = (hostname) => hostname.includes(":") && /^[0-9a-f:]+$/i.test(hostname);
+  const hasHostLabel = (hostname, label) => hostname.split(/[.-]/).includes(label);
+  const inferEnvFromHostname = () => {
+    const hostname = String(window.location.hostname || "").toLowerCase();
+    if (!hostname || hostname === "localhost" || hostname === "local.dev.alipay.net" || isIpv4Host(hostname) || isIpv6Host(hostname)) {
+      return "dev";
+    }
+    if (hasHostLabel(hostname, "dev") || hasHostLabel(hostname, "stable")) return "dev";
+    if (hasHostLabel(hostname, "pre")) return "pre";
+    return "prod";
+  };
+  const readQueryEnv = () => {
+    const params = new URLSearchParams(window.location.search);
+    for (const key of ["openbridge_env", "aipay_env"]) {
+      const env2 = normalizeEnv(params.get(key));
+      if (env2) return env2;
+    }
+    return "";
+  };
+  const readStorageEnv = () => {
+    try {
+      return normalizeEnv(window.localStorage?.getItem("aipay:openbridge-env"));
+    } catch {
+      return "";
+    }
+  };
+  const env = readQueryEnv() || readStorageEnv() || normalizeEnv(configuredEnv) || inferEnvFromHostname();
+  const openBridge = window.OpenBridge && typeof window.OpenBridge === "object" ? window.OpenBridge : {};
+  openBridge.env = env;
+  window.OpenBridge = openBridge;
+  return env;
+})("");</script><script>(function installAipayApiRuntimeConfig(config = {}) {
+  const existingConfig = window.AIPayApiConfig && typeof window.AIPayApiConfig === "object" ? window.AIPayApiConfig : {};
+  window.AIPayApiConfig = {
+    ...config,
+    ...existingConfig
+  };
+  return window.AIPayApiConfig;
+})({"useLocalApiProxy":false,"devWatchtowerOrigin":"https://webgw.stable.alipay.net/watchtowerproxy/proxy","devApiTarget":"http://aipayweb-37.rz00b.dev.alipay.net","webgwVersion":"2.0","webgwAppId":"180020010001296536"});</script><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/favicon.svg" type="image/svg+xml"><meta name="theme-color" content="#1677ff"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/top-bar.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/ui/feedback.css" data-skillpay-feedback-style=""><title>协议管理｜SkillPay</title><meta name="description" content="SkillPay 产品协议、AI 按量付费协议与即刻收产品协议管理。"><meta name="keywords" content="SkillPay 产品管理, 商品管理, 订单管理, 支付宝"><meta name="robots" content="noindex,nofollow"><meta name="googlebot" content="noindex,nofollow"><meta property="og:title" content="协议管理｜SkillPay"><meta property="og:description" content="SkillPay 产品协议、AI 按量付费协议与即刻收产品协议管理。"><meta property="og:site_name" content="支付宝Agent支付 - 支付宝"><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="协议管理｜SkillPay"><meta name="twitter:description" content="SkillPay 产品协议、AI 按量付费协议与即刻收产品协议管理。"><link rel="canonical" href="https://skillpay.alipay.com/creator/authorizations"><link rel="alternate" hreflang="zh-CN" href="https://skillpay.alipay.com/creator/authorizations"><meta property="og:url" content="https://skillpay.alipay.com/creator/authorizations"><meta name="data-aspm" content="a5486"><meta name="data-bizType" content="common"><script>(function(){const tracertConfig = {"spmAPos":"a5486","spmBPos":"b245653","pathName":"/creator/authorizations","name":"SkillPay授权管理页","bizType":"common","autoLogPv":true,"autoExpo":true,"ifRouterNeedPv":false,"expoOnce":false};
+const spmPageName = "SkillPay授权管理页";
+const tracertScriptUrl = "https://ur.alipay.com/tracert_a5486.js";
+
+  window._to = { ...tracertConfig, pathName: window.location.pathname };
+  window.__aipaySpmPageName = spmPageName;
+  window.__aipayTracertScriptUrl = tracertScriptUrl;
+})();</script><script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/spm-params.js"></script><script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/spm-loader.js"></script><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/skillpay-sign.yzfpbYvS.css"><style>:root{color-scheme:light;--font-sans: "Alibaba Sans", "PingFang SC", "HarmonyOS Sans SC", "Helvetica Neue", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;--page-bg: #f6f9ff;--page-text: #102033;--page-muted: #526275;--brand-blue: #1677ff;--brand-blue-deep: #0c3f9f;--brand-cyan: #19c8de;--brand-mint: #35d6a3;--surface: #ffffff;--surface-tinted: #edf5ff;--border: rgba(55, 88, 130, .16);--shadow-soft: 0 22px 70px rgba(33, 74, 129, .12);--site-max-width: 1180px;--header-height: 76px;--button-radius: 99px}@font-face{font-family:Poppins-Medium;font-display:swap;src:url(https://mdn.alipayobjects.com/huamei_yqdpol/afts/file/A*iEYVT4xFONMAAAAASZAAAAgAej16AQ/Poppins-Medium.ttf)}@font-face{font-family:AlipayWeiXiaoTi;font-weight:400;font-display:swap;src:url(/fonts/AlipayWeiXiaoTi-Regular.woff2?v=20260519-full) format("woff2")}@font-face{font-family:AlipayWeiXiaoTi;font-weight:500;font-display:swap;src:url(/fonts/AlipayWeiXiaoTi-Medium.woff2?v=20260518-full) format("woff2")}*,*:before,*:after{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background:var(--page-bg);scrollbar-gutter:stable}body{margin:0;min-height:100vh;background:var(--page-bg);color:var(--page-text);font-family:var(--font-sans)}img,video{display:block;max-width:100%}:where(a){color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}button{color:inherit}:is(.button,.btn,.pill,.navButton,.sectionCtaLink,.siteLoginButton,.siteAccountTrigger,.siteAccountLogout,.onboardingAccountTrigger,.onboardingAccountLogout,.devHeroActions a,.devHeroActionPrimary,.devHeroActionSecondary,.primaryAction,.secondaryAction,.ctaAction,.skill-copy-button,.capabilityActions a,.productMatrixViewLink,.footerCommunityButton,.aiCollectionAction,.subscriptionOptimizationAction,.incentiveSubmitButton,.onboardingPrimaryAction,.onboardingSecondaryAction,.onboardingGhostAction,.onboardingTextAction,.workspaceConsoleButton,.workspaceCloseButton,.stepAgentButton,.serviceTextAction,.serviceCopyButton,.serviceUseAction,.keyCopyButton,.agentCopyAction,.verifyTradeButton,.consoleManageButton,.productChoiceAction,.devHeroPromptSend,.aiPayChatSend,.uploadClearBtn,.uploadSubmitBtn,.qrAuthSimBtn,.incentivePrimaryButton,.incentiveSecondaryButton,.incentiveDocButton,.login-banner-btn,.claim-btn,.pending-btn,.locked-btn,.confirm-btn,.cancel-btn,.result-btn,.copy-btn){border-radius:var(--button-radius)!important}::selection{background:#1677ff2e}:is(section,article)[id]{scroll-margin-top:calc(var(--header-height) + 24px)}
+</style><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/preview-product.BaGsV3wQ.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/preview-global.frMyCUcA.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/onboarding.PKcRDf-v.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/NavUserAccount.DGmt9f10.css"><link rel="stylesheet" href="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/index.SYrakKiE.css">
+    <meta name="yuyan_id" content="180020010001296536">
+    <meta name="bm_sprint_id" content="S090011956410">
+
+    <script>
+      !function(){var e=window;function n(n){if(e.g_monitor&&e.g_monitor.events){var t=e.g_monitor.events;t.length<20&&t.push(n)}}e.g_monitor=e.g_monitor||{listener:{},events:[]};var r=e.g_monitor.listener;function t(t,n){try{e.addEventListener?e.addEventListener(t,n,!0):e.attachEvent?e.attachEvent("on"+t,n):e[t]=n,r[t]=n}catch(n){console.warn("Tracert 监控事件注册失败："+t,n)}}r.error||t("error",n),r.unhandledrejection||t("unhandledrejection",n)}();
+    </script>
+    <script>
+      (function (window, document) {
+      window.yuyanCmdCache = [];
+      window.yuyanMonitor = {
+        config: function () {},
+        logError: function () {},
+        log: function () { window.yuyanCmdCache.push(arguments); }
+      };
+      var script = document.createElement('script');
+      script.async = true;
+      script.src = 'https://gw.alipayobjects.com/os/lib/alipay/yuyan-monitor-sdk/1.1.0/dist/index.umd.min.js';
+      script.crossOrigin = "anonymous";
+      script.onload = function () {
+        if (YuyanMonitor) {
+          window.yuyanMonitor = new YuyanMonitor({ yuyanId: "180020010001296536" });
+          if (window.yuyanCmdCache.length) {
+            for (let i = 0; i < window.yuyanCmdCache.length; i++) {
+              window.yuyanMonitor.log.apply(window.yuyanMonitor, window.yuyanCmdCache[i]);
+            }
+            window.yuyanCmdCache.length = 0;
+          }
+        }
+      }
+      var insertAnchor = document.getElementsByTagName('script')[0];
+      if (insertAnchor.parentNode) {
+        insertAnchor.parentNode.insertBefore(script, insertAnchor);
+      }
+    })(window, window.document);
+    </script>
+  </head> <body data-aspm="b245653" data-biz-type="common">  <main class="product-app" data-product-app="" data-product-perspective="creator" data-auth-guard=""> <script>
+      (() => {
+        try {
+          const productApp = document.currentScript?.parentElement;
+          productApp?.classList.toggle(
+            'is-sidebar-collapsed',
+            localStorage.getItem('skillpay:product-sidebar-collapsed') === 'true',
+          );
+        } catch {
+          // Storage can be unavailable in privacy-restricted contexts.
+        }
+      })();
+    </script> <aside class="product-sidebar" data-product-sidebar=""> <a data-aspm-click="ca125804.da216532" data-aspm-desc="侧栏导航-返回首页" class="product-sidebar__brand" href="/" aria-label="SkillPay 首页"> <img class="product-sidebar__mark" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/skillpay-logo-mark.svg" alt=""> <img class="product-sidebar__wordmark" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/skillpay-wordmark.svg" alt=""> </a> <div class="product-sidebar__body"> <nav class="product-sidebar__navigation" aria-label="创作者控制台导航"> <a data-aspm-click="ca125804.da216533" data-aspm-desc="侧栏导航-导航菜单" data-spm-dynamic="" class="product-sidebar__item" href="/creator/products" data-spm-button-name="商品管理" title="商品管理" data-auth-required="" data-auth-return-to="/creator/products"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/product/products.svg" alt=""> <span class="product-sidebar__label">商品管理</span>  </a><a data-aspm-click="ca125804.da216533" data-aspm-desc="侧栏导航-导航菜单" data-spm-dynamic="" class="product-sidebar__item" href="/creator/orders" data-spm-button-name="订单管理" title="订单管理" data-auth-required="" data-auth-return-to="/creator/orders"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/product/orders.svg" alt=""> <span class="product-sidebar__label">订单管理</span> <i class="product-sidebar__dot" data-creator-refund-pending-dot="" role="status" aria-label="有待处理售后订单" hidden=""></i> </a><a data-aspm-click="ca125804.da216533" data-aspm-desc="侧栏导航-导航菜单" data-spm-dynamic="" class="product-sidebar__item" href="/creator/shelf" data-spm-button-name="公开货架" title="公开货架" data-auth-required="" data-auth-return-to="/creator/shelf"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/product/shelf.svg" alt=""> <span class="product-sidebar__label">公开货架</span>  </a><a data-aspm-click="ca125804.da216533" data-aspm-desc="侧栏导航-导航菜单" data-spm-dynamic="" class="product-sidebar__item is-active" href="/creator/authorizations" data-spm-button-name="授权管理" aria-current="page" title="授权管理" data-auth-required="" data-auth-return-to="/creator/authorizations"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/product/authorizations.svg" alt=""> <span class="product-sidebar__label">授权管理</span>  </a> </nav> <button data-aspm-click="ca125804.da216534" data-aspm-desc="侧栏导航-收起侧边栏" class="product-sidebar__toggle" type="button" aria-expanded="true" aria-label="收起侧边栏"> <span class="product-sidebar__toggle-icon" aria-hidden="true"> <img class="product-sidebar__collapse-icon" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/product/sidebar-collapse.svg" alt=""> <img class="product-sidebar__expand-icon" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/product/sidebar-expand.svg" alt=""> </span> <span class="product-sidebar__label">收起侧边栏</span> </button> </div> </aside> <div class="product-app__body" id="product-scroll-region" data-product-scroll-region=""> <aside class="product-contract-banner" data-product-contract-banner="" hidden="" aria-live="polite"> <div class="product-contract-banner__message"> <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"> <g clip-path="url(#product-contract-info-clip)"> <path d="M8 14.6667C11.6819 14.6667 14.6667 11.6819 14.6667 8.00001C14.6667 4.31811 11.6819 1.33334 8 1.33334C4.3181 1.33334 1.33333 4.31811 1.33333 8.00001C1.33333 11.6819 4.3181 14.6667 8 14.6667Z" stroke="#1677FF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8 5.33334V8.00001" stroke="#1677FF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8 10.6667H8.00667" stroke="#1677FF" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs><clipPath id="product-contract-info-clip"><rect width="16" height="16" fill="white"></rect></clipPath></defs> </svg> <span data-product-contract-message="">为了您能成功收到商品订单收入，需要完成 SkillPay 产品协议、AI
+            按量付费协议及即刻收产品协议，全部完成后商品才能上架成功。</span> </div> <a data-aspm-click="ca125803.da216536" data-aspm-desc="产品管理导航-立即签约" class="product-contract-banner__action" href="/creator/authorizations" data-product-contract-action=""> <span data-product-contract-action-label="">立即签约</span> <span data-product-contract-count="">0/3</span> </a> </aside> <header class="product-app__header"> <nav class="product-app__perspective-switch" data-perspective="creator" aria-label="切换产品视角"> <span class="product-app__perspective-indicator" aria-hidden="true"></span> <a data-aspm-click="ca125803.da216535" data-aspm-desc="产品管理导航-消费者" class="product-app__perspective-option" href="/user/skills" data-perspective-link="" data-perspective="consumer">
+消费者
+</a> <a data-aspm-click="ca125803.da216537" data-aspm-desc="产品管理导航-创作者" class="product-app__perspective-option is-active" href="/creator/products" aria-current="page" data-perspective-link="" data-perspective="creator">
+创作者
+</a> </nav> <div class="product-app__account" data-nav-auth="" aria-live="polite"> <a data-aspm-click="ca125837.da216730" data-aspm-desc="页头账号菜单-登录" class="product-app__login-link" href="/creator/authorizations?aipay_login=1&amp;aipay_login_next=stay" data-nav-login="" hidden="" data-login-trigger="true">
+登录
+</a><div class="navUser" data-nav-user="" hidden=""> <button data-aspm-click="ca125837.da216729" data-aspm-desc="页头账号菜单-打开用户菜单" class="navUserTrigger" type="button" aria-haspopup="menu" aria-expanded="false" data-nav-user-trigger=""> <span class="navUserAvatar" aria-hidden="true"> <img class="navUserAvatarImage" alt="" data-nav-user-avatar-image="" hidden=""> <span class="navUserAvatarInitial" data-nav-user-initial="" hidden="">开</span> </span> <span class="navUserName" data-nav-user-name="">开发者</span> <svg class="navUserArrow" viewBox="0 0 15 14" aria-hidden="true" focusable="false"> <path d="M4.25 5.25L7.5 8.5L10.75 5.25" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </button> <div class="navUserMenu" role="menu" aria-hidden="true" data-nav-user-menu=""> <div class="navUserMenuName" role="presentation" data-nav-user-full-name=""></div> <a data-aspm-click="ca125837.da216676" data-aspm-desc="页头账号菜单-我是创作者" class="navUserMenuItem" href="/creator/products?aipay_choose_perspective=creator" role="menuitem"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path> <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline> <line x1="12" y1="22.08" x2="12" y2="12"></line> </svg>
+我是创作者
+</a> <a data-aspm-click="ca125837.da216731" data-aspm-desc="页头账号菜单-我是消费者" class="navUserMenuItem" href="/user/skills?aipay_choose_perspective=consumer" role="menuitem"> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <circle cx="12" cy="8" r="4"></circle> <path d="M4 21a8 8 0 0 1 16 0"></path> </svg>
+我是消费者
+</a> <button data-aspm-click="ca125837.da216728" data-aspm-desc="页头账号菜单-退出登录" class="navUserMenuItem" type="button" role="menuitem" data-nav-logout=""> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"> <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path> <polyline points="16 17 21 12 16 7"></polyline> <line x1="21" y1="12" x2="9" y2="12"></line> </svg>
+退出登录
+</button> </div> </div> <script type="module">function h(){document.querySelectorAll(".navUser").forEach((o,f)=>{if(o.dataset.namePresentationBound)return;const n=o.querySelector("[data-nav-user-name]"),t=o.querySelector("[data-nav-user-trigger]"),s=o.querySelector("[data-nav-user-full-name]");if(!n||!t||!s)return;o.dataset.namePresentationBound="true";const e=document.createElement("div");e.id=`nav-name-tooltip-${f}`,e.className="nav-user-overflow-tooltip",e.setAttribute("role","tooltip"),e.hidden=!0,document.body.append(e);const c=new AbortController,r={signal:c.signal},a=()=>{e.hidden=!0},u=()=>n.clientWidth>0&&n.scrollWidth>n.clientWidth+1,i=()=>{a(),s.textContent=n.textContent,u()?t.setAttribute("aria-describedby",e.id):t.removeAttribute("aria-describedby")},l=()=>{if(i(),!u()||t.getAttribute("aria-expanded")==="true")return;e.textContent=n.textContent,e.hidden=!1;const d=n.getBoundingClientRect(),b=e.getBoundingClientRect();e.style.left=`${Math.max(12,Math.min(d.left,innerWidth-b.width-12))}px`,e.style.top=`${Math.max(12,Math.min(d.bottom+8,innerHeight-b.height-12))}px`};t.addEventListener("mouseenter",l,r),t.addEventListener("mouseleave",a,r),t.addEventListener("focus",l,r),t.addEventListener("blur",a,r),t.addEventListener("click",a,r),t.addEventListener("keydown",d=>{d.key==="Escape"&&a()},r),window.addEventListener("scroll",a,{...r,capture:!0}),window.addEventListener("resize",i,r);const v=new ResizeObserver(i);v.observe(n);const m=new MutationObserver(i);m.observe(n,{childList:!0,characterData:!0,subtree:!0}),i(),document.addEventListener("astro:before-swap",()=>{c.abort(),v.disconnect(),m.disconnect(),e.remove(),t.removeAttribute("aria-describedby"),delete o.dataset.namePresentationBound},{once:!0})})}h();document.addEventListener("astro:page-load",h);</script> <script>
+  (() => {
+    const script = document.currentScript;
+    const root = script?.parentElement?.closest('[data-nav-auth]');
+    if (!(root instanceof HTMLElement)) return;
+
+    try {
+      const cached = JSON.parse(sessionStorage.getItem('aipay:nav-account-cache') || 'null');
+      if (!cached || cached.version !== 1 || Number(cached.expiresAt || 0) <= Date.now()) return;
+
+      const isLoggedIn = cached.isLoggedIn === true;
+      const userInfo =
+        cached.userInfo && typeof cached.userInfo === 'object' ? cached.userInfo : {};
+      const loginEntry = root.querySelector('[data-nav-login]');
+      const user = root.querySelector('[data-nav-user]');
+      if (loginEntry instanceof HTMLElement) loginEntry.hidden = isLoggedIn;
+      if (user instanceof HTMLElement) user.hidden = !isLoggedIn;
+      root.toggleAttribute('data-nav-logged-in', isLoggedIn);
+      root.dataset.navAccountState = isLoggedIn ? 'logged-in' : 'logged-out';
+      if (!isLoggedIn) return;
+
+      const displayName =
+        String(
+          userInfo.userName ||
+            userInfo.logonName ||
+            userInfo.nickName ||
+            userInfo.name ||
+            userInfo.customerId ||
+            userInfo.userId ||
+            '开发者',
+        ).trim() || '开发者';
+      const name = root.querySelector('[data-nav-user-name]');
+      const initial = root.querySelector('[data-nav-user-initial]');
+      const avatar = root.querySelector('[data-nav-user-avatar-image]');
+      if (name instanceof HTMLElement) name.textContent = displayName;
+      if (initial instanceof HTMLElement) {
+        const firstCharacter = displayName.replace(/\s+/g, '').charAt(0) || '开';
+        initial.textContent = /[a-z]/i.test(firstCharacter)
+          ? firstCharacter.toUpperCase()
+          : firstCharacter;
+        initial.hidden = false;
+      }
+
+      const avatarUrl =
+        userInfo.avatarUrl || userInfo.avatar || userInfo.headImg || userInfo.headImgUrl || '';
+      if (!(avatar instanceof HTMLImageElement) || !avatarUrl) return;
+      const revealAvatar = () => {
+        avatar.hidden = false;
+        if (initial instanceof HTMLElement) initial.hidden = true;
+      };
+      avatar.src = avatarUrl;
+      if (avatar.complete && avatar.naturalWidth > 0) revealAvatar();
+      else avatar.addEventListener('load', revealAvatar, { once: true });
+    } catch {
+      // Keep both account variants hidden until the live status check completes.
+    }
+  })();
+</script> </div> </header> <div class="product-app__view">  <section class="product-authorizations" aria-labelledby="product-authorizations-title" data-authorization-page=""> <div class="product-authorizations__inner"> <header class="product-authorizations__heading"> <h1 id="product-authorizations-title">授权管理</h1> <p class="product-authorizations__subtitle" data-product-authorization-subtitle="">
+协议开通通常需要处理几分钟，请耐心等待
+</p> </header> <div class="product-authorizations__content"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).only=e;window.dispatchEvent(new Event("astro:only"));})();</script><script>(()=>{var g=Object.defineProperty;var w=(c,s,d)=>s in c?g(c,s,{enumerable:!0,configurable:!0,writable:!0,value:d}):c[s]=d;var l=(c,s,d)=>w(c,typeof s!="symbol"?s+"":s,d);var E=new Set(["__proto__","constructor","prototype"]);{let c={0:t=>y(t),1:t=>d(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(d(t)),5:t=>new Set(d(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>Number.POSITIVE_INFINITY*t},s=t=>{let[p,e]=t;return p in c?c[p](e):void 0},d=t=>t.map(s),y=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([p,e])=>[p,s(e)]));class f extends HTMLElement{constructor(){super(...arguments);l(this,"Component");l(this,"hydrator");l(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let n=this.querySelectorAll("astro-slot"),r={},i=this.querySelectorAll("template[data-astro-template]");for(let o of i){let a=o.closest(this.tagName);a!=null&&a.isSameNode(this)&&(r[o.getAttribute("data-astro-template")||"default"]=o.innerHTML,o.remove())}for(let o of n){let a=o.closest(this.tagName);a!=null&&a.isSameNode(this)&&(r[o.getAttribute("name")||"default"]=o.innerHTML)}let u;try{u=this.hasAttribute("props")?y(JSON.parse(this.getAttribute("props"))):{}}catch(o){let a=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(a+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${a}`,this.getAttribute("props"),o),o}let h;await this.hydrator(this)(this.Component,u,r,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});l(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),n.disconnect(),this.childrenConnectedCallback()},n=new MutationObserver(()=>{var r;((r=this.lastChild)==null?void 0:r.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});n.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}getRetryImportUrl(e){let n=new URL(e,document.baseURI),r=`astro-retry=${Date.now()}`,i=n.hash.replace(/^#/,"");return n.hash=i?`${i}&${r}`:r,n.toString()}async importWithRetry(e){try{return await import(e)}catch(n){return await new Promise(r=>setTimeout(r,1e3)),import(this.getRetryImportUrl(e))}}handleHydrationError(e){let n=this.getAttribute("component-url"),r=new CustomEvent("astro:hydration-error",{cancelable:!0,bubbles:!0,composed:!0,detail:{error:e,componentUrl:n}});this.dispatchEvent(r)&&console.error(`[astro-island] Error hydrating ${n}`,e)}async start(){let e=JSON.parse(this.getAttribute("opts")),n=this.getAttribute("client");if(Astro[n]===void 0){window.addEventListener(`astro:${n}`,()=>this.start(),{once:!0});return}try{await Astro[n](async()=>{let r=this.getAttribute("renderer-url");try{let[i,{default:u}]=await Promise.all([this.importWithRetry(this.getAttribute("component-url")),r?this.importWithRetry(r):Promise.resolve({default:()=>()=>{}})]),h=this.getAttribute("component-export")||"default";if(h.includes(".")){this.Component=i;for(let m of h.split(".")){if(E.has(m)||!this.Component||typeof this.Component!="object"&&typeof this.Component!="function"||!Object.hasOwn(this.Component,m))throw new Error(`Invalid component export path: ${h}`);this.Component=this.Component[m]}}else{if(E.has(h))throw new Error(`Invalid component export path: ${h}`);this.Component=i[h]}return this.hydrator=u,this.hydrate}catch(i){return this.handleHydrationError(i),()=>{}}},e,this)}catch(r){this.handleHydrationError(r)}}attributeChangedCallback(){this.hydrate()}}l(f,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",f)}})();</script><astro-island uid="UQDvd" component-url="/_astro/SkillPaySignPage.CIWNbtDl.js" component-export="default" renderer-url="/_astro/client.C0YBjjw1.js" props="{&quot;verifyAipayLoginAfterStatus&quot;:[0,true]}" ssr="" client="only" opts="{&quot;name&quot;:&quot;SkillPaySignPage&quot;,&quot;value&quot;:&quot;react&quot;}" await-children=""><div class="skillPaySignPage" data-authorization-static-fallback=""> <div class="merchantAuthorizationSteps" aria-label="协议列表"> <button class="merchantAuthorizationStep" type="button" disabled=""> <div class="merchantAuthorizationStep__title"> <strong>SkillPay 产品协议</strong> <span>查询中</span> </div> <p>约定商品发布、销售、履约、结算及平台管理等相关规则。</p> </button><button class="merchantAuthorizationStep" type="button" disabled=""> <div class="merchantAuthorizationStep__title"> <strong>AI按量付费协议</strong> <span>查询中</span> </div> <p>约定 AI 服务按使用量计费的方式、费用结算及服务管理规则。</p> </button><button class="merchantAuthorizationStep" type="button" disabled=""> <div class="merchantAuthorizationStep__title"> <strong>即刻收产品协议</strong> <span>查询中</span> </div> <p>开通即刻收交易能力，用于承接商品订单收款与结算。</p> </button> </div> <div class="skillPaySignState" role="status" aria-busy="true"> <span class="skillPaySignSpinner" aria-hidden="true"></span> <strong>正在加载产品协议信息</strong> <p>请稍候...</p> </div> </div><template data-astro-template="fallback"><div class="skillPaySignPage" data-authorization-static-fallback=""> <div class="merchantAuthorizationSteps" aria-label="协议列表"> <button class="merchantAuthorizationStep" type="button" disabled=""> <div class="merchantAuthorizationStep__title"> <strong>SkillPay 产品协议</strong> <span>查询中</span> </div> <p>约定商品发布、销售、履约、结算及平台管理等相关规则。</p> </button><button class="merchantAuthorizationStep" type="button" disabled=""> <div class="merchantAuthorizationStep__title"> <strong>AI按量付费协议</strong> <span>查询中</span> </div> <p>约定 AI 服务按使用量计费的方式、费用结算及服务管理规则。</p> </button><button class="merchantAuthorizationStep" type="button" disabled=""> <div class="merchantAuthorizationStep__title"> <strong>即刻收产品协议</strong> <span>查询中</span> </div> <p>开通即刻收交易能力，用于承接商品订单收款与结算。</p> </button> </div> <div class="skillPaySignState" role="status" aria-busy="true"> <span class="skillPaySignSpinner" aria-hidden="true"></span> <strong>正在加载产品协议信息</strong> <p>请稍候...</p> </div> </div></template><!--astro:end--></astro-island> </div> </div> </section>  </div> </div> </main> <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/ProductLayout.astro_astro_type_script_index_0_lang.BvtR1MT1.js"></script> <div class="onboardingRoot" data-onboarding-root=""><section class="onboardingLayer onboardingLoginLayer" data-onboarding-panel="login" aria-labelledby="onboarding-login-title" aria-modal="true" role="dialog" tabindex="-1" hidden=""> <button data-aspm-click="ca125824.da216582" data-aspm-desc="登录弹窗-关闭登录弹窗遮罩" class="onboardingScrim" type="button" aria-label="登录弹窗遮罩" tabindex="-1"></button> <div class="loginDialog" role="document"> <button data-aspm-click="ca125824.da216583" data-aspm-desc="登录弹窗-关闭登录弹窗" class="onboardingIconClose loginDialogClose" type="button" data-onboarding-close="" aria-label="关闭"> <svg viewBox="0 0 20 20" aria-hidden="true"> <path d="M5.5 5.5 14.5 14.5M14.5 5.5 5.5 14.5"></path> </svg> </button> <div class="loginSkillPayBrand" aria-label="SkillPay"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-mark.svg" alt=""> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-wordmark.svg" alt="SkillPay"> </div> <div class="loginDialogContent"> <h2 id="onboarding-login-title">欢迎使用 SkillPay</h2> <div class="loginQrGroup"> <div class="loginQrCard" aria-label="支付宝登录二维码"> <div class="loginStatusPanel" data-login-status-panel="" role="status" aria-live="polite"> <span class="loginStatusSpinner" data-login-status-spinner="" aria-hidden="true"></span> <p class="loginStatusText" data-login-status-text="">正在确认登录状态...</p> <div class="loginStatusActions" data-login-status-actions="" hidden=""> <button data-aspm-click="ca125824.da216629" data-aspm-desc="登录弹窗-重新加载登录二维码" class="loginStatusButton" type="button" data-login-retry="">重试</button> <button data-aspm-click="ca125824.da216581" data-aspm-desc="登录弹窗-刷新登录状态" class="loginStatusButton loginStatusButtonSecondary" type="button" data-login-full-logout="" hidden="">
+刷新登录状态
+</button> </div> </div> <div class="loginIframePanel" data-login-iframe-panel="" hidden=""> <iframe class="loginIframe" title="支付宝登录" data-login-iframe="" referrerpolicy="no-referrer-when-downgrade"></iframe> </div> </div> <p class="loginQrHint">使用支付宝扫码登录</p> </div> </div> <p class="loginDialogSlogan">让你的有价值的 Skill，为你创造价值</p> </div> </section> <section class="onboardingLayer onboardingPerspectiveLayer" data-onboarding-panel="perspective" aria-labelledby="onboarding-perspective-title" aria-modal="true" role="dialog" tabindex="-1" hidden=""> <div class="onboardingScrim perspectiveScrim" aria-hidden="true"></div> <div class="perspectiveDialog" role="document"> <h2 id="onboarding-perspective-title" class="visuallyHidden">选择使用 SkillPay 的身份</h2> <div class="perspectiveSkillPayBrand" aria-label="SkillPay"> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-mark.svg" alt=""> <img src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/skillpay-login-wordmark.svg" alt="SkillPay"> </div> <div class="perspectiveCardList" role="list"> <button data-aspm-click="ca125824.da216630" data-aspm-desc="登录弹窗-选择创作者身份" class="perspectiveCard" type="button" role="listitem" data-login-perspective="creator" data-login-return-path="/creator/products"> <span class="perspectiveCardMain"> <span class="perspectiveCardTitle">我是创作者</span> <img class="perspectiveCardIllustration perspectiveCardIllustrationCreator" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/role-creator.svg" alt=""> </span> <span class="perspectiveCardDescription">创作 Skill 赚取收益的用户</span> </button> <button data-aspm-click="ca125824.da216631" data-aspm-desc="登录弹窗-选择消费者身份" class="perspectiveCard" type="button" role="listitem" data-login-perspective="consumer" data-login-return-path="/user/skills"> <span class="perspectiveCardMain"> <span class="perspectiveCardTitle">我是消费者</span> <img class="perspectiveCardIllustration perspectiveCardIllustrationConsumer" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/assets/onboarding/role-consumer.svg" alt=""> </span> <span class="perspectiveCardDescription">购买 Skill 获得权益的用户</span> </button> </div> </div> </section></div><script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/PreviewBaseLayout.astro_astro_type_script_index_0_lang.Bsi1wV5g.js"></script> <script src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/next/assets/top-bar-auth-with-inject-7a897063.js"></script> <script type="module" src="https://gw.alipayobjects.com/render/p/yuyan/180020010001296536/_astro/SessionRenewalScript.astro_astro_type_script_index_0_lang.BAIyrsu9.js"></script> </body></html>

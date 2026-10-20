@@ -1,0 +1,95 @@
+{
+  "contentZhAvailable": false,
+  "latestVersion": {
+    "changelog": "Initial release",
+    "createdAt": 1790736761340,
+    "version": "1.0.0"
+  },
+  "namespace": {
+    "canonicalName": "@org-kkw9656k/xique-tender-pay",
+    "displayName": "org-kkw9656k",
+    "handle": "org-kkw9656k",
+    "publicSlug": "xique-tender-pay"
+  },
+  "owner": {
+    "displayName": "mahao",
+    "handle": "u_84923c62",
+    "image": null
+  },
+  "pricing": {
+    "billingType": "per_call",
+    "currency": "CNY",
+    "freeQuotaDaily": null,
+    "freeQuotaMonthly": null,
+    "pricePerCall": "1",
+    "pricingDescription": null,
+    "pricingMode": "unified"
+  },
+  "publisher": {
+    "name": "喜鹊AI",
+    "logoUrl": null,
+    "verified": true,
+    "certifiedName": "北京喜鹊云智科技有限公司",
+    "orgId": "org-kkw9656k"
+  },
+  "securityReports": {
+    "keen": {
+      "reportUrl": "https://tix.qq.com/search/skill?keyword=7f2183399ed18da269e026dcbafc5c59",
+      "status": "benign",
+      "statusText": "安全，无风险"
+    },
+    "sanbu": {
+      "reportUrl": "https://static.cloudsec.tencent.com/html-report-v2/2026/09/30/1956299_cea33ba1d68faef8e0f532325b478787.html?q-sign-algorithm=sha1&q-ak=REDACTED&q-sign-time=1790736824%3B1822272824&q-key-time=1790736824%3B1822272824&q-header-list=host&q-url-param-list=&q-signature=2bb284979bf29d0d81fd774b40b8c726aec84d02",
+      "status": "benign",
+      "statusText": "安全，无风险"
+    }
+  },
+  "skill": {
+    "authorVerifiedHandle": null,
+    "category": "office-efficiency",
+    "claim_state": "unclaimed",
+    "claimable": false,
+    "claimed_user_handle": null,
+    "createdAt": 1790736761340,
+    "displayName": "招标文件解读【喜鹊标书】",
+    "ext": null,
+    "githubAuthorLogin": null,
+    "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/632823/ca882c894fd54beba62718c761869ef8.png",
+    "isAuthorVerified": false,
+    "isServiceized": false,
+    "labels": {
+      "pricing_type": "paid",
+      "requires_api_key": "false"
+    },
+    "last_synced_at": null,
+    "overviewMd": "",
+    "slug": "xique-tender-pay",
+    "source": "enterprise",
+    "sourceUrl": null,
+    "stats": {
+      "comments": 0,
+      "downloads": 166505,
+      "installs": 0,
+      "stars": 1,
+      "versions": 0
+    },
+    "subCategories": [
+      {
+        "key": "office-doc",
+        "name": "文档处理"
+      },
+      {
+        "key": "office-report",
+        "name": "日报周报"
+      }
+    ],
+    "summary": "喜鹊标书解读，支持上传 PDF、Word 招标文件，快速梳理项目要求、资格条件、评分标准、废标风险及投标准备事项。一次付费，即可获得深度解析报告、投标文件完整框架、商务资料清单三份 Word 文件，并在对话中查看重点摘要、围绕报告继续提问。无需注册喜鹊账号或手动配置 API Key，通过微信授权按次支付，让读标、理清要求和准备材料更高效。",
+    "summary_zh": "",
+    "tags": {},
+    "updatedAt": 1792426119036,
+    "upstream_owner_login": null,
+    "upstream_url": null,
+    "verified": false
+  },
+  "slug": "xique-tender-pay"
+}

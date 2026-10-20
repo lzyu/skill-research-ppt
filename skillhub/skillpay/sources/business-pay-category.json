@@ -1,0 +1,2739 @@
+{
+  "code": 0,
+  "data": {
+    "skills": [
+      {
+        "category": "office-efficiency",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.05"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1790138369189,
+        "description": "WPS/MS Office/LibreOffice/纯Python 四引擎智能办公全家桶：文档/表格/PPT/公文/会议纪要一体化。",
+        "description_zh": "当用户要处理 Word/Excel/PPT、做文档模板与排版、批量合并图表、公文一键套红头、会议纪要要素化、或跨引擎办公自动化时，WPS全家桶·办公管家.Skill 立即出动。\n四引擎智能识别已装软件（WPS/MS Office/LibreOffice/纯Python），纯Python模式支持排序/筛选/图表/公式/统计；含文档模板代码生成、20+避坑+15 FAQ+15错误ID统一索引、自动重试、硬件自适应、环境自检。\n当用户提到批量水印、敏感信息打码（身份证/手机号/银行卡/邮箱）、跨文档检索问答等信号时，主动亮剑。",
+        "downloads": 180260,
+        "homepage": "https://api.skillhub.cn/user_185644ed/wps-office-suite",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/702064/f24f51ee2cf54f5dbd352780b7c3fde4.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "WPS全家桶·办公管家.Skill",
+        "namespace": {
+          "canonicalName": "@user_185644ed/wps-office-suite",
+          "displayName": "user_185644ed",
+          "handle": "user_185644ed",
+          "publicSlug": "wps-office-suite"
+        },
+        "ownerName": "user_185644ed",
+        "score": 100000,
+        "slug": "wps-office-suite",
+        "source": "community",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "office-doc",
+            "name": "文档处理"
+          },
+          {
+            "key": "office-spreadsheet",
+            "name": "表格处理"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426118224,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "5.2.10"
+      },
+      {
+        "category": "office-efficiency",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1790736761340,
+        "description": "喜鹊标书解读，支持上传 PDF、Word 招标文件，快速梳理项目要求、资格条件、评分标准、废标风险及投标准备事项。一次付费，即可获得深度解析报告、投标文件完整框架、商务资料清单三份 Word 文件，并在对话中查看重点摘要、围绕报告继续提问。无需注册喜鹊账号或手动配置 API Key，通过微信授权按次支付，让读标、理清要求和准备材料更高效。",
+        "description_zh": "喜鹊标书解读，支持上传 PDF、Word 招标文件，快速梳理项目要求、资格条件、评分标准、废标风险及投标准备事项。一次付费，即可获得深度解析报告、投标文件完整框架、商务资料清单三份 Word 文件，并在对话中查看重点摘要、围绕报告继续提问。无需注册喜鹊账号或手动配置 API Key，通过微信授权按次支付，让读标、理清要求和准备材料更高效。",
+        "downloads": 166505,
+        "homepage": "https://api.skillhub.cn/org-kkw9656k/xique-tender-pay",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/632823/ca882c894fd54beba62718c761869ef8.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "招标文件解读【喜鹊标书】",
+        "namespace": {
+          "canonicalName": "@org-kkw9656k/xique-tender-pay",
+          "displayName": "org-kkw9656k",
+          "handle": "org-kkw9656k",
+          "publicSlug": "xique-tender-pay"
+        },
+        "ownerName": "u_84923c62",
+        "publisher": {
+          "name": "喜鹊AI",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "北京喜鹊云智科技有限公司",
+          "orgId": "org-kkw9656k"
+        },
+        "score": 92370.20190814289,
+        "slug": "xique-tender-pay",
+        "source": "enterprise",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "office-doc",
+            "name": "文档处理"
+          },
+          {
+            "key": "office-report",
+            "name": "日报周报"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426119036,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "office-efficiency",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.99"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1786884585541,
+        "description": "处理 Word、Excel、PDF：排序筛选、合并拆分、格式转换、水印和交付前检查；文档体检按次收费。",
+        "description_zh": "处理 Word、Excel、PDF：排序筛选、合并拆分、格式转换、水印和交付前检查；文档体检按次收费。",
+        "downloads": 128130,
+        "homepage": "https://api.skillhub.cn/user_69794d19/office-doc-suite",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/629449/4d3c6950d8134a69bcf473420c9889a6.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "办公文档三件套（Word/Excel/PDF）",
+        "namespace": {
+          "canonicalName": "@user_69794d19/office-doc-suite",
+          "displayName": "user_69794d19",
+          "handle": "user_69794d19",
+          "publicSlug": "office-doc-suite"
+        },
+        "ownerName": "user_69794d19",
+        "score": 71106.05724428667,
+        "slug": "office-doc-suite",
+        "source": "community",
+        "stars": 3,
+        "subCategories": [],
+        "tags": [
+          "ai-skill",
+          "excel",
+          "office",
+          "pdf",
+          "word",
+          "办公文档",
+          "打码",
+          "模板",
+          "水印"
+        ],
+        "updated_at": 1792426119235,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.7.13"
+      },
+      {
+        "category": "business-ops",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1783159540036,
+        "description": "全网招中标数据查询与分析助手。当用户涉及以下任何场景时，必须使用此SKILL：查询招标/中标公告、搜索标讯、查找临期/即将到期项目、商机预测、推荐潜在投标供应商、分析公司主营业务/历史中标、查询公司上下游合作客户与供应商、分析竞争对手/竞对企业、查询Top采购单位/Top中标单位/Top中标品牌、招中标数据统计分析、查询品牌型号历史中标单价/价格趋势、市场分析/行业分析/采购寻源/渠道拓展等采购与投标相关场景。即使用户没有提到「知了标讯」，只要涉及招投标、采购、中标、供应商、竞争对手等关键词，都应使用本SKILL。新设备通常可获赠 100 积分体验额度（每日限量，发完为止），可用于基础检索与企业信息体验，直接提问即可使用；**联系方式等高价值能力仅支持付费额度**；额度用完后通过微信支付购买次数包，余额按设备保存、换对话继续有效，全程无需注册或配置 API Key。",
+        "description_zh": "全网招中标数据查询与分析助手。当用户涉及以下任何场景时，必须使用此SKILL：查询招标/中标公告、搜索标讯、查找临期/即将到期项目、商机预测、推荐潜在投标供应商、分析公司主营业务/历史中标、查询公司上下游合作客户与供应商、分析竞争对手/竞对企业、查询Top采购单位/Top中标单位/Top中标品牌、招中标数据统计分析、查询品牌型号历史中标单价/价格趋势、市场分析/行业分析/采购寻源/渠道拓展等采购与投标相关场景。即使用户没有提到「知了标讯」，只要涉及招投标、采购、中标、供应商、竞争对手等关键词，都应使用本SKILL。新设备通常可获赠 100 积分体验额度（每日限量，发完为止），可用于基础检索与企业信息体验，直接提问即可使用；**联系方式等高价值能力仅支持付费额度**；额度用完后通过微信支付购买次数包，余额按设备保存、换对话继续有效，全程无需注册或配置 API Key。",
+        "downloads": 80959,
+        "homepage": "https://api.skillhub.cn/org-32m5yxyy/zlbx-bidding-payskill",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "知了标讯 · 全网招中标数据查询",
+        "namespace": {
+          "canonicalName": "@org-32m5yxyy/zlbx-bidding-payskill",
+          "displayName": "org-32m5yxyy",
+          "handle": "org-32m5yxyy",
+          "publicSlug": "zlbx-bidding-payskill"
+        },
+        "ownerName": "u_41cc4bed",
+        "publisher": {
+          "name": "知了标讯",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "北京百炼智能科技有限公司",
+          "orgId": "org-32m5yxyy"
+        },
+        "score": 45051.586421122694,
+        "slug": "zlbx-bidding-payskill",
+        "source": "enterprise",
+        "stars": 13,
+        "subCategories": [
+          {
+            "key": "biz-growth",
+            "name": "增长分析"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426035808,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.7"
+      },
+      {
+        "category": "business-ops",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1791630812776,
+        "description": "喜鹊标书审查｜让投标风险看得见、查得清、改得准\n投标文件准备好了，还有哪些遗漏和隐患？喜鹊标书审查对照招标要求，检查投标文件中的响应缺漏、内容矛盾和潜在风险，帮助您在提交前发现问题、明确修改重点。\n- 问题一目了然：区分已确认风险与待核实事项，清晰呈现问题位置、具体表现及潜在影响。\n- 审查有据可查：关联招标条款与投标内容，让您看清“要求是什么、哪里存在问题、判断依据是什么”。\n- 原文快速定位：结合页码、检索线索和证据截图，减少来回翻找，方便逐项核对。\n- 完整报告可交付：提供 Word 审查报告及审查版 PDF，便于团队复核、修改和留档。\n支持 PDF、DOCX 及多附件审查。先检查文件，再展示价格并按次付费；支持随时查询进度、继续已付款任务和补领报告，让每一次审查都有清晰结果。\nhttps://www.xiquebiaoshu.com/?source=skillhub](https://www.xiquebiaoshu.com/?source=bid-review-pay",
+        "description_zh": "喜鹊标书审查｜让投标风险看得见、查得清、改得准\n投标文件准备好了，还有哪些遗漏和隐患？喜鹊标书审查对照招标要求，检查投标文件中的响应缺漏、内容矛盾和潜在风险，帮助您在提交前发现问题、明确修改重点。\n- 问题一目了然：区分已确认风险与待核实事项，清晰呈现问题位置、具体表现及潜在影响。\n- 审查有据可查：关联招标条款与投标内容，让您看清“要求是什么、哪里存在问题、判断依据是什么”。\n- 原文快速定位：结合页码、检索线索和证据截图，减少来回翻找，方便逐项核对。\n- 完整报告可交付：提供 Word 审查报告及审查版 PDF，便于团队复核、修改和留档。\n支持 PDF、DOCX 及多附件审查。先检查文件，再展示价格并按次付费；支持随时查询进度、继续已付款任务和补领报告，让每一次审查都有清晰结果。\nhttps://www.xiquebiaoshu.com/?source=skillhub](https://www.xiquebiaoshu.com/?source=bid-review-pay",
+        "downloads": 78786,
+        "homepage": "https://api.skillhub.cn/org-kkw9656k/xique-bid-review-pay",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/632823/f1f1471b8afe466ab0b11bec00ae4316.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "标书审查【喜鹊标书】",
+        "namespace": {
+          "canonicalName": "@org-kkw9656k/xique-bid-review-pay",
+          "displayName": "org-kkw9656k",
+          "handle": "org-kkw9656k",
+          "publicSlug": "xique-bid-review-pay"
+        },
+        "ownerName": "u_84923c62",
+        "publisher": {
+          "name": "喜鹊AI",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "北京喜鹊云智科技有限公司",
+          "orgId": "org-kkw9656k"
+        },
+        "score": 43713.11293543377,
+        "slug": "xique-bid-review-pay",
+        "source": "enterprise",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "biz-sales",
+            "name": "销售助手"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426118592,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "ai-agent",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1791081553868,
+        "description": "浏览器自动化能力，适用于开发和运维领域。当用户想要 AI 驱动的浏览器自动化时使用，支持网页抓取、自动填表、点击、截图及 Web 应用测试。触发条件：agent-browser、browser-use。不适用于与浏览器自动化无关的请求。风险等级 L2。中文触发词：agent-browser、browser-use。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务时会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "description_zh": "浏览器自动化能力，适用于开发和运维领域。当用户想要 AI 驱动的浏览器自动化时使用，支持网页抓取、自动填表、点击、截图及 Web 应用测试。触发条件：agent-browser、browser-use。不适用于与浏览器自动化无关的请求。风险等级 L2。中文触发词：agent-browser、browser-use。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务时会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "downloads": 63033,
+        "homepage": "https://api.skillhub.cn/org-pqka8yp5/agent-browser",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "浏览器自动化",
+        "namespace": {
+          "canonicalName": "@org-pqka8yp5/agent-browser",
+          "displayName": "org-pqka8yp5",
+          "handle": "org-pqka8yp5",
+          "publicSlug": "agent-browser"
+        },
+        "ownerName": "u_77519267",
+        "publisher": {
+          "name": "菏泽九有信息科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "菏泽九有信息科技有限公司",
+          "orgId": "org-pqka8yp5"
+        },
+        "score": 34963.94497448413,
+        "slug": "agent-browser",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "agent-tool-use",
+            "name": "工具调用"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425959141,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "ai-agent",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1791071847664,
+        "description": "核心和系统管理领域的技能开发能力。当用户希望支持通过自然语言创建自定义技能和插件开发调试时使用。触发器：skill-creator、skill-vetter、clawhub。不适用于与技能开发无关的请求。风险等级 L1。中文触发：skill-creator、skill-vetter、clawhub。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "description_zh": "核心和系统管理领域的技能开发能力。当用户希望支持通过自然语言创建自定义技能和插件开发调试时使用。触发器：skill-creator、skill-vetter、clawhub。不适用于与技能开发无关的请求。风险等级 L1。中文触发：skill-creator、skill-vetter、clawhub。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "downloads": 56879,
+        "homepage": "https://api.skillhub.cn/org-pqka8yp5/skill-creator",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/64ea6fd6-ebe7-418c-af4f-2cafff71f2ec.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "技能开发",
+        "namespace": {
+          "canonicalName": "@org-pqka8yp5/skill-creator",
+          "displayName": "org-pqka8yp5",
+          "handle": "org-pqka8yp5",
+          "publicSlug": "skill-creator"
+        },
+        "ownerName": "u_77519267",
+        "publisher": {
+          "name": "菏泽九有信息科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "菏泽九有信息科技有限公司",
+          "orgId": "org-pqka8yp5"
+        },
+        "score": 31550.36609718216,
+        "slug": "skill-creator",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "agent-framework",
+            "name": "Agent 框架"
+          },
+          {
+            "key": "agent-tool-use",
+            "name": "工具调用"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426080464,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "content-creation",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.20"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1790644972208,
+        "description": "把中文里\"一眼看出是 AI 写的\"痕迹去掉，同时不改动事实、不改变原意。由云端引擎按文体（微信/邮件/小红书/工作报告/论文）改写，改完自动回扫验收，返回「痕迹报告（改前→改后各几处、都属哪一类）+ 按文体改写稿 + 改动说明」。原文没有的数字、案例、承诺一律不补，宁可在备注里请你补事实，也不编造。凡出现「这段太像 AI 写的了」「帮我改得像人写的」「降 AI 味」「润色一下，别那么僵硬」「感觉像机器人写的」这类需求时主动使用。**本 Skill 依赖在线服务**：改写前先取一份付费授权（未付费返回 402 账单），付费后由云端模型改写并回扫；包内没有改写逻辑，绕不过门。",
+        "description_zh": "把中文里\"一眼看出是 AI 写的\"痕迹去掉，同时不改动事实、不改变原意。由云端引擎按文体（微信/邮件/小红书/工作报告/论文）改写，改完自动回扫验收，返回「痕迹报告（改前→改后各几处、都属哪一类）+ 按文体改写稿 + 改动说明」。原文没有的数字、案例、承诺一律不补，宁可在备注里请你补事实，也不编造。凡出现「这段太像 AI 写的了」「帮我改得像人写的」「降 AI 味」「润色一下，别那么僵硬」「感觉像机器人写的」这类需求时主动使用。**本 Skill 依赖在线服务**：改写前先取一份付费授权（未付费返回 402 账单），付费后由云端模型改写并回扫；包内没有改写逻辑，绕不过门。",
+        "downloads": 50037,
+        "homepage": "https://api.skillhub.cn/user_4e7171fa/humanizer-zh",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/733448/77f96ab54afd4cdbafe322f7e1e2ad5d.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "true"
+        },
+        "last_synced_at": null,
+        "name": "中文去 AI 味",
+        "namespace": {
+          "canonicalName": "@user_4e7171fa/humanizer-zh",
+          "displayName": "user_4e7171fa",
+          "handle": "user_4e7171fa",
+          "publicSlug": "humanizer-zh"
+        },
+        "ownerName": "user_4e7171fa",
+        "score": 27766.25249611715,
+        "slug": "humanizer-zh",
+        "source": "community",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "content-rewrite",
+            "name": "内容改写"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426079797,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.6"
+      },
+      {
+        "category": "office-efficiency",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.50"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1791274608895,
+        "description": "自带 5 个可直接运行的 Python 脚本 + 3 套成品业务模板（销售月报 / 库存车龄分析 / 成本利润核算），不是只给思路：报表一键生成；零依赖解析含 VBA 宏的超大 xlsm；多工作表批量合并。Excel / WPS 双兼容，中文场景深度优化。",
+        "description_zh": "Excel / WPS 表格自动化技能，由开发者 WJ 出品维护，内置 5 个可直接运行的 Python 脚本（create_report / merge_sheets / parse_xlsm / xlsx_style / make_samples）与 3 套开箱即用的成品业务模板（销售月报、库存车龄分析、成本利润核算），不是只给提示词。当用户需要一键生成格式专业的财务报表、销售月报、考勤汇总、人力资源台账，批量合并多个工作表或工作簿，或解析 openpyxl 打不开的 xlsm/xlsx 文件（含 VBA 宏、超大、关系受损）时使用本技能；触发语包括：Excel自动化、WPS表格、财务报表生成、考勤汇总、销售月报、库存车龄分析、成本利润核算、批量处理表格、xlsm解析、openpyxl、多表合并。产物在 Microsoft Excel 与 WPS Office 中均可正常打开，兼容 Windows 与 macOS。",
+        "downloads": 37040,
+        "homepage": "https://api.skillhub.cn/indiv-mxh/excel-auto-zh",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/783891/c8025aa1b0b5436499c8d91b2d36b39d.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "Excel/WPS 表格自动化（5 个脚本 + 3 套业务模板）",
+        "namespace": {
+          "canonicalName": "@indiv-mxh/excel-auto-zh",
+          "displayName": "user_9823f3f8",
+          "handle": "indiv-mxh",
+          "publicSlug": "excel-auto-zh"
+        },
+        "ownerName": "user_9823f3f8",
+        "score": 20545.81761704016,
+        "slug": "excel-auto-zh",
+        "source": "community",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "office-spreadsheet",
+            "name": "表格处理"
+          },
+          {
+            "key": "office-report",
+            "name": "日报周报"
+          },
+          {
+            "key": "office-automation",
+            "name": "流程自动化"
+          }
+        ],
+        "tags": [
+          "excel-automation",
+          "excel自动化",
+          "office自动化",
+          "openpyxl",
+          "wps",
+          "xlsm解析",
+          "多表合并",
+          "库存车龄分析",
+          "成本利润核算",
+          "报表模板",
+          "数据整理",
+          "考勤汇总",
+          "表格处理",
+          "财务报表生成",
+          "销售月报"
+        ],
+        "updated_at": 1792425987050,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.3.4"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1782375552256,
+        "description": "智能图片编辑助手，根据文字描述对已上传图片进行风格化、调色、局部修改、背景替换等 AI 修图，当用户要求「修图」「改图」「P图」「编辑图片」「换背景」「调色」「风格化」「图片后期处理」时使用。",
+        "description_zh": "智能图片编辑助手，根据文字描述对已上传图片进行风格化、调色、局部修改、背景替换等 AI 修图，当用户要求「修图」「改图」「P图」「编辑图片」「换背景」「调色」「风格化」「图片后期处理」时使用。",
+        "downloads": 21374,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-image-edit",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "智绘图片编辑",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-image-edit",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-image-edit"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 11867.095629021522,
+        "slug": "ixhlink-skills-image-edit",
+        "source": "enterprise",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "design-image-edit",
+            "name": "图片编辑"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426080794,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.7"
+      },
+      {
+        "category": "it-ops-security",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1790900613386,
+        "description": "核心和系统管理领域的安全审查能力。当用户想要使用安全校验工具，用于拦截恶意指令、审查高风险技能时使用。触发器：skill-vetter、clawhub、skill-creator。不适用于与安全审查无关的请求。风险等级 L0。中文触发：skill-vetter、clawhub、skill-creator。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "description_zh": "核心和系统管理领域的安全审查能力。当用户想要使用安全校验工具，用于拦截恶意指令、审查高风险技能时使用。触发器：skill-vetter、clawhub、skill-creator。不适用于与安全审查无关的请求。风险等级 L0。中文触发：skill-vetter、clawhub、skill-creator。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "downloads": 16526,
+        "homepage": "https://api.skillhub.cn/org-pqka8yp5/skill-vetter",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "安全校验",
+        "namespace": {
+          "canonicalName": "@org-pqka8yp5/skill-vetter",
+          "displayName": "org-pqka8yp5",
+          "handle": "org-pqka8yp5",
+          "publicSlug": "skill-vetter"
+        },
+        "ownerName": "u_77519267",
+        "publisher": {
+          "name": "菏泽九有信息科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "菏泽九有信息科技有限公司",
+          "orgId": "org-pqka8yp5"
+        },
+        "score": 9166.851564233415,
+        "slug": "skill-vetter",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "itops-security-scan",
+            "name": "安全扫描"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425965816,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1782375235744,
+        "description": "智能图片生成助手，根据文字描述生成插画、配图、概念图等 AI 图像，支持自定义尺寸与画质，可选参考图进行图生图；当用户要求「生成图片」「文生图」「画一张」「AI 画图」「出图」「插画」「配图」「图生图」时使用。",
+        "description_zh": "智能图片生成助手，根据文字描述生成插画、配图、概念图等 AI 图像，支持自定义尺寸与画质，可选参考图进行图生图；当用户要求「生成图片」「文生图」「画一张」「AI 画图」「出图」「插画」「配图」「图生图」时使用。",
+        "downloads": 15953,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-image-gen",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "智绘图片生成",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-image-gen",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-image-gen"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 8849.012646993566,
+        "slug": "ixhlink-skills-image-gen",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "design-image-gen",
+            "name": "图片生成"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426079624,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.6"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1782438886296,
+        "description": "智能图片理解助手，支持对单张或多张图片进行内容描述、视觉问答、文字识别与对比分析；当用户要求「识图」「看图」「描述图片」「分析图片」「图中有什么」「提取图片文字」「对比图片」「视觉问答」时使用。",
+        "description_zh": "智能图片理解助手，支持对单张或多张图片进行内容描述、视觉问答、文字识别与对比分析；当用户要求「识图」「看图」「描述图片」「分析图片」「图中有什么」「提取图片文字」「对比图片」「视觉问答」时使用。",
+        "downloads": 15753,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-image-explain",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f7fabcfa-0496-4dc7-9258-df9b7c751850.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "智绘图片理解",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-image-explain",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-image-explain"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 8760.261814954514,
+        "slug": "ixhlink-skills-image-explain",
+        "source": "enterprise",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "design-image-edit",
+            "name": "图片编辑"
+          },
+          {
+            "key": "design-visual-asset",
+            "name": "视觉素材"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426117274,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.3"
+      },
+      {
+        "category": "life-service",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784884874109,
+        "description": "知命八字综合分析（Pay Skill）。在用户提供出生年月日时、性别、阴阳历后，生成 Markdown 综合解读：日主与格局、五行与十神、事业财运与情感倾向、可操作建议。融合书房派与盲派，注入《穷通宝鉴》《子平真诠》《滴天髓》等理论及约1000例归纳知识，并引用规则引擎白盒结论。按次付费。用于自我认知与人生规划参考；非吉凶断语、非决策承诺。",
+        "description_zh": "知命八字综合分析（Pay Skill）。在用户提供出生年月日时、性别、阴阳历后，生成 Markdown 综合解读：日主与格局、五行与十神、事业财运与情感倾向、可操作建议。融合书房派与盲派，注入《穷通宝鉴》《子平真诠》《滴天髓》等理论及约1000例归纳知识，并引用规则引擎白盒结论。按次付费。用于自我认知与人生规划参考；非吉凶断语、非决策承诺。",
+        "downloads": 15079,
+        "homepage": "https://api.skillhub.cn/org-cm0r264r/zhiming-comprehensive",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "八字综合分析",
+        "namespace": {
+          "canonicalName": "@org-cm0r264r/zhiming-comprehensive",
+          "displayName": "org-cm0r264r",
+          "handle": "org-cm0r264r",
+          "publicSlug": "zhiming-comprehensive"
+        },
+        "ownerName": "u_f543c792",
+        "publisher": {
+          "name": "问玄引擎",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "郑州高新技术产业开发区问玄信息技术咨询工作室（个体工商户）",
+          "orgId": "org-cm0r264r"
+        },
+        "score": 8419.68049700466,
+        "slug": "zhiming-comprehensive",
+        "source": "enterprise",
+        "stars": 5,
+        "subCategories": [
+          {
+            "key": "life-personal-plan",
+            "name": "个人计划"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426117515,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.5"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1790133462292,
+        "description": "把一段音频或视频文件，变成带时间轴的文字转录稿——多语种识别、字幕对齐、音频翻译，一键成稿。 当用户需要「录音转文字助手」相关成品、只有最小输入却希望一次拿到可直接使用的文件时立即出动：多语种识别→字幕对齐→音频翻译→多格式识别。内容由 AI 辅助生成，仅供参考，决策与落地由使用者自行负责。",
+        "description_zh": "把一段音频或视频文件，变成带时间轴的文字转录稿——多语种识别、字幕对齐、音频翻译，一键成稿。 当用户需要「录音转文字助手」相关成品、只有最小输入却希望一次拿到可直接使用的文件时立即出动：多语种识别→字幕对齐→音频翻译→多格式识别。内容由 AI 辅助生成，仅供参考，决策与落地由使用者自行负责。",
+        "downloads": 15071,
+        "homepage": "https://api.skillhub.cn/zechuan-zhuchuang/openai-whisper",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/637132/1a6cba2a7093484bbd21d698e89f8c2f.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "录音转文字助手",
+        "namespace": {
+          "canonicalName": "@zechuan-zhuchuang/openai-whisper",
+          "displayName": "zechuan-zhuchuang",
+          "handle": "zechuan-zhuchuang",
+          "publicSlug": "openai-whisper"
+        },
+        "ownerName": "u_74a75eb4",
+        "publisher": {
+          "name": "泽川智创",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "广州市增城区泽川筑创互联网商品销售工作室（个体工商户）",
+          "orgId": "org-r1rxv16h"
+        },
+        "score": 8381.961393388063,
+        "slug": "openai-whisper",
+        "source": "enterprise",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "design-video",
+            "name": "视频处理"
+          },
+          {
+            "key": "design-audio",
+            "name": "音频处理"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425955887,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "dev-programming",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785909361320,
+        "description": "在 AI 辅助编程任务中自动执行 Token 节流协议：精准裁剪上下文、Diff 优先输出、避免重复返工，实现功能不变、质量不降、Token 减半。按调用量付费，适用于代码开发、调试、重构、审查等全研发链路。",
+        "description_zh": "在 AI 辅助编程任务中自动执行 Token 节流协议：精准裁剪上下文、Diff 优先输出、避免重复返工，实现功能不变、质量不降、Token 减半。按调用量付费，适用于代码开发、调试、重构、审查等全研发链路。",
+        "downloads": 11291,
+        "homepage": "https://api.skillhub.cn/org-sh4pm2xy/token-master",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f7fabcfa-0496-4dc7-9258-df9b7c751850.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "token节省大师",
+        "namespace": {
+          "canonicalName": "@org-sh4pm2xy/token-master",
+          "displayName": "org-sh4pm2xy",
+          "handle": "org-sh4pm2xy",
+          "publicSlug": "token-master"
+        },
+        "ownerName": "u_c567ecce",
+        "publisher": {
+          "name": "紫元科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "南京紫元科技有限公司",
+          "orgId": "org-sh4pm2xy"
+        },
+        "score": 6285.222986465498,
+        "slug": "token-master",
+        "source": "enterprise",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "dev-code-gen",
+            "name": "代码生成"
+          },
+          {
+            "key": "dev-code-review",
+            "name": "代码审查"
+          },
+          {
+            "key": "dev-bug-fix",
+            "name": "Bug 修复"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425988232,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785897119837,
+        "description": "智能图片编辑助手，根据文字描述对已上传图片进行风格化、调色、局部修改、背景替换等 AI 修图，当用户要求「修图」「改图」「P图」「编辑图片」「换背景」「调色」「风格化」「图片后期处理」时使用。",
+        "description_zh": "智能图片编辑助手，根据文字描述对已上传图片进行风格化、调色、局部修改、背景替换等 AI 修图，当用户要求「修图」「改图」「P图」「编辑图片」「换背景」「调色」「风格化」「图片后期处理」时使用。",
+        "downloads": 10377,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-image-edit-pro",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "全能图片编辑",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-image-edit-pro",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-image-edit-pro"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 5756.04615043266,
+        "slug": "ixhlink-skills-image-edit-pro",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "design-image-edit",
+            "name": "图片编辑"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426077515,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.2"
+      },
+      {
+        "category": "knowledge-management",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.50"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784352522540,
+        "description": "中国政府文件、法律法规、规范标准查询技能。输入主题关键词（如压力管道、液氨存储、危险化学品等），深入官方/权威网站并检索 ima 知识库，整理相关的法律、行政法规、部门规章、国家标准(GB/GB/T)、行业标准、团体标准、地方性法规、政策文件等。输出每条结果的名称、详细条款原文摘录、最新现行有效状态及可点击原文链接，文末附综合总结与免责声明；可按需同时生成排版精美的 PDF 和 Word 报告。触发词：法律、法规、标准、规范、规定、条例、办法、通知、意见、政策、国家标准、行业标准、团体标准、政府文件、安全管理、合规、执法依据。",
+        "description_zh": "中国政府文件、法律法规、规范标准查询技能。输入主题关键词（如压力管道、液氨存储、危险化学品等），深入官方/权威网站并检索 ima 知识库，整理相关的法律、行政法规、部门规章、国家标准(GB/GB/T)、行业标准、团体标准、地方性法规、政策文件等。\n输出每条结果的名称、详细条款原文摘录、最新现行有效状态及可点击原文链接，文末附综合总结与免责声明；可按需同时生成排版精美的 PDF 和 Word 报告。\n触发词：法律、法规、标准、规范、规定、条例、办法、通知、意见、政策、国家标准、行业标准、团体标准、政府文件、安全管理、合规、执法依据。",
+        "downloads": 9796,
+        "homepage": "https://api.skillhub.cn/user_9d03c4c1/gov-doc-law-search",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/601612/668c3f014e5e4ef893e8c7d7c5ec23bb.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "政府文件法律法规标准查询",
+        "namespace": {
+          "canonicalName": "@user_9d03c4c1/gov-doc-law-search",
+          "displayName": "user_9d03c4c1",
+          "handle": "user_9d03c4c1",
+          "publicSlug": "gov-doc-law-search"
+        },
+        "ownerName": "user_9d03c4c1",
+        "score": 5500.332815620147,
+        "slug": "gov-doc-law-search",
+        "source": "community",
+        "stars": 6,
+        "subCategories": [
+          {
+            "key": "knowledge-retrieval",
+            "name": "信息检索"
+          },
+          {
+            "key": "knowledge-summary",
+            "name": "摘要总结"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425818479,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "2.0.0"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785311743908,
+        "description": "电商场景化商品主图：上传商品图后生成可上架的场景主图；当用户要求「电商场景主图」「场景主图」「商品场景图」「产品场景图」「电商主图场景」「生活方式主图」「场景化商品图」「商品氛围图」「详情页场景图」时使用。若只要纯白底商品图，优先用白底图生成器；若是任意照片换纯色底，优先用照片换背景色。",
+        "description_zh": "电商场景化商品主图：上传商品图后生成可上架的场景主图；当用户要求「电商场景主图」「场景主图」「商品场景图」「产品场景图」「电商主图场景」「生活方式主图」「场景化商品图」「商品氛围图」「详情页场景图」时使用。若只要纯白底商品图，优先用白底图生成器；若是任意照片换纯色底，优先用照片换背景色。",
+        "downloads": 9292,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-ecom-scene-main",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/27205dc2-3c4b-4854-85b1-8902f05745a3.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "电商场景主图",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-ecom-scene-main",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-ecom-scene-main"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 5187.486132682494,
+        "slug": "ixhlink-skills-ecom-scene-main",
+        "source": "enterprise",
+        "stars": 3,
+        "subCategories": [
+          {
+            "key": "design-image-gen",
+            "name": "图片生成"
+          },
+          {
+            "key": "design-image-edit",
+            "name": "图片编辑"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426080633,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "data-analysis",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1789476759647,
+        "description": "读取 CSV/Excel 生成柱/折/饼/散点四类 PNG 图表。",
+        "description_zh": "读取 CSV/Excel 生成柱/折/饼/散点四类 PNG 图表。",
+        "downloads": 7950,
+        "homepage": "https://api.skillhub.cn/guomeng/data-visualization-master",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "数据可视化大师",
+        "namespace": {
+          "canonicalName": "@guomeng/data-visualization-master",
+          "displayName": "guomeng",
+          "handle": "guomeng",
+          "publicSlug": "data-visualization-master"
+        },
+        "ownerName": "u_bb29e585",
+        "publisher": {
+          "name": "果盟数科",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "长沙果盟数字科技有限公司",
+          "orgId": "org-rali8sw3"
+        },
+        "score": 4420.900820945197,
+        "slug": "data-visualization-master",
+        "source": "enterprise",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "data-visualization",
+            "name": "数据可视化"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792423119497,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.1.0"
+      },
+      {
+        "category": "office-efficiency",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1788796554776,
+        "description": "【是什么】按需求场景，输出可直接套用的 Excel 公式与公式解释，含多种替代写法与适用场景。\n【能做什么】需求澄清：用提问锁定场景（数据查找/统计/条件判断/文本处理/日期计算）。；公式输出：给出可直接套用的公式，含中文公式解释与步骤拆解。；替代写法：给出 2-3 种替代公式（如 VLOOKUP 与 INDEX/MATCH），便于兼容不同 Excel 版本。；嵌套组合：展示公式的嵌套组合（如 IF + AND + OR），提升公式可读性。；错误处理：识别常见公式错误（#N/A、#VALUE!、#REF!）并给出修复方法。；性能优化：对大数据量场景给出性能优化建议（避免整列引用、用辅助列等）。\n【适用场景】适合财务/HR/数据分析/办公人员快速产出 Excel 公式，提升数据处理效率。\n【免责】本技能依据用户给定资料生成结构化方案，仅尽力提升质量，不承诺具体效果，最终决策与落地需用户自行复核。",
+        "description_zh": "【是什么】按需求场景，输出可直接套用的 Excel 公式与公式解释，含多种替代写法与适用场景。\n【能做什么】需求澄清：用提问锁定场景（数据查找/统计/条件判断/文本处理/日期计算）。；公式输出：给出可直接套用的公式，含中文公式解释与步骤拆解。；替代写法：给出 2-3 种替代公式（如 VLOOKUP 与 INDEX/MATCH），便于兼容不同 Excel 版本。；嵌套组合：展示公式的嵌套组合（如 IF + AND + OR），提升公式可读性。；错误处理：识别常见公式错误（#N/A、#VALUE!、#REF!）并给出修复方法。；性能优化：对大数据量场景给出性能优化建议（避免整列引用、用辅助列等）。\n【适用场景】适合财务/HR/数据分析/办公人员快速产出 Excel 公式，提升数据处理效率。\n【免责】本技能依据用户给定资料生成结构化方案，仅尽力提升质量，不承诺具体效果，最终决策与落地需用户自行复核。",
+        "downloads": 7555,
+        "homepage": "https://api.skillhub.cn/zechuan-zhuchuang/excel-formula-assistant",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/637132/0dd6af312f3043969e49bce0bb0ee6c7.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "Excel公式助手",
+        "namespace": {
+          "canonicalName": "@zechuan-zhuchuang/excel-formula-assistant",
+          "displayName": "zechuan-zhuchuang",
+          "handle": "zechuan-zhuchuang",
+          "publicSlug": "excel-formula-assistant"
+        },
+        "ownerName": "u_74a75eb4",
+        "publisher": {
+          "name": "泽川智创",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "广州市增城区泽川筑创互联网商品销售工作室（个体工商户）",
+          "orgId": "org-r1rxv16h"
+        },
+        "score": 4212.891058353672,
+        "slug": "excel-formula-assistant",
+        "source": "enterprise",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "office-spreadsheet",
+            "name": "表格处理"
+          },
+          {
+            "key": "office-automation",
+            "name": "流程自动化"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426003464,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.2"
+      },
+      {
+        "category": "content-creation",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.20"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1788702085906,
+        "description": "小说润色蒸馏专家：AI辅助网文创作质量工作台，提供质量检测、去AI味、润色、风格蒸馏、作家仿写、续写、对白增强、合规申报、AI痕迹扫描、红蓝对抗审稿、平台规范实时核实。本 Skill 为按次付费服务，单次 0.20 元，用户通过支付宝完成支付后使用。",
+        "description_zh": "小说润色蒸馏专家：AI辅助网文创作质量工作台，提供质量检测、去AI味、润色、风格蒸馏、作家仿写、续写、对白增强、合规申报、AI痕迹扫描、红蓝对抗审稿、平台规范实时核实。",
+        "downloads": 7235,
+        "homepage": "https://api.skillhub.cn/indiv-bin1732/fiction-polish-distill",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/609796/104ec248a7484eef91fb487279b82d62.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "小说润色蒸馏专家",
+        "namespace": {
+          "canonicalName": "@indiv-bin1732/fiction-polish-distill",
+          "displayName": "user_0fcf0d65",
+          "handle": "indiv-bin1732",
+          "publicSlug": "fiction-polish-distill"
+        },
+        "ownerName": "user_0fcf0d65",
+        "score": 4046.4832482804522,
+        "slug": "fiction-polish-distill",
+        "source": "community",
+        "stars": 3,
+        "subCategories": [
+          {
+            "key": "content-article",
+            "name": "文章写作"
+          },
+          {
+            "key": "content-rewrite",
+            "name": "内容改写"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425706406,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.27"
+      },
+      {
+        "category": "dev-programming",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1791081654508,
+        "description": "浏览器自动化能力，适用于开发和运维领域。当用户想要 AI 驱动的浏览器自动化时使用，支持网页抓取、自动填表、点击、截图及 Web 应用测试。触发条件：browser-use、agent-browser。不适用于与浏览器自动化无关的请求。风险等级 L2。中文触发词：browser-use、agent-browser。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务时会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "description_zh": "浏览器自动化能力，适用于开发和运维领域。当用户想要 AI 驱动的浏览器自动化时使用，支持网页抓取、自动填表、点击、截图及 Web 应用测试。触发条件：browser-use、agent-browser。不适用于与浏览器自动化无关的请求。风险等级 L2。中文触发词：browser-use、agent-browser。本技能为 SkillHub 按次计费技能（0.01 元/次）：执行核心任务时会触发一次平台支付授权，是否执行付费动作由用户决定；授权由作者自有服务 pay.sharpdealhub.com 承载（非第三方支付网关），仅接收动作名与订单号，不读取本技能处理的内容。",
+        "downloads": 7161,
+        "homepage": "https://api.skillhub.cn/org-pqka8yp5/browser-use",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "true"
+        },
+        "last_synced_at": null,
+        "name": "浏览器自动化（browser-use）",
+        "namespace": {
+          "canonicalName": "@org-pqka8yp5/browser-use",
+          "displayName": "org-pqka8yp5",
+          "handle": "org-pqka8yp5",
+          "publicSlug": "browser-use"
+        },
+        "ownerName": "u_77519267",
+        "publisher": {
+          "name": "菏泽九有信息科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "菏泽九有信息科技有限公司",
+          "orgId": "org-pqka8yp5"
+        },
+        "score": 3972.154426447748,
+        "slug": "browser-use",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "dev-script",
+            "name": "脚本工具"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425954273,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785997788577,
+        "description": "电商图片翻译：上传商品主图、详情页、促销海报、A+页面等电商图片，将图中营销文字原位翻译替换为目标市场语言，保留品牌名/价格/商品与排版；当用户要求「电商图片翻译」「商品图翻译」「主图翻译」「详情页翻译」「海报翻译成英文/日文」「跨境电商翻译」「把中文卖点改成目标国语言」「亚马逊/速卖通/Temu图翻译」时使用。若是识别图片文字只输出文本，用 OCR；非电商类图片翻译用智能图片翻译。",
+        "description_zh": "电商图片翻译：上传商品主图、详情页、促销海报、A+页面等电商图片，将图中营销文字原位翻译替换为目标市场语言，保留品牌名/价格/商品与排版；当用户要求「电商图片翻译」「商品图翻译」「主图翻译」「详情页翻译」「海报翻译成英文/日文」「跨境电商翻译」「把中文卖点改成目标国语言」「亚马逊/速卖通/Temu图翻译」时使用。若是识别图片文字只输出文本，用 OCR；非电商类图片翻译用智能图片翻译。",
+        "downloads": 7085,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-ecom-translate",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "电商图片翻译",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-ecom-translate",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-ecom-translate"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 3929.997781229199,
+        "slug": "ixhlink-skills-ecom-translate",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "design-image-edit",
+            "name": "图片编辑"
+          },
+          {
+            "key": "design-visual-asset",
+            "name": "视觉素材"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792423420119,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.2"
+      },
+      {
+        "category": "business-ops",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1783080099207,
+        "description": "招中标数据查询与供应商竞争分析助手（余额永久有效）。当用户涉及以下任何场景时，必须使用此SKILL：查询招标/中标公告、搜索标讯、查找临期/即将到期项目、商机预测、推荐潜在投标供应商、分析公司主营业务/历史中标、查询公司上下游合作客户与供应商、分析竞争对手/竞对企业、查询Top采购单位/Top中标单位/Top中标品牌、招中标数据统计分析、查询品牌型号历史中标单价/价格趋势、市场分析/行业分析/采购寻源/渠道拓展等采购与投标相关场景。即使用户没有提到具体网站名，只要涉及招投标、采购、中标、供应商、竞争对手等关键词，都应使用本SKILL。新设备通常可获赠 100 积分体验额度（每日限量，发完为止），可用于基础检索与企业信息体验，直接提问即可使用；**联系方式等高价值能力仅支持付费额度**；额度用完后通过微信支付购买次数包，余额按设备保存、换对话继续有效，全程无需注册或配置 API Key。",
+        "description_zh": "招中标数据查询与供应商竞争分析助手（余额永久有效）。当用户涉及以下任何场景时，必须使用此SKILL：查询招标/中标公告、搜索标讯、查找临期/即将到期项目、商机预测、推荐潜在投标供应商、分析公司主营业务/历史中标、查询公司上下游合作客户与供应商、分析竞争对手/竞对企业、查询Top采购单位/Top中标单位/Top中标品牌、招中标数据统计分析、查询品牌型号历史中标单价/价格趋势、市场分析/行业分析/采购寻源/渠道拓展等采购与投标相关场景。即使用户没有提到具体网站名，只要涉及招投标、采购、中标、供应商、竞争对手等关键词，都应使用本SKILL。新设备通常可获赠 100 积分体验额度（每日限量，发完为止），可用于基础检索与企业信息体验，直接提问即可使用；**联系方式等高价值能力仅支持付费额度**；额度用完后通过微信支付购买次数包，余额按设备保存、换对话继续有效，全程无需注册或配置 API Key。",
+        "downloads": 7084,
+        "homepage": "https://api.skillhub.cn/org-32m5yxyy/zlbx-bidding-pay-persist",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/556770/ce070ca15a0143efa391303fb041dd84.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "标讯数据查询 · 免注册",
+        "namespace": {
+          "canonicalName": "@org-32m5yxyy/zlbx-bidding-pay-persist",
+          "displayName": "org-32m5yxyy",
+          "handle": "org-32m5yxyy",
+          "publicSlug": "zlbx-bidding-pay-persist"
+        },
+        "ownerName": "u_41cc4bed",
+        "publisher": {
+          "name": "知了标讯",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "北京百炼智能科技有限公司",
+          "orgId": "org-32m5yxyy"
+        },
+        "score": 3984.9123585533616,
+        "slug": "zlbx-bidding-pay-persist",
+        "source": "enterprise",
+        "stars": 5,
+        "subCategories": [
+          {
+            "key": "biz-growth",
+            "name": "增长分析"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425666447,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.5"
+      },
+      {
+        "category": "business-ops",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1787290996215,
+        "description": "服务端电商运营方案：选品、流量、转化、复购与数据看板。按次付费调用。",
+        "description_zh": "服务端电商运营方案：选品、流量、转化、复购与数据看板。按次付费调用。",
+        "downloads": 6633,
+        "homepage": "https://api.skillhub.cn/metago/metago-ecommerce-pack-pay",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "电商运营方案",
+        "namespace": {
+          "canonicalName": "@metago/metago-ecommerce-pack-pay",
+          "displayName": "metago",
+          "handle": "metago",
+          "publicSlug": "metago-ecommerce-pack-pay"
+        },
+        "ownerName": "u_4a59b9a6",
+        "publisher": {
+          "name": "元构光年MetaGO",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "元构光年（成都）人工智能科技有限公司",
+          "orgId": "org-wgyu1arl"
+        },
+        "score": 3679.276680718882,
+        "slug": "metago-ecommerce-pack-pay",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "biz-growth",
+            "name": "增长分析"
+          },
+          {
+            "key": "biz-ecommerce",
+            "name": "电商运营"
+          },
+          {
+            "key": "biz-user-ops",
+            "name": "用户运营"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792423422014,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "content-creation",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785422276039,
+        "description": "AI驱动的短视频拆解工具，支持TikTok/YouTube/B站/抖音/小红书，提供病毒传播评分+可执行优化建议+可复用脚本模板。\n\n    AI驱动的短视频拆解工具，支持 TikTok/YouTube/B站/抖音/小红书/Instagram 等平台视频深度分析。\n\n    核心功能\n\n    🎬 场景检测 — PySceneDetect 自动切分 + 关键帧提取\n    🎤 语音转文字 — DashScope Paraformer v2，中英双语识别\n    👁️ AI视觉分析 — Qwen-VL 多模态分析：风格/色彩/构图/文字覆盖\n    📊 病毒传播评分 — 0-100分 + Hook分析 + 内容结构拆解\n    🎯 受众画像 — 人口统计/痛点/购买信号\n    💡 优化建议 — 10+条可执行建议，按优先级排序\n    📝 脚本模板 — 可复用的爆款脚本框架\n    🎵 数据洞察 — 最佳时长/发布时间/标签策略/音乐建议\n\n    支持平台\n\n    TikTok、YouTube、B站、抖音、小红书、Instagram，以及 yt-dlp 支持的所有平台\n\n    分析报告\n\n    支付后 2-5 分钟生成完整分析报告，包含：\n    - 视频概况（时长/场景数/分辨率/帧率）\n    - 病毒传播评分（0-100）+ 传播因素分析\n    - Hook 分析（类型/强度/出现时机）\n    - 内容结构拆解（AIDA/PAS/BAB/4U/story_arc）\n    - 视觉分析（风格/能量级别/制作质量/色彩调性）\n    - 优化建议（按 high/medium/low 优先级排序）\n    - 可复用脚本模板\n    - 数据洞察（最佳时长/发布时间/标签策略）\n\n    技术亮点\n\n    - 异步任务处理，支付后立即启动后台分析\n    - 实时进度轮询，用户体验友好\n    - 分析失败自动退款，零风险\n    - 美观的 HTML 报告页面，支持移动端\n视频分析,爆款拆解,短视频,TikTok,YouTube,B站,抖音,小红书,内容创作,电商营销",
+        "description_zh": "AI驱动的短视频拆解工具，支持TikTok/YouTube/B站/抖音/小红书，提供病毒传播评分+可执行优化建议+可复用脚本模板。\n\n    AI驱动的短视频拆解工具，支持 TikTok/YouTube/B站/抖音/小红书/Instagram 等平台视频深度分析。\n\n    核心功能\n\n    🎬 场景检测 — PySceneDetect 自动切分 + 关键帧提取\n    🎤 语音转文字 — DashScope Paraformer v2，中英双语识别\n    👁️ AI视觉分析 — Qwen-VL 多模态分析：风格/色彩/构图/文字覆盖\n    📊 病毒传播评分 — 0-100分 + Hook分析 + 内容结构拆解\n    🎯 受众画像 — 人口统计/痛点/购买信号\n    💡 优化建议 — 10+条可执行建议，按优先级排序\n    📝 脚本模板 — 可复用的爆款脚本框架\n    🎵 数据洞察 — 最佳时长/发布时间/标签策略/音乐建议\n\n    支持平台\n\n    TikTok、YouTube、B站、抖音、小红书、Instagram，以及 yt-dlp 支持的所有平台\n\n    分析报告\n\n    支付后 2-5 分钟生成完整分析报告，包含：\n    - 视频概况（时长/场景数/分辨率/帧率）\n    - 病毒传播评分（0-100）+ 传播因素分析\n    - Hook 分析（类型/强度/出现时机）\n    - 内容结构拆解（AIDA/PAS/BAB/4U/story_arc）\n    - 视觉分析（风格/能量级别/制作质量/色彩调性）\n    - 优化建议（按 high/medium/low 优先级排序）\n    - 可复用脚本模板\n    - 数据洞察（最佳时长/发布时间/标签策略）\n\n    技术亮点\n\n    - 异步任务处理，支付后立即启动后台分析\n    - 实时进度轮询，用户体验友好\n    - 分析失败自动退款，零风险\n    - 美观的 HTML 报告页面，支持移动端\n视频分析,爆款拆解,短视频,TikTok,YouTube,B站,抖音,小红书,内容创作,电商营销",
+        "downloads": 6614,
+        "homepage": "https://api.skillhub.cn/org-gfrg4dba/virallens",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "爆款视频拆解器",
+        "namespace": {
+          "canonicalName": "@org-gfrg4dba/virallens",
+          "displayName": "org-gfrg4dba",
+          "handle": "org-gfrg4dba",
+          "publicSlug": "virallens"
+        },
+        "ownerName": "u_1aa5eec8",
+        "publisher": {
+          "name": "上海熵海领航科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "上海熵海领航科技有限公司",
+          "orgId": "org-gfrg4dba"
+        },
+        "score": 3713.1129354337695,
+        "slug": "virallens",
+        "source": "enterprise",
+        "stars": 4,
+        "subCategories": [
+          {
+            "key": "content-social-media",
+            "name": "自媒体运营"
+          },
+          {
+            "key": "content-short-video-script",
+            "name": "短视频脚本"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426037710,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.3"
+      },
+      {
+        "category": "professional",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "0.01"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1782984907977,
+        "description": "对中文合同进行智能风险审查，识别条款风险、提取关键信息、生成审查报告，覆盖买卖/技术/租赁/劳动等常见合同类型。v6.0.0 升级为 Pay Skill：新增付费深度语义审查（服务端下发增强审查包，按次 0.01 元）与自带大模型通道（BYOK，8 家厂商适配，用户填自己的 Key，合同正文不出本机）。v6.0.1 对齐 SkillHub 支付宝付费改造规范：接入支付宝 AI 按量付费官方支付能力，补齐 402 账单、Payment-Proof 凭证重试、服务端验付、商家履约回执与订单幂等五项自查链路。v5.0 新增法条引用溯源、合同谈判辅助、中英双语对照审查。v5.1 新增指导案例引用溯源、金额校验引擎、多语种扩展（日/韩）。v5.2 新增合同台账与履约提醒、档案库全文检索、风险趋势对比、类案要点库与判决倾向参考。",
+        "description_zh": "对中文合同进行智能风险审查，识别条款风险、提取关键信息、生成审查报告，覆盖买卖/技术/租赁/劳动等常见合同类型。v5.0 新增法条引用溯源、合同谈判辅助、中英双语对照审查。v5.1 新增指导案例引用溯源、金额校验引擎、多语种扩展（日/韩）。v5.2 新增合同台账与履约提醒、档案库全文检索、风险趋势对比、类案要点库与判决倾向参考。",
+        "downloads": 6135,
+        "homepage": "https://api.skillhub.cn/user_1a470ba8/workbuddy-contract-review",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "true"
+        },
+        "last_synced_at": null,
+        "name": "AI 法律合同审查",
+        "namespace": {
+          "canonicalName": "@user_1a470ba8/workbuddy-contract-review",
+          "displayName": "user_1a470ba8",
+          "handle": "user_1a470ba8",
+          "publicSlug": "workbuddy-contract-review"
+        },
+        "ownerName": "user_1a470ba8",
+        "score": 3425.2274240071006,
+        "slug": "workbuddy-contract-review",
+        "source": "community",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "pro-legal",
+            "name": "法律合规"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426117671,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "6.0.1"
+      },
+      {
+        "category": "data-analysis",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1788796325449,
+        "description": "【是什么】按业务问题，输出从指标拆解、数据获取、清洗、分析到可视化与汇报呈现的完整方案。\n【能做什么】指标拆解：把业务问题拆为可度量的核心指标与次级指标，给出指标定义与计算公式。；数据获取：列出需要的数据源（业务系统/日志/调研/公开数据）与获取方式。；清洗规范：给出数据清洗规范（缺失值/异常值/重复值/格式统一）的处理步骤。；分析方法：按问题类型（描述/对比/归因/预测）给出适合的分析方法与工具选型。；可视化建议：按指标类型给出适合的图表（柱/线/饼/散点/漏斗）与配色规范。；汇报框架：给出数据分析报告的结构框架（摘要/方法/发现/洞察/建议）。\n【适用场景】适合运营/市场/产品/管理者在做业务分析时快速产出专业级报告，避免汇报时逻辑不清。\n【免责】本技能依据用户给定资料生成结构化方案，仅尽力提升质量，不承诺具体效果，最终决策与落地需用户自行复核。",
+        "description_zh": "【是什么】按业务问题，输出从指标拆解、数据获取、清洗、分析到可视化与汇报呈现的完整方案。\n【能做什么】指标拆解：把业务问题拆为可度量的核心指标与次级指标，给出指标定义与计算公式。；数据获取：列出需要的数据源（业务系统/日志/调研/公开数据）与获取方式。；清洗规范：给出数据清洗规范（缺失值/异常值/重复值/格式统一）的处理步骤。；分析方法：按问题类型（描述/对比/归因/预测）给出适合的分析方法与工具选型。；可视化建议：按指标类型给出适合的图表（柱/线/饼/散点/漏斗）与配色规范。；汇报框架：给出数据分析报告的结构框架（摘要/方法/发现/洞察/建议）。\n【适用场景】适合运营/市场/产品/管理者在做业务分析时快速产出专业级报告，避免汇报时逻辑不清。\n【免责】本技能依据用户给定资料生成结构化方案，仅尽力提升质量，不承诺具体效果，最终决策与落地需用户自行复核。",
+        "downloads": 6131,
+        "homepage": "https://api.skillhub.cn/zechuan-zhuchuang/data-analysis-report-assistant",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/637132/e703684226aa496384000f5d573d04d5.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "数据分析报告助手",
+        "namespace": {
+          "canonicalName": "@zechuan-zhuchuang/data-analysis-report-assistant",
+          "displayName": "zechuan-zhuchuang",
+          "handle": "zechuan-zhuchuang",
+          "publicSlug": "data-analysis-report-assistant"
+        },
+        "ownerName": "u_74a75eb4",
+        "publisher": {
+          "name": "泽川智创",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "广州市增城区泽川筑创互联网商品销售工作室（个体工商户）",
+          "orgId": "org-r1rxv16h"
+        },
+        "score": 3400.820945196361,
+        "slug": "data-analysis-report-assistant",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "data-report",
+            "name": "报表生成"
+          },
+          {
+            "key": "data-insight",
+            "name": "数据洞察"
+          },
+          {
+            "key": "data-metrics-monitoring",
+            "name": "指标监控"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426009391,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.2"
+      },
+      {
+        "category": "life-service",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784885212152,
+        "description": "知命流年节奏报告（Pay Skill）。在用户提供出生年月日时、性别、阴阳历及目标公历年份后，生成该年 Markdown 流年解读：大运与流年关系、重点月份节奏、事业与情感倾向、可执行注意事项。结合规则引擎年度应事与调候/格局/盲派做功视角，理论含《穷通宝鉴》《子平真诠》《滴天髓》等及约1000例归纳知识。按次付费。用于年度规划与自我认知；非吉凶铁口、非决策承诺。",
+        "description_zh": "知命流年节奏报告（Pay Skill）。在用户提供出生年月日时、性别、阴阳历及目标公历年份后，生成该年 Markdown 流年解读：大运与流年关系、重点月份节奏、事业与情感倾向、可执行注意事项。结合规则引擎年度应事与调候/格局/盲派做功视角，理论含《穷通宝鉴》《子平真诠》《滴天髓》等及约1000例归纳知识。按次付费。用于年度规划与自我认知；非吉凶铁口、非决策承诺。",
+        "downloads": 6046,
+        "homepage": "https://api.skillhub.cn/org-cm0r264r/zhiming-annual-report",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "八字流年报告",
+        "namespace": {
+          "canonicalName": "@org-cm0r264r/zhiming-annual-report",
+          "displayName": "org-cm0r264r",
+          "handle": "org-cm0r264r",
+          "publicSlug": "zhiming-annual-report"
+        },
+        "ownerName": "u_f543c792",
+        "publisher": {
+          "name": "问玄引擎",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "郑州高新技术产业开发区问玄信息技术咨询工作室（个体工商户）",
+          "orgId": "org-cm0r264r"
+        },
+        "score": 3375.859773685378,
+        "slug": "zhiming-annual-report",
+        "source": "enterprise",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "life-personal-plan",
+            "name": "个人计划"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425721981,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.4"
+      },
+      {
+        "category": "education",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "9.99"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1786941568168,
+        "description": "备课教学、学习提效、特殊教育、学术科研、升学就业——教育学习全场景一个技能搞定。",
+        "description_zh": "备课到半夜、课件不吸引人、学生听不懂？本技能专注教学全流程（备课/课件/教案/出题/批改/课堂互动，不含学校行政事务），用教学法+模板化产出，给你教案、PPT 备注、习题、课堂活动方案；学生隐私脱敏、教育政策标注时效；不用它，备课挤占休息、课堂效果靠运气；现在告诉我课程和对象，给你可用的教案与课件。",
+        "downloads": 5977,
+        "homepage": "https://api.skillhub.cn/user_ff29c4df/edu-all-in-one",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "教师教学助手",
+        "namespace": {
+          "canonicalName": "@user_ff29c4df/edu-all-in-one",
+          "displayName": "user_ff29c4df",
+          "handle": "user_ff29c4df",
+          "publicSlug": "edu-all-in-one"
+        },
+        "ownerName": "user_ff29c4df",
+        "score": 3337.585977368538,
+        "slug": "edu-all-in-one",
+        "source": "community",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "edu-course-design",
+            "name": "课程设计"
+          },
+          {
+            "key": "edu-question-gen",
+            "name": "题目生成"
+          },
+          {
+            "key": "edu-teaching-aid",
+            "name": "教学辅助"
+          }
+        ],
+        "tags": [
+          "备课",
+          "复习计划",
+          "学习计划",
+          "学情分析",
+          "家长会",
+          "教学",
+          "教师",
+          "教育科研",
+          "特殊教育",
+          "英语作文",
+          "论文",
+          "课件",
+          "高考"
+        ],
+        "updated_at": 1792426008834,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "2.1.0"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1783073375122,
+        "description": "基于 Google Nano Banana（Gemini 原生图像模型）的文生图、图生图与对话式修图助手，擅长画面内文字渲染、4K 高清、多参考图一致性；当用户要求「nano banana」「Nano Banana」「香蕉模型」「Gemini 画图」「Gemini 出图」「Gemini 修图」「带文字的海报图」「4K 出图」「多参考图生成」或需要高质量文字/多图一致性出图时使用。",
+        "description_zh": "基于 Google Nano Banana（Gemini 原生图像模型）的文生图、图生图与对话式修图助手，擅长画面内文字渲染、4K 高清、多参考图一致性；当用户要求「nano banana」「Nano Banana」「香蕉模型」「Gemini 画图」「Gemini 出图」「Gemini 修图」「带文字的海报图」「4K 出图」「多参考图生成」或需要高质量文字/多图一致性出图时使用。",
+        "downloads": 5639,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-image-banana",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/64ea6fd6-ebe7-418c-af4f-2cafff71f2ec.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "智绘图片香蕉",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-image-banana",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-image-banana"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 3127.9121366762815,
+        "slug": "ixhlink-skills-image-banana",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "design-image-gen",
+            "name": "图片生成"
+          },
+          {
+            "key": "design-image-edit",
+            "name": "图片编辑"
+          },
+          {
+            "key": "design-poster",
+            "name": "海报设计"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426078111,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.4"
+      },
+      {
+        "category": "content-creation",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "2.99"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784712533597,
+        "description": "专业短剧脚本生成器，内置零基础使用指南。根据主题、风格、时长，自动生成可直接用于即梦/小云雀/豆包的完整短剧脚本工程包：逐秒拆解表、运镜统计、声音统计、核心元素清单，全部精确到秒。支持13+题材自动适配，含十大创作铁律、题材光影库与15项自动质检，新手也能出精品。",
+        "description_zh": "专业短剧脚本生成器，内置零基础使用指南，打开就会用。根据主题、风格、时长，自动生成可直接用于即梦/小云雀/豆包的完整短剧脚本工程包：逐秒拆解表、运镜统计、声音统计、核心元素清单，全部精确到秒。支持13+题材自动适配，含十大创作铁律、题材光影库与15项自动质检，新手也能出精品。",
+        "downloads": 5483,
+        "homepage": "https://api.skillhub.cn/user_dc12046b/short-drama-script",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "短剧脚本生成器",
+        "namespace": {
+          "canonicalName": "@user_dc12046b/short-drama-script",
+          "displayName": "user_dc12046b",
+          "handle": "user_dc12046b",
+          "publicSlug": "short-drama-script"
+        },
+        "ownerName": "user_dc12046b",
+        "score": 3063.5677834479698,
+        "slug": "short-drama-script",
+        "source": "community",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "content-short-video-script",
+            "name": "短视频脚本"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425880880,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "16.0.2"
+      },
+      {
+        "category": "office-efficiency",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1789472360736,
+        "description": "AI 智能体办公套件：一行命令创建、读取、分析、修改 Word (.docx)、Excel (.xlsx)、PowerPoint (.pptx) 文档，无需安装 Office、零依赖。搬运自 GitHub 办公类 skill 排名第一的 iOfficeAI/OfficeCLI（30k+ ★，Apache-2.0）。输入：用户的办公文档诉求，需说明目标格式（Word/Excel/PPT/CSV）、文档用途（报告/演示/合同/论文/财务模型/看板等）、关键内容与风格要求，或待处理文档的路径。输出：可直接打开的 .docx/.xlsx/.pptx 文件（或对其的精准修改）、符合工程规范的排版与视觉设计、公式驱动的联动表格、或格式问题检测与修复报告。当用户要\"做 PPT / 做幻灯片 / 写 Word 报告 / 生成文档 / 建 Excel 表 / 财务模型 / 数据看板 / 融资路演 PPT / 学术论文排版 / Word 可填表单 / Morph 动画 PPT\"，或提到任何 .docx/.xlsx/.pptx/.csv 的创建、读取、查找替换、批量修改、模板填充时使用。中英触发词：Office 文档、办公三件套、演示文稿、spreadsheet、workbook、deck、slides、report、letter、financial model、dashboard、pitch deck、tracker、docx、pptx、xlsx。",
+        "description_zh": "AI 智能体办公套件：一行命令创建、读取、分析、修改 Word (.docx)、Excel (.xlsx)、PowerPoint (.pptx) 文档，无需安装 Office、零依赖。搬运自 GitHub 办公类 skill 排名第一的 iOfficeAI/OfficeCLI（30k+ ★，Apache-2.0）。输入：用户的办公文档诉求，需说明目标格式（Word/Excel/PPT/CSV）、文档用途（报告/演示/合同/论文/财务模型/看板等）、关键内容与风格要求，或待处理文档的路径。输出：可直接打开的 .docx/.xlsx/.pptx 文件（或对其的精准修改）、符合工程规范的排版与视觉设计、公式驱动的联动表格、或格式问题检测与修复报告。当用户要\"做 PPT / 做幻灯片 / 写 Word 报告 / 生成文档 / 建 Excel 表 / 财务模型 / 数据看板 / 融资路演 PPT / 学术论文排版 / Word 可填表单 / Morph 动画 PPT\"，或提到任何 .docx/.xlsx/.pptx/.csv 的创建、读取、查找替换、批量修改、模板填充时使用。中英触发词：Office 文档、办公三件套、演示文稿、spreadsheet、workbook、deck、slides、report、letter、financial model、dashboard、pitch deck、tracker、docx、pptx、xlsx。",
+        "downloads": 5339,
+        "homepage": "https://api.skillhub.cn/jishangtech/js-08",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "AI 智能体办公套件",
+        "namespace": {
+          "canonicalName": "@jishangtech/js-08",
+          "displayName": "jishangtech",
+          "handle": "jishangtech",
+          "publicSlug": "js-08"
+        },
+        "ownerName": "u_5f1b7100",
+        "publisher": {
+          "name": "技赏网络科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "技赏网络科技（衢州）有限公司",
+          "orgId": "org-k005qfao"
+        },
+        "score": 2983.6920346128245,
+        "slug": "js-08",
+        "source": "enterprise",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "office-doc",
+            "name": "文档处理"
+          },
+          {
+            "key": "office-spreadsheet",
+            "name": "表格处理"
+          },
+          {
+            "key": "office-ppt",
+            "name": "PPT 生成"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425967717,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.1"
+      },
+      {
+        "category": "business-ops",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785316814783,
+        "description": "招投标超级大师一站式技能。提供三大功能：(1) 招标/采购文件要点提取——解析招标文件/采购文件，生成投标 Excel 审查报告； (2) 技术建议书编写——基于功能（1）要求生成五级目录，预算驱动页数控制、逐章 Word 编写、合并、审查；(3) 投标文件检查——定位投标人应答文件目录，与 功能（1）审查结果逐项对比，输出Excel对比报告。按次调用付费，每次调用 ¥5.00，基于 X402 协议触发微信支付后返回结果。",
+        "description_zh": "招投标超级大师一站式技能。提供三大功能：(1) 招标/采购文件要点提取——解析招标文件/采购文件，生成投标 Excel 审查报告； (2) 技术建议书编写——基于功能（1）要求生成五级目录，预算驱动页数控制、逐章 Word 编写、合并、审查；(3) 投标文件检查——定位投标人应答文件目录，与 功能（1）审查结果逐项对比，输出Excel对比报告。按次调用付费，每次调用 ¥5.00，基于 X402 协议触发微信支付后返回结果。",
+        "downloads": 4973,
+        "homepage": "https://api.skillhub.cn/org-ffjpn5v1/bidding-super-master",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "招投标超级大师",
+        "namespace": {
+          "canonicalName": "@org-ffjpn5v1/bidding-super-master",
+          "displayName": "org-ffjpn5v1",
+          "handle": "org-ffjpn5v1",
+          "publicSlug": "bidding-super-master"
+        },
+        "ownerName": "u_93cee939",
+        "publisher": {
+          "name": "北京亨昌源商贸有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "北京亨昌源商贸有限公司",
+          "orgId": "org-ffjpn5v1"
+        },
+        "score": 2769.580652318615,
+        "slug": "bidding-super-master",
+        "source": "enterprise",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "biz-sales",
+            "name": "销售助手"
+          },
+          {
+            "key": "biz-project-management",
+            "name": "项目管理"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425835546,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.2.1"
+      },
+      {
+        "category": "knowledge-management",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784716610304,
+        "description": "邵雍正宗梅花易数，先天数起卦+体用生克+互卦变卦+月令旺衰，64卦全维度专业解读\n北宋邵雍《梅花易数》正宗算法，纯服务端运行。\n\n    支持三种起卦方式：时间起卦（邵雍正宗法）、报数起卦、字数起卦\n    支持三个解读深度：基础版 / 详细版 / 大师级\n\n    专业实现：\n    • 先天数起卦（乾一兑二离三震四巽五坎六艮七坤八）\n    • 体用判定（动爻所在卦为用，另一卦为体）\n    • 互卦推导（2-4爻下互，3-5爻上互）\n    • 变卦推导（动爻阴阳互变）\n    • 月令旺衰（旺/相/休/囚/死五档判断）\n    • 应期推断（五行当令+数理暗示）\n    • 64卦完整数据，无遗漏无重复\n\n    适用场景：\n    「今天面试能成功吗？」\n    「这段感情值得继续吗？」\n    「这个月财运如何？」\n    「今年整体运势怎样？」\n\n    输入问题，为你专业解读天机。",
+        "description_zh": "邵雍正宗梅花易数，先天数起卦+体用生克+互卦变卦+月令旺衰，64卦全维度专业解读\n北宋邵雍《梅花易数》正宗算法，纯服务端运行。\n\n    支持三种起卦方式：时间起卦（邵雍正宗法）、报数起卦、字数起卦\n    支持三个解读深度：基础版 / 详细版 / 大师级\n\n    专业实现：\n    • 先天数起卦（乾一兑二离三震四巽五坎六艮七坤八）\n    • 体用判定（动爻所在卦为用，另一卦为体）\n    • 互卦推导（2-4爻下互，3-5爻上互）\n    • 变卦推导（动爻阴阳互变）\n    • 月令旺衰（旺/相/休/囚/死五档判断）\n    • 应期推断（五行当令+数理暗示）\n    • 64卦完整数据，无遗漏无重复\n\n    适用场景：\n    「今天面试能成功吗？」\n    「这段感情值得继续吗？」\n    「这个月财运如何？」\n    「今年整体运势怎样？」\n\n    输入问题，为你专业解读天机。",
+        "downloads": 4875,
+        "homepage": "https://api.skillhub.cn/org-gfrg4dba/meihua-yishu",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "梅花易数专业解卦",
+        "namespace": {
+          "canonicalName": "@org-gfrg4dba/meihua-yishu",
+          "displayName": "org-gfrg4dba",
+          "handle": "org-gfrg4dba",
+          "publicSlug": "meihua-yishu"
+        },
+        "ownerName": "u_1aa5eec8",
+        "publisher": {
+          "name": "上海熵海领航科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "上海熵海领航科技有限公司",
+          "orgId": "org-gfrg4dba"
+        },
+        "score": 2704.126913689816,
+        "slug": "meihua-yishu",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "knowledge-base-qa",
+            "name": "知识库问答"
+          },
+          {
+            "key": "knowledge-summary",
+            "name": "摘要总结"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425678193,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.2"
+      },
+      {
+        "category": "content-creation",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "2.00"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1787310465730,
+        "description": "种草文案一键生成：爆款标题+六段式正文+SEO埋词+标签+封面+发布策略，3套风格可选，**并注入服务端实时抓取的节点倒计时（含调休补班）、电商节点、时令与天气实况**。基于 A2M 智能收协议（HTTP 402）的付费资源，按次付费 ¥2/次。",
+        "description_zh": "小红薯种草文案生成器 Pro v6.0.6（Pay Skill · 按次付费 ¥2/次，博主全链路增长引擎）。一键生成高点击率、高收藏率的种草笔记：爆款标题+六段式正文+SEO搜索埋词+话题标签+封面文案+发布策略，输出闺蜜分享/专业测评/故事叙事3套风格，自带去AI味优化、限流词检测、评论区运营话术，覆盖美妆/穿搭/美食/家居/数码/母婴/旅行/宠物/健身/教育/汽车/奢品/文创/本地生活14大品类。**服务端每次调用实时抓取节点倒计时（含法定节假日与调休补班）、电商节点、时令与天气实况/气温走势，并按这些真实数据推出\"当下就该写\"的角度** —— 同一主题隔几天再算结论不同。v6.0.5 起注入实时信号，按次计费由支付宝 AI 按量付费完成收款。当用户需要写小红书文案、种草笔记、好物测评、产品推广、爆款标题、探店文案、开箱文案、好物分享、带货文案、朋友圈文案、营销软文、自媒体运营内容，或要改写润色现有文案、批量生成种草文案时触发。触发词：小红书文案、小红薯文案、种草文案、种草笔记、笔记生成、爆款标题、好物推荐、测评文案、探店文案、开箱文案、带货文案、产品文案、推广文案、营销文案、软文、内容运营、自媒体、博主文案、KOL文案、KOC文案、抖音文案、短视频脚本、朋友圈文案、文案改写、去AI味、文案润色、批量写文案、AI写文案、AI文案生成、博主增长、账号定位、选题规划、内容日历、节日营销、节日文案、节气营销、应季选题、换季文案、热点选题、数据复盘、涨粉、变现。平台名称（如小红书）仅作场景指示，与任何平台无官方关联。",
+        "downloads": 4858,
+        "homepage": "https://api.skillhub.cn/user_6850f0da/zhongcao-copywriter-pro",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "小红薯种草文案生成器 Pro（爆款笔记一键写）",
+        "namespace": {
+          "canonicalName": "@user_6850f0da/zhongcao-copywriter-pro",
+          "displayName": "user_6850f0da",
+          "handle": "user_6850f0da",
+          "publicSlug": "zhongcao-copywriter-pro"
+        },
+        "ownerName": "user_6850f0da",
+        "score": 2716.8848457954296,
+        "slug": "zhongcao-copywriter-pro",
+        "source": "community",
+        "stars": 2,
+        "subCategories": [
+          {
+            "key": "content-marketing-copy",
+            "name": "营销文案"
+          },
+          {
+            "key": "content-social-media",
+            "name": "自媒体运营"
+          },
+          {
+            "key": "content-title",
+            "name": "标题生成"
+          }
+        ],
+        "tags": [
+          "ai写作",
+          "内容创作",
+          "去ai味",
+          "好物",
+          "好物测评",
+          "小红书文案",
+          "小红薯文案",
+          "带货文案",
+          "批量写文案",
+          "探店文案",
+          "文案",
+          "文案改写",
+          "文案生成",
+          "爆款",
+          "爆款标题",
+          "种草",
+          "种草文案",
+          "种草笔记",
+          "笔记",
+          "笔记模板",
+          "自媒体运营",
+          "营销文案"
+        ],
+        "updated_at": 1792425665288,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "6.0.6"
+      },
+      {
+        "category": "office-efficiency",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785897489353,
+        "description": "全能 OCR 文字识别助手，从图片中提取印刷体、手写体、表格、票据、名片等文字内容，支持 URL 与 Base64 图片；当用户要求「OCR」「识别图片文字」「提取文字」「扫图识字」「图片转文字」「读图」「票据识别」「表格识别」时使用。",
+        "description_zh": "全能 OCR 文字识别助手，从图片中提取印刷体、手写体、表格、票据、名片等文字内容，支持 URL 与 Base64 图片；当用户要求「OCR」「识别图片文字」「提取文字」「扫图识字」「图片转文字」「读图」「票据识别」「表格识别」时使用。",
+        "downloads": 4851,
+        "homepage": "https://api.skillhub.cn/ixhlink/ixhlink-skills-quanneng-ocr-recog",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "全能文字识别",
+        "namespace": {
+          "canonicalName": "@ixhlink/ixhlink-skills-quanneng-ocr-recog",
+          "displayName": "ixhlink",
+          "handle": "ixhlink",
+          "publicSlug": "ixhlink-skills-quanneng-ocr-recog"
+        },
+        "ownerName": "u_c497be8b",
+        "publisher": {
+          "name": "星华智联科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "莆田市星华智联科技有限公司",
+          "orgId": "org-qonbsnez"
+        },
+        "score": 2701.90814288884,
+        "slug": "ixhlink-skills-quanneng-ocr-recog",
+        "source": "enterprise",
+        "stars": 1,
+        "subCategories": [
+          {
+            "key": "office-doc",
+            "name": "文档处理"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425705473,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.3"
+      },
+      {
+        "category": "data-analysis",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1788461413203,
+        "description": "提交带表头的 CSV 数据，服务端真实计算每列描述统计（均值/标准差/分位数）、数值列 Pearson 相关性矩阵与缺失值审计，输出完整数据画像报告。适用于数据摸底、报表核对、质量审计。按次计费，调用时通过微信支付完成授权。｜鸿爪派 出品",
+        "description_zh": "提交带表头的 CSV 数据，服务端真实计算每列描述统计（均值/标准差/分位数）、数值列 Pearson 相关性矩阵与缺失值审计，输出完整数据画像报告。适用于数据摸底、报表核对、质量审计。按次计费，调用时通过微信支付完成授权。｜鸿爪派 出品",
+        "downloads": 4706,
+        "homepage": "https://api.skillhub.cn/org-4zi88x86/data-analysis",
+        "iconUrl": null,
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "鸿爪派·数据统计分析",
+        "namespace": {
+          "canonicalName": "@org-4zi88x86/data-analysis",
+          "displayName": "org-4zi88x86",
+          "handle": "org-4zi88x86",
+          "publicSlug": "data-analysis"
+        },
+        "ownerName": "u_54f90838",
+        "publisher": {
+          "name": "鸿爪派科技",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "杭州鸿爪派数字科技有限公司",
+          "orgId": "org-4zi88x86"
+        },
+        "score": 2610.383847348569,
+        "slug": "data-analysis",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "data-report",
+            "name": "报表生成"
+          },
+          {
+            "key": "data-insight",
+            "name": "数据洞察"
+          },
+          {
+            "key": "data-metrics-monitoring",
+            "name": "指标监控"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425708320,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.1"
+      },
+      {
+        "category": "education",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785896525934,
+        "description": "小学学科与素养工具包，面向小学阶段（1-6年级）的语文、数学、英语、科学、艺术、体育、德育及班级管理工作，提供拼音、识字写字、口算、应用题、看图写话、阅读理解、英语启蒙、科学实验、班会活动、习惯养成、家长沟通、期末评语、成长档案等场景的辅助工具。当用户提到辅导小学生、小学拼音、口算、看图写话、生字卡片、数学思维、英语绘本、暑期规划、安全教育、节日活动、评语生成等场景时使用。",
+        "description_zh": "小学学科与素养工具包，面向小学阶段（1-6年级）的语文、数学、英语、科学、艺术、体育、德育及班级管理工作，提供拼音、识字写字、口算、应用题、看图写话、阅读理解、英语启蒙、科学实验、班会活动、习惯养成、家长沟通、期末评语、成长档案等场景的辅助工具。当用户提到辅导小学生、小学拼音、口算、看图写话、生字卡片、数学思维、英语绘本、暑期规划、安全教育、节日活动、评语生成等场景时使用。",
+        "downloads": 4663,
+        "homepage": "https://api.skillhub.cn/org-qg3ht1fx/k12-xiaoxue",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "K12-小学教育助手",
+        "namespace": {
+          "canonicalName": "@org-qg3ht1fx/k12-xiaoxue",
+          "displayName": "org-qg3ht1fx",
+          "handle": "org-qg3ht1fx",
+          "publicSlug": "k12-xiaoxue"
+        },
+        "ownerName": "u_7434a589",
+        "publisher": {
+          "name": "珠海禾方教育科技有限公司",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "珠海禾方教育科技有限公司",
+          "orgId": "org-qg3ht1fx"
+        },
+        "score": 2653.095185267362,
+        "slug": "k12-xiaoxue",
+        "source": "enterprise",
+        "stars": 6,
+        "subCategories": [
+          {
+            "key": "edu-tutoring",
+            "name": "学习辅导"
+          },
+          {
+            "key": "edu-grading",
+            "name": "作业批改"
+          },
+          {
+            "key": "edu-teaching-aid",
+            "name": "教学辅助"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425819721,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "professional",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1787986116407,
+        "description": "A股真实数据按次获取：行情/K线、研报、信号(热点/北向/龙虎榜/解禁/行业)、资金面(两融/大宗/股东户数/分红/资金流)、新闻、财务/F10、公告、打板、ETF期权、舆情、筹码分布、复权因子、估值历史、宏观(社融/PMI)。十一层·54端点·内嵌可运行代码，支付后本机脚本直连19个数据源取数。",
+        "description_zh": "A股真实数据按次获取：行情/K线、研报、信号(热点/北向/龙虎榜/解禁/行业)、资金面(两融/大宗/股东户数/分红/资金流)、新闻、财务/F10、公告、打板、ETF期权、舆情、筹码分布、复权因子、估值历史、宏观(社融/PMI)。十一层·54端点·内嵌可运行代码，支付后本机脚本直连19个数据源取数。",
+        "downloads": 4589,
+        "homepage": "https://api.skillhub.cn/zerone-iteration/a-stock-data",
+        "iconUrl": null,
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "A股投研数据全维引擎",
+        "namespace": {
+          "canonicalName": "@zerone-iteration/a-stock-data",
+          "displayName": "zerone-iteration",
+          "handle": "zerone-iteration",
+          "publicSlug": "a-stock-data"
+        },
+        "ownerName": "u_c89c5a8b",
+        "publisher": {
+          "name": "零一智能",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "零一迭代（北京）智能科技有限公司",
+          "orgId": "org-i9hk8ewl"
+        },
+        "score": 2545.4848014200134,
+        "slug": "a-stock-data",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "pro-finance",
+            "name": "金融分析"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425955464,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.0"
+      },
+      {
+        "category": "data-analysis",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "5.00"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784542402789,
+        "description": "足球赛事精算预测大脑：融合数据精算、情报研判与博弈推演，覆盖全球各级联赛的胜平负概率、总进球数、精确比分、半场走势与冷门预警，输出量化结论，支持每日自学习迭代与小众联赛适配。",
+        "description_zh": "针对足球赛事进行专业数据建模分析，基于球队历史战绩、攻防数据、Opta xG 预期进球、ELO 实力分、蒙特卡洛仿真模拟等多维度指标，输出赛事基本面解读与量化评估。本工具仅用于体育赛事数据分析、赛事复盘与战术研究，不构成任何投注建议。",
+        "downloads": 4446,
+        "homepage": "https://api.skillhub.cn/user_7b6ae6b7/football-predict-brain",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/604418/597f82be13094d32934d342f441d9afb.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "足球预测精算师",
+        "namespace": {
+          "canonicalName": "@user_7b6ae6b7/football-predict-brain",
+          "displayName": "user_7b6ae6b7",
+          "handle": "user_7b6ae6b7",
+          "publicSlug": "football-predict-brain"
+        },
+        "ownerName": "user_7b6ae6b7",
+        "score": 2466.1637452851123,
+        "slug": "football-predict-brain",
+        "source": "community",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "data-insight",
+            "name": "数据洞察"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425710095,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.2"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1782912354258,
+        "description": "生成静态图片的付费创作 Skill。当用户要文生图、图生图（基于参考图改图/换风格/续作），或做海报、插画、壁纸、头像、配图、logo 等时命中。例：「画一张橘猫」「做张产品海报」「参考这张图改动漫风」「出张壁纸」。",
+        "description_zh": "生成静态图片的付费创作 Skill。当用户要文生图、图生图（基于参考图改图/换风格/续作），或做海报、插画、壁纸、头像、配图、logo 等时命中。例：「画一张橘猫」「做张产品海报」「参考这张图改动漫风」「出张壁纸」。",
+        "downloads": 4429,
+        "homepage": "https://api.skillhub.cn/tencent-adm/workrally-image",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/549080/313e1cbb076f4e1a8859e4be46e5f774.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "WorkRally图片生成",
+        "namespace": {
+          "canonicalName": "@tencent-adm/workrally-image",
+          "displayName": "tencent-adm",
+          "handle": "tencent-adm",
+          "publicSlug": "workrally-image"
+        },
+        "ownerName": "u_8c36d985",
+        "publisher": {
+          "name": "WorkRally Team",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "腾讯科技（深圳）有限公司",
+          "orgId": "org-bv6b8qcb"
+        },
+        "score": 2501.109385400488,
+        "slug": "workrally-image",
+        "source": "enterprise",
+        "stars": 4,
+        "subCategories": [
+          {
+            "key": "design-image-gen",
+            "name": "图片生成"
+          },
+          {
+            "key": "design-poster",
+            "name": "海报设计"
+          },
+          {
+            "key": "design-visual-asset",
+            "name": "视觉素材"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426077783,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.5"
+      },
+      {
+        "category": "professional",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1787936547976,
+        "description": "专业A股板块热度分析工具。当用户需要行业板块热度分析、政策催化梳理、产业景气度判断、资金流向统计时立即出动：政策热度→产业热度→资金热度→三维交叉验证→热度可持续性判断→五步标准化分析报告。不单纯跟踪涨跌，重点判断热度真实性与可持续性，所有数据标注明确来源。温馨提示：本服务仅提供客观数据汇总与分析参考，不构成任何投资建议。",
+        "description_zh": "专业A股板块热度分析工具。当用户需要行业板块热度分析、政策催化梳理、产业景气度判断、资金流向统计时立即出动：政策热度→产业热度→资金热度→三维交叉验证→热度可持续性判断→五步标准化分析报告。不单纯跟踪涨跌，重点判断热度真实性与可持续性，所有数据标注明确来源。温馨提示：本服务仅提供客观数据汇总与分析参考，不构成任何投资建议。",
+        "downloads": 4409,
+        "homepage": "https://api.skillhub.cn/zechuan-zhuchuang/a-share-sector-heat-analyst",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/637132/77530c1667634b919b26baae6e171d72.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "A股板块热度分析专家",
+        "namespace": {
+          "canonicalName": "@zechuan-zhuchuang/a-share-sector-heat-analyst",
+          "displayName": "zechuan-zhuchuang",
+          "handle": "zechuan-zhuchuang",
+          "publicSlug": "a-share-sector-heat-analyst"
+        },
+        "ownerName": "u_74a75eb4",
+        "publisher": {
+          "name": "泽川智创",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "广州市增城区泽川筑创互联网商品销售工作室（个体工商户）",
+          "orgId": "org-r1rxv16h"
+        },
+        "score": 2445.6401153760817,
+        "slug": "a-share-sector-heat-analyst",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "pro-finance",
+            "name": "金融分析"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426016100,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.4"
+      },
+      {
+        "category": "professional",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "9.90"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1788709268985,
+        "description": "法律工具包，3大核心功能一次拥有：合同审查50+合同类型300+风险点+法律文书起草80+模板+法律咨询分类10大领域100+问题。覆盖法律事务全场景，9.9元按次调用。",
+        "description_zh": "合同审查、法律文书、法律咨询、合规检查、知识产权、劳动法律六大场景合集，按次付费调用，单次 ¥9.90。",
+        "downloads": 4364,
+        "homepage": "https://api.skillhub.cn/user_2c08c7ce/bundle-legal-tools",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "法律工具包",
+        "namespace": {
+          "canonicalName": "@user_2c08c7ce/bundle-legal-tools",
+          "displayName": "user_2c08c7ce",
+          "handle": "user_2c08c7ce",
+          "publicSlug": "bundle-legal-tools"
+        },
+        "ownerName": "user_2c08c7ce",
+        "score": 2420.6789438650985,
+        "slug": "bundle-legal-tools",
+        "source": "community",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "pro-legal",
+            "name": "法律合规"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425678720,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.3"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1784343743161,
+        "description": "免注册、免 API Key 的 AI 音乐 / 配乐生成。在对话里描述主题、风格、情绪，或直接给出歌词，即可生成可试听、可下载的歌曲或纯音乐 BGM，一次出 2 首候选。适合短视频 / Vlog 配乐、播客片头片尾、游戏与广告配乐、品牌歌、活动主题曲、歌词成曲等专业创作场景。音乐能力由 Suno 提供（suno_v5.5），锁定双轨输出。微信支付 ¥1/次，付费即取得商业使用授权，可用于变现与商用。触发词：写歌、AI写歌、生成音乐、作曲、歌词成曲、配乐、做个配乐、BGM、背景音乐、片头音乐、短视频配乐、Vlog配乐、播客配乐、游戏配乐、广告歌、品牌歌。",
+        "description_zh": "免注册、免 API Key 的 AI 音乐 / 配乐生成。在对话里描述主题、风格、情绪，或直接给出歌词，即可生成可试听、可下载的歌曲或纯音乐 BGM，一次出 2 首候选。适合短视频 / Vlog 配乐、播客片头片尾、游戏与广告配乐、品牌歌、活动主题曲、歌词成曲等专业创作场景。音乐能力由 Suno 提供（suno_v5.5），锁定双轨输出。微信支付 ¥1/次，付费即取得商业使用授权，可用于变现与商用。触发词：写歌、AI写歌、生成音乐、作曲、歌词成曲、配乐、做个配乐、BGM、背景音乐、片头音乐、短视频配乐、Vlog配乐、播客配乐、游戏配乐、广告歌、品牌歌。",
+        "downloads": 4346,
+        "homepage": "https://api.skillhub.cn/beatra-ai/ai-music-bgm-gen",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "AI音乐生成与配乐BGM",
+        "namespace": {
+          "canonicalName": "@beatra-ai/ai-music-bgm-gen",
+          "displayName": "beatra-ai",
+          "handle": "beatra-ai",
+          "publicSlug": "ai-music-bgm-gen"
+        },
+        "ownerName": "u_319b171b",
+        "publisher": {
+          "name": "AI气泡音乐",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "乐萱同行科技（深圳）有限公司",
+          "orgId": "org-0bqts5ar"
+        },
+        "score": 2443.9760372753494,
+        "slug": "ai-music-bgm-gen",
+        "source": "enterprise",
+        "stars": 3,
+        "subCategories": [
+          {
+            "key": "design-audio",
+            "name": "音频处理"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425705340,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.1"
+      },
+      {
+        "category": "office-efficiency",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "1.00"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1787551374803,
+        "description": "办公效率一个技能全搞定——文档、表格、PPT、邮件、会议、自动化，新手到专家分层适配。",
+        "description_zh": "Excel 公式不会、PPT 拿不出手、会议纪要没人记？本技能专注文档/表格/演示/邮件/云文档/会议/转换/自动化八大模块（不含专业设计排版与建模），用即抄即用模板+跨工具等价适配（WPS/Office/云文档），产出可复制公式、规范模板、纪要模板；敏感文档脱敏、宏脚本先审查；不用它，每次做表 2 小时、改格式返工 3 遍；现在告诉我你要做什么文档/表格/PPT，给你能直接用的成品。（高频需求：公文写作、报销表单）",
+        "downloads": 4239,
+        "homepage": "https://api.skillhub.cn/user_ff29c4df/office-king",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/62f73a9b-1aca-4f8e-921d-6102e258c768.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "办公效率全能手",
+        "namespace": {
+          "canonicalName": "@user_ff29c4df/office-king",
+          "displayName": "user_ff29c4df",
+          "handle": "user_ff29c4df",
+          "publicSlug": "office-king"
+        },
+        "ownerName": "user_ff29c4df",
+        "score": 2351.3423563345905,
+        "slug": "office-king",
+        "source": "community",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "office-doc",
+            "name": "文档处理"
+          },
+          {
+            "key": "office-spreadsheet",
+            "name": "表格处理"
+          },
+          {
+            "key": "office-automation",
+            "name": "流程自动化"
+          }
+        ],
+        "tags": [
+          "excel",
+          "ocr",
+          "pdf",
+          "ppt",
+          "word",
+          "wps",
+          "会议纪要",
+          "公文写作",
+          "办公自动化",
+          "报销",
+          "日程",
+          "格式转换",
+          "模板",
+          "腾讯文档",
+          "行政文书",
+          "表单",
+          "邮件",
+          "飞书"
+        ],
+        "updated_at": 1792426017599,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "2.2.0"
+      },
+      {
+        "category": "content-creation",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1785398538609,
+        "description": "接收一个选题信息，分别按知乎（数据驱动深度分析）、微信公众号（个人叙事情感共鸣）、小红书（精炼干货实操导向）三平台风格生成完整内容。每个平台使用专属写作模板，自动适配字量要求与平台调性。",
+        "description_zh": "接收一个选题信息，分别按知乎（数据驱动深度分析）、微信公众号（个人叙事情感共鸣）、小红书（精炼干货实操导向）三平台风格生成完整内容。每个平台使用专属写作模板，自动适配字量要求与平台调性。",
+        "downloads": 4223,
+        "homepage": "https://api.skillhub.cn/org-huhheyk0/content-writer",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "三平台差异化写作",
+        "namespace": {
+          "canonicalName": "@org-huhheyk0/content-writer",
+          "displayName": "org-huhheyk0",
+          "handle": "org-huhheyk0",
+          "publicSlug": "content-writer"
+        },
+        "ownerName": "u_cf4b38ad",
+        "publisher": {
+          "name": "宇之然",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "北京宇之然科技中心（个体工商户）",
+          "orgId": "org-huhheyk0"
+        },
+        "score": 2342.4672731306855,
+        "slug": "content-writer",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "content-article",
+            "name": "文章写作"
+          },
+          {
+            "key": "content-social-media",
+            "name": "自媒体运营"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792425219710,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.3"
+      },
+      {
+        "category": "data-analysis",
+        "channelPricing": {
+          "currency": "CNY",
+          "payChannel": "alipay",
+          "price": "2.99"
+        },
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1787551501270,
+        "description": "数据分析一个技能全搞定——采集、清洗、分析、可视化、报表、决策，新手到专家分层适配。",
+        "description_zh": "数据拿不到、表太乱、领导问数答不上？本技能专注采集/清洗/分析/可视化/报表/监测/决策八大模块（不含数据仓库搭建与建模算法开发），用\"数据→洞察→建议\"闭环一次交付，产出清洗后数据表、可视化图表、日报周报模板；禁止编造数据、爬虫守合规、相关性≠因果；不用它，凭感觉决策、报表靠拼凑，数据里的答案你看不到；现在把数据或问题给我，给你完整分析闭环。（增补触发词：生成 HTML 报告、交互式数据报告、数据质量检查、数据清洗前体检、KPI 看板、预测、AB测试、A/B测试、指标体系、经营分析、数据质量）用户会这样说：这份数据帮我看看有什么问题、能得出什么结论；领导问我要一个数，我该怎么答。",
+        "downloads": 4192,
+        "homepage": "https://api.skillhub.cn/user_ff29c4df/data-king",
+        "iconUrl": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "alipay",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "数据分析全能师",
+        "namespace": {
+          "canonicalName": "@user_ff29c4df/data-king",
+          "displayName": "user_ff29c4df",
+          "handle": "user_ff29c4df",
+          "publicSlug": "data-king"
+        },
+        "ownerName": "user_ff29c4df",
+        "score": 2325.27179942312,
+        "slug": "data-king",
+        "source": "community",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "data-visualization",
+            "name": "数据可视化"
+          },
+          {
+            "key": "data-report",
+            "name": "报表生成"
+          },
+          {
+            "key": "data-insight",
+            "name": "数据洞察"
+          }
+        ],
+        "tags": [
+          "a/b测试",
+          "ab测试",
+          "html分析报告",
+          "kpi卡片",
+          "python",
+          "sql",
+          "可视化",
+          "报表",
+          "指标体系",
+          "指标监控",
+          "数据分析",
+          "数据清洗",
+          "数据看板",
+          "数据质量",
+          "数据质量检查",
+          "数据采集",
+          "竞品数据",
+          "经营分析",
+          "趋势分析",
+          "预测"
+        ],
+        "updated_at": 1792426017609,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "2.4.0"
+      },
+      {
+        "category": "design-media",
+        "claim_state": "unclaimed",
+        "claimable": false,
+        "claimed_user_handle": null,
+        "created_at": 1788503810979,
+        "description": "把一句话需求，变成能打开就用的高质量网页与 UI。当你要做落地页、产品官网、活动页、后台界面、个人主页时立即出动：先做风格定位，再搭信息架构，产出高保真页面与可运行 HTML/CSS/设计风格仅供参考，最终以你的品牌规范与合规要求为准。",
+        "description_zh": "把一句话需求，变成能打开就用的高质量网页与 UI。当你要做落地页、产品官网、活动页、后台界面、个人主页时立即出动：先做风格定位，再搭信息架构，产出高保真页面与可运行 HTML/CSS/设计风格仅供参考，最终以你的品牌规范与合规要求为准。",
+        "downloads": 4172,
+        "homepage": "https://api.skillhub.cn/zechuan-zhuchuang/web-ui-design-assistant",
+        "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/637132/c70eb9948ad94a03a27cb425ca0e67bb.png",
+        "installs": 0,
+        "isServiceized": false,
+        "labels": {
+          "pricing_type": "paid",
+          "requires_api_key": "false"
+        },
+        "last_synced_at": null,
+        "name": "网页UI设计助手",
+        "namespace": {
+          "canonicalName": "@zechuan-zhuchuang/web-ui-design-assistant",
+          "displayName": "zechuan-zhuchuang",
+          "handle": "zechuan-zhuchuang",
+          "publicSlug": "web-ui-design-assistant"
+        },
+        "ownerName": "u_74a75eb4",
+        "publisher": {
+          "name": "泽川智创",
+          "logoUrl": null,
+          "verified": true,
+          "certifiedName": "广州市增城区泽川筑创互联网商品销售工作室（个体工商户）",
+          "orgId": "org-r1rxv16h"
+        },
+        "score": 2314.1779454182383,
+        "slug": "web-ui-design-assistant",
+        "source": "enterprise",
+        "stars": 0,
+        "subCategories": [
+          {
+            "key": "design-ui",
+            "name": "UI 设计"
+          }
+        ],
+        "tags": null,
+        "updated_at": 1792426017756,
+        "upstream_owner_login": null,
+        "upstream_url": null,
+        "verified": false,
+        "version": "1.0.4"
+      }
+    ],
+    "total": 19974
+  },
+  "message": "success"
+}

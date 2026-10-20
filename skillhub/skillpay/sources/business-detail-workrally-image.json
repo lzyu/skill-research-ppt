@@ -1,0 +1,99 @@
+{
+  "contentZhAvailable": false,
+  "latestVersion": {
+    "changelog": "New version",
+    "createdAt": 1783666788954,
+    "version": "1.0.5"
+  },
+  "namespace": {
+    "canonicalName": "@tencent-adm/workrally-image",
+    "displayName": "tencent-adm",
+    "handle": "tencent-adm",
+    "publicSlug": "workrally-image"
+  },
+  "owner": {
+    "displayName": "measonsui(隋铭轩)",
+    "handle": "u_8c36d985",
+    "image": null
+  },
+  "pricing": {
+    "billingType": "per_call",
+    "currency": "CNY",
+    "freeQuotaDaily": null,
+    "freeQuotaMonthly": null,
+    "pricePerCall": "0.36",
+    "pricingDescription": null,
+    "pricingMode": "unified"
+  },
+  "publisher": {
+    "name": "WorkRally Team",
+    "logoUrl": null,
+    "verified": true,
+    "certifiedName": "腾讯科技（深圳）有限公司",
+    "orgId": "org-bv6b8qcb"
+  },
+  "securityReports": {
+    "keen": {
+      "reportUrl": "https://tix.qq.com/search/skill?keyword=23c0ea6650fea078c312d15778fdaf61",
+      "status": "benign",
+      "statusText": "安全，无风险"
+    },
+    "sanbu": {
+      "reportUrl": "https://static.cloudsec.tencent.com/html-report-v2/2026/07/10/672407_d284bb6262cba367dd2ef04aa5a3be34.html?q-sign-algorithm=sha1&q-ak=REDACTED&q-sign-time=1783666935%3B1815202935&q-key-time=1783666935%3B1815202935&q-header-list=host&q-url-param-list=&q-signature=cb527db848e6a3870f6f44dd895d324703654bc5",
+      "status": "benign",
+      "statusText": "安全，无风险"
+    }
+  },
+  "skill": {
+    "authorVerifiedHandle": null,
+    "category": "design-media",
+    "claim_state": "unclaimed",
+    "claimable": false,
+    "claimed_user_handle": null,
+    "createdAt": 1782912354258,
+    "displayName": "WorkRally图片生成",
+    "ext": null,
+    "githubAuthorLogin": null,
+    "iconUrl": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/549080/313e1cbb076f4e1a8859e4be46e5f774.png",
+    "isAuthorVerified": false,
+    "isServiceized": false,
+    "labels": {
+      "pricing_type": "paid",
+      "requires_api_key": "false"
+    },
+    "last_synced_at": null,
+    "overviewMd": "",
+    "slug": "workrally-image",
+    "source": "enterprise",
+    "sourceUrl": null,
+    "stats": {
+      "comments": 0,
+      "downloads": 4429,
+      "installs": 0,
+      "stars": 4,
+      "versions": 0
+    },
+    "subCategories": [
+      {
+        "key": "design-image-gen",
+        "name": "图片生成"
+      },
+      {
+        "key": "design-poster",
+        "name": "海报设计"
+      },
+      {
+        "key": "design-visual-asset",
+        "name": "视觉素材"
+      }
+    ],
+    "summary": "生成静态图片的付费创作 Skill。当用户要文生图、图生图（基于参考图改图/换风格/续作），或做海报、插画、壁纸、头像、配图、logo 等时命中。例：「画一张橘猫」「做张产品海报」「参考这张图改动漫风」「出张壁纸」。",
+    "summary_zh": "",
+    "tags": {},
+    "updatedAt": 1792426077783,
+    "upstream_owner_login": null,
+    "upstream_url": null,
+    "verified": false
+  },
+  "slug": "workrally-image"
+}

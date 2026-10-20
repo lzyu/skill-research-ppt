@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960">
+  <style>
+    rect, circle { fill: none !important; stroke: #202020 !important; }
+    path { stroke: #202020 !important; }
+    text { fill: #202020 !important; }
+    svg > rect:first-of-type { fill: none !important; stroke: none !important; }
+  </style>
+  <rect width="1600" height="960" fill="#F6F4EE"/>
+  <text x="80" y="82" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="20" fill="#77736B" letter-spacing="3">FIGURE 04 / COMMERCIAL LOOP</text>
+  <text x="80" y="142" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="42" font-weight="700" fill="#171717">从一次付款，到可以持续经营的 Skill</text>
+  <circle cx="800" cy="535" r="285" fill="none" stroke="#D2CEC4" stroke-width="2" stroke-dasharray="7 9"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif">
+    <rect x="640" y="395" width="320" height="210" rx="28" fill="#171717"/>
+    <text x="800" y="452" text-anchor="middle" font-size="18" fill="#AAA69C">SKILLPAY</text>
+    <text x="800" y="500" text-anchor="middle" font-size="30" font-weight="700" fill="#FFF">能力商业化层</text>
+    <text x="800" y="548" text-anchor="middle" font-size="20" fill="#D7D4CD">支付 · 权益 · 保护 · 交付</text>
+    <text x="800" y="580" text-anchor="middle" font-size="20" fill="#D7D4CD">一次性 · 订阅 · 试用转化</text>
+    <rect x="165" y="210" width="330" height="142" rx="22" fill="#E8EDF5" stroke="#8092AD" stroke-width="2"/>
+    <text x="205" y="256" font-size="18" fill="#52657F">01 / DISTRIBUTE</text><text x="205" y="301" font-size="28" font-weight="700" fill="#171717">开发者自主分发</text>
+    <rect x="1105" y="210" width="330" height="142" rx="22" fill="#FBE9E4" stroke="#C77A63" stroke-width="2"/>
+    <text x="1145" y="256" font-size="18" fill="#A84F38">02 / TRY</text><text x="1145" y="301" font-size="28" font-weight="700" fill="#171717">免费试用</text>
+    <rect x="1105" y="665" width="330" height="142" rx="22" fill="#FFF" stroke="#B9B5AB" stroke-width="2"/>
+    <text x="1145" y="711" font-size="18" fill="#77736B">03 / PAY</text><text x="1145" y="756" font-size="28" font-weight="700" fill="#171717">一次性购买 / 订阅制</text>
+    <rect x="165" y="665" width="330" height="142" rx="22" fill="#E8EFE9" stroke="#7D9C86" stroke-width="2"/>
+    <text x="205" y="711" font-size="18" fill="#557260">04 / IMPROVE</text><text x="205" y="756" font-size="28" font-weight="700" fill="#171717">持续使用与更新</text>
+  </g>
+  <g fill="none" stroke="#171717" stroke-width="3">
+    <path d="M500 275C725 175 890 175 1092 275"/><path d="M1077 267L1092 275L1078 285"/>
+    <path d="M1370 365C1440 470 1440 565 1370 652"/><path d="M1369 635L1370 652L1355 644"/>
+    <path d="M1095 745C860 860 720 860 508 745"/><path d="M523 754L508 745L523 736"/>
+    <path d="M230 652C160 560 160 460 230 365"/><path d="M230 382L230 365L245 373"/>
+  </g>
+  <text x="800" y="895" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif" font-size="20" fill="#77736B">分发由开发者掌握，支付宝 SkillPay 承接试用、支付、权益与持续履约。</text>
+</svg>

@@ -1,0 +1,65 @@
+{
+  "retrieved_on": "2026-10-20 Asia/Shanghai",
+  "sources": [
+    {
+      "file": "business-home.html",
+      "url": "https://skillhub.cn/",
+      "sha256": "6075be1a6e18893fe65a9e8dfd939e62ea5122f09afee0ead479f6c8990caab3"
+    },
+    {
+      "file": "business-skill-hub.cpdwg332.js",
+      "url": "https://cloudcache.tencent-cloud.com/qcloud/tea/app/skillhub/assets/skill-hub.cpdwg332.js?max_age=31536000",
+      "sha256": "82a1fee3d94a51c9f63ee4674f60b12f6501b0c27d948eb08a6fe6be5d5466e2"
+    },
+    {
+      "file": "business-pay-category.json",
+      "url": "https://api.skillhub.cn/api/skills?category=pay-skill&pageSize=50&sortBy=downloads&order=desc",
+      "sha256": "7d5b93a501447f73630fe3796390205d72337ebb717e58ffd8ffe5de29d49c9d"
+    },
+    {
+      "file": "business-detail-workrally-image.json",
+      "url": "https://api.skillhub.cn/api/v1/skills/workrally-image",
+      "sha256": "3085448a0183a8b4237ac27f75b1ed681058fa3f15160b74cf4f0eaa0fb2655c"
+    },
+    {
+      "file": "business-detail-xique-tender-pay.json",
+      "url": "https://api.skillhub.cn/api/v1/skills/xique-tender-pay",
+      "sha256": "bc3307df5d6ebcceead557d380af641ee6274db5869800c1c75bb54799adf67c"
+    },
+    {
+      "file": "business-detail-zlbx-bidding-payskill.json",
+      "url": "https://api.skillhub.cn/api/v1/skills/zlbx-bidding-payskill",
+      "sha256": "88ad4b7003edd7ac012343278f15a81ce331bcb932395352849efa96047a3b0c"
+    },
+    {
+      "file": "business-skill-workrally-image.txt",
+      "url": "https://api.skillhub.cn/api/v1/skills/workrally-image/file?path=SKILL.md",
+      "sha256": "e48ba98e1cdde1c9edb5c7c30241f948b5eef96ba4baa5a77da8d15a7c5e8b5d"
+    },
+    {
+      "file": "business-skill-xique-tender-pay.txt",
+      "url": "https://api.skillhub.cn/api/v1/skills/xique-tender-pay/file?path=SKILL.md",
+      "sha256": "71ef963e66d3b0972982c7e02aa508aee7740ada0471d0d241bb631ca6851d6c"
+    },
+    {
+      "file": "business-official-readme.md",
+      "url": "https://github.com/Tencent/skillhub",
+      "sha256": "72e805b9624ee623d288bc68e1233d6406fb245d80a5020c160fbae1a78e5d67"
+    },
+    {
+      "file": "business-open-api.md",
+      "url": "https://github.com/Tencent/skillhub/blob/main/docs/README.md",
+      "sha256": "da24ef5db3c353e579b2b788ccc8800686791439de0a4c1e888e3e8900ed0341"
+    },
+    {
+      "file": "business-api-apply.md",
+      "url": "https://github.com/Tencent/skillhub/blob/main/docs/apply.md",
+      "sha256": "21110c2a363a45d4f2a6009ae6f611610dcc52cce80f057d802eadd87477ac9f"
+    },
+    {
+      "file": "business-pay-page.html",
+      "url": "https://www.skillhub.cn/skillpay",
+      "sha256": "a5a9334b72c5f73a529560da71770f6f7130a6acf02466db5ca1ffbab78bff50"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+const a="商品审核通过后会生成用于分发的购买指令",e="商品信息不完整，暂时无法生成购买指令";function t(n){return String(n?.purchaseCommand||n?.latestPurchaseCommand||n?.purchaseCode||"").trim()}function o(n){const r=String(n||"").trim();return r===a||r===e?"":r}function c(n){return t(n)||a}function m(n){return t(n)||e}export{c as a,o as b,m as g};

@@ -1,0 +1,19 @@
+{
+  "all": "https://api.skillhub.cn/api/skills?pageSize=1",
+  "paid": "https://api.skillhub.cn/api/skills?pageSize=1&labels=pricing_type%3Apaid",
+  "not-paid": "https://api.skillhub.cn/api/skills?pageSize=1&labels=pricing_type%3A%21paid",
+  "key-true": "https://api.skillhub.cn/api/skills?pageSize=1&labels=requires_api_key%3Atrue",
+  "key-false": "https://api.skillhub.cn/api/skills?pageSize=1&labels=requires_api_key%3Afalse",
+  "key-not-true": "https://api.skillhub.cn/api/skills?pageSize=1&labels=requires_api_key%3A%21true",
+  "key-not-false": "https://api.skillhub.cn/api/skills?pageSize=1&labels=requires_api_key%3A%21false",
+  "paid-key-true": "https://api.skillhub.cn/api/skills?pageSize=1&labels=pricing_type%3Apaid%2Crequires_api_key%3Atrue",
+  "paid-key-false": "https://api.skillhub.cn/api/skills?pageSize=1&labels=pricing_type%3Apaid%2Crequires_api_key%3Afalse",
+  "pay-category": "https://api.skillhub.cn/api/skills?pageSize=1&category=pay-skill",
+  "pay-category-paid": "https://api.skillhub.cn/api/skills?pageSize=1&category=pay-skill&labels=pricing_type%3Apaid",
+  "pay-category-key-true": "https://api.skillhub.cn/api/skills?pageSize=1&category=pay-skill&labels=requires_api_key%3Atrue",
+  "paid-sample": "https://api.skillhub.cn/api/skills?pageSize=100&labels=pricing_type%3Apaid&sortBy=downloads&order=desc",
+  "key-true-sample": "https://api.skillhub.cn/api/skills?pageSize=30&labels=requires_api_key%3Atrue&sortBy=downloads&order=desc",
+  "all-sample": "https://api.skillhub.cn/api/skills?pageSize=100&sortBy=downloads&order=desc",
+  "homepage": "https://skillhub.cn/",
+  "skills-api-doc": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/skills.md"
+}

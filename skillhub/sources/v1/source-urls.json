@@ -1,0 +1,11 @@
+{
+  "api-downloads.json": "https://api.skillhub.cn/api/skills?sortBy=downloads&order=desc&pageSize=50",
+  "categories.json": "https://api.skillhub.cn/api/v1/categories",
+  "release-guide.md": "https://skillhub.cn/ai/release.md",
+  "skills-api.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/skills.md",
+  "files-api.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/api/files.md",
+  "cli-install-script.txt": "https://skillhub.cn/install/install.sh",
+  "homepage.html": "https://skillhub.cn/",
+  "api-readme.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/docs/README.md",
+  "publishers-guide.md": "https://raw.githubusercontent.com/Tencent/skillhub/main/README.md"
+}
