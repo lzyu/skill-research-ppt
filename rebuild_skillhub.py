@@ -93,9 +93,9 @@ def build_capabilities(s, W, H):
 
 def build_ecosystem(s, W, H):
     add_text(s, 0.035 * W, 0.040 * H, 0.93 * W, 0.055 * H,
-             "SkillHub 生态画像：Top1000 里，开发类拿走 21.8% 下载，付费标签仅 0.9%",
+             "SkillHub 生态画像：全站付费 10%、API Key 19%，分类比头部更均衡",
              24, TITLE_RED, True)
-    add_text(s, 0.035 * W, 0.110 * H, 0.40 * W, 0.026 * H, "生态画像：Top1000 下载头部", 12, INK, True)
+    add_text(s, 0.035 * W, 0.110 * H, 0.40 * W, 0.026 * H, "生态画像：来源/消费看 Top1000，分类/付费看全站", 12, INK, True)
 
     # 01 supply sources
     add_text(s, 0.035 * W, 0.150 * H, 0.44 * W, 0.024 * H, "谁在供给：ClawHub 数量最多，社区拿走最多下载", 10.5, INK, True)
@@ -112,33 +112,33 @@ def build_ecosystem(s, W, H):
              "Top1000 里 ClawHub 条数最多，但下载份额低于社区。", 8.5, LIGHT_GRAY, False, spacing=1.15)
 
     # 02 category mix
-    add_text(s, 0.510 * W, 0.150 * H, 0.44 * W, 0.024 * H, "分类：开发类少而重，AI Agent 多而散", 10.5, INK, True)
-    add_text(s, 0.510 * W, 0.174 * H, 0.44 * W, 0.020 * H, "数量占比 / 下载占比", 8.5, LIGHT_GRAY, False)
+    add_text(s, 0.510 * W, 0.150 * H, 0.44 * W, 0.024 * H, "分类：全站结构更均衡，商业/专业/AI/开发居前", 10.5, INK, True)
+    add_text(s, 0.510 * W, 0.174 * H, 0.44 * W, 0.020 * H, "全站 200,403 条 · 条数占比", 8.5, LIGHT_GRAY, False)
     cats = [
-        ("开发编程", 7.2, 21.8), ("AI Agent", 15.8, 15.4), ("办公效率", 12.7, 10.4),
-        ("知识管理", 6.8, 9.5), ("内容创作", 11.8, 9.2), ("设计多媒体", 12.3, 8.1),
+        ("商业运营", 15.2), ("专业服务", 11.6), ("AI Agent", 11.2),
+        ("开发编程", 10.6), ("内容创作", 9.4), ("设计多媒体", 7.4),
     ]
-    for i, (name, count_pct, dl_pct) in enumerate(cats):
+    for i, (name, count_pct) in enumerate(cats):
         y = 0.212 * H + i * 0.030 * H
         add_text(s, 0.510 * W, y, 0.090 * W, 0.020 * H, name, 9, GRAY, False)
-        add_bar(s, 0.605 * W, y + 0.004 * H, 0.115 * W, 0.010 * H, count_pct / 15.8,
+        add_bar(s, 0.605 * W, y + 0.004 * H, 0.115 * W, 0.010 * H, count_pct / 15.2,
                 RED if i == 0 else RGBColor(0xC9, 0x7A, 0x80))
-        add_text(s, 0.730 * W, y, 0.110 * W, 0.020 * H, f"{count_pct}% / {dl_pct}%", 8.5, INK, False)
+        add_text(s, 0.730 * W, y, 0.060 * W, 0.020 * H, f"{count_pct}%", 8.5, INK, False)
     add_text(s, 0.510 * W, 0.405 * H, 0.44 * W, 0.022 * H,
-             "开发类只占 7.2% 供给，却拿走 21.8% 下载；AI Agent 供给最多，下载占比略低。", 8.5, LIGHT_GRAY, False, spacing=1.05)
+             "其余 6 类合计 34.7%；12 个内容分类基本覆盖全站（10 条未挂类目）。", 8.5, LIGHT_GRAY, False, spacing=1.05)
     add_text(s, 0.510 * W, 0.432 * H, 0.44 * W, 0.020 * H,
-             "其余 6 类合计：33.4% 供给 / 25.6% 下载。", 8.5, LIGHT_GRAY, False)
+             "对比 Top1000：AI Agent 15.8%、开发 7.2%，头部结构与全站不同。", 8.5, LIGHT_GRAY, False)
 
     # 03 paid + API key
-    add_text(s, 0.035 * W, 0.520 * H, 0.44 * W, 0.024 * H, "付费与 API Key：API Key 已三成，付费仍在边缘", 10.5, INK, True)
-    add_text(s, 0.035 * W, 0.544 * H, 0.44 * W, 0.020 * H, "Top1000 条 · 条数占比 / 下载占比", 8.5, LIGHT_GRAY, False)
-    add_text(s, 0.035 * W, 0.578 * H, 0.115 * W, 0.040 * H, "0.9%", 18, RED, True)
-    add_text(s, 0.035 * W, 0.615 * H, 0.150 * W, 0.020 * H, "PaySkill（9 条）", 8.5, GRAY, False)
-    add_text(s, 0.240 * W, 0.578 * H, 0.115 * W, 0.040 * H, "30.7%", 18, RED, True)
-    add_text(s, 0.240 * W, 0.615 * H, 0.150 * W, 0.020 * H, "API Key（307 条）", 8.5, GRAY, False)
-    add_text(s, 0.035 * W, 0.655 * H, 0.44 * W, 0.075 * H,
-             "付费下载占比 0.8%；API Key 下载占比 21.6%；付费且 API Key 仅 1 条；\n"
-             "Pay Skill 分类在 Top1000 为 0 条。付费标签按 pricing_type=paid/alipay 统计。",
+    add_text(s, 0.035 * W, 0.520 * H, 0.44 * W, 0.024 * H, "付费与 API Key：全站 10.0% / 19.3%，头部结构相反", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.544 * H, 0.44 * W, 0.020 * H, "全站 200,403 条 · 条数占比", 8.5, LIGHT_GRAY, False)
+    add_text(s, 0.035 * W, 0.578 * H, 0.115 * W, 0.040 * H, "10.0%", 18, RED, True)
+    add_text(s, 0.035 * W, 0.615 * H, 0.150 * W, 0.020 * H, "Pay Skill（20,125 条）", 8.5, GRAY, False)
+    add_text(s, 0.240 * W, 0.578 * H, 0.115 * W, 0.040 * H, "19.3%", 18, RED, True)
+    add_text(s, 0.240 * W, 0.615 * H, 0.150 * W, 0.020 * H, "API Key（38,646 条）", 8.5, GRAY, False)
+    add_text(s, 0.035 * W, 0.655 * H, 0.44 * W, 0.085 * H,
+             "付费标签 17,123（8.5%）、支付宝 2,901（1.4%）；Pay Skill 且 API Key 331 条。\n"
+             "Top1000：付费 0.9%、API Key 30.7%；Pay Skill 是多标签分类，不计入左侧 12 类。",
              8.5, LIGHT_GRAY, False, spacing=1.15)
 
     # 04 concentration
@@ -153,7 +153,7 @@ def build_ecosystem(s, W, H):
              "Top1 占 5.0%，Top3 占 14.7%；下载含 CLI/镜像拉取，不等于安装或使用。", 8.5, LIGHT_GRAY, False, spacing=1.1)
 
     add_text(s, 0.035 * W, 0.855 * H, 0.93 * W, 0.028 * H,
-             "读法：ClawHub 撑数量，社区撑下载，开发类最重；付费仍在边缘，API Key 已是三成供给。", 10, INK, False)
+             "读法：全站付费 10%、API Key 19%，但头部下载集中在编程；Top1000 付费标签只有 0.9%。", 10, INK, False)
 
 
 def main():
