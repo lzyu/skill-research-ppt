@@ -93,23 +93,23 @@ def build_capabilities(s, W, H):
 
 def build_ecosystem(s, W, H):
     add_text(s, 0.035 * W, 0.040 * H, 0.93 * W, 0.055 * H,
-             "SkillHub 生态画像：全站社区 68.4%、ClawHub 31.6%，企业是交叉标签",
+             "SkillHub 生态画像：全站个人 34.0%、企业 34.4%、镜像 31.6%",
              24, TITLE_RED, True)
     add_text(s, 0.035 * W, 0.108 * H, 0.90 * W, 0.024 * H,
-             "全站社区 + ClawHub 覆盖全站，企业 34.9% 叠加；Top5000 里个人下载份额最高，企业单条最强。", 10, GRAY, False)
+             "全站个人/企业/镜像约三分；Top5000 镜像 62.4%，企业单条最强，付费只有 1%。", 10, GRAY, False)
 
-    # 01 who supplies (full site; enterprise is an overlay)
-    add_text(s, 0.035 * W, 0.145 * H, 0.44 * W, 0.024 * H, "谁在供给：社区 13.7 万，ClawHub 6.3 万，企业 7.0 万", 10.5, INK, True)
-    add_text(s, 0.035 * W, 0.168 * H, 0.44 * W, 0.020 * H, "全站 200,419 条 · 来源计数（可重叠）", 8.5, LIGHT_GRAY, False)
-    src = [("社区", 137017, 68.4, RED), ("ClawHub", 63402, 31.6, SLATE), ("企业（交叉）", 69938, 34.9, RGBColor(0xCF, 0xD4, 0xDA))]
+    # 01 who supplies (full-site split: individual / enterprise / mirror)
+    add_text(s, 0.035 * W, 0.145 * H, 0.44 * W, 0.024 * H, "谁在供给：个人 34.0%、企业 34.4%、镜像 31.6%", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.168 * H, 0.44 * W, 0.020 * H, "全站 200,419 条 · 条数占比", 8.5, LIGHT_GRAY, False)
+    src = [("个人", 68158, 34.0, RED), ("企业", 68859, 34.4, SLATE), ("镜像 ClawHub", 63402, 31.6, RGBColor(0xCF, 0xD4, 0xDA))]
     for i, (name, count, pct, color) in enumerate(src):
         y = 0.200 * H + i * 0.030 * H
         add_text(s, 0.035 * W, y, 0.095 * W, 0.020 * H, name, 9.5, GRAY, False)
-        add_bar(s, 0.132 * W, y + 0.004 * H, 0.145 * W, 0.010 * H, pct / 68.4, color)
+        add_bar(s, 0.132 * W, y + 0.004 * H, 0.145 * W, 0.010 * H, pct / 34.4, color)
         add_text(s, 0.288 * W, y, 0.165 * W, 0.020 * H, f"{count:,} / {pct}%", 8.5, INK, False)
     add_text(s, 0.035 * W, 0.295 * H, 0.44 * W, 0.048 * H,
-             "社区 + ClawHub = 200,419，正好覆盖全站；\n"
-             "企业是叠加在两者上的交叉标签，三者不能相加。", 8.5, LIGHT_GRAY, False, spacing=1.1)
+             "按来源标签折算：个人 = 社区 137,017 − 企业 68,859；\n"
+             "企业 = 1,999 家 publishedSkillCount 合计；镜像 = ClawHub 63,402。", 8.5, LIGHT_GRAY, False, spacing=1.1)
 
     # 02 category (full site)
     add_text(s, 0.510 * W, 0.145 * H, 0.44 * W, 0.024 * H, "分类：全站商业 / 专业 / AI / 开发居前", 10.5, INK, True)
@@ -163,7 +163,7 @@ def build_ecosystem(s, W, H):
              8.5, LIGHT_GRAY, False, spacing=1.1)
 
     add_text(s, 0.035 * W, 0.845 * H, 0.93 * W, 0.028 * H,
-             "读法：全站社区 + ClawHub 覆盖全站，企业 34.9% 是叠加；Top5000 里企业单条最强，付费只有 1%。", 10, INK, False)
+             "读法：全站个人/企业/镜像约三分；Top5000 镜像 62.4%，企业单条最强，付费只有 1%。", 10, INK, False)
 
 
 def main():
