@@ -1,4 +1,4 @@
-"""Rebuild page 1: generic Skill asset lifecycle + a Zhiguoyuan/CodeArts example."""
+"""Rebuild page 1: concrete actions + checks + outputs for the Skill lifecycle."""
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.dml import MSO_LINE_DASH_STYLE
@@ -6,7 +6,7 @@ from pptx.enum.shapes import MSO_CONNECTOR, MSO_SHAPE
 from pptx.enum.text import MSO_ANCHOR, PP_ALIGN
 from pptx.util import Pt
 
-from redesign_lifecycle import add_bullets, add_rect, add_text, set_run
+from redesign_lifecycle import add_rect, add_text, set_run
 
 SRC = "skill-final-v1.pptx"
 RED = RGBColor(0xB5, 0x33, 0x3B)
@@ -19,6 +19,25 @@ BAND = RGBColor(0xF7, 0xF8, 0xFA)
 WHITE = RGBColor(0xFF, 0xFF, 0xFF)
 
 
+def add_actions(s, x, y, w, h, actions):
+    box = s.shapes.add_textbox(int(x), int(y), int(w), int(h))
+    tf = box.text_frame
+    tf.word_wrap = True
+    tf.margin_left = 0
+    tf.margin_right = 0
+    tf.margin_top = 0
+    tf.margin_bottom = 0
+    for i, action in enumerate(actions):
+        p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
+        p.line_spacing = 1.0
+        p.space_after = Pt(3)
+        r1 = p.add_run(); r1.text = "· "
+        set_run(r1, 10, RED, True)
+        r2 = p.add_run(); r2.text = action
+        set_run(r2, 10, INK, False)
+    return box
+
+
 def main():
     prs = Presentation(SRC)
     W, H = prs.slide_width, prs.slide_height
@@ -26,60 +45,70 @@ def main():
     for sh in list(s.shapes):
         sh._element.getparent().remove(sh._element)
 
-    # Generic title; no Zhiguoyuan/CodeArts here.
-    add_text(s, 0.04 * W, 0.050 * H, 0.92 * W, 0.060 * H,
+    add_text(s, 0.04 * W, 0.045 * H, 0.92 * W, 0.06 * H,
              "Skill 资产生命周期：生产 → 分发 → 安装 → 使用",
              24, TITLE_RED, True)
 
-    # Generic four-stage rail. The rail is neutral gray so it does not read as a
-    # red rule under the title; red stays on the nodes and arrows.
-    rail_y = 0.170 * H
+    rail_y = 0.160 * H
     rail = s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, int(0.06 * W), int(rail_y), int(0.94 * W), int(rail_y))
     rail.line.color.rgb = RGBColor(0xC9, 0xCD, 0xD2)
     rail.line.width = Pt(1.0)
 
     stages = [
-        ("01", "生产", "作者", "把方法写成可复用的包",
-         ["写成可复用的方法包：步骤、异常处理与验收标准",
-          "用真实任务跑通，留下可运行样例与“不该用”的边界",
-          "明确依赖、权限与运行环境，避免装完跑不起来"],
-         "产物：方法包 + 脚本 + 参考资料"),
-        ("02", "分发", "作者 / 平台", "上架资产平台",
-         ["打包发布包：单目录、清单在根、≤10MB",
-          "填分类、许可证、版本与来源，审核后上架",
-          "保留版本历史，让使用者能追溯与回滚"],
-         "产物：资产卡片 + 版本 + 可安装包"),
+        ("01", "生产", "作者", "把经验变成可复用的方法",
+         ["定任务：目标 / 输入输出 / 边界",
+          "起稿：$skill-creator 生成草稿",
+          "补步骤/异常/验收，配资源跑三类任务"],
+         "触发准 / 边界清 / 样例与评测齐全",
+         "方法包 + 样例 + 评测 + 依赖"),
+        ("02", "分发", "作者 / 平台", "让合适的人拿到明确版本",
+         ["打包：Git / ZIP，附来源/版本/许可",
+          "写说明页：场景/示例/环境/限制",
+          "上架：市场 / Plugin / 托管 API"],
+         "展示=实得 / 来源可追 / 版本可回滚",
+         "发布包 + 说明页 + 来源/版本/许可"),
         ("03", "安装", "宿主 Agent", "在宿主 Agent 中安装",
-         ["从资产平台获取，检查依赖、权限与宿主",
-          "在宿主 Agent 中启用，跑一个最小任务",
-          "确认运行环境与版本，避免装完不可用"],
-         "产物：安装实例 + 就绪检查"),
+         ["复制到 ~/.agents/skills",
+          "npx skills add <repo> -g -a codex",
+          "查依赖 / 权限，跑最小任务"],
+         "宿主可见 / 依赖权限 / 最小任务通过",
+         "安装实例 + 就绪检查"),
         ("04", "使用", "用户 / Agent", "在任务中调用并反馈",
-         ["任务中按需加载、调用，记录版本与结果",
-          "用后反馈 → 修订 → 新版本",
-          "验收不通过，先分清方法、输入与环境"],
-         "产物：任务结果 + 使用记录"),
+         ["提任务：目标 / 输入 / 约束 / 验收",
+          "自动匹配，或点名 /pdf-processing",
+          "渐进加载 references/scripts"],
+         "已加载 / 已执行 / 已验收",
+         "任务结果 + 验收结论 + 使用记录"),
     ]
 
     card_w, gap = 0.22 * W, 0.0167 * W
-    card_x0, card_y, card_h = 0.035 * W, 0.210 * H, 0.320 * H
+    card_x0, card_y, card_h = 0.035 * W, 0.200 * H, 0.350 * H
     centers = []
-    for i, (num, name, role, verb, bullets, product) in enumerate(stages):
+    for i, (num, name, role, verb, actions, check, product) in enumerate(stages):
         x = card_x0 + i * (card_w + gap)
         centers.append(x + card_w / 2)
         add_rect(s, MSO_SHAPE.ROUNDED_RECTANGLE, x, card_y, card_w, card_h, WHITE, BORDER, 0.75, radius=0.05)
-        add_text(s, x + 0.014 * W, card_y + 0.010 * H, 0.03 * W, 0.03 * H, num, 12, RED, True)
-        add_text(s, x + 0.040 * W, card_y + 0.010 * H, 0.09 * W, 0.03 * H, name, 12, INK, True)
-        add_text(s, x + 0.125 * W, card_y + 0.012 * H, 0.08 * W, 0.025 * H, role, 8.5, LIGHT_GRAY,
+        add_text(s, x + 0.014 * W, card_y + 0.010 * H, 0.030 * W, 0.030 * H, num, 12, RED, True)
+        add_text(s, x + 0.040 * W, card_y + 0.010 * H, 0.085 * W, 0.030 * H, name, 12, INK, True)
+        add_text(s, x + 0.125 * W, card_y + 0.012 * H, 0.080 * W, 0.025 * H, role, 8.5, LIGHT_GRAY,
                  False, PP_ALIGN.RIGHT)
-        add_text(s, x + 0.014 * W, card_y + 0.044 * H, 0.19 * W, 0.035 * H, verb, 12, INK, True)
-        add_bullets(s, x + 0.014 * W, card_y + 0.078 * H, 0.19 * W, 0.185 * H, bullets)
-        add_rect(s, MSO_SHAPE.ROUNDED_RECTANGLE, x + 0.012 * W, card_y + 0.276 * H,
-                 0.196 * W, 0.038 * H, RGBColor(0xF5, 0xF6, 0xF8), None, radius=0.12)
-        add_text(s, x + 0.020 * W, card_y + 0.283 * H, 0.18 * W, 0.028 * H, product, 9, GRAY, False,
-                 spacing=1.0)
+        add_text(s, x + 0.014 * W, card_y + 0.044 * H, 0.190 * W, 0.032 * H, verb, 12, INK, True)
 
-    # Rail nodes and arrows
+        add_text(s, x + 0.014 * W, card_y + 0.078 * H, 0.040 * W, 0.018 * H, "动作", 8.5, RED, True)
+        add_actions(s, x + 0.014 * W, card_y + 0.096 * H, 0.190 * W, 0.125 * H, actions)
+
+        # divider + check + product
+        line = s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, int(x + 0.012 * W), int(card_y + 0.228 * H),
+                                      int(x + card_w - 0.012 * W), int(card_y + 0.228 * H))
+        line.line.color.rgb = BORDER
+        line.line.width = Pt(0.5)
+
+        add_text(s, x + 0.014 * W, card_y + 0.238 * H, 0.035 * W, 0.018 * H, "检查", 8.5, RED, True)
+        add_text(s, x + 0.050 * W, card_y + 0.238 * H, 0.160 * W, 0.018 * H, check, 9, GRAY, False)
+        add_text(s, x + 0.014 * W, card_y + 0.272 * H, 0.035 * W, 0.018 * H, "产物", 8.5, RED, True)
+        add_text(s, x + 0.050 * W, card_y + 0.272 * H, 0.160 * W, 0.026 * H, product, 9, GRAY, False)
+
+    # Nodes and arrows
     node_d = 0.028 * H
     for i, cx in enumerate(centers):
         node = add_rect(s, MSO_SHAPE.OVAL, cx - node_d / 2, rail_y - node_d / 2, node_d, node_d, WHITE, RED, 2.0)
@@ -95,7 +124,7 @@ def main():
             add_rect(s, MSO_SHAPE.RIGHT_ARROW, ax, rail_y - 0.007 * H, 0.017 * W, 0.014 * H, RED, None, radius=0.3)
 
     # Feedback loop
-    loop_y = 0.560 * H
+    loop_y = 0.580 * H
     loop = s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, int(0.93 * W), int(loop_y), int(0.07 * W), int(loop_y))
     loop.line.color.rgb = RGBColor(0xA5, 0xAC, 0xB4)
     loop.line.width = Pt(1)
@@ -105,8 +134,8 @@ def main():
                      "用后反馈 → 修订 → 新版本", 9.5, GRAY, False, PP_ALIGN.CENTER)
     label.fill.solid(); label.fill.fore_color.rgb = WHITE; label.line.fill.background()
 
-    # Specific example strip: only here do we mention Zhiguoyuan and CodeArts.
-    strip_x, strip_y, strip_w, strip_h = 0.035 * W, 0.600 * H, 0.93 * W, 0.200 * H
+    # Zhiguoyuan example strip
+    strip_x, strip_y, strip_w, strip_h = 0.035 * W, 0.615 * H, 0.93 * W, 0.200 * H
     add_rect(s, MSO_SHAPE.ROUNDED_RECTANGLE, strip_x, strip_y, strip_w, strip_h, BAND, BORDER, 0.75, radius=0.04)
     add_rect(s, MSO_SHAPE.ROUNDED_RECTANGLE, strip_x + 0.008 * W, strip_y + 0.018 * H,
              0.004 * W, strip_h - 0.036 * H, RED, None, radius=0.5)
@@ -136,23 +165,9 @@ def main():
     add_text(s, strip_x + 0.020 * W, strip_y + 0.158 * H, 0.88 * W, 0.024 * H,
              "验收：能装 · 能跑 · 能验收 · 能回滚", 9, GRAY, False)
 
-    # Bottom platform three columns (generic; no SKILL.md).
-    line = s.shapes.add_connector(MSO_CONNECTOR.STRAIGHT, int(0.04 * W), int(0.825 * H), int(0.96 * W), int(0.825 * H))
-    line.line.color.rgb = BORDER
-    line.line.width = Pt(0.75)
-    cols = [
-        ("标准", "发布包 / 元数据 / 版本"),
-        ("分发", "资产平台审核 / 上架"),
-        ("运行", "宿主 Agent 安装 / 调用"),
-    ]
-    for i, (label, body) in enumerate(cols):
-        x = 0.04 * W + i * 0.31 * W
-        add_text(s, x, 0.840 * H, 0.28 * W, 0.020 * H, label, 9, RED, True)
-        add_text(s, x, 0.862 * H, 0.28 * W, 0.025 * H, body, 10, GRAY, False)
-
     # Closing judgment
-    add_text(s, 0.04 * W, 0.900 * H, 0.045 * W, 0.022 * H, "判断", 9.5, RED, True)
-    add_text(s, 0.088 * W, 0.900 * H, 0.87 * W, 0.024 * H,
+    add_text(s, 0.04 * W, 0.855 * H, 0.045 * W, 0.022 * H, "判断", 9.5, RED, True)
+    add_text(s, 0.088 * W, 0.855 * H, 0.87 * W, 0.024 * H,
              "平台的价值不在“存资产”，而在让 Skill 可发现、可安装、可运行、可迭代。",
              10, GRAY, False)
 
