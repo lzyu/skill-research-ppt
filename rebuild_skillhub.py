@@ -93,67 +93,79 @@ def build_capabilities(s, W, H):
 
 def build_ecosystem(s, W, H):
     add_text(s, 0.035 * W, 0.040 * H, 0.93 * W, 0.055 * H,
-             "SkillHub 生态画像：全站付费 10%、API Key 19%，分类比头部更均衡",
+             "SkillHub 生态画像：Top5000 里，个人 24.9%、企业 12.7%、镜像 62.4%",
              24, TITLE_RED, True)
-    add_text(s, 0.035 * W, 0.110 * H, 0.40 * W, 0.026 * H, "生态画像：来源/消费看 Top1000，分类/付费看全站", 12, INK, True)
+    add_text(s, 0.035 * W, 0.108 * H, 0.90 * W, 0.024 * H,
+             "镜像撑数量，个人下载份额最高，企业单条最强；全站付费 10%，头部只有 1%。", 10, GRAY, False)
 
-    # 01 supply sources
-    add_text(s, 0.035 * W, 0.150 * H, 0.44 * W, 0.024 * H, "谁在供给：ClawHub 数量最多，社区拿走最多下载", 10.5, INK, True)
-    add_text(s, 0.035 * W, 0.174 * H, 0.44 * W, 0.020 * H, "Top1000 条 · 数量占比 / 下载占比", 8.5, LIGHT_GRAY, False)
-    src = [("ClawHub", 44.7, "27.0%"), ("社区", 30.5, "44.2%"), ("企业", 24.8, "28.8%")]
-    for i, (name, pct, dl) in enumerate(src):
-        y = 0.212 * H + i * 0.040 * H
+    # 01 who publishes Top5000: individual / enterprise / mirror
+    add_text(s, 0.035 * W, 0.145 * H, 0.44 * W, 0.024 * H, "三种上架方：镜像最多，个人最重，企业最强", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.168 * H, 0.44 * W, 0.020 * H, "Top5000 条 · 数量 / 下载", 8.5, LIGHT_GRAY, False)
+    src = [("个人 / 社区", 24.9, "39.8%", RED),
+           ("企业", 12.7, "24.7%", SLATE),
+           ("镜像 ClawHub", 62.4, "35.5%", RGBColor(0xCF, 0xD4, 0xDA))]
+    for i, (name, pct, dl, color) in enumerate(src):
+        y = 0.200 * H + i * 0.030 * H
         add_text(s, 0.035 * W, y, 0.085 * W, 0.020 * H, name, 9.5, GRAY, False)
-        add_bar(s, 0.125 * W, y + 0.004 * H, 0.170 * W, 0.011 * H, pct / 44.7,
-                RED if i == 1 else RGBColor(0x9A, 0xA1, 0xAA))
-        add_text(s, 0.310 * W, y, 0.165 * W, 0.020 * H, f"{pct}% / {dl}", 9, INK, False)
-    add_text(s, 0.035 * W, 0.340 * H, 0.44 * W, 0.050 * H,
-             "社区 = 个人/社区作者；ClawHub = 外部同步；企业 = 认证企业。\n"
-             "Top1000 里 ClawHub 条数最多，但下载份额低于社区。", 8.5, LIGHT_GRAY, False, spacing=1.15)
+        add_bar(s, 0.125 * W, y + 0.004 * H, 0.150 * W, 0.010 * H, pct / 62.4, color)
+        add_text(s, 0.292 * W, y, 0.160 * W, 0.020 * H, f"{pct}% / {dl}", 8.5, INK, False)
+    add_text(s, 0.035 * W, 0.295 * H, 0.44 * W, 0.048 * H,
+             "个人条数少、下载高；镜像条数最多；企业单条最强见右图。\n"
+             "个人 1,245 条 / 企业 633 条 / 镜像 3,122 条。", 8.5, LIGHT_GRAY, False, spacing=1.1)
 
-    # 02 category mix
-    add_text(s, 0.510 * W, 0.150 * H, 0.44 * W, 0.024 * H, "分类：全站结构更均衡，商业/专业/AI/开发居前", 10.5, INK, True)
-    add_text(s, 0.510 * W, 0.174 * H, 0.44 * W, 0.020 * H, "全站 200,403 条 · 条数占比", 8.5, LIGHT_GRAY, False)
-    cats = [
-        ("商业运营", 15.2), ("专业服务", 11.6), ("AI Agent", 11.2),
-        ("开发编程", 10.6), ("内容创作", 9.4), ("设计多媒体", 7.4),
-    ]
-    for i, (name, count_pct) in enumerate(cats):
-        y = 0.212 * H + i * 0.030 * H
-        add_text(s, 0.510 * W, y, 0.090 * W, 0.020 * H, name, 9, GRAY, False)
-        add_bar(s, 0.605 * W, y + 0.004 * H, 0.115 * W, 0.010 * H, count_pct / 15.2,
+    # 02 category (full site)
+    add_text(s, 0.510 * W, 0.145 * H, 0.44 * W, 0.024 * H, "分类：全站商业 / 专业 / AI / 开发居前", 10.5, INK, True)
+    add_text(s, 0.510 * W, 0.168 * H, 0.44 * W, 0.020 * H, "全站 200,403 条 · 条数占比", 8.5, LIGHT_GRAY, False)
+    cats = [("商业运营", 15.2), ("专业服务", 11.6), ("AI Agent", 11.2),
+            ("开发编程", 10.6), ("内容创作", 9.4), ("设计多媒体", 7.4)]
+    for i, (name, pct) in enumerate(cats):
+        y = 0.198 * H + i * 0.022 * H
+        add_text(s, 0.510 * W, y, 0.085 * W, 0.020 * H, name, 9, GRAY, False)
+        add_bar(s, 0.600 * W, y + 0.004 * H, 0.110 * W, 0.009 * H, pct / 15.2,
                 RED if i == 0 else RGBColor(0xC9, 0x7A, 0x80))
-        add_text(s, 0.730 * W, y, 0.060 * W, 0.020 * H, f"{count_pct}%", 8.5, INK, False)
-    add_text(s, 0.510 * W, 0.405 * H, 0.44 * W, 0.022 * H,
-             "其余 6 类合计 34.7%；12 个内容分类基本覆盖全站（10 条未挂类目）。", 8.5, LIGHT_GRAY, False, spacing=1.05)
-    add_text(s, 0.510 * W, 0.432 * H, 0.44 * W, 0.020 * H,
-             "对比 Top1000：AI Agent 15.8%、开发 7.2%，头部结构与全站不同。", 8.5, LIGHT_GRAY, False)
+        add_text(s, 0.720 * W, y, 0.060 * W, 0.020 * H, f"{pct}%", 8.5, INK, False)
+    add_text(s, 0.510 * W, 0.332 * H, 0.44 * W, 0.035 * H,
+             "其余 6 类 34.7%；12 个内容分类覆盖全站；Pay Skill 10.0% 为多标签，另计。", 8.5, LIGHT_GRAY, False, spacing=1.05)
 
-    # 03 paid + API key
-    add_text(s, 0.035 * W, 0.520 * H, 0.44 * W, 0.024 * H, "付费与 API Key：全站 10.0% / 19.3%，头部结构相反", 10.5, INK, True)
-    add_text(s, 0.035 * W, 0.544 * H, 0.44 * W, 0.020 * H, "全站 200,403 条 · 条数占比", 8.5, LIGHT_GRAY, False)
-    add_text(s, 0.035 * W, 0.578 * H, 0.115 * W, 0.040 * H, "10.0%", 18, RED, True)
-    add_text(s, 0.035 * W, 0.615 * H, 0.150 * W, 0.020 * H, "Pay Skill（20,125 条）", 8.5, GRAY, False)
-    add_text(s, 0.240 * W, 0.578 * H, 0.115 * W, 0.040 * H, "19.3%", 18, RED, True)
-    add_text(s, 0.240 * W, 0.615 * H, 0.150 * W, 0.020 * H, "API Key（38,646 条）", 8.5, GRAY, False)
-    add_text(s, 0.035 * W, 0.655 * H, 0.44 * W, 0.085 * H,
-             "付费标签 17,123（8.5%）、支付宝 2,901（1.4%）；Pay Skill 且 API Key 331 条。\n"
-             "Top1000：付费 0.9%、API Key 30.7%；Pay Skill 是多标签分类，不计入左侧 12 类。",
-             8.5, LIGHT_GRAY, False, spacing=1.15)
-
-    # 04 concentration
-    add_text(s, 0.510 * W, 0.520 * H, 0.44 * W, 0.024 * H, "消费集中度：Top10 拿走 31.3%，Top100 拿走 63.3%", 10.5, INK, True)
-    add_text(s, 0.510 * W, 0.544 * H, 0.44 * W, 0.020 * H, "Top1000 总下载约 1.04 亿；中位 32,907", 8.5, LIGHT_GRAY, False)
-    kpis = [("31.3%", "Top10 下载占比"), ("63.3%", "Top100 下载占比"), ("443", "installs=0 的条数")]
+    # 03 consumption (Top5000)
+    add_text(s, 0.035 * W, 0.385 * H, 0.44 * W, 0.024 * H, "消费集中度：Top10 24.2%，Top100 48.9%", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.408 * H, 0.44 * W, 0.020 * H, "Top5000 总下载 1.35 亿 · 中位 7,521", 8.5, LIGHT_GRAY, False)
+    kpis = [("3.9%", "Top1 占比"), ("24.2%", "Top10 占比"), ("48.9%", "Top100 占比"), ("77.3%", "Top1000 占比")]
     for i, (num, label) in enumerate(kpis):
-        x = 0.510 * W + i * 0.145 * W
-        add_text(s, x, 0.578 * H, 0.130 * W, 0.040 * H, num, 18, RED, True)
-        add_text(s, x, 0.615 * H, 0.130 * W, 0.034 * H, label, 8.5, GRAY, False, spacing=1.05)
-    add_text(s, 0.510 * W, 0.665 * H, 0.44 * W, 0.060 * H,
-             "Top1 占 5.0%，Top3 占 14.7%；下载含 CLI/镜像拉取，不等于安装或使用。", 8.5, LIGHT_GRAY, False, spacing=1.1)
+        x = 0.035 * W + (i % 2) * 0.220 * W
+        y = 0.440 * H + (i // 2) * 0.060 * H
+        add_text(s, x, y, 0.120 * W, 0.034 * H, num, 16, RED, True)
+        add_text(s, x, y + 0.030 * H, 0.150 * W, 0.020 * H, label, 8.5, GRAY, False)
+    add_text(s, 0.035 * W, 0.565 * H, 0.44 * W, 0.040 * H,
+             "Top5000 中 1,519 条 installs=0；下载含 CLI / 镜像，不等于使用。", 8.5, LIGHT_GRAY, False, spacing=1.05)
 
-    add_text(s, 0.035 * W, 0.855 * H, 0.93 * W, 0.028 * H,
-             "读法：全站付费 10%、API Key 19%，但头部下载集中在编程；Top1000 付费标签只有 0.9%。", 10, INK, False)
+    # 04 who gets downloaded (median)
+    add_text(s, 0.510 * W, 0.385 * H, 0.44 * W, 0.024 * H, "谁被下载：企业 > 个人 > 镜像", 10.5, INK, True)
+    add_text(s, 0.510 * W, 0.408 * H, 0.44 * W, 0.020 * H, "Top5000 · 单条中位下载", 8.5, LIGHT_GRAY, False)
+    rows = [("企业", 12725, 633, RED), ("个人 / 社区", 8730, 1245, SLATE),
+            ("镜像 ClawHub", 6756, 3122, RGBColor(0xCF, 0xD4, 0xDA))]
+    for i, (name, median, count, color) in enumerate(rows):
+        y = 0.445 * H + i * 0.055 * H
+        add_text(s, 0.510 * W, y, 0.095 * W, 0.020 * H, name, 9.5, GRAY, False)
+        add_bar(s, 0.615 * W, y + 0.004 * H, 0.120 * W, 0.011 * H, median / 12725, color)
+        add_text(s, 0.745 * W, y, 0.185 * W, 0.020 * H, f"{median:,} / {count} 条", 8.5, INK, False)
+    add_text(s, 0.510 * W, 0.590 * H, 0.44 * W, 0.032 * H,
+             "Top5000 整体中位 7,521；企业单条最高，个人高于镜像。2,883 个上架方，Top10 占 37.9% 下载。", 8.5, LIGHT_GRAY, False, spacing=1.05)
+
+    # 05 paid + API key (full site)
+    add_text(s, 0.035 * W, 0.635 * H, 0.90 * W, 0.024 * H, "付费与 API Key：全站 10.0% / 19.3%，Top5000 付费仅 1.0%", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.658 * H, 0.90 * W, 0.020 * H, "全站 200,403 条；Pay Skill 20,125、API Key 38,646", 8.5, LIGHT_GRAY, False)
+    add_text(s, 0.035 * W, 0.682 * H, 0.090 * W, 0.036 * H, "10.0%", 16, RED, True)
+    add_text(s, 0.035 * W, 0.716 * H, 0.130 * W, 0.020 * H, "Pay Skill", 8.5, GRAY, False)
+    add_text(s, 0.180 * W, 0.682 * H, 0.090 * W, 0.036 * H, "19.3%", 16, RED, True)
+    add_text(s, 0.180 * W, 0.716 * H, 0.130 * W, 0.020 * H, "API Key", 8.5, GRAY, False)
+    add_text(s, 0.350 * W, 0.682 * H, 0.60 * W, 0.060 * H,
+             "付费标签 17,123（8.5%）、支付宝 2,901（1.4%）；Pay Skill 且 API Key 331 条。\n"
+             "Top5000：付费 1.0%（50 条）、API Key 28.8%；Pay Skill 分类 0 条。",
+             8.5, LIGHT_GRAY, False, spacing=1.1)
+
+    add_text(s, 0.035 * W, 0.845 * H, 0.93 * W, 0.028 * H,
+             "读法：Top5000 由 2,883 个上架方供给，Top10 拿走 37.9% 下载；全站付费 10%，但头部只有 1%。", 10, INK, False)
 
 
 def main():
