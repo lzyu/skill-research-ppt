@@ -12,6 +12,7 @@
 - 移除右上角日期/来源等元信息、左下角来源/“Huawei Confidential”等小字，以及表格下方的“下载分布”表注。
 - 表格统一为 7.5 pt（表头加粗），避免原表格自动增高压住下方内容。
 - **Skill 资产生命周期页重做为第 1 页**：生产 / 分发 / 安装 / 使用四段 + 角色 + 产物 + 闭环回线；结合智果园示例（AI 资产广场上架分发、CodeArts Agent 安装使用）与平台三件事。原第 5 页删除，总页数仍为 20。
+- **最后两页按统一版式重排**：第 19 页先总结阿里/腾讯两条商业化路径（对比表 + 三点判断），第 20 页给出智果园的四条启示、首期路径与验收口径。
 - 例外：KPI 数字保留展示字号；6.5–9.5 pt 的图注、单位、表注保留原字号，避免密集卡片溢出。若要求所有文字严格 10/12，需要重排或拆页。
 
 ## 顺序与来源
@@ -36,8 +37,8 @@
 | 16 | 05 阿里 SkillPay 商业化 | SkillPay：把 Skill 变成可定价、可交付、可退款的产品 | `alipay-skillpay-machinepay.pptx`（2/4） |
 | 17 | 05 阿里 SkillPay 商业化 | MachinePay：用 402 把每次 API 调用变成一笔可验证的交易 | `alipay-skillpay-machinepay.pptx`（3/4） |
 | 18 | 05 阿里 SkillPay 商业化 | SkillPay vs MachinePay：商品化与计费化的分工 | `alipay-skillpay-machinepay.pptx`（4/4） |
-| 19 | 06 Skill 商业化总结 | 阿里经营 Skill 商品权益，腾讯连接付费服务与生态分发 | `zhiguoyuan-skill-commercialization.pptx`（1/2） |
-| 20 | 06 Skill 商业化总结 | 智果园复用资产与云商店底座，重点补齐 Skill 商业编排 | `zhiguoyuan-skill-commercialization.pptx`（2/2） |
+| 19 | 06 Skill 商业化总结 | 两个平台的商业化：阿里卖商品权益，腾讯连付费服务 | `zhiguoyuan-skill-commercialization.pptx`（1/2，按统一版式重排） |
+| 20 | 06 Skill 商业化总结 | 对智果园的启示：补商业编排，而不是再堆资产 | `zhiguoyuan-skill-commercialization.pptx`（2/2，按统一版式重排） |
 
 ## 未重复入片的精确副本
 
