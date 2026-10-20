@@ -93,70 +93,67 @@ def build_capabilities(s, W, H):
 
 def build_ecosystem(s, W, H):
     add_text(s, 0.035 * W, 0.040 * H, 0.93 * W, 0.055 * H,
-             "SkillHub 生态画像：20 万 Skill，开发类占下载 36.3%，TRACE 覆盖不均",
+             "SkillHub 生态画像：Top1000 里，开发类拿走 21.8% 下载，付费标签仅 0.9%",
              24, TITLE_RED, True)
-    add_text(s, 0.035 * W, 0.110 * H, 0.40 * W, 0.026 * H, "生态画像：4 项对比", 12, INK, True)
+    add_text(s, 0.035 * W, 0.110 * H, 0.40 * W, 0.026 * H, "生态画像：Top1000 下载头部", 12, INK, True)
 
     # 01 supply sources
-    add_text(s, 0.035 * W, 0.150 * H, 0.44 * W, 0.024 * H, "谁在供给", 11, INK, True)
-    add_text(s, 0.035 * W, 0.180 * H, 0.44 * W, 0.020 * H, "Top50 头部样本来源", 8.5, LIGHT_GRAY, False)
-    src = [("社区", 44, "44%"), ("ClawHub", 28, "28%"), ("企业", 28, "28%")]
-    for i, (name, pct, label) in enumerate(src):
-        y = 0.218 * H + i * 0.036 * H
+    add_text(s, 0.035 * W, 0.150 * H, 0.44 * W, 0.024 * H, "谁在供给：ClawHub 数量最多，社区拿走最多下载", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.174 * H, 0.44 * W, 0.020 * H, "Top1000 条 · 数量占比 / 下载占比", 8.5, LIGHT_GRAY, False)
+    src = [("ClawHub", 44.7, "27.0%"), ("社区", 30.5, "44.2%"), ("企业", 24.8, "28.8%")]
+    for i, (name, pct, dl) in enumerate(src):
+        y = 0.212 * H + i * 0.040 * H
         add_text(s, 0.035 * W, y, 0.085 * W, 0.020 * H, name, 9.5, GRAY, False)
-        add_bar(s, 0.125 * W, y + 0.004 * H, 0.200 * W, 0.011 * H, pct / 44,
-                RED if i == 0 else RGBColor(0x9A, 0xA1, 0xAA))
-        add_text(s, 0.340 * W, y, 0.060 * W, 0.020 * H, label, 9, INK, False)
-    add_text(s, 0.035 * W, 0.335 * H, 0.44 * W, 0.060 * H,
-             "1,999 家企业；腾讯官方 155；13 个一级类目。44/28/28 只是 Top50 头部，不是全量来源占比。",
-             8.5, LIGHT_GRAY, False, spacing=1.1)
+        add_bar(s, 0.125 * W, y + 0.004 * H, 0.170 * W, 0.011 * H, pct / 44.7,
+                RED if i == 1 else RGBColor(0x9A, 0xA1, 0xAA))
+        add_text(s, 0.310 * W, y, 0.165 * W, 0.020 * H, f"{pct}% / {dl}", 9, INK, False)
+    add_text(s, 0.035 * W, 0.340 * H, 0.44 * W, 0.050 * H,
+             "社区 = 个人/社区作者；ClawHub = 外部同步；企业 = 认证企业。\n"
+             "Top1000 里 ClawHub 条数最多，但下载份额低于社区。", 8.5, LIGHT_GRAY, False, spacing=1.15)
 
-    # 02 what gets downloaded
-    add_text(s, 0.510 * W, 0.150 * H, 0.44 * W, 0.024 * H, "什么被下载", 11, INK, True)
-    add_text(s, 0.510 * W, 0.180 * H, 0.44 * W, 0.020 * H, "Top50 下载类别", 8.5, LIGHT_GRAY, False)
-    cats = [("开发编程", 36.3, "36.3%"), ("AI Agent", 13.0, "13.0%"),
-            ("知识管理", 11.6, "11.6%"), ("其他", 39.1, "39.1%")]
-    for i, (name, pct, label) in enumerate(cats):
-        y = 0.218 * H + i * 0.032 * H
-        add_text(s, 0.510 * W, y, 0.095 * W, 0.020 * H, name, 9.5, GRAY, False)
-        add_bar(s, 0.610 * W, y + 0.004 * H, 0.200 * W, 0.011 * H, pct / 39.1,
+    # 02 category mix
+    add_text(s, 0.510 * W, 0.150 * H, 0.44 * W, 0.024 * H, "分类：开发类少而重，AI Agent 多而散", 10.5, INK, True)
+    add_text(s, 0.510 * W, 0.174 * H, 0.44 * W, 0.020 * H, "数量占比 / 下载占比", 8.5, LIGHT_GRAY, False)
+    cats = [
+        ("开发编程", 7.2, 21.8), ("AI Agent", 15.8, 15.4), ("办公效率", 12.7, 10.4),
+        ("知识管理", 6.8, 9.5), ("内容创作", 11.8, 9.2), ("设计多媒体", 12.3, 8.1),
+    ]
+    for i, (name, count_pct, dl_pct) in enumerate(cats):
+        y = 0.212 * H + i * 0.030 * H
+        add_text(s, 0.510 * W, y, 0.090 * W, 0.020 * H, name, 9, GRAY, False)
+        add_bar(s, 0.605 * W, y + 0.004 * H, 0.115 * W, 0.010 * H, count_pct / 15.8,
                 RED if i == 0 else RGBColor(0xC9, 0x7A, 0x80))
-        add_text(s, 0.825 * W, y, 0.060 * W, 0.020 * H, label, 9, INK, False)
-    add_text(s, 0.510 * W, 0.350 * H, 0.44 * W, 0.040 * H,
-             "开发类 5 条贡献 36.3%，头部集中；样本只代表下载头部。", 8.5, LIGHT_GRAY, False, spacing=1.1)
+        add_text(s, 0.730 * W, y, 0.110 * W, 0.020 * H, f"{count_pct}% / {dl_pct}%", 8.5, INK, False)
+    add_text(s, 0.510 * W, 0.405 * H, 0.44 * W, 0.022 * H,
+             "开发类只占 7.2% 供给，却拿走 21.8% 下载；AI Agent 供给最多，下载占比略低。", 8.5, LIGHT_GRAY, False, spacing=1.05)
+    add_text(s, 0.510 * W, 0.432 * H, 0.44 * W, 0.020 * H,
+             "其余 6 类合计：33.4% 供给 / 25.6% 下载。", 8.5, LIGHT_GRAY, False)
 
-    # 03 consumption concentration
-    add_text(s, 0.035 * W, 0.505 * H, 0.44 * W, 0.024 * H, "消费有多集中", 11, INK, True)
-    add_text(s, 0.035 * W, 0.535 * H, 0.44 * W, 0.020 * H, "Top50 下载合计约 5,481 万", 8.5, LIGHT_GRAY, False)
-    tops = [("编程大神", 521.3), ("编程专家Pro", 519.1), ("编程专家", 487.6), ("腾讯文档", 182.3)]
-    for i, (name, val) in enumerate(tops):
-        y = 0.570 * H + i * 0.032 * H
-        add_text(s, 0.035 * W, y, 0.110 * W, 0.020 * H, name, 9, GRAY, False)
-        add_bar(s, 0.150 * W, y + 0.004 * H, 0.180 * W, 0.011 * H, val / 521.3,
-                RED if i == 0 else RGBColor(0x9A, 0xA1, 0xAA))
-        add_text(s, 0.340 * W, y, 0.070 * W, 0.020 * H, f"{val} 万", 8.5, INK, False)
-    add_text(s, 0.035 * W, 0.710 * H, 0.44 * W, 0.060 * H,
-             "downloads 含 CLI / 镜像拉取；部分头部 installs 为 0，下载不等于使用。",
-             8.5, LIGHT_GRAY, False, spacing=1.1)
+    # 03 paid + API key
+    add_text(s, 0.035 * W, 0.520 * H, 0.44 * W, 0.024 * H, "付费与 API Key：API Key 已三成，付费仍在边缘", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.544 * H, 0.44 * W, 0.020 * H, "Top1000 条 · 条数占比 / 下载占比", 8.5, LIGHT_GRAY, False)
+    add_text(s, 0.035 * W, 0.578 * H, 0.115 * W, 0.040 * H, "0.9%", 18, RED, True)
+    add_text(s, 0.035 * W, 0.615 * H, 0.150 * W, 0.020 * H, "PaySkill（9 条）", 8.5, GRAY, False)
+    add_text(s, 0.240 * W, 0.578 * H, 0.115 * W, 0.040 * H, "30.7%", 18, RED, True)
+    add_text(s, 0.240 * W, 0.615 * H, 0.150 * W, 0.020 * H, "API Key（307 条）", 8.5, GRAY, False)
+    add_text(s, 0.035 * W, 0.655 * H, 0.44 * W, 0.075 * H,
+             "付费下载占比 0.8%；API Key 下载占比 21.6%；付费且 API Key 仅 1 条；\n"
+             "Pay Skill 分类在 Top1000 为 0 条。付费标签按 pricing_type=paid/alipay 统计。",
+             8.5, LIGHT_GRAY, False, spacing=1.15)
 
-    # 04 quality coverage
-    add_text(s, 0.510 * W, 0.505 * H, 0.44 * W, 0.024 * H, "质量覆盖", 11, INK, True)
-    add_text(s, 0.510 * W, 0.535 * H, 0.44 * W, 0.020 * H, "TRACE 抽样：40 条有效 / 53 条", 8.5, LIGHT_GRAY, False)
-    add_text(s, 0.510 * W, 0.560 * H, 0.100 * W, 0.040 * H, "4.54", 18, RED, True)
-    add_text(s, 0.620 * W, 0.565 * H, 0.110 * W, 0.030 * H, "均分", 9, GRAY, False)
-    add_text(s, 0.740 * W, 0.565 * H, 0.120 * W, 0.030 * H, "72.5%", 12, RED, True)
-    add_text(s, 0.740 * W, 0.590 * H, 0.160 * W, 0.020 * H, "≥4.5 / 5", 8.5, LIGHT_GRAY, False)
-    coverage = [("企业", 100, "100%"), ("社区", 74, "74%"), ("ClawHub", 0, "0%")]
-    for i, (name, pct, label) in enumerate(coverage):
-        y = 0.625 * H + i * 0.030 * H
-        add_text(s, 0.510 * W, y, 0.085 * W, 0.020 * H, name, 9, GRAY, False)
-        add_bar(s, 0.600 * W, y + 0.004 * H, 0.190 * W, 0.011 * H, pct / 100,
-                RED if i == 0 else RGBColor(0x9A, 0xA1, 0xAA))
-        add_text(s, 0.800 * W, y, 0.060 * W, 0.020 * H, label, 8.5, INK, False)
-    add_text(s, 0.510 * W, 0.728 * H, 0.44 * W, 0.060 * H,
-             "最低 4.12，0 条 <4.0；分数高且集中，不能替代真实任务验收。", 8.5, LIGHT_GRAY, False, spacing=1.1)
-    add_text(s, 0.035 * W, 0.840 * H, 0.93 * W, 0.028 * H,
-             "读法：供给靠社区，下载靠开发，评测覆盖靠企业；TRACE 覆盖不均，ClawHub 基本空白。", 10, INK, False)
+    # 04 concentration
+    add_text(s, 0.510 * W, 0.520 * H, 0.44 * W, 0.024 * H, "消费集中度：Top10 拿走 31.3%，Top100 拿走 63.3%", 10.5, INK, True)
+    add_text(s, 0.510 * W, 0.544 * H, 0.44 * W, 0.020 * H, "Top1000 总下载约 1.04 亿；中位 32,907", 8.5, LIGHT_GRAY, False)
+    kpis = [("31.3%", "Top10 下载占比"), ("63.3%", "Top100 下载占比"), ("443", "installs=0 的条数")]
+    for i, (num, label) in enumerate(kpis):
+        x = 0.510 * W + i * 0.145 * W
+        add_text(s, x, 0.578 * H, 0.130 * W, 0.040 * H, num, 18, RED, True)
+        add_text(s, x, 0.615 * H, 0.130 * W, 0.034 * H, label, 8.5, GRAY, False, spacing=1.05)
+    add_text(s, 0.510 * W, 0.665 * H, 0.44 * W, 0.060 * H,
+             "Top1 占 5.0%，Top3 占 14.7%；下载含 CLI/镜像拉取，不等于安装或使用。", 8.5, LIGHT_GRAY, False, spacing=1.1)
+
+    add_text(s, 0.035 * W, 0.855 * H, 0.93 * W, 0.028 * H,
+             "读法：ClawHub 撑数量，社区撑下载，开发类最重；付费仍在边缘，API Key 已是三成供给。", 10, INK, False)
 
 
 def main():
