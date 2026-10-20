@@ -14,7 +14,7 @@
 - **Skill 资产生命周期页重做为第 1 页**：生产 / 分发 / 安装 / 使用四段，每段给出可执行动作、检查点与产物，并保留闭环回线；结合智果园示例（AI 资产广场上架分发、CodeArts Agent 安装使用）。原第 5 页删除，总页数 19。
 - **第一页按 `skill-lifecycle-summary.md` 的“关键动作”重新核对**：每段只把“动作”放入动作层，检查点与产物另列；生产段把“定任务 / 写方法 / 配资源并验证”拆开，边界放入“定任务”和检查点，样例与评测记录放入产物，不再把“留样例和边界”当作与前两步并列的第三个动作。动作层补入 `$skill-creator`、Git/ZIP、`npx skills add`、`/pdf-processing` 等可执行动作；`$skill-creator` 作为一条起稿路径，不写成唯一方式。
 - **最后两页按统一版式重排**：第 18 页先总结阿里/腾讯两条商业化路径（对比表 + 三点判断），第 19 页给出智果园的四条启示、首期路径与验收口径。
-- **SkillHub 从 3 页合并为 2 页**：第 3 页“关键能力”（供给与发布 / 分发安装 / 云端试跑 / TRACE）；第 4 页“生态画像”：供给/分类/付费看全站，消费与“谁被下载”中位看 Top5000；个人/企业为按来源标签折算，Top5000 不等于全站。
+- **SkillHub 从 3 页合并为 2 页**：第 3 页“关键能力”（供给与发布 / 分发安装 / 云端试跑 / TRACE）；第 4 页“生态画像”：供给/分类/付费看全站，消费与“谁被下载”中位看 Top10000；个人/企业为按来源标签折算，Top10000 不等于全站。
 - **魔搭合并为一页**：上半部分是“关键能力洞察”（发布 / 使用 / 试运行），下半部分是“生态画像”的 4 项对比：谁在供给 / 类目分布 / 消费集中度 / 谁被下载；30.9% 只在供给卡里出现，不再单独成块；删掉资产定位与结构、结论。
 - **标题已回退**：恢复上一版标题；第一页的动作 / 检查 / 产物内容保留。
 - 例外：KPI 数字保留展示字号；6.5–9.5 pt 的图注、单位、表注保留原字号，避免密集卡片溢出。若要求所有文字严格 10/12，需要重排或拆页。
@@ -26,7 +26,7 @@
 | 01 | 00 Skill 资产生命周期（开篇） | Skill 资产生命周期：生产 → 分发 → 安装 → 使用 | `skill-asset-lifecycle.pptx` 内容重做，结合智果园 / CodeArts Agent 示例 |
 | 02 | 01 魔搭平台调研 | 魔搭 Skill 关键能力：发布两步、安装四路，试运行和原创供给都还薄 | `modelscope-skills-center.pptx` 内容重做 + 一手 API/页面核查（1/1） |
 | 03 | 02 SkillHub 平台调研 | SkillHub 关键能力：20 万供给、多路安装、云端试跑、TRACE 评分 | `skillhub-insights-v1.pptx` + `skillhub-eval-onepage.pptx`（重做，1/2） |
-| 04 | 02 SkillHub 平台调研 | SkillHub 生态画像：全站个人 34.0%、企业 34.4%、镜像 31.6% | `skillhub-insights.pptx` / `skillhub-insights-v1.pptx` + 全站来源拆分/分类/付费与 Top5000 中位复算（重做，2/2） |
+| 04 | 02 SkillHub 平台调研 | SkillHub 生态画像：全站个人 34.0%、企业 34.4%、镜像 31.6% | `skillhub-insights.pptx` / `skillhub-insights-v1.pptx` + 全站来源拆分/分类/付费与 Top10000 中位复算（重做，2/2） |
 | 05 | 03 Skill 平台总结 | 从魔搭、SkillHub 到智果园：Skill 资产平台的四个必答题 | `zhiguoyuan-skill-asset-onepage.pptx`（1/1） |
 | 06 | 04 腾讯 SkillPay 商业化 | SkillHub 已有按次收费供给，平台暂不收技术服务费 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（1/2） |
 | 07 | 04 腾讯 SkillPay 商业化 | 微信 SkillPay 将微信订单接入 Agent，商户验付后履约 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（2/2） |

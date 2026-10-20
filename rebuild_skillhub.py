@@ -96,7 +96,7 @@ def build_ecosystem(s, W, H):
              "SkillHub 生态画像：全站个人 34.0%、企业 34.4%、镜像 31.6%",
              24, TITLE_RED, True)
     add_text(s, 0.035 * W, 0.108 * H, 0.90 * W, 0.024 * H,
-             "全站个人/企业/镜像约三分；Top5000 镜像 62.4%，企业单条最强，付费只有 1%。", 10, GRAY, False)
+             "全站个人/企业/镜像约三分；Top10000 镜像 72.4%、拿走 40.3% 下载，企业单条最强，付费不足 1%。", 10, GRAY, False)
 
     # 01 who supplies (full-site split: individual / enterprise / mirror)
     add_text(s, 0.035 * W, 0.145 * H, 0.44 * W, 0.024 * H, "谁在供给：个人 34.0%、企业 34.4%、镜像 31.6%", 10.5, INK, True)
@@ -126,32 +126,32 @@ def build_ecosystem(s, W, H):
              "其余 6 类 34.7%；12 个内容分类覆盖全站；Pay Skill 10.0% 为多标签，另计。", 8.5, LIGHT_GRAY, False, spacing=1.05)
 
     # 03 consumption (Top5000)
-    add_text(s, 0.035 * W, 0.385 * H, 0.44 * W, 0.024 * H, "消费集中度：Top10 24.2%，Top100 48.9%", 10.5, INK, True)
-    add_text(s, 0.035 * W, 0.408 * H, 0.44 * W, 0.020 * H, "Top5000 总下载 1.35 亿 · 中位 7,521", 8.5, LIGHT_GRAY, False)
-    kpis = [("3.9%", "Top1 占比"), ("24.2%", "Top10 占比"), ("48.9%", "Top100 占比"), ("77.3%", "Top1000 占比")]
+    add_text(s, 0.035 * W, 0.385 * H, 0.44 * W, 0.024 * H, "消费集中度：Top10 21.6%，Top100 43.7%", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.408 * H, 0.44 * W, 0.020 * H, "Top10000 总下载 1.51 亿 · 中位 4,251", 8.5, LIGHT_GRAY, False)
+    kpis = [("3.5%", "Top1 占比"), ("21.6%", "Top10 占比"), ("43.7%", "Top100 占比"), ("69.1%", "Top1000 占比")]
     for i, (num, label) in enumerate(kpis):
         x = 0.035 * W + (i % 2) * 0.220 * W
         y = 0.440 * H + (i // 2) * 0.060 * H
         add_text(s, x, y, 0.120 * W, 0.034 * H, num, 16, RED, True)
         add_text(s, x, y + 0.030 * H, 0.150 * W, 0.020 * H, label, 8.5, GRAY, False)
     add_text(s, 0.035 * W, 0.565 * H, 0.44 * W, 0.040 * H,
-             "Top5000 中 1,519 条 installs=0；下载含 CLI / 镜像，不等于使用。", 8.5, LIGHT_GRAY, False, spacing=1.05)
+             "Top10000 中 2,301 条 installs=0；下载含 CLI / 镜像，不等于使用。", 8.5, LIGHT_GRAY, False, spacing=1.05)
 
     # 04 who gets downloaded (median)
     add_text(s, 0.510 * W, 0.385 * H, 0.44 * W, 0.024 * H, "谁被下载：企业 > 个人 > 镜像", 10.5, INK, True)
-    add_text(s, 0.510 * W, 0.408 * H, 0.44 * W, 0.020 * H, "Top5000 · 单条中位下载", 8.5, LIGHT_GRAY, False)
-    rows = [("企业", 12725, 633, RED), ("个人 / 社区", 8730, 1245, SLATE),
-            ("镜像 ClawHub", 6756, 3122, RGBColor(0xCF, 0xD4, 0xDA))]
+    add_text(s, 0.510 * W, 0.408 * H, 0.44 * W, 0.020 * H, "Top10000 · 单条中位下载", 8.5, LIGHT_GRAY, False)
+    rows = [("企业", 8570, 789, RED), ("个人 / 社区", 5629, 1971, SLATE),
+            ("镜像 ClawHub", 3830, 7240, RGBColor(0xCF, 0xD4, 0xDA))]
     for i, (name, median, count, color) in enumerate(rows):
         y = 0.445 * H + i * 0.055 * H
         add_text(s, 0.510 * W, y, 0.095 * W, 0.020 * H, name, 9.5, GRAY, False)
-        add_bar(s, 0.615 * W, y + 0.004 * H, 0.120 * W, 0.011 * H, median / 12725, color)
+        add_bar(s, 0.615 * W, y + 0.004 * H, 0.120 * W, 0.011 * H, median / 8570, color)
         add_text(s, 0.745 * W, y, 0.185 * W, 0.020 * H, f"{median:,} / {count} 条", 8.5, INK, False)
     add_text(s, 0.510 * W, 0.590 * H, 0.44 * W, 0.032 * H,
-             "Top5000 整体中位 7,521；企业单条最高，个人高于镜像。2,883 个上架方，Top10 占 37.9% 下载。", 8.5, LIGHT_GRAY, False, spacing=1.05)
+             "Top10000 整体中位 4,251；企业单条最高，个人高于镜像。", 8.5, LIGHT_GRAY, False, spacing=1.05)
 
     # 05 paid + API key (full site)
-    add_text(s, 0.035 * W, 0.635 * H, 0.90 * W, 0.024 * H, "付费与 API Key：全站 10.0% / 19.3%，Top5000 付费仅 1.0%", 10.5, INK, True)
+    add_text(s, 0.035 * W, 0.635 * H, 0.90 * W, 0.024 * H, "付费与 API Key：全站 10.0% / 19.3%，Top10000 付费仅 0.7%", 10.5, INK, True)
     add_text(s, 0.035 * W, 0.658 * H, 0.90 * W, 0.020 * H, "全站 200,403 条；Pay Skill 20,125、API Key 38,646", 8.5, LIGHT_GRAY, False)
     add_text(s, 0.035 * W, 0.682 * H, 0.090 * W, 0.036 * H, "10.0%", 16, RED, True)
     add_text(s, 0.035 * W, 0.716 * H, 0.130 * W, 0.020 * H, "Pay Skill", 8.5, GRAY, False)
@@ -159,11 +159,11 @@ def build_ecosystem(s, W, H):
     add_text(s, 0.180 * W, 0.716 * H, 0.130 * W, 0.020 * H, "API Key", 8.5, GRAY, False)
     add_text(s, 0.350 * W, 0.682 * H, 0.60 * W, 0.060 * H,
              "付费标签 17,123（8.5%）、支付宝 2,901（1.4%）；Pay Skill 且 API Key 331 条。\n"
-             "Top5000：付费 1.0%（50 条）、API Key 28.8%；Pay Skill 分类 0 条。",
+             "Top10000：付费 0.7%（68 条）、API Key 30.3%；Pay Skill 分类 0 条。",
              8.5, LIGHT_GRAY, False, spacing=1.1)
 
     add_text(s, 0.035 * W, 0.845 * H, 0.93 * W, 0.028 * H,
-             "读法：全站个人/企业/镜像约三分；Top5000 镜像 62.4%，企业单条最强，付费只有 1%。", 10, INK, False)
+             "读法：镜像撑数量也撑总下载，企业撑单条；付费沉在长尾，API 在头部。", 10, INK, False)
 
 
 def main():
