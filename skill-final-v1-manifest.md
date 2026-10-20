@@ -1,20 +1,20 @@
 # skill-final-v1 合并清单
 
-- 输出：`skill-final-v1.pptx`（21 页，16:9，12192000×6858000）
+- 输出：`skill-final-v1.pptx`（20 页，16:9，12192000×6858000）
 - 原则：按指定顺序合并；不删除重复主题/版本；精确重复的文件不重复入片，源文件全部保留在工作区。
 - 说明：为避免不同主题的 notes master 造成跨主题关系异常，合并时未复制演讲者备注；源 PPTX 中的备注仍在原文件。
 
 ## 2026-10-20 第二版排版
 
 - 页面标题：微软雅黑 24 pt，RGB 199/0/11（#C7000B），统一上移到距顶 0.045H。
-- 删除标题上方 kicker、标题下方红色横线、标题下方一行总结小字；21 页全部校验通过。
+- 删除标题上方 kicker、标题下方红色横线、标题下方一行总结小字；20 页全部校验通过。
 - 正文：微软雅黑 10 pt；正文中的章节标题 12 pt；正文采用 -1 pt 字间距、章节标题 -0.5 pt，保证 10/12 号下不溢出。
 - 移除右上角日期/来源等元信息、左下角来源/“Huawei Confidential”等小字，以及表格下方的“下载分布”表注。
 - 表格统一为 7.5 pt（表头加粗），避免原表格自动增高压住下方内容。
-- **Skill 资产生命周期页重做为第 1 页**：生产 / 分发 / 安装 / 使用四段，每段给出可执行动作、检查点与产物，并保留闭环回线；结合智果园示例（AI 资产广场上架分发、CodeArts Agent 安装使用）。原第 5 页删除，总页数 21。
+- **Skill 资产生命周期页重做为第 1 页**：生产 / 分发 / 安装 / 使用四段，每段给出可执行动作、检查点与产物，并保留闭环回线；结合智果园示例（AI 资产广场上架分发、CodeArts Agent 安装使用）。原第 5 页删除，总页数 20。
 - **第一页按 `skill-lifecycle-summary.md` 的“关键动作”重新核对**：每段只把“动作”放入动作层，检查点与产物另列；生产段把“定任务 / 写方法 / 配资源并验证”拆开，边界放入“定任务”和检查点，样例与评测记录放入产物，不再把“留样例和边界”当作与前两步并列的第三个动作。动作层补入 `$skill-creator`、Git/ZIP、`npx skills add`、`/pdf-processing` 等可执行动作；`$skill-creator` 作为一条起稿路径，不写成唯一方式。
-- **最后两页按统一版式重排**：第 20 页先总结阿里/腾讯两条商业化路径（对比表 + 三点判断），第 21 页给出智果园的四条启示、首期路径与验收口径。
-- **魔搭从 1 页扩为 2 页**：第 2 页定位“关键能力洞察”，讲发布 / 使用 / 试运行，并放详情页与安装区截图；第 3 页定位“生态画像”，讲供给 / 类目 / 消费 / 镜像口径；删掉资产定位与结构、结论。
+- **最后两页按统一版式重排**：第 19 页先总结阿里/腾讯两条商业化路径（对比表 + 三点判断），第 20 页给出智果园的四条启示、首期路径与验收口径。
+- **魔搭合并为一页**：上半部分是“关键能力洞察”（发布 / 使用 / 试运行），下半部分是“生态画像”的 4 项对比：谁在供给 / 类目分布 / 消费集中度 / 谁被下载；30.9% 只在供给卡里出现，不再单独成块；删掉资产定位与结构、结论。
 - **标题已回退**：恢复上一版标题；第一页的动作 / 检查 / 产物内容保留。
 - 例外：KPI 数字保留展示字号；6.5–9.5 pt 的图注、单位、表注保留原字号，避免密集卡片溢出。若要求所有文字严格 10/12，需要重排或拆页。
 
@@ -23,26 +23,25 @@
 | # | 章节 | 页面标题 | 来源文件（页序） |
 |---:|---|---|---|
 | 01 | 00 Skill 资产生命周期（开篇） | Skill 资产生命周期：生产 → 分发 → 安装 → 使用 | `skill-asset-lifecycle.pptx` 内容重做，结合智果园 / CodeArts Agent 示例 |
-| 02 | 01 魔搭平台调研 | 魔搭 Skill 中心关键能力：两步发布、四路安装，试运行还停在通用实验场 | `modelscope-skills-center.pptx` 内容重做 + 一手 API/页面核查 + 详情页/安装区截图（1/2） |
-| 03 | 01 魔搭平台调研 | 魔搭 Skill 生态画像：8.35 万个 Skill，官方 0.4%，头部 1% 拿走 66% 下载 | `modelscope-skills-center.pptx` 内容重做 + 一手 API/页面核查（2/2） |
-| 04 | 02 SkillHub 平台调研 | SkillHub 将技能分发扩展到场景组合与云端验证 | `skillhub/output/skillhub-insights.pptx`（1/1） |
-| 05 | 02 SkillHub 平台调研 | SkillHub 围绕 Skill 打通生态供给、可信分发与宿主安装 | `skillhub/output/skillhub-insights-v1.pptx`（1/1） |
-| 06 | 02 SkillHub 平台调研 | 腾讯 SkillHub：用 TRACE 把 Skill 分发从「能装」推向「可评」 | `skillhub-eval-onepage.pptx`（1/1） |
-| 07 | 03 Skill 平台总结 | 从魔搭、SkillHub 到智果园：Skill 资产平台的四个必答题 | `zhiguoyuan-skill-asset-onepage.pptx`（1/1） |
-| 08 | 04 腾讯 SkillPay 商业化 | SkillHub 已有按次收费供给，平台暂不收技术服务费 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（1/2） |
-| 09 | 04 腾讯 SkillPay 商业化 | 微信 SkillPay 将微信订单接入 Agent，商户验付后履约 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（2/2） |
-| 10 | 04 腾讯 SkillPay 商业化 | 两次下单接入 Agent，SkillHub 提供商户验签与分发 | `skillhub/output/skillhub-skillpay-commercialization-v2-final.pptx`（1/2） |
-| 11 | 04 腾讯 SkillPay 商业化 | payment_code 发起付款，payment_id 串联任务与交付 | `skillhub/output/skillhub-skillpay-commercialization-v2-final.pptx`（2/2） |
-| 12 | 05 阿里 SkillPay 商业化 | SkillPay 经营 Skill 商品，付款后分为源文件与使用权两种交付 | `gpt-alipay-research.pptx`（1/4） |
-| 13 | 05 阿里 SkillPay 商业化 | 订阅原文留云端，云端给任务指导，本地 Agent 继续执行 | `gpt-alipay-research.pptx`（2/4） |
-| 14 | 05 阿里 SkillPay 商业化 | MachinePay 先签报价，付款后带票重试，商户在线验付 | `gpt-alipay-research.pptx`（3/4） |
-| 15 | 05 阿里 SkillPay 商业化 | 支付宝验证支付事实，商户核对业务账并恢复唯一履约 | `gpt-alipay-research.pptx`（4/4） |
-| 16 | 05 阿里 SkillPay 商业化 | 阿里把 Agent 支付拆成两层：SkillPay 卖商品，MachinePay 卖调用 | `alipay-skillpay-machinepay.pptx`（1/4） |
-| 17 | 05 阿里 SkillPay 商业化 | SkillPay：把 Skill 变成可定价、可交付、可退款的产品 | `alipay-skillpay-machinepay.pptx`（2/4） |
-| 18 | 05 阿里 SkillPay 商业化 | MachinePay：用 402 把每次 API 调用变成一笔可验证的交易 | `alipay-skillpay-machinepay.pptx`（3/4） |
-| 19 | 05 阿里 SkillPay 商业化 | SkillPay vs MachinePay：商品化与计费化的分工 | `alipay-skillpay-machinepay.pptx`（4/4） |
-| 20 | 06 Skill 商业化总结 | 两个平台的商业化：阿里卖商品权益，腾讯连付费服务 | `zhiguoyuan-skill-commercialization.pptx`（1/2，重排） |
-| 21 | 06 Skill 商业化总结 | 对智果园的启示：补商业编排，而不是再堆资产 | `zhiguoyuan-skill-commercialization.pptx`（2/2，重排） |
+| 02 | 01 魔搭平台调研 | 魔搭 Skill 关键能力：发布两步、安装四路，试运行和原创供给都还薄 | `modelscope-skills-center.pptx` 内容重做 + 一手 API/页面核查（1/1） |
+| 03 | 02 SkillHub 平台调研 | SkillHub 将技能分发扩展到场景组合与云端验证 | `skillhub/output/skillhub-insights.pptx`（1/1） |
+| 04 | 02 SkillHub 平台调研 | SkillHub 围绕 Skill 打通生态供给、可信分发与宿主安装 | `skillhub/output/skillhub-insights-v1.pptx`（1/1） |
+| 05 | 02 SkillHub 平台调研 | 腾讯 SkillHub：用 TRACE 把 Skill 分发从「能装」推向「可评」 | `skillhub-eval-onepage.pptx`（1/1） |
+| 06 | 03 Skill 平台总结 | 从魔搭、SkillHub 到智果园：Skill 资产平台的四个必答题 | `zhiguoyuan-skill-asset-onepage.pptx`（1/1） |
+| 07 | 04 腾讯 SkillPay 商业化 | SkillHub 已有按次收费供给，平台暂不收技术服务费 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（1/2） |
+| 08 | 04 腾讯 SkillPay 商业化 | 微信 SkillPay 将微信订单接入 Agent，商户验付后履约 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（2/2） |
+| 09 | 04 腾讯 SkillPay 商业化 | 两次下单接入 Agent，SkillHub 提供商户验签与分发 | `skillhub/output/skillhub-skillpay-commercialization-v2-final.pptx`（1/2） |
+| 10 | 04 腾讯 SkillPay 商业化 | payment_code 发起付款，payment_id 串联任务与交付 | `skillhub/output/skillhub-skillpay-commercialization-v2-final.pptx`（2/2） |
+| 11 | 05 阿里 SkillPay 商业化 | SkillPay 经营 Skill 商品，付款后分为源文件与使用权两种交付 | `gpt-alipay-research.pptx`（1/4） |
+| 12 | 05 阿里 SkillPay 商业化 | 订阅原文留云端，云端给任务指导，本地 Agent 继续执行 | `gpt-alipay-research.pptx`（2/4） |
+| 13 | 05 阿里 SkillPay 商业化 | MachinePay 先签报价，付款后带票重试，商户在线验付 | `gpt-alipay-research.pptx`（3/4） |
+| 14 | 05 阿里 SkillPay 商业化 | 支付宝验证支付事实，商户核对业务账并恢复唯一履约 | `gpt-alipay-research.pptx`（4/4） |
+| 15 | 05 阿里 SkillPay 商业化 | 阿里把 Agent 支付拆成两层：SkillPay 卖商品，MachinePay 卖调用 | `alipay-skillpay-machinepay.pptx`（1/4） |
+| 16 | 05 阿里 SkillPay 商业化 | SkillPay：把 Skill 变成可定价、可交付、可退款的产品 | `alipay-skillpay-machinepay.pptx`（2/4） |
+| 17 | 05 阿里 SkillPay 商业化 | MachinePay：用 402 把每次 API 调用变成一笔可验证的交易 | `alipay-skillpay-machinepay.pptx`（3/4） |
+| 18 | 05 阿里 SkillPay 商业化 | SkillPay vs MachinePay：商品化与计费化的分工 | `alipay-skillpay-machinepay.pptx`（4/4） |
+| 19 | 06 Skill 商业化总结 | 两个平台的商业化：阿里卖商品权益，腾讯连付费服务 | `zhiguoyuan-skill-commercialization.pptx`（1/2，重排） |
+| 20 | 06 Skill 商业化总结 | 对智果园的启示：补商业编排，而不是再堆资产 | `zhiguoyuan-skill-commercialization.pptx`（2/2，重排） |
 
 ## 未重复入片的精确副本
 
