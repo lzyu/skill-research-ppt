@@ -4,23 +4,25 @@
 - 原则：按指定顺序合并；不删除重复主题/版本；精确重复的文件不重复入片，源文件全部保留在工作区。
 - 说明：为避免不同主题的 notes master 造成跨主题关系异常，合并时未复制演讲者备注；源 PPTX 中的备注仍在原文件。
 
-## 2026-10-20 排版统一
+## 2026-10-20 第二版排版
 
-- 页面标题：微软雅黑 24 pt，RGB 199/0/11（#C7000B）。
-- 正文：微软雅黑 10 pt；正文中的章节标题 12 pt；为保住原卡片布局，正文采用 -1 pt 字间距（标题/章节 -0.5 pt）压缩换行。
-- 移除右上角日期/来源等元信息、左下角来源/“Huawei Confidential”等小字，以及第 1 页表格下方的“下载分布”表注。
+- 页面标题：微软雅黑 24 pt，RGB 199/0/11（#C7000B），统一上移到距顶 0.045H。
+- 删除标题上方 kicker、标题下方红色横线、标题下方一行总结小字；20 页全部校验通过。
+- 正文：微软雅黑 10 pt；正文中的章节标题 12 pt；正文采用 -1 pt 字间距、章节标题 -0.5 pt，保证 10/12 号下不溢出。
+- 移除右上角日期/来源等元信息、左下角来源/“Huawei Confidential”等小字，以及表格下方的“下载分布”表注。
 - 表格统一为 7.5 pt（表头加粗），避免原表格自动增高压住下方内容。
+- **Skill 资产生命周期页重做为第 1 页**：生产 / 分发 / 安装 / 使用四段 + 角色 + 产物 + 闭环回线；结合智果园示例（AI 资产广场上架分发、CodeArts Agent 安装使用）与平台三件事。原第 5 页删除，总页数仍为 20。
 - 例外：KPI 数字保留展示字号；6.5–9.5 pt 的图注、单位、表注保留原字号，避免密集卡片溢出。若要求所有文字严格 10/12，需要重排或拆页。
 
 ## 顺序与来源
 
 | # | 章节 | 页面标题 | 来源文件（页序） |
 |---:|---|---|---|
-| 01 | 01 魔搭平台调研 | 魔搭 Skills 中心：8.35 万技能撑起四层框架，验证闭环仍缺一环 | `modelscope-skills-center.pptx`（1/1） |
-| 02 | 02 SkillHub 平台调研 | SkillHub 将技能分发扩展到场景组合与云端验证 | `skillhub/output/skillhub-insights.pptx`（1/1） |
-| 03 | 02 SkillHub 平台调研 | SkillHub 围绕 Skill 打通生态供给、可信分发与宿主安装 | `skillhub/output/skillhub-insights-v1.pptx`（1/1） |
-| 04 | 02 SkillHub 平台调研 | 腾讯 SkillHub：用 TRACE 把 Skill 分发从「能装」推向「可评」 | `skillhub-eval-onepage.pptx`（1/1） |
-| 05 | 03 Skill 平台总结 | 一个 Skill 的四段路：写出来 → 发出去 → 装进去 → 用起来 | `skill-asset-lifecycle.pptx`（1/1） |
+| 01 | 00 Skill 资产生命周期（开篇） | Skill 资产生命周期：生产 → 分发 → 安装 → 使用 | `skill-asset-lifecycle.pptx` 内容重做，结合智果园 / CodeArts Agent 示例（第 1 页） |
+| 02 | 01 魔搭平台调研 | 魔搭 Skills 中心：8.35 万技能撑起四层框架，验证闭环仍缺一环 | `modelscope-skills-center.pptx`（1/1） |
+| 03 | 02 SkillHub 平台调研 | SkillHub 将技能分发扩展到场景组合与云端验证 | `skillhub/output/skillhub-insights.pptx`（1/1） |
+| 04 | 02 SkillHub 平台调研 | SkillHub 围绕 Skill 打通生态供给、可信分发与宿主安装 | `skillhub/output/skillhub-insights-v1.pptx`（1/1） |
+| 05 | 02 SkillHub 平台调研 | 腾讯 SkillHub：用 TRACE 把 Skill 分发从「能装」推向「可评」 | `skillhub-eval-onepage.pptx`（1/1） |
 | 06 | 03 Skill 平台总结 | 从魔搭、SkillHub 到智果园：Skill 资产平台的四个必答题 | `zhiguoyuan-skill-asset-onepage.pptx`（1/1） |
 | 07 | 04 腾讯 SkillPay 商业化 | SkillHub 已有按次收费供给，平台暂不收技术服务费 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（1/2） |
 | 08 | 04 腾讯 SkillPay 商业化 | 微信 SkillPay 将微信订单接入 Agent，商户验付后履约 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（2/2） |
@@ -49,4 +51,4 @@
 ## 版式提醒
 
 - 合并保留每份原稿的字体、字号、文本框与主题；不同来源的标题宽度/字体替换可能造成个别页标题换行或溢出（源 PPTX 同样存在）。
-- 建议在 PowerPoint/WPS 中用统一母版、统一字体（如 Noto Sans SC / 微软雅黑）做一次版式整理，再删减重复页。
+- 建议在 PowerPoint/WPS 中用统一母版、统一字体（如 Microsoft YaHei / Noto Sans SC）做一次版式整理，再删减重复页。
