@@ -32,7 +32,7 @@
 | 07 | 04 腾讯 SkillPay 商业化 | 微信 SkillPay 将微信订单接入 Agent，商户验付后履约 | `skillhub/output/skillhub-skillpay-commercialization-v1.pptx`（2/2） |
 | 08 | 04 腾讯 SkillPay 商业化 | 两次下单接入 Agent，SkillHub 提供商户验签与分发 | `skillhub/output/skillhub-skillpay-commercialization-v2-final.pptx`（1/2） |
 | 09 | 04 腾讯 SkillPay 商业化 | payment_code 发起付款，payment_id 串联任务与交付 | `skillhub/output/skillhub-skillpay-commercialization-v2-final.pptx`（2/2） |
-| 10 | 05 阿里 SkillPay 商业化 | SkillPay 经营 Skill 商品，付款后分为源文件与使用权两种交付 | `gpt-alipay-research.pptx`（1/4） |
+| 10 | 05 阿里 SkillPay 商业化 | SkillPay 经营 Skill 商品，付款后分为源文件与使用权两种交付；左侧为 402 支付嵌入任务的序列图 | `gpt-alipay-research.pptx`（1/4） |
 | 11 | 05 阿里 SkillPay 商业化 | 订阅原文留云端，云端给任务指导，本地 Agent 继续执行 | `gpt-alipay-research.pptx`（2/4） |
 | 12 | 05 阿里 SkillPay 商业化 | MachinePay 先签报价，付款后带票重试，商户在线验付 | `gpt-alipay-research.pptx`（3/4） |
 | 13 | 05 阿里 SkillPay 商业化 | 支付宝验证支付事实，商户核对业务账并恢复唯一履约 | `gpt-alipay-research.pptx`（4/4） |
